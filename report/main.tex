@@ -1,0 +1,36 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage[colorlinks, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
+\usepackage{geometry}
+\usepackage{todonotes}
+\geometry{tmargin=3cm, bmargin=2.2cm, lmargin=2.2cm, rmargin=2cm}
+\usepackage[toc,page]{appendix}
+\usepackage{subfiles}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{url}
+\usepackage{listings}
+\usepackage[multiple]{footmisc}
+\usepackage{csquotes}
+
+\begin{document}
+\setlength\parindent{0pt}
+
+\input{titlepage}
+
+\tableofcontents
+\newpage
+
+\listoftodos[Notes]
+
+\subfile{sections/introduction}
+
+\bibliographystyle{siam}
+\bibliography{references}
+
+\subfile{appendices}
+
+\end{document}
