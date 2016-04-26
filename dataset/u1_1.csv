@@ -1,127 +1,127 @@
-"2016-02-29T14:49:58.809Z, ""load"", ""https://self-repair.mozilla.org/en-US/repair/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:50:06.834Z, ""load"", ""http://www.nieuwsblad.be/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:50:25.749Z, ""click"", ""http://www.nieuwsblad.be/"", ""http://www.nieuwsblad.be/regio""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:50:25.757Z, ""beforeunload"", ""http://www.nieuwsblad.be/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:50:26.316Z, ""load"", ""http://www.nieuwsblad.be/regio/startgemeente"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:50:42.622Z, ""click"", ""http://www.nieuwsblad.be/regio/startgemeente"", ""http://www.nieuwsblad.be/regio/gemeente/3000_leuven/index.aspx""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:50:42.830Z, ""beforeunload"", ""http://www.nieuwsblad.be/regio/startgemeente"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:50:43.925Z, ""load"", ""http://www.nieuwsblad.be/regio/leuven"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:51:24.270Z, ""load"", ""http://www.nieuwsblad.be/cnt/dmf20160226_02151558"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:52:27.204Z, ""beforeunload"", ""http://www.nieuwsblad.be/cnt/dmf20160226_02151558"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:52:45.616Z, ""load"", ""http://www.nieuwsblad.be/cnt/dmf20160226_02151624"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:53:05.009Z, ""beforeunload"", ""http://www.nieuwsblad.be/cnt/dmf20160226_02151624"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:53:18.896Z, ""beforeunload"", ""http://www.nieuwsblad.be/regio/leuven"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:53:38.272Z, ""load"", ""https://www.reddit.com/me/m/all_subs"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:53:45.114Z, ""load"", ""https://www.reddit.com/r/ProgrammerHumor"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:53:45.955Z, ""load"", ""https://www.reddit.com/r/recruitinghell"", """"";;;;;;;;;;;;;;;;;110;;50
-"2016-02-29T14:53:51.938Z, ""load"", ""https://www.reddit.com/r/photoshopbattles"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:54:02.726Z, ""load"", ""http://i.imgur.com/rZu1XU4.png"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:54:07.404Z, ""beforeunload"", ""http://i.imgur.com/rZu1XU4.png"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:54:14.741Z, ""load"", ""http://i.imgur.com/VfMw4bu.png"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:54:19.860Z, ""load"", ""http://imgur.com/xclQWux"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:54:54.545Z, ""beforeunload"", ""http://i.imgur.com/VfMw4bu.png"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:55:04.139Z, ""click"", ""http://imgur.com/xclQWux"", ""http://trc.taboola.com/imgur/log/3/click?pi=%2Fxclqwux&ri=6bb9c6735557fd01377c174c04e20abf&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456757665_CDQQick_GKGsl-yyKiAB&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=video&ii=~~V1~~-7623962289194265280~~G428YZO_VmxPAoEEfQjrAmhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a76-vid-bilingualbrain-tb%2F1_eng_tab_cd%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_bilingualbrain%26utm_term%3Dimgur%26utm_content%3DWhy%2BEuropeans%2Bspeak%2B2%2Blanguages%2Band%2Bsay%2Bthey%2Baren%2527t%2Bbilingual&vi=1456757659169&p=babbel-sc&r=73""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:55:04.372Z, ""load"", ""http://trc.taboola.com/imgur/log/3/click?pi=%2Fxclqwux&ri=6bb9c6735557fd01377c174c04e20abf&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456757665_CDQQick_GKGsl-yyKiAB&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=video&ii=~~V1~~-7623962289194265280~~G428YZO_VmxPAoEEfQjrAmhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a76-vid-bilingualbrain-tb%2F1_eng_tab_cd%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_bilingualbrain%26utm_term%3Dimgur%26utm_content%3DWhy%2BEuropeans%2Bspeak%2B2%2Blanguages%2Band%2Bsay%2Bthey%2Baren%2527t%2Bbilingual&vi=1456757659169&p=babbel-sc&r=73"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:55:05.201Z, ""load"", ""https://www.babbel.com/en/magazine/the-bilingual-brain?bsc=engmag-a76-vid-bilingualbrain-tb&btp=1_eng_tab_cd&utm_campaign=cd_engall_gen_ceu_bilingualbrain&utm_content=Why+Europeans+speak+2+languages+and+say+they+aren%27t+bilingual&utm_medium=CON&utm_source=taboola&utm_term=imgur"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:55:04.377Z, ""beforeunload"", ""http://trc.taboola.com/imgur/log/3/click?pi=%2Fxclqwux&ri=6bb9c6735557fd01377c174c04e20abf&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456757665_CDQQick_GKGsl-yyKiAB&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=video&ii=~~V1~~-7623962289194265280~~G428YZO_VmxPAoEEfQjrAmhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a76-vid-bilingualbrain-tb%2F1_eng_tab_cd%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_bilingualbrain%26utm_term%3Dimgur%26utm_content%3DWhy%2BEuropeans%2Bspeak%2B2%2Blanguages%2Band%2Bsay%2Bthey%2Baren%2527t%2Bbilingual&vi=1456757659169&p=babbel-sc&r=73"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:55:06.573Z, ""beforeunload"", ""http://imgur.com/xclQWux"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:55:25.043Z, ""beforeunload"", ""https://www.babbel.com/en/magazine/the-bilingual-brain?bsc=engmag-a76-vid-bilingualbrain-tb&btp=1_eng_tab_cd&utm_campaign=cd_engall_gen_ceu_bilingualbrain&utm_content=Why+Europeans+speak+2+languages+and+say+they+aren%27t+bilingual&utm_medium=CON&utm_source=taboola&utm_term=imgur"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:55:35.557Z, ""load"", ""http://i.imgur.com/bEvQAow.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:55:41.764Z, ""beforeunload"", ""http://i.imgur.com/bEvQAow.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:55:54.533Z, ""click"", ""https://www.reddit.com/r/ProgrammerHumor"", ""http://www.shamusyoung.com/twentysidedtale/?p=30761""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:55:54.580Z, ""beforeunload"", ""https://www.reddit.com/r/ProgrammerHumor"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:55:57.410Z, ""load"", ""http://www.shamusyoung.com/twentysidedtale/?p=30761"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:58:21.866Z, ""beforeunload"", ""http://www.shamusyoung.com/twentysidedtale/?p=30761"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:58:24.138Z, ""beforeunload"", ""https://www.reddit.com/me/m/all_subs"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:58:59.912Z, ""load"", ""https://www.reddit.com/r/recruitinghell/comments/47ep03/can_you_do_literally_anything_because_were/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:59:09.438Z, ""beforeunload"", ""https://www.reddit.com/r/recruitinghell/comments/47ep03/can_you_do_literally_anything_because_were/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:59:15.552Z, ""load"", ""http://i.imgur.com/3SP5T7M.png"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:59:38.889Z, ""beforeunload"", ""http://i.imgur.com/3SP5T7M.png"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:59:42.855Z, ""load"", ""http://i.imgur.com/g4pKNOR.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T14:59:59.570Z, ""beforeunload"", ""http://i.imgur.com/g4pKNOR.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:08.950Z, ""load"", ""http://imgur.com/YbIrTHP"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:19.012Z, ""click"", ""http://imgur.com/YbIrTHP"", ""http://trc.taboola.com/imgur/log/3/click?pi=%2Fybirthp&ri=89292f65e39a95302a332c98aa831ca0&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456758014_CDQQick_GOXVrOyyKiAC&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=text&ii=~~V1~~798980603870895380~~v1zDB5Z001noy7F0l-0S3mhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a2-vid-bv1-polyglotvid-tb%2Fdefault%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_polyglotvid%26utm_term%3Dimgur&vi=1456758008549&p=babbel-sc&r=5""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:19.218Z, ""load"", ""http://trc.taboola.com/imgur/log/3/click?pi=%2Fybirthp&ri=89292f65e39a95302a332c98aa831ca0&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456758014_CDQQick_GOXVrOyyKiAC&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=text&ii=~~V1~~798980603870895380~~v1zDB5Z001noy7F0l-0S3mhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a2-vid-bv1-polyglotvid-tb%2Fdefault%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_polyglotvid%26utm_term%3Dimgur&vi=1456758008549&p=babbel-sc&r=5"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:20.539Z, ""beforeunload"", ""http://imgur.com/YbIrTHP"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:19.224Z, ""beforeunload"", ""http://trc.taboola.com/imgur/log/3/click?pi=%2Fybirthp&ri=89292f65e39a95302a332c98aa831ca0&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456758014_CDQQick_GOXVrOyyKiAC&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=text&ii=~~V1~~798980603870895380~~v1zDB5Z001noy7F0l-0S3mhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a2-vid-bv1-polyglotvid-tb%2Fdefault%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_polyglotvid%26utm_term%3Dimgur&vi=1456758008549&p=babbel-sc&r=5"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:20.566Z, ""load"", ""https://www.babbel.com/en/magazine/language-chamaleon-one?bsc=engmag-a2-vid-bv1-polyglotvid-tb&btp=default&utm_campaign=cd_engall_gen_ceu_polyglotvid&utm_medium=CON&utm_source=taboola&utm_term=imgur"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:24.956Z, ""beforeunload"", ""https://www.babbel.com/en/magazine/language-chamaleon-one?bsc=engmag-a2-vid-bv1-polyglotvid-tb&btp=default&utm_campaign=cd_engall_gen_ceu_polyglotvid&utm_medium=CON&utm_source=taboola&utm_term=imgur"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:29.548Z, ""load"", ""http://webdiplomacy.net/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:36.396Z, ""click"", ""http://webdiplomacy.net/"", ""http://webdiplomacy.net/board.php?gameID=173904""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:36.898Z, ""load"", ""http://webdiplomacy.net/board.php?gameID=173904"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:36.400Z, ""beforeunload"", ""http://webdiplomacy.net/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:50.653Z, ""click"", ""http://webdiplomacy.net/board.php?gameID=173904"", ""http://webdiplomacy.net/board.php?gameID=173861""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:51.130Z, ""load"", ""http://webdiplomacy.net/board.php?gameID=173861"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:00:50.659Z, ""beforeunload"", ""http://webdiplomacy.net/board.php?gameID=173904"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:01:42.620Z, ""beforeunload"", ""http://webdiplomacy.net/board.php?gameID=173861"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:01:54.691Z, ""load"", ""https://www.reddit.com/r/recruitinghell/comments/44ows0/why_are_so_much_of_recruiting_hell_from_software/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:03:38.077Z, ""beforeunload"", ""https://www.reddit.com/r/recruitinghell/comments/44ows0/why_are_so_much_of_recruiting_hell_from_software/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:04:05.977Z, ""load"", ""http://imgur.com/6IWVz43"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:04:52.847Z, ""beforeunload"", ""http://imgur.com/6IWVz43"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:05:00.771Z, ""click"", ""https://www.reddit.com/r/recruitinghell"", ""https://www.reddit.com/r/recruitinghell/comments/43jc2l/software_developer_the_dream_job/""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:05:00.822Z, ""beforeunload"", ""https://www.reddit.com/r/recruitinghell"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:05:01.829Z, ""load"", ""https://www.reddit.com/r/recruitinghell/comments/43jc2l/software_developer_the_dream_job/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:06:50.069Z, ""beforeunload"", ""https://www.reddit.com/r/recruitinghell/comments/43jc2l/software_developer_the_dream_job/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:06:58.364Z, ""load"", ""https://i.imgur.com/ExVOByJ.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:00.398Z, ""beforeunload"", ""https://i.imgur.com/ExVOByJ.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:02.648Z, ""load"", ""https://www.reddit.com/r/photoshopbattles/comments/489tcy/psbattle_a_man_in_smog/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:06.617Z, ""load"", ""http://i.imgur.com/NOd4mRV.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:07.863Z, ""load"", ""http://imgur.com/yUcBbK9"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:08.635Z, ""load"", ""http://i.imgur.com/1Q4h53u.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:10.193Z, ""beforeunload"", ""http://imgur.com/yUcBbK9"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:12.215Z, ""beforeunload"", ""http://i.imgur.com/NOd4mRV.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:13.791Z, ""beforeunload"", ""http://i.imgur.com/1Q4h53u.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:15.239Z, ""beforeunload"", ""https://www.reddit.com/r/photoshopbattles/comments/489tcy/psbattle_a_man_in_smog/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:20.904Z, ""load"", ""http://i.imgur.com/CyhDNIF.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:21.279Z, ""load"", ""https://www.reddit.com/r/photoshopbattles/comments/483d0f/psbattle_manchester_united_manager_louis_van_gaal/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:29.009Z, ""beforeunload"", ""http://i.imgur.com/CyhDNIF.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:31.797Z, ""load"", ""http://i.imgur.com/IW62ZmB.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:37.814Z, ""load"", ""http://imgur.com/RBW0qhy"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:39.476Z, ""load"", ""http://i.imgur.com/yfOYthV.png"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:47.626Z, ""beforeunload"", ""http://i.imgur.com/IW62ZmB.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:55.533Z, ""beforeunload"", ""http://imgur.com/RBW0qhy"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:07:56.819Z, ""beforeunload"", ""http://i.imgur.com/yfOYthV.png"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:01.697Z, ""load"", ""http://imgur.com/QN3tUex"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:03.005Z, ""beforeunload"", ""http://imgur.com/QN3tUex"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:06.404Z, ""load"", ""http://i.imgur.com/TZTyjcH.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:08.604Z, ""beforeunload"", ""http://i.imgur.com/TZTyjcH.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:09.419Z, ""beforeunload"", ""https://www.reddit.com/r/photoshopbattles/comments/483d0f/psbattle_manchester_united_manager_louis_van_gaal/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:16.395Z, ""load"", ""http://webdiplomacy.net/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:19.107Z, ""click"", ""http://webdiplomacy.net/"", ""http://webdiplomacy.net/board.php?gameID=173904""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:19.584Z, ""load"", ""http://webdiplomacy.net/board.php?gameID=173904"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:19.112Z, ""beforeunload"", ""http://webdiplomacy.net/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:21.595Z, ""click"", ""http://webdiplomacy.net/board.php?gameID=173904"", ""http://webdiplomacy.net/board.php?gameID=173861""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:22.004Z, ""load"", ""http://webdiplomacy.net/board.php?gameID=173861"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:08:21.600Z, ""beforeunload"", ""http://webdiplomacy.net/board.php?gameID=173904"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:09:16.913Z, ""click"", ""http://webdiplomacy.net/board.php?gameID=173861"", ""http://webdiplomacy.net/board.php?gameID=173861#""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:09:19.485Z, ""click"", ""http://webdiplomacy.net/board.php?gameID=173861"", ""http://webdiplomacy.net/board.php?gameID=173861#""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:09:20.325Z, ""click"", ""http://webdiplomacy.net/board.php?gameID=173861"", ""http://webdiplomacy.net/board.php?gameID=173861#""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:09:24.525Z, ""click"", ""http://webdiplomacy.net/board.php?gameID=173861"", ""http://webdiplomacy.net/board.php?gameID=173861#""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:09:26.937Z, ""click"", ""http://webdiplomacy.net/board.php?gameID=173861"", ""http://webdiplomacy.net/board.php?gameID=173861#""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:09:50.054Z, ""beforeunload"", ""http://webdiplomacy.net/board.php?gameID=173861"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:00.182Z, ""load"", ""http://i.imgur.com/saIoSZF.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:03.086Z, ""load"", ""https://www.reddit.com/r/photoshopbattles/comments/482zi9/psbattle_kid_panics_while_kayaking_in_thunderstorm/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:04.974Z, ""beforeunload"", ""http://i.imgur.com/saIoSZF.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:07.278Z, ""load"", ""http://i.imgur.com/5bw2PtX.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:16.885Z, ""load"", ""http://i.imgur.com/Y96ueFP.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:18.555Z, ""load"", ""http://i.imgur.com/j8f1Xb9.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:20.774Z, ""load"", ""http://i.imgur.com/sCFXgvg.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:22.802Z, ""load"", ""http://i.imgur.com/Kzq48An.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:27.592Z, ""beforeunload"", ""http://i.imgur.com/5bw2PtX.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:29.664Z, ""beforeunload"", ""http://i.imgur.com/Y96ueFP.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:38.793Z, ""beforeunload"", ""http://i.imgur.com/j8f1Xb9.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:43.617Z, ""beforeunload"", ""http://i.imgur.com/sCFXgvg.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:10:50.538Z, ""beforeunload"", ""http://i.imgur.com/Kzq48An.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:14.796Z, ""beforeunload"", ""https://www.reddit.com/r/photoshopbattles/comments/482zi9/psbattle_kid_panics_while_kayaking_in_thunderstorm/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:24.305Z, ""load"", ""http://i.imgur.com/lSWpaqG.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:25.005Z, ""click"", ""https://www.reddit.com/r/photoshopbattles"", ""https://www.reddit.com/r/photoshopbattles/comments/47wzm0/psbattle_kim_jongun_smoking_a_cigarette_in_an/""";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:25.056Z, ""beforeunload"", ""https://www.reddit.com/r/photoshopbattles"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:29.145Z, ""load"", ""https://www.reddit.com/r/photoshopbattles/comments/47wzm0/psbattle_kim_jongun_smoking_a_cigarette_in_an/"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:35.072Z, ""load"", ""http://i.imgur.com/uRSGFKK.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:39.531Z, ""load"", ""http://imgur.com/ya5YhiZ"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:46.115Z, ""load"", ""http://i.imgur.com/GfaLiYy.png"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:47.312Z, ""load"", ""http://i.imgur.com/QCCYzG6.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:47.847Z, ""load"", ""http://i.imgur.com/MzmcDTl.png"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:48.215Z, ""load"", ""http://i.imgur.com/b0XiMLL.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:51.185Z, ""load"", ""http://i.imgur.com/oGawlBU.jpg"", """"";;;;;;;;;;;;;;;;;;;
-"2016-02-29T15:11:52.094Z, ""click"", ""https://www.reddit.com/r/photoshopbattles/comments/47wzm0/psbattle_kim_jongun_smoking_a_cigarette_in_an/"", ""http://i.imgur.com/idT06nt.jpg""";;;;;;;;;;;;;;;;;;;
+2016-02-29T14:49:58.809Z, load, https://self-repair.mozilla.org/en-US/repair/, 
+2016-02-29T14:50:06.834Z, load, http://www.nieuwsblad.be/, 
+2016-02-29T14:50:25.749Z, click, http://www.nieuwsblad.be/, http://www.nieuwsblad.be/regio
+2016-02-29T14:50:25.757Z, beforeunload, http://www.nieuwsblad.be/, 
+2016-02-29T14:50:26.316Z, load, http://www.nieuwsblad.be/regio/startgemeente, 
+2016-02-29T14:50:42.622Z, click, http://www.nieuwsblad.be/regio/startgemeente, http://www.nieuwsblad.be/regio/gemeente/3000_leuven/index.aspx
+2016-02-29T14:50:42.830Z, beforeunload, http://www.nieuwsblad.be/regio/startgemeente, 
+2016-02-29T14:50:43.925Z, load, http://www.nieuwsblad.be/regio/leuven, 
+2016-02-29T14:51:24.270Z, load, http://www.nieuwsblad.be/cnt/dmf20160226_02151558, 
+2016-02-29T14:52:27.204Z, beforeunload, http://www.nieuwsblad.be/cnt/dmf20160226_02151558, 
+2016-02-29T14:52:45.616Z, load, http://www.nieuwsblad.be/cnt/dmf20160226_02151624, 
+2016-02-29T14:53:05.009Z, beforeunload, http://www.nieuwsblad.be/cnt/dmf20160226_02151624, 
+2016-02-29T14:53:18.896Z, beforeunload, http://www.nieuwsblad.be/regio/leuven, 
+2016-02-29T14:53:38.272Z, load, https://www.reddit.com/me/m/all_subs, 
+2016-02-29T14:53:45.114Z, load, https://www.reddit.com/r/ProgrammerHumor, 
+2016-02-29T14:53:45.955Z, load, https://www.reddit.com/r/recruitinghell, 11050
+2016-02-29T14:53:51.938Z, load, https://www.reddit.com/r/photoshopbattles, 
+2016-02-29T14:54:02.726Z, load, http://i.imgur.com/rZu1XU4.png, 
+2016-02-29T14:54:07.404Z, beforeunload, http://i.imgur.com/rZu1XU4.png, 
+2016-02-29T14:54:14.741Z, load, http://i.imgur.com/VfMw4bu.png, 
+2016-02-29T14:54:19.860Z, load, http://imgur.com/xclQWux, 
+2016-02-29T14:54:54.545Z, beforeunload, http://i.imgur.com/VfMw4bu.png, 
+2016-02-29T14:55:04.139Z, click, http://imgur.com/xclQWux, http://trc.taboola.com/imgur/log/3/click?pi=%2Fxclqwux&ri=6bb9c6735557fd01377c174c04e20abf&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456757665_CDQQick_GKGsl-yyKiAB&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=video&ii=~~V1~~-7623962289194265280~~G428YZO_VmxPAoEEfQjrAmhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a76-vid-bilingualbrain-tb%2F1_eng_tab_cd%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_bilingualbrain%26utm_term%3Dimgur%26utm_content%3DWhy%2BEuropeans%2Bspeak%2B2%2Blanguages%2Band%2Bsay%2Bthey%2Baren%2527t%2Bbilingual&vi=1456757659169&p=babbel-sc&r=73
+2016-02-29T14:55:04.372Z, load, http://trc.taboola.com/imgur/log/3/click?pi=%2Fxclqwux&ri=6bb9c6735557fd01377c174c04e20abf&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456757665_CDQQick_GKGsl-yyKiAB&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=video&ii=~~V1~~-7623962289194265280~~G428YZO_VmxPAoEEfQjrAmhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a76-vid-bilingualbrain-tb%2F1_eng_tab_cd%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_bilingualbrain%26utm_term%3Dimgur%26utm_content%3DWhy%2BEuropeans%2Bspeak%2B2%2Blanguages%2Band%2Bsay%2Bthey%2Baren%2527t%2Bbilingual&vi=1456757659169&p=babbel-sc&r=73, 
+2016-02-29T14:55:05.201Z, load, https://www.babbel.com/en/magazine/the-bilingual-brain?bsc=engmag-a76-vid-bilingualbrain-tb&btp=1_eng_tab_cd&utm_campaign=cd_engall_gen_ceu_bilingualbrain&utm_content=Why+Europeans+speak+2+languages+and+say+they+aren%27t+bilingual&utm_medium=CON&utm_source=taboola&utm_term=imgur, 
+2016-02-29T14:55:04.377Z, beforeunload, http://trc.taboola.com/imgur/log/3/click?pi=%2Fxclqwux&ri=6bb9c6735557fd01377c174c04e20abf&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456757665_CDQQick_GKGsl-yyKiAB&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=video&ii=~~V1~~-7623962289194265280~~G428YZO_VmxPAoEEfQjrAmhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a76-vid-bilingualbrain-tb%2F1_eng_tab_cd%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_bilingualbrain%26utm_term%3Dimgur%26utm_content%3DWhy%2BEuropeans%2Bspeak%2B2%2Blanguages%2Band%2Bsay%2Bthey%2Baren%2527t%2Bbilingual&vi=1456757659169&p=babbel-sc&r=73, 
+2016-02-29T14:55:06.573Z, beforeunload, http://imgur.com/xclQWux, 
+2016-02-29T14:55:25.043Z, beforeunload, https://www.babbel.com/en/magazine/the-bilingual-brain?bsc=engmag-a76-vid-bilingualbrain-tb&btp=1_eng_tab_cd&utm_campaign=cd_engall_gen_ceu_bilingualbrain&utm_content=Why+Europeans+speak+2+languages+and+say+they+aren%27t+bilingual&utm_medium=CON&utm_source=taboola&utm_term=imgur, 
+2016-02-29T14:55:35.557Z, load, http://i.imgur.com/bEvQAow.jpg, 
+2016-02-29T14:55:41.764Z, beforeunload, http://i.imgur.com/bEvQAow.jpg, 
+2016-02-29T14:55:54.533Z, click, https://www.reddit.com/r/ProgrammerHumor, http://www.shamusyoung.com/twentysidedtale/?p=30761
+2016-02-29T14:55:54.580Z, beforeunload, https://www.reddit.com/r/ProgrammerHumor, 
+2016-02-29T14:55:57.410Z, load, http://www.shamusyoung.com/twentysidedtale/?p=30761, 
+2016-02-29T14:58:21.866Z, beforeunload, http://www.shamusyoung.com/twentysidedtale/?p=30761, 
+2016-02-29T14:58:24.138Z, beforeunload, https://www.reddit.com/me/m/all_subs, 
+2016-02-29T14:58:59.912Z, load, https://www.reddit.com/r/recruitinghell/comments/47ep03/can_you_do_literally_anything_because_were/, 
+2016-02-29T14:59:09.438Z, beforeunload, https://www.reddit.com/r/recruitinghell/comments/47ep03/can_you_do_literally_anything_because_were/, 
+2016-02-29T14:59:15.552Z, load, http://i.imgur.com/3SP5T7M.png, 
+2016-02-29T14:59:38.889Z, beforeunload, http://i.imgur.com/3SP5T7M.png, 
+2016-02-29T14:59:42.855Z, load, http://i.imgur.com/g4pKNOR.jpg, 
+2016-02-29T14:59:59.570Z, beforeunload, http://i.imgur.com/g4pKNOR.jpg, 
+2016-02-29T15:00:08.950Z, load, http://imgur.com/YbIrTHP, 
+2016-02-29T15:00:19.012Z, click, http://imgur.com/YbIrTHP, http://trc.taboola.com/imgur/log/3/click?pi=%2Fybirthp&ri=89292f65e39a95302a332c98aa831ca0&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456758014_CDQQick_GOXVrOyyKiAC&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=text&ii=~~V1~~798980603870895380~~v1zDB5Z001noy7F0l-0S3mhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a2-vid-bv1-polyglotvid-tb%2Fdefault%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_polyglotvid%26utm_term%3Dimgur&vi=1456758008549&p=babbel-sc&r=5
+2016-02-29T15:00:19.218Z, load, http://trc.taboola.com/imgur/log/3/click?pi=%2Fybirthp&ri=89292f65e39a95302a332c98aa831ca0&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456758014_CDQQick_GOXVrOyyKiAC&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=text&ii=~~V1~~798980603870895380~~v1zDB5Z001noy7F0l-0S3mhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a2-vid-bv1-polyglotvid-tb%2Fdefault%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_polyglotvid%26utm_term%3Dimgur&vi=1456758008549&p=babbel-sc&r=5, 
+2016-02-29T15:00:20.539Z, beforeunload, http://imgur.com/YbIrTHP, 
+2016-02-29T15:00:19.224Z, beforeunload, http://trc.taboola.com/imgur/log/3/click?pi=%2Fybirthp&ri=89292f65e39a95302a332c98aa831ca0&sd=v2_b1aa8c8a0ac4bfee7fcf19265bff27e3_0307bcd0-058a-4f0a-afc5-272042bde652_1456757665_1456758014_CDQQick_GOXVrOyyKiAC&ui=0307bcd0-058a-4f0a-afc5-272042bde652&it=text&ii=~~V1~~798980603870895380~~v1zDB5Z001noy7F0l-0S3mhIoS99L-xBVvPXnmcRWllG-nRE8tQFg5DKlXTLeJGT1MLkpQylkmrvBqXJgtHYOw&pt=text&li=rbox-t2m&redir=https%3A%2F%2Fgo.babbel.com%2Fengmag-a2-vid-bv1-polyglotvid-tb%2Fdefault%3Futm_source%3Dtaboola%26utm_medium%3DCON%26utm_campaign%3Dcd_engall_gen_ceu_polyglotvid%26utm_term%3Dimgur&vi=1456758008549&p=babbel-sc&r=5, 
+2016-02-29T15:00:20.566Z, load, https://www.babbel.com/en/magazine/language-chamaleon-one?bsc=engmag-a2-vid-bv1-polyglotvid-tb&btp=default&utm_campaign=cd_engall_gen_ceu_polyglotvid&utm_medium=CON&utm_source=taboola&utm_term=imgur, 
+2016-02-29T15:00:24.956Z, beforeunload, https://www.babbel.com/en/magazine/language-chamaleon-one?bsc=engmag-a2-vid-bv1-polyglotvid-tb&btp=default&utm_campaign=cd_engall_gen_ceu_polyglotvid&utm_medium=CON&utm_source=taboola&utm_term=imgur, 
+2016-02-29T15:00:29.548Z, load, http://webdiplomacy.net/, 
+2016-02-29T15:00:36.396Z, click, http://webdiplomacy.net/, http://webdiplomacy.net/board.php?gameID=173904
+2016-02-29T15:00:36.898Z, load, http://webdiplomacy.net/board.php?gameID=173904, 
+2016-02-29T15:00:36.400Z, beforeunload, http://webdiplomacy.net/, 
+2016-02-29T15:00:50.653Z, click, http://webdiplomacy.net/board.php?gameID=173904, http://webdiplomacy.net/board.php?gameID=173861
+2016-02-29T15:00:51.130Z, load, http://webdiplomacy.net/board.php?gameID=173861, 
+2016-02-29T15:00:50.659Z, beforeunload, http://webdiplomacy.net/board.php?gameID=173904, 
+2016-02-29T15:01:42.620Z, beforeunload, http://webdiplomacy.net/board.php?gameID=173861, 
+2016-02-29T15:01:54.691Z, load, https://www.reddit.com/r/recruitinghell/comments/44ows0/why_are_so_much_of_recruiting_hell_from_software/, 
+2016-02-29T15:03:38.077Z, beforeunload, https://www.reddit.com/r/recruitinghell/comments/44ows0/why_are_so_much_of_recruiting_hell_from_software/, 
+2016-02-29T15:04:05.977Z, load, http://imgur.com/6IWVz43, 
+2016-02-29T15:04:52.847Z, beforeunload, http://imgur.com/6IWVz43, 
+2016-02-29T15:05:00.771Z, click, https://www.reddit.com/r/recruitinghell, https://www.reddit.com/r/recruitinghell/comments/43jc2l/software_developer_the_dream_job/
+2016-02-29T15:05:00.822Z, beforeunload, https://www.reddit.com/r/recruitinghell, 
+2016-02-29T15:05:01.829Z, load, https://www.reddit.com/r/recruitinghell/comments/43jc2l/software_developer_the_dream_job/, 
+2016-02-29T15:06:50.069Z, beforeunload, https://www.reddit.com/r/recruitinghell/comments/43jc2l/software_developer_the_dream_job/, 
+2016-02-29T15:06:58.364Z, load, https://i.imgur.com/ExVOByJ.jpg, 
+2016-02-29T15:07:00.398Z, beforeunload, https://i.imgur.com/ExVOByJ.jpg, 
+2016-02-29T15:07:02.648Z, load, https://www.reddit.com/r/photoshopbattles/comments/489tcy/psbattle_a_man_in_smog/, 
+2016-02-29T15:07:06.617Z, load, http://i.imgur.com/NOd4mRV.jpg, 
+2016-02-29T15:07:07.863Z, load, http://imgur.com/yUcBbK9, 
+2016-02-29T15:07:08.635Z, load, http://i.imgur.com/1Q4h53u.jpg, 
+2016-02-29T15:07:10.193Z, beforeunload, http://imgur.com/yUcBbK9, 
+2016-02-29T15:07:12.215Z, beforeunload, http://i.imgur.com/NOd4mRV.jpg, 
+2016-02-29T15:07:13.791Z, beforeunload, http://i.imgur.com/1Q4h53u.jpg, 
+2016-02-29T15:07:15.239Z, beforeunload, https://www.reddit.com/r/photoshopbattles/comments/489tcy/psbattle_a_man_in_smog/, 
+2016-02-29T15:07:20.904Z, load, http://i.imgur.com/CyhDNIF.jpg, 
+2016-02-29T15:07:21.279Z, load, https://www.reddit.com/r/photoshopbattles/comments/483d0f/psbattle_manchester_united_manager_louis_van_gaal/, 
+2016-02-29T15:07:29.009Z, beforeunload, http://i.imgur.com/CyhDNIF.jpg, 
+2016-02-29T15:07:31.797Z, load, http://i.imgur.com/IW62ZmB.jpg, 
+2016-02-29T15:07:37.814Z, load, http://imgur.com/RBW0qhy, 
+2016-02-29T15:07:39.476Z, load, http://i.imgur.com/yfOYthV.png, 
+2016-02-29T15:07:47.626Z, beforeunload, http://i.imgur.com/IW62ZmB.jpg, 
+2016-02-29T15:07:55.533Z, beforeunload, http://imgur.com/RBW0qhy, 
+2016-02-29T15:07:56.819Z, beforeunload, http://i.imgur.com/yfOYthV.png, 
+2016-02-29T15:08:01.697Z, load, http://imgur.com/QN3tUex, 
+2016-02-29T15:08:03.005Z, beforeunload, http://imgur.com/QN3tUex, 
+2016-02-29T15:08:06.404Z, load, http://i.imgur.com/TZTyjcH.jpg, 
+2016-02-29T15:08:08.604Z, beforeunload, http://i.imgur.com/TZTyjcH.jpg, 
+2016-02-29T15:08:09.419Z, beforeunload, https://www.reddit.com/r/photoshopbattles/comments/483d0f/psbattle_manchester_united_manager_louis_van_gaal/, 
+2016-02-29T15:08:16.395Z, load, http://webdiplomacy.net/, 
+2016-02-29T15:08:19.107Z, click, http://webdiplomacy.net/, http://webdiplomacy.net/board.php?gameID=173904
+2016-02-29T15:08:19.584Z, load, http://webdiplomacy.net/board.php?gameID=173904, 
+2016-02-29T15:08:19.112Z, beforeunload, http://webdiplomacy.net/, 
+2016-02-29T15:08:21.595Z, click, http://webdiplomacy.net/board.php?gameID=173904, http://webdiplomacy.net/board.php?gameID=173861
+2016-02-29T15:08:22.004Z, load, http://webdiplomacy.net/board.php?gameID=173861, 
+2016-02-29T15:08:21.600Z, beforeunload, http://webdiplomacy.net/board.php?gameID=173904, 
+2016-02-29T15:09:16.913Z, click, http://webdiplomacy.net/board.php?gameID=173861, http://webdiplomacy.net/board.php?gameID=173861#
+2016-02-29T15:09:19.485Z, click, http://webdiplomacy.net/board.php?gameID=173861, http://webdiplomacy.net/board.php?gameID=173861#
+2016-02-29T15:09:20.325Z, click, http://webdiplomacy.net/board.php?gameID=173861, http://webdiplomacy.net/board.php?gameID=173861#
+2016-02-29T15:09:24.525Z, click, http://webdiplomacy.net/board.php?gameID=173861, http://webdiplomacy.net/board.php?gameID=173861#
+2016-02-29T15:09:26.937Z, click, http://webdiplomacy.net/board.php?gameID=173861, http://webdiplomacy.net/board.php?gameID=173861#
+2016-02-29T15:09:50.054Z, beforeunload, http://webdiplomacy.net/board.php?gameID=173861, 
+2016-02-29T15:10:00.182Z, load, http://i.imgur.com/saIoSZF.jpg, 
+2016-02-29T15:10:03.086Z, load, https://www.reddit.com/r/photoshopbattles/comments/482zi9/psbattle_kid_panics_while_kayaking_in_thunderstorm/, 
+2016-02-29T15:10:04.974Z, beforeunload, http://i.imgur.com/saIoSZF.jpg, 
+2016-02-29T15:10:07.278Z, load, http://i.imgur.com/5bw2PtX.jpg, 
+2016-02-29T15:10:16.885Z, load, http://i.imgur.com/Y96ueFP.jpg, 
+2016-02-29T15:10:18.555Z, load, http://i.imgur.com/j8f1Xb9.jpg, 
+2016-02-29T15:10:20.774Z, load, http://i.imgur.com/sCFXgvg.jpg, 
+2016-02-29T15:10:22.802Z, load, http://i.imgur.com/Kzq48An.jpg, 
+2016-02-29T15:10:27.592Z, beforeunload, http://i.imgur.com/5bw2PtX.jpg, 
+2016-02-29T15:10:29.664Z, beforeunload, http://i.imgur.com/Y96ueFP.jpg, 
+2016-02-29T15:10:38.793Z, beforeunload, http://i.imgur.com/j8f1Xb9.jpg, 
+2016-02-29T15:10:43.617Z, beforeunload, http://i.imgur.com/sCFXgvg.jpg, 
+2016-02-29T15:10:50.538Z, beforeunload, http://i.imgur.com/Kzq48An.jpg, 
+2016-02-29T15:11:14.796Z, beforeunload, https://www.reddit.com/r/photoshopbattles/comments/482zi9/psbattle_kid_panics_while_kayaking_in_thunderstorm/, 
+2016-02-29T15:11:24.305Z, load, http://i.imgur.com/lSWpaqG.jpg, 
+2016-02-29T15:11:25.005Z, click, https://www.reddit.com/r/photoshopbattles, https://www.reddit.com/r/photoshopbattles/comments/47wzm0/psbattle_kim_jongun_smoking_a_cigarette_in_an/
+2016-02-29T15:11:25.056Z, beforeunload, https://www.reddit.com/r/photoshopbattles, 
+2016-02-29T15:11:29.145Z, load, https://www.reddit.com/r/photoshopbattles/comments/47wzm0/psbattle_kim_jongun_smoking_a_cigarette_in_an/, 
+2016-02-29T15:11:35.072Z, load, http://i.imgur.com/uRSGFKK.jpg, 
+2016-02-29T15:11:39.531Z, load, http://imgur.com/ya5YhiZ, 
+2016-02-29T15:11:46.115Z, load, http://i.imgur.com/GfaLiYy.png, 
+2016-02-29T15:11:47.312Z, load, http://i.imgur.com/QCCYzG6.jpg, 
+2016-02-29T15:11:47.847Z, load, http://i.imgur.com/MzmcDTl.png, 
+2016-02-29T15:11:48.215Z, load, http://i.imgur.com/b0XiMLL.jpg, 
+2016-02-29T15:11:51.185Z, load, http://i.imgur.com/oGawlBU.jpg, 
+2016-02-29T15:11:52.094Z, click, https://www.reddit.com/r/photoshopbattles/comments/47wzm0/psbattle_kim_jongun_smoking_a_cigarette_in_an/, http://i.imgur.com/idT06nt.jpg

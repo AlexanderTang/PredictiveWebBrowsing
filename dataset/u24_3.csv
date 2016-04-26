@@ -1,82 +1,82 @@
-"2016-03-25T19:34:11.897Z", "load", "https://www.google.com/intl/ru/mail/help/about.html", ""
-"2016-03-25T19:34:14.103Z", "click", "https://www.google.com/intl/ru/mail/help/about.html", "https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=ru"
-"2016-03-25T19:34:14.111Z", "beforeunload", "https://www.google.com/intl/ru/mail/help/about.html", ""
-"2016-03-25T19:34:14.822Z", "load", "https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=ru#identifier", ""
-"2016-03-25T19:34:26.321Z", "polling", "https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=ru#password", ""
-"2016-03-25T19:34:30.864Z", "beforeunload", "https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=ru#password", ""
-"2016-03-25T19:34:31.309Z", "load", "https://accounts.google.com/CheckCookie?hl=ru&checkedDomains=youtube&checkConnection=youtube%3A646%3A1&pstMsg=1&chtml=LoginDoneHtml&service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&gidl=CAA", ""
-"2016-03-25T19:34:31.571Z", "beforeunload", "https://accounts.google.com/CheckCookie?hl=ru&checkedDomains=youtube&checkConnection=youtube%3A646%3A1&pstMsg=1&chtml=LoginDoneHtml&service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&gidl=CAA", ""
-"2016-03-25T19:34:33.226Z", "load", "https://mail.google.com/mail/u/0/", ""
-"2016-03-25T19:34:34.606Z", "polling", "https://mail.google.com/mail/u/0/#inbox", ""
-"2016-03-25T19:38:52.223Z", "beforeunload", "https://mail.google.com/mail/u/0/#inbox", ""
-"2016-03-25T19:38:53.593Z", "load", "https://godville.net/", ""
-"2016-03-25T19:39:02.216Z", "beforeunload", "https://godville.net/", ""
-"2016-03-25T19:39:02.758Z", "load", "https://godville.net/superhero", ""
-"2016-03-25T19:40:22.750Z", "beforeunload", "https://godville.net/superhero", ""
-"2016-03-25T19:40:22.953Z", "load", "https://godville.net/superhero", ""
-"2016-03-25T19:40:52.570Z", "beforeunload", "https://godville.net/superhero", ""
-"2016-03-25T19:40:53.706Z", "load", "http://bash.im/", ""
-"2016-03-25T19:41:05.013Z", "click", "http://bash.im/", "http://zadolba.li/"
-"2016-03-25T19:41:05.060Z", "beforeunload", "http://bash.im/", ""
-"2016-03-25T19:41:05.656Z", "load", "http://zadolba.li/", ""
-"2016-03-25T19:43:33.195Z", "beforeunload", "http://zadolba.li/", ""
-"2016-03-25T19:43:33.918Z", "load", "https://www.facebook.com/?_rdr", ""
-"2016-03-25T19:43:42.414Z", "beforeunload", "https://www.facebook.com/?_rdr", ""
-"2016-03-25T19:43:44.821Z", "load", "https://www.facebook.com/", ""
-"2016-03-25T19:47:59.207Z", "beforeunload", "https://www.facebook.com/", ""
-"2016-03-25T19:48:01.209Z", "load", "http://theprogmind.com/", ""
-"2016-03-25T19:48:05.499Z", "click", "http://theprogmind.com/", "http://theprogmind.com/2016/03/26/circus-maximus-havoc/"
-"2016-03-25T19:48:05.508Z", "beforeunload", "http://theprogmind.com/", ""
-"2016-03-25T19:48:06.751Z", "load", "http://theprogmind.com/2016/03/26/circus-maximus-havoc/", ""
-"2016-03-25T19:52:15.531Z", "click", "http://theprogmind.com/2016/03/26/circus-maximus-havoc/", "http://theprogmind.com/2016/02/04/votum-ktonik/?relatedposts_hit=1&relatedposts_origin=2173&relatedposts_position=0"
-"2016-03-25T19:52:15.546Z", "beforeunload", "http://theprogmind.com/2016/03/26/circus-maximus-havoc/", ""
-"2016-03-25T19:52:17.048Z", "load", "http://theprogmind.com/2016/02/04/votum-ktonik/?relatedposts_hit=1&relatedposts_origin=2173&relatedposts_position=0", ""
-"2016-03-25T19:52:17.567Z", "polling", "http://theprogmind.com/2016/02/04/votum-ktonik/", ""
-"2016-03-25T19:54:47.898Z", "beforeunload", "http://theprogmind.com/2016/02/04/votum-ktonik/", ""
-"2016-03-25T19:54:51.130Z", "load", "http://moskva.beeline.ru/customers/products/", ""
-"2016-03-25T19:55:14.098Z", "click", "http://moskva.beeline.ru/customers/products/", "http://moskva.beeline.ru/customers/products/#"
-"2016-03-25T19:55:14.956Z", "polling", "http://moskva.beeline.ru/customers/products/#", ""
-"2016-03-25T19:55:16.630Z", "click", "http://moskva.beeline.ru/customers/products/#", "https://my.beeline.ru/"
-"2016-03-25T19:55:17.848Z", "load", "https://my.beeline.ru/login.xhtml", ""
-"2016-03-25T19:55:17.006Z", "beforeunload", "http://moskva.beeline.ru/customers/products/#", ""
-"2016-03-25T19:55:33.097Z", "beforeunload", "https://my.beeline.ru/login.xhtml", ""
-"2016-03-25T19:55:43.696Z", "load", "https://my.beeline.ru/c/pre/index.xhtml", ""
-"2016-03-25T19:55:46.783Z", "click", "https://my.beeline.ru/c/pre/index.xhtml", "javascript:void(0);"
-"2016-03-25T19:56:16.971Z", "click", "https://my.beeline.ru/c/pre/index.xhtml", "https://my.beeline.ru/c/tariffs/tariffsList.xhtml"
-"2016-03-25T19:56:16.987Z", "beforeunload", "https://my.beeline.ru/c/pre/index.xhtml", ""
-"2016-03-25T19:56:21.178Z", "load", "https://my.beeline.ru/c/tariffs/tariffsList.xhtml", ""
-"2016-03-25T19:56:38.848Z", "click", "https://my.beeline.ru/c/tariffs/tariffsList.xhtml", "https://my.beeline.ru/c/tariffs/tariffsList.xhtml#"
-"2016-03-25T19:57:00.205Z", "click", "https://my.beeline.ru/c/tariffs/tariffsList.xhtml", "https://my.beeline.ru/c/tariffs/tariffsList.xhtml#"
-"2016-03-25T19:57:56.676Z", "polling", "https://my.beeline.ru/c/tariffs/tariffsList.xhtml#socSelected=SECOND", ""
-"2016-03-25T20:07:44.786Z", "beforeunload", "https://my.beeline.ru/c/tariffs/tariffsList.xhtml#socSelected=SECOND", ""
-"2016-03-25T20:07:46.374Z", "load", "http://www.bbc.com/", ""
-"2016-03-25T20:08:07.675Z", "click", "http://www.bbc.com/", "http://www.bbc.com/weather/"
-"2016-03-25T20:08:07.685Z", "beforeunload", "http://www.bbc.com/", ""
-"2016-03-25T20:08:09.802Z", "load", "http://www.bbc.com/weather/", ""
-"2016-03-25T20:08:30.496Z", "beforeunload", "http://www.bbc.com/weather/", ""
-"2016-03-25T20:08:32.179Z", "load", "http://www.bbc.com/weather/524901", ""
-"2016-03-25T20:08:36.472Z", "click", "http://www.bbc.com/weather/524901", "http://www.bbc.com/weather/524901?day=1"
-"2016-03-25T20:08:38.650Z", "click", "http://www.bbc.com/weather/524901", "http://www.bbc.com/weather/524901?day=2"
-"2016-03-25T20:09:09.979Z", "click", "http://www.bbc.com/weather/524901", "http://www.bbc.com/weather/524901?day=3"
-"2016-03-25T20:09:14.623Z", "click", "http://www.bbc.com/weather/524901", "http://www.bbc.com/weather/524901?day=4"
-"2016-03-25T21:21:34.071Z", "beforeunload", "http://www.bbc.com/weather/524901", ""
-"2016-03-25T21:21:34.944Z", "load", "http://www.kuleuven.be/kuleuven/", ""
-"2016-03-25T21:21:45.703Z", "click", "http://www.kuleuven.be/kuleuven/", "http://www.kuleuven.be/kuleuven/#"
-"2016-03-25T21:21:49.383Z", "click", "http://www.kuleuven.be/kuleuven/", "http://toledo.kuleuven.be/"
-"2016-03-25T21:21:49.396Z", "beforeunload", "http://www.kuleuven.be/kuleuven/", ""
-"2016-03-25T21:21:50.959Z", "load", "http://toledo.kuleuven.be/", ""
-"2016-03-25T21:21:52.575Z", "click", "http://toledo.kuleuven.be/", "http://toledo.kuleuven.be/portal"
-"2016-03-25T21:21:52.586Z", "beforeunload", "http://toledo.kuleuven.be/", ""
-"2016-03-25T21:21:52.793Z", "load", "https://toledo.kuleuven.be/portal/", ""
-"2016-03-25T21:21:52.873Z", "beforeunload", "https://toledo.kuleuven.be/portal/", ""
-"2016-03-25T21:21:53.246Z", "load", "https://idp.kuleuven.be/idp/view/login.htm", ""
-"2016-03-25T21:22:10.493Z", "beforeunload", "https://idp.kuleuven.be/idp/view/login.htm", ""
-"2016-03-25T21:22:10.831Z", "load", "https://idp.kuleuven.be/idp/profile/SAML2/POST/SSO", ""
-"2016-03-25T21:22:10.837Z", "beforeunload", "https://idp.kuleuven.be/idp/profile/SAML2/POST/SSO", ""
-"2016-03-25T21:22:11.504Z", "load", "https://toledo.kuleuven.be/portal/", ""
-"2016-03-25T21:22:12.017Z", "polling", "https://toledo.kuleuven.be/portal/#/home", ""
-"2016-03-25T22:35:56.449Z", "beforeunload", "https://toledo.kuleuven.be/portal/#/home", ""
-"2016-03-25T22:35:58.132Z", "load", "https://habrahabr.ru/", ""
-"2016-03-25T22:38:34.781Z", "beforeunload", "https://habrahabr.ru/", ""
-"2016-03-25T22:38:36.014Z", "load", "http://vk.com/feed", ""
+2016-03-25T19:34:11.897Z, load, https://www.google.com/intl/ru/mail/help/about.html, 
+2016-03-25T19:34:14.103Z, click, https://www.google.com/intl/ru/mail/help/about.html, https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=ru
+2016-03-25T19:34:14.111Z, beforeunload, https://www.google.com/intl/ru/mail/help/about.html, 
+2016-03-25T19:34:14.822Z, load, https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=ru#identifier, 
+2016-03-25T19:34:26.321Z, polling, https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=ru#password, 
+2016-03-25T19:34:30.864Z, beforeunload, https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=ru#password, 
+2016-03-25T19:34:31.309Z, load, https://accounts.google.com/CheckCookie?hl=ru&checkedDomains=youtube&checkConnection=youtube%3A646%3A1&pstMsg=1&chtml=LoginDoneHtml&service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&gidl=CAA, 
+2016-03-25T19:34:31.571Z, beforeunload, https://accounts.google.com/CheckCookie?hl=ru&checkedDomains=youtube&checkConnection=youtube%3A646%3A1&pstMsg=1&chtml=LoginDoneHtml&service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&gidl=CAA, 
+2016-03-25T19:34:33.226Z, load, https://mail.google.com/mail/u/0/, 
+2016-03-25T19:34:34.606Z, polling, https://mail.google.com/mail/u/0/#inbox, 
+2016-03-25T19:38:52.223Z, beforeunload, https://mail.google.com/mail/u/0/#inbox, 
+2016-03-25T19:38:53.593Z, load, https://godville.net/, 
+2016-03-25T19:39:02.216Z, beforeunload, https://godville.net/, 
+2016-03-25T19:39:02.758Z, load, https://godville.net/superhero, 
+2016-03-25T19:40:22.750Z, beforeunload, https://godville.net/superhero, 
+2016-03-25T19:40:22.953Z, load, https://godville.net/superhero, 
+2016-03-25T19:40:52.570Z, beforeunload, https://godville.net/superhero, 
+2016-03-25T19:40:53.706Z, load, http://bash.im/, 
+2016-03-25T19:41:05.013Z, click, http://bash.im/, http://zadolba.li/
+2016-03-25T19:41:05.060Z, beforeunload, http://bash.im/, 
+2016-03-25T19:41:05.656Z, load, http://zadolba.li/, 
+2016-03-25T19:43:33.195Z, beforeunload, http://zadolba.li/, 
+2016-03-25T19:43:33.918Z, load, https://www.facebook.com/?_rdr, 
+2016-03-25T19:43:42.414Z, beforeunload, https://www.facebook.com/?_rdr, 
+2016-03-25T19:43:44.821Z, load, https://www.facebook.com/, 
+2016-03-25T19:47:59.207Z, beforeunload, https://www.facebook.com/, 
+2016-03-25T19:48:01.209Z, load, http://theprogmind.com/, 
+2016-03-25T19:48:05.499Z, click, http://theprogmind.com/, http://theprogmind.com/2016/03/26/circus-maximus-havoc/
+2016-03-25T19:48:05.508Z, beforeunload, http://theprogmind.com/, 
+2016-03-25T19:48:06.751Z, load, http://theprogmind.com/2016/03/26/circus-maximus-havoc/, 
+2016-03-25T19:52:15.531Z, click, http://theprogmind.com/2016/03/26/circus-maximus-havoc/, http://theprogmind.com/2016/02/04/votum-ktonik/?relatedposts_hit=1&relatedposts_origin=2173&relatedposts_position=0
+2016-03-25T19:52:15.546Z, beforeunload, http://theprogmind.com/2016/03/26/circus-maximus-havoc/, 
+2016-03-25T19:52:17.048Z, load, http://theprogmind.com/2016/02/04/votum-ktonik/?relatedposts_hit=1&relatedposts_origin=2173&relatedposts_position=0, 
+2016-03-25T19:52:17.567Z, polling, http://theprogmind.com/2016/02/04/votum-ktonik/, 
+2016-03-25T19:54:47.898Z, beforeunload, http://theprogmind.com/2016/02/04/votum-ktonik/, 
+2016-03-25T19:54:51.130Z, load, http://moskva.beeline.ru/customers/products/, 
+2016-03-25T19:55:14.098Z, click, http://moskva.beeline.ru/customers/products/, http://moskva.beeline.ru/customers/products/#
+2016-03-25T19:55:14.956Z, polling, http://moskva.beeline.ru/customers/products/#, 
+2016-03-25T19:55:16.630Z, click, http://moskva.beeline.ru/customers/products/#, https://my.beeline.ru/
+2016-03-25T19:55:17.848Z, load, https://my.beeline.ru/login.xhtml, 
+2016-03-25T19:55:17.006Z, beforeunload, http://moskva.beeline.ru/customers/products/#, 
+2016-03-25T19:55:33.097Z, beforeunload, https://my.beeline.ru/login.xhtml, 
+2016-03-25T19:55:43.696Z, load, https://my.beeline.ru/c/pre/index.xhtml, 
+2016-03-25T19:55:46.783Z, click, https://my.beeline.ru/c/pre/index.xhtml, javascript:void(0);
+2016-03-25T19:56:16.971Z, click, https://my.beeline.ru/c/pre/index.xhtml, https://my.beeline.ru/c/tariffs/tariffsList.xhtml
+2016-03-25T19:56:16.987Z, beforeunload, https://my.beeline.ru/c/pre/index.xhtml, 
+2016-03-25T19:56:21.178Z, load, https://my.beeline.ru/c/tariffs/tariffsList.xhtml, 
+2016-03-25T19:56:38.848Z, click, https://my.beeline.ru/c/tariffs/tariffsList.xhtml, https://my.beeline.ru/c/tariffs/tariffsList.xhtml#
+2016-03-25T19:57:00.205Z, click, https://my.beeline.ru/c/tariffs/tariffsList.xhtml, https://my.beeline.ru/c/tariffs/tariffsList.xhtml#
+2016-03-25T19:57:56.676Z, polling, https://my.beeline.ru/c/tariffs/tariffsList.xhtml#socSelected=SECOND, 
+2016-03-25T20:07:44.786Z, beforeunload, https://my.beeline.ru/c/tariffs/tariffsList.xhtml#socSelected=SECOND, 
+2016-03-25T20:07:46.374Z, load, http://www.bbc.com/, 
+2016-03-25T20:08:07.675Z, click, http://www.bbc.com/, http://www.bbc.com/weather/
+2016-03-25T20:08:07.685Z, beforeunload, http://www.bbc.com/, 
+2016-03-25T20:08:09.802Z, load, http://www.bbc.com/weather/, 
+2016-03-25T20:08:30.496Z, beforeunload, http://www.bbc.com/weather/, 
+2016-03-25T20:08:32.179Z, load, http://www.bbc.com/weather/524901, 
+2016-03-25T20:08:36.472Z, click, http://www.bbc.com/weather/524901, http://www.bbc.com/weather/524901?day=1
+2016-03-25T20:08:38.650Z, click, http://www.bbc.com/weather/524901, http://www.bbc.com/weather/524901?day=2
+2016-03-25T20:09:09.979Z, click, http://www.bbc.com/weather/524901, http://www.bbc.com/weather/524901?day=3
+2016-03-25T20:09:14.623Z, click, http://www.bbc.com/weather/524901, http://www.bbc.com/weather/524901?day=4
+2016-03-25T21:21:34.071Z, beforeunload, http://www.bbc.com/weather/524901, 
+2016-03-25T21:21:34.944Z, load, http://www.kuleuven.be/kuleuven/, 
+2016-03-25T21:21:45.703Z, click, http://www.kuleuven.be/kuleuven/, http://www.kuleuven.be/kuleuven/#
+2016-03-25T21:21:49.383Z, click, http://www.kuleuven.be/kuleuven/, http://toledo.kuleuven.be/
+2016-03-25T21:21:49.396Z, beforeunload, http://www.kuleuven.be/kuleuven/, 
+2016-03-25T21:21:50.959Z, load, http://toledo.kuleuven.be/, 
+2016-03-25T21:21:52.575Z, click, http://toledo.kuleuven.be/, http://toledo.kuleuven.be/portal
+2016-03-25T21:21:52.586Z, beforeunload, http://toledo.kuleuven.be/, 
+2016-03-25T21:21:52.793Z, load, https://toledo.kuleuven.be/portal/, 
+2016-03-25T21:21:52.873Z, beforeunload, https://toledo.kuleuven.be/portal/, 
+2016-03-25T21:21:53.246Z, load, https://idp.kuleuven.be/idp/view/login.htm, 
+2016-03-25T21:22:10.493Z, beforeunload, https://idp.kuleuven.be/idp/view/login.htm, 
+2016-03-25T21:22:10.831Z, load, https://idp.kuleuven.be/idp/profile/SAML2/POST/SSO, 
+2016-03-25T21:22:10.837Z, beforeunload, https://idp.kuleuven.be/idp/profile/SAML2/POST/SSO, 
+2016-03-25T21:22:11.504Z, load, https://toledo.kuleuven.be/portal/, 
+2016-03-25T21:22:12.017Z, polling, https://toledo.kuleuven.be/portal/#/home, 
+2016-03-25T22:35:56.449Z, beforeunload, https://toledo.kuleuven.be/portal/#/home, 
+2016-03-25T22:35:58.132Z, load, https://habrahabr.ru/, 
+2016-03-25T22:38:34.781Z, beforeunload, https://habrahabr.ru/, 
+2016-03-25T22:38:36.014Z, load, http://vk.com/feed, 
 

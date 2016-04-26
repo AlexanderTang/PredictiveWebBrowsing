@@ -1,459 +1,459 @@
-"2016-03-24T14:24:49.015Z", "beforeunload", "https://www.linuxmint.com/start/rebecca/", ""
-"2016-03-24T14:24:50.130Z", "load", "https://www.reddit.com/", ""
-"2016-03-24T14:24:59.624Z", "beforeunload", "https://www.reddit.com/", ""
-"2016-03-24T14:25:01.433Z", "load", "https://www.reddit.com/", ""
-"2016-03-24T14:25:12.011Z", "click", "https://www.reddit.com/", "https://www.reddit.com/r/gaming/"
-"2016-03-24T14:25:12.041Z", "beforeunload", "https://www.reddit.com/", ""
-"2016-03-24T14:25:13.279Z", "load", "https://www.reddit.com/r/gaming/", ""
-"2016-03-24T14:25:23.655Z", "click", "https://www.reddit.com/r/gaming/", "https://imgur.com/gallery/0rAuS"
-"2016-03-24T14:25:23.692Z", "beforeunload", "https://www.reddit.com/r/gaming/", ""
-"2016-03-24T14:25:30.630Z", "load", "https://imgur.com/gallery/0rAuS", ""
-"2016-03-24T14:25:57.215Z", "beforeunload", "https://imgur.com/gallery/0rAuS", ""
-"2016-03-24T14:25:57.603Z", "load", "https://www.reddit.com/r/gaming/", ""
-"2016-03-24T14:26:11.102Z", "click", "https://www.reddit.com/r/gaming/", "https://www.reddit.com/r/gaming/comments/4bmxaq/just_wanted_to_share_this_nostalgic_gif/"
-"2016-03-24T14:26:11.133Z", "beforeunload", "https://www.reddit.com/r/gaming/", ""
-"2016-03-24T14:26:13.530Z", "load", "https://www.reddit.com/r/gaming/comments/4bmxaq/just_wanted_to_share_this_nostalgic_gif/", ""
-"2016-03-24T14:27:45.878Z", "click", "https://www.reddit.com/r/gaming/comments/4bmxaq/just_wanted_to_share_this_nostalgic_gif/", "https://www.reddit.com/r/space/"
-"2016-03-24T14:27:45.901Z", "beforeunload", "https://www.reddit.com/r/gaming/comments/4bmxaq/just_wanted_to_share_this_nostalgic_gif/", ""
-"2016-03-24T14:27:47.072Z", "load", "https://www.reddit.com/r/space/", ""
-"2016-03-24T14:27:53.939Z", "click", "https://www.reddit.com/r/space/", "http://i.imgur.com/sCYzj5H.png"
-"2016-03-24T14:27:53.971Z", "beforeunload", "https://www.reddit.com/r/space/", ""
-"2016-03-24T14:27:54.215Z", "load", "http://i.imgur.com/sCYzj5H.png", ""
-"2016-03-24T14:27:56.384Z", "beforeunload", "http://i.imgur.com/sCYzj5H.png", ""
-"2016-03-24T14:27:56.711Z", "load", "https://www.reddit.com/r/space/", ""
-"2016-03-24T14:28:05.244Z", "click", "https://www.reddit.com/r/space/", "http://www.drewexmachina.com/2016/03/24/the-practical-limits-of-trip-times-to-the-planets/"
-"2016-03-24T14:28:05.275Z", "beforeunload", "https://www.reddit.com/r/space/", ""
-"2016-03-24T14:28:11.523Z", "beforeunload", "https://www.reddit.com/r/space/", ""
-"2016-03-24T14:28:14.899Z", "load", "https://www.reddit.com/r/space/", ""
-"2016-03-24T14:28:18.762Z", "click", "https://www.reddit.com/r/space/", "http://www.csmonitor.com/Science/2016/0323/Ceres-becomes-even-more-mysterious-with-new-specatular-images"
-"2016-03-24T14:28:18.793Z", "beforeunload", "https://www.reddit.com/r/space/", ""
-"2016-03-24T14:28:20.564Z", "load", "http://www.csmonitor.com/Science/2016/0323/Spectacular-Ceres-images-deepen-mystery-of-dwarf-planet-s-geology", ""
-"2016-03-24T14:29:26.603Z", "beforeunload", "http://www.csmonitor.com/Science/2016/0323/Spectacular-Ceres-images-deepen-mystery-of-dwarf-planet-s-geology", ""
-"2016-03-24T14:29:33.897Z", "load", "http://sporza.be/cm/sporza", ""
-"2016-03-24T14:29:44.861Z", "click", "http://sporza.be/cm/sporza", "http://sporza.be/cm/sporza/voetbal/buitenland/Nederland/1.2610913"
-"2016-03-24T14:29:45.808Z", "load", "http://sporza.be/cm/sporza/voetbal/buitenland/Nederland/1.2610913", ""
-"2016-03-24T14:29:44.867Z", "beforeunload", "http://sporza.be/cm/sporza", ""
-"2016-03-24T14:30:23.044Z", "click", "http://sporza.be/cm/sporza/voetbal/buitenland/Nederland/1.2610913", "http://sporza.be/cm/sporza"
-"2016-03-24T14:30:24.121Z", "load", "http://sporza.be/cm/sporza", ""
-"2016-03-24T14:30:23.050Z", "beforeunload", "http://sporza.be/cm/sporza/voetbal/buitenland/Nederland/1.2610913", ""
-"2016-03-24T14:31:41.126Z", "click", "http://sporza.be/cm/sporza", "http://sporza.be/cm/sporza/voetbal"
-"2016-03-24T14:31:41.149Z", "beforeunload", "http://sporza.be/cm/sporza", ""
-"2016-03-24T14:31:47.164Z", "load", "http://sporza.be/cm/sporza/voetbal", ""
-"2016-03-24T14:32:04.156Z", "click", "http://sporza.be/cm/sporza/voetbal", "http://sporza.be/cm/sporza/matchcenter/mc_voetbal/jupilerleague_1516/JPL_PO_speeldag1"
-"2016-03-24T14:32:04.162Z", "beforeunload", "http://sporza.be/cm/sporza/voetbal", ""
-"2016-03-24T14:32:06.655Z", "load", "http://sporza.be/cm/sporza/matchcenter/mc_voetbal/jupilerleague_1516/JPL_PO_speeldag1", ""
-"2016-03-24T14:32:14.606Z", "beforeunload", "http://sporza.be/cm/sporza/matchcenter/mc_voetbal/jupilerleague_1516/JPL_PO_speeldag1", ""
-"2016-03-24T14:32:16.119Z", "load", "https://www.youtube.com/", ""
-"2016-03-24T14:32:17.473Z", "beforeunload", "https://www.youtube.com/", ""
-"2016-03-24T14:32:18.055Z", "load", "https://accounts.google.com/ServiceLogin?hl=en&service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Ffeature%3Dsign_in_button%26hl%3Den%26app%3Ddesktop%26next%3D%252F%26action_handle_signin%3Dtrue&passive=true&uilel=3#identifier", ""
-"2016-03-24T14:32:27.555Z", "polling", "https://accounts.google.com/ServiceLogin?hl=en&service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Ffeature%3Dsign_in_button%26hl%3Den%26app%3Ddesktop%26next%3D%252F%26action_handle_signin%3Dtrue&passive=true&uilel=3#password", ""
-"2016-03-24T14:32:28.906Z", "beforeunload", "https://accounts.google.com/ServiceLogin?hl=en&service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Ffeature%3Dsign_in_button%26hl%3Den%26app%3Ddesktop%26next%3D%252F%26action_handle_signin%3Dtrue&passive=true&uilel=3#password", ""
-"2016-03-24T14:32:29.316Z", "load", "https://accounts.google.com/ServiceLoginAuth#password", ""
-"2016-03-24T14:32:36.052Z", "beforeunload", "https://accounts.google.com/ServiceLoginAuth#password", ""
-"2016-03-24T14:32:36.404Z", "load", "https://accounts.google.com/CheckCookie?hl=en&checkedDomains=youtube&checkConnection=youtube%3A374%3A1&pstMsg=1&chtml=LoginDoneHtml&service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Ffeature%3Dsign_in_button%26hl%3Den%26app%3Ddesktop%26next%3D%252F%26action_handle_signin%3Dtrue&gidl=CAA", ""
-"2016-03-24T14:32:36.497Z", "beforeunload", "https://accounts.google.com/CheckCookie?hl=en&checkedDomains=youtube&checkConnection=youtube%3A374%3A1&pstMsg=1&chtml=LoginDoneHtml&service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Ffeature%3Dsign_in_button%26hl%3Den%26app%3Ddesktop%26next%3D%252F%26action_handle_signin%3Dtrue&gidl=CAA", ""
-"2016-03-24T14:32:37.383Z", "load", "https://www.youtube.com/signin?action_prompt_identity=true&next=%2F&app=desktop", ""
-"2016-03-24T14:32:39.827Z", "beforeunload", "https://www.youtube.com/signin?action_prompt_identity=true&next=%2F&app=desktop", ""
-"2016-03-24T14:32:42.715Z", "load", "https://www.youtube.com/", ""
-"2016-03-24T14:33:01.045Z", "click", "https://www.youtube.com/", "https://www.youtube.com/watch?v=fbJg5yeo12c"
-"2016-03-24T14:33:01.076Z", "beforeunload", "https://www.youtube.com/", ""
-"2016-03-24T14:33:01.711Z", "load", "https://www.youtube.com/watch?v=fbJg5yeo12c", ""
-"2016-03-24T14:36:51.173Z", "load", "http://vtm.be/", ""
-"2016-03-24T14:36:56.652Z", "load", "http://www.hln.be/", ""
-"2016-03-24T14:36:57.906Z", "beforeunload", "http://vtm.be/", ""
-"2016-03-24T14:36:59.682Z", "load", "http://www.vier.be/", ""
-"2016-03-24T14:37:03.524Z", "beforeunload", "http://www.vier.be/", ""
-"2016-03-24T14:38:03.137Z", "click", "http://www.hln.be/", "http://www.hln.be/hln/nl/36484/Aanslagen-Brussel/article/detail/2656721/2016/03/24/Geens-Onze-diensten-hebben-fout-gemaakt.dhtml"
-"2016-03-24T14:38:03.234Z", "beforeunload", "http://www.hln.be/", ""
-"2016-03-24T14:38:05.812Z", "load", "http://www.hln.be/hln/nl/36484/Aanslagen-Brussel/article/detail/2656721/2016/03/24/Geens-Onze-diensten-hebben-fout-gemaakt.dhtml", ""
-"2016-03-24T14:38:07.104Z", "click", "http://www.hln.be/hln/nl/36484/Aanslagen-Brussel/article/detail/2656721/2016/03/24/Geens-Onze-diensten-hebben-fout-gemaakt.dhtml", "http://www.hln.be/hln/nl/922/Nieuws/index.dhtml"
-"2016-03-24T14:38:07.184Z", "beforeunload", "http://www.hln.be/hln/nl/36484/Aanslagen-Brussel/article/detail/2656721/2016/03/24/Geens-Onze-diensten-hebben-fout-gemaakt.dhtml", ""
-"2016-03-24T14:38:09.081Z", "load", "http://www.hln.be/hln/nl/922/Nieuws/index.dhtml", ""
-"2016-03-24T14:38:58.006Z", "click", "https://www.youtube.com/watch?v=fbJg5yeo12c", "https://www.youtube.com/"
-"2016-03-24T14:38:58.022Z", "beforeunload", "https://www.youtube.com/watch?v=fbJg5yeo12c", ""
-"2016-03-24T14:39:00.636Z", "load", "https://www.youtube.com/", ""
-"2016-03-24T14:39:16.962Z", "click", "https://www.youtube.com/", "https://www.youtube.com/watch?v=ISdfUPd2AIA"
-"2016-03-24T14:39:16.988Z", "beforeunload", "https://www.youtube.com/", ""
-"2016-03-24T14:39:18.231Z", "load", "https://www.youtube.com/watch?v=ISdfUPd2AIA", ""
-"2016-03-24T14:39:33.613Z", "click", "https://www.youtube.com/watch?v=ISdfUPd2AIA", ""
-"2016-03-24T14:41:42.260Z", "click", "https://www.youtube.com/watch?v=ISdfUPd2AIA", "https://www.youtube.com/watch?v=RGp3FZSi900"
-"2016-03-24T14:41:42.290Z", "beforeunload", "https://www.youtube.com/watch?v=ISdfUPd2AIA", ""
-"2016-03-24T14:41:43.488Z", "load", "https://www.youtube.com/watch?v=RGp3FZSi900", ""
-"2016-03-24T14:42:18.135Z", "click", "https://www.youtube.com/watch?v=RGp3FZSi900", ""
-"2016-03-24T14:42:29.357Z", "beforeunload", "http://www.hln.be/hln/nl/922/Nieuws/index.dhtml", ""
-"2016-03-24T14:42:31.563Z", "load", "http://www.nieuwsblad.be/sportwereld", ""
-"2016-03-24T14:42:35.876Z", "click", "http://www.nieuwsblad.be/sportwereld", "http://www.nieuwsblad.be/sportwereld#modalbox-splash"
-"2016-03-24T14:42:38.272Z", "beforeunload", "http://www.nieuwsblad.be/sportwereld", ""
-"2016-03-24T14:42:38.264Z", "click", "http://www.nieuwsblad.be/sportwereld", "http://www.nieuwsblad.be/sportwereld/voetbal"
-"2016-03-24T14:42:40.339Z", "load", "http://www.nieuwsblad.be/sportwereld/voetbal", ""
-"2016-03-24T14:42:46.571Z", "click", "http://www.nieuwsblad.be/sportwereld/voetbal", "http://www.nieuwsblad.be/sportwereld/tag/voetbal/belgie"
-"2016-03-24T14:42:46.593Z", "beforeunload", "http://www.nieuwsblad.be/sportwereld/voetbal", ""
-"2016-03-24T14:42:47.981Z", "load", "http://www.nieuwsblad.be/sportwereld/tag/voetbal/belgie", ""
-"2016-03-24T14:43:08.483Z", "click", "http://www.nieuwsblad.be/sportwereld/tag/voetbal/belgie", "http://www.nieuwsblad.be/cnt/dmf20160324_02200618"
-"2016-03-24T14:43:08.517Z", "beforeunload", "http://www.nieuwsblad.be/sportwereld/tag/voetbal/belgie", ""
-"2016-03-24T14:43:09.635Z", "load", "http://www.nieuwsblad.be/cnt/dmf20160324_02200618", ""
-"2016-03-24T14:43:17.381Z", "click", "http://www.nieuwsblad.be/cnt/dmf20160324_02200618", "http://www.nieuwsblad.be/sportwereld/wielrennen"
-"2016-03-24T14:43:18.134Z", "load", "http://www.nieuwsblad.be/sportwereld/wielrennen", ""
-"2016-03-24T14:43:17.401Z", "beforeunload", "http://www.nieuwsblad.be/cnt/dmf20160324_02200618", ""
-"2016-03-24T14:43:43.928Z", "click", "http://www.nieuwsblad.be/sportwereld/wielrennen", "http://www.nieuwsblad.be/sportwereld/wielrennen"
-"2016-03-24T14:43:43.942Z", "beforeunload", "http://www.nieuwsblad.be/sportwereld/wielrennen", ""
-"2016-03-24T14:43:44.445Z", "load", "http://www.nieuwsblad.be/sportwereld/wielrennen", ""
-"2016-03-24T14:43:46.591Z", "click", "http://www.nieuwsblad.be/sportwereld/wielrennen", "http://www.nieuwsblad.be/cnt/dmf20160323_02199928"
-"2016-03-24T14:43:46.601Z", "beforeunload", "http://www.nieuwsblad.be/sportwereld/wielrennen", ""
-"2016-03-24T14:43:47.401Z", "load", "http://www.nieuwsblad.be/cnt/dmf20160323_02199928", ""
-"2016-03-24T14:44:00.465Z", "beforeunload", "https://www.youtube.com/watch?v=RGp3FZSi900", ""
-"2016-03-24T14:44:01.775Z", "load", "https://www.youtube.com/results?search_query=Mars+footage", ""
-"2016-03-24T14:44:04.309Z", "click", "https://www.youtube.com/results?search_query=Mars+footage", "https://www.youtube.com/watch?v=7zpojhD4hpI"
-"2016-03-24T14:44:04.337Z", "beforeunload", "https://www.youtube.com/results?search_query=Mars+footage", ""
-"2016-03-24T14:44:05.681Z", "load", "https://www.youtube.com/watch?v=7zpojhD4hpI", ""
-"2016-03-24T14:44:18.558Z", "click", "https://www.youtube.com/watch?v=7zpojhD4hpI", ""
-"2016-03-24T14:49:51.680Z", "load", "http://www.gva.be/", ""
-"2016-03-24T14:49:55.867Z", "click", "http://www.gva.be/", "http://www.gva.be/sport"
-"2016-03-24T14:49:56.776Z", "load", "http://www.gva.be/sport", ""
-"2016-03-24T14:49:55.884Z", "beforeunload", "http://www.gva.be/", ""
-"2016-03-24T14:50:00.479Z", "beforeunload", "http://www.gva.be/sport", ""
-"2016-03-24T14:50:00.440Z", "click", "http://www.gva.be/sport", "http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal"
-"2016-03-24T14:50:01.832Z", "load", "http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal", ""
-"2016-03-24T14:50:04.226Z", "click", "http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal", "http://www.gva.be/sport"
-"2016-03-24T14:50:04.236Z", "beforeunload", "http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal", ""
-"2016-03-24T14:50:04.768Z", "load", "http://www.gva.be/sport", ""
-"2016-03-24T14:50:09.532Z", "click", "http://www.gva.be/sport", "http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal"
-"2016-03-24T14:50:09.553Z", "beforeunload", "http://www.gva.be/sport", ""
-"2016-03-24T14:50:10.071Z", "load", "http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal", ""
-"2016-03-24T14:50:12.412Z", "click", "http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal", "http://www.gva.be/"
-"2016-03-24T14:50:12.428Z", "beforeunload", "http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal", ""
-"2016-03-24T14:50:16.155Z", "click", "http://www.gva.be/", "http://www.gva.be/regio/regio-kempen"
-"2016-03-24T14:50:13.514Z", "load", "http://www.gva.be/", ""
-"2016-03-24T14:50:16.680Z", "beforeunload", "http://www.gva.be/", ""
-"2016-03-24T14:50:17.600Z", "load", "http://www.gva.be/regio/regio-kempen", ""
-"2016-03-24T14:50:17.284Z", "load", "http://tap2-cdn.rubiconproject.com/partner/scripts/rubicon/emily.html?rtb_ext=1&pc=7916/12718&geo=eu&co=be", ""
-"2016-03-24T14:50:19.802Z", "click", "http://www.gva.be/regio/regio-kempen", "http://www.gva.be/cnt/dmf20160321_02194589/dit-weekend-in-citta-kempen"
-"2016-03-24T14:50:19.827Z", "beforeunload", "http://www.gva.be/regio/regio-kempen", ""
-"2016-03-24T14:50:20.877Z", "load", "http://www.gva.be/cnt/dmf20160321_02194589/dit-weekend-in-citta-kempen", ""
-"2016-03-24T14:50:23.393Z", "click", "http://www.gva.be/cnt/dmf20160321_02194589/dit-weekend-in-citta-kempen", "http://www.gva.be/regio/regio-kempen"
-"2016-03-24T14:50:23.407Z", "beforeunload", "http://www.gva.be/cnt/dmf20160321_02194589/dit-weekend-in-citta-kempen", ""
-"2016-03-24T14:50:23.969Z", "load", "http://www.gva.be/regio/regio-kempen", ""
-"2016-03-24T14:39:23.791Z", "load", "https://news.ycombinator.com/", ""
-"2016-03-24T14:39:47.042Z", "load", "https://security.googleblog.com/2016/03/more-encryption-more-notifications-more.html", ""
-"2016-03-24T14:40:11.340Z", "load", "https://news.ycombinator.com/item?id=11359664", ""
-"2016-03-24T14:41:21.317Z", "load", "https://www.omniref.com/code_review", ""
-"2016-03-24T14:41:33.412Z", "beforeunload", "https://www.omniref.com/code_review", ""
-"2016-03-24T14:41:46.544Z", "load", "https://www.smashingmagazine.com/2016/03/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of/", ""
-"2016-03-24T14:42:05.681Z", "load", "https://news.ycombinator.com/item?id=11357794", ""
-"2016-03-24T14:42:35.006Z", "beforeunload", "https://news.ycombinator.com/", ""
-"2016-03-24T14:42:37.106Z", "load", "https://www.reddit.com/", ""
-"2016-03-24T14:42:39.618Z", "load", "http://redditenhancementsuite.com/whatsnew.html?v=4.6.1", ""
-"2016-03-24T14:42:49.222Z", "click", "https://www.reddit.com/", "https://www.reddit.com/new/"
-"2016-03-24T14:42:49.285Z", "beforeunload", "https://www.reddit.com/", ""
-"2016-03-24T14:42:51.630Z", "load", "https://www.reddit.com/new/", ""
-"2016-03-24T14:43:01.300Z", "load", "https://www.youtube.com/watch?v=XpLEHRonid8&ab_channel=J", ""
-"2016-03-24T14:47:15.143Z", "beforeunload", "https://www.youtube.com/watch?v=XpLEHRonid8&ab_channel=J", ""
-"2016-03-24T14:47:22.038Z", "click", "https://www.reddit.com/new/", "https://www.reddit.com/"
-"2016-03-24T14:47:22.085Z", "beforeunload", "https://www.reddit.com/new/", ""
-"2016-03-24T14:47:24.339Z", "load", "https://www.reddit.com/", ""
-"2016-03-24T14:47:26.929Z", "click", "https://www.reddit.com/", "https://www.reddit.com/message/inbox/"
-"2016-03-24T14:47:27.119Z", "beforeunload", "https://www.reddit.com/", ""
-"2016-03-24T14:47:29.168Z", "load", "https://www.reddit.com/message/inbox/", ""
-"2016-03-24T14:48:07.697Z", "click", "https://www.reddit.com/message/inbox/", "https://www.reddit.com/"
-"2016-03-24T14:48:07.726Z", "beforeunload", "https://www.reddit.com/message/inbox/", ""
-"2016-03-24T14:48:09.666Z", "load", "https://www.reddit.com/", ""
-"2016-03-24T14:48:11.834Z", "beforeunload", "https://www.reddit.com/", ""
-"2016-03-24T14:48:14.179Z", "load", "https://www.reddit.com/r/darksouls", ""
-"2016-03-24T14:48:24.909Z", "load", "https://www.reddit.com/r/darksouls/comments/4bt86x/someone_should_sell_stress_balls_shaped_like/", ""
-"2016-03-24T14:48:45.712Z", "click", "https://www.reddit.com/r/darksouls/comments/4bt86x/someone_should_sell_stress_balls_shaped_like/", "javascript:void(0)"
-"2016-03-24T14:48:47.796Z", "click", "https://www.reddit.com/r/darksouls/comments/4bt86x/someone_should_sell_stress_balls_shaped_like/", "javascript:void(0)"
-"2016-03-24T14:48:57.909Z", "beforeunload", "https://www.reddit.com/r/darksouls/comments/4bt86x/someone_should_sell_stress_balls_shaped_like/", ""
-"2016-03-24T14:49:06.637Z", "load", "https://www.reddit.com/r/darksouls/comments/4bwjlo/need_help_with_dsfix_and_some_other_stuff/", ""
-"2016-03-24T14:49:25.129Z", "beforeunload", "https://www.reddit.com/r/darksouls/comments/4bwjlo/need_help_with_dsfix_and_some_other_stuff/", ""
-"2016-03-24T14:49:35.791Z", "load", "https://twitter.com/", ""
-"2016-03-24T14:49:51.083Z", "click", "https://twitter.com/", "https://twitter.com/#"
-"2016-03-24T14:50:36.456Z", "beforeunload", "https://twitter.com/", ""
-"2016-03-24T14:50:39.052Z", "load", "https://www.facebook.com/", ""
-"2016-03-24T14:50:48.109Z", "click", "https://www.facebook.com/", "https://www.facebook.com/#"
-"2016-03-24T14:50:51.671Z", "click", "https://www.facebook.com/", "https://www.facebook.com/messages/"
-"2016-03-24T14:50:52.141Z", "polling", "https://www.facebook.com/messages/", ""
-"2016-03-24T14:50:53.766Z", "polling", "https://www.facebook.com/messages/Caro.otjj", ""
-"2016-03-24T14:50:59.977Z", "click", "https://www.facebook.com/messages/Caro.otjj", "https://www.facebook.com/messages/conversation-1719792268307148"
-"2016-03-24T14:51:00.063Z", "polling", "https://www.facebook.com/messages/conversation-1719792268307148", ""
-"2016-03-24T14:51:08.765Z", "beforeunload", "https://www.facebook.com/messages/conversation-1719792268307148", ""
-"2016-03-24T14:51:09.914Z", "load", "http://en.lichess.org/", ""
-"2016-03-24T14:51:14.003Z", "click", "http://en.lichess.org/", "http://en.lichess.org/training/daily"
-"2016-03-24T14:51:14.019Z", "beforeunload", "http://en.lichess.org/", ""
-"2016-03-24T14:51:14.662Z", "load", "http://en.lichess.org/training/55459", ""
-"2016-03-24T14:51:52.161Z", "click", "http://en.lichess.org/training/55459", ""
-"2016-03-24T14:51:52.661Z", "polling", "http://en.lichess.org/training/22398", ""
-"2016-03-24T14:53:42.418Z", "click", "http://en.lichess.org/training/22398", "http://en.lichess.org/"
-"2016-03-24T14:53:42.426Z", "beforeunload", "http://en.lichess.org/training/22398", ""
-"2016-03-24T14:53:43.076Z", "load", "http://en.lichess.org/", ""
-"2016-03-24T14:53:51.972Z", "load", "https://medium.com/", ""
-"2016-03-24T14:54:08.407Z", "click", "https://medium.com/", "https://medium.com/@alexteplitzky/it-s-impossible-to-make-any-political-points-through-image-making-so-stop-painting-donald-trump-deae176ea411?source=reading_list---------3-3"
-"2016-03-24T14:54:08.504Z", "polling", "https://medium.com/@alexteplitzky/it-s-impossible-to-make-any-political-points-through-image-making-so-stop-painting-donald-trump-deae176ea411", ""
-"2016-03-24T14:54:09.608Z", "polling", "https://medium.com/@alexteplitzky/it-s-impossible-to-make-any-political-points-through-image-making-so-stop-painting-donald-trump-deae176ea411#.8gonl2pug", ""
-"2016-03-24T14:54:55.094Z", "beforeunload", "https://medium.com/@alexteplitzky/it-s-impossible-to-make-any-political-points-through-image-making-so-stop-painting-donald-trump-deae176ea411#.8gonl2pug", ""
-"2016-03-24T14:54:57.823Z", "load", "http://www.standaard.be/", ""
-"2016-03-24T14:54:59.685Z", "click", "http://www.standaard.be/", "http://www.standaard.be/cnt/dmf20160325_02203598"
-"2016-03-24T14:54:59.916Z", "beforeunload", "http://www.standaard.be/", ""
-"2016-03-24T14:55:00.638Z", "load", "http://embed.scribblelive.com/Embed/v7.aspx?Id=1960548&ThemeId=31503", ""
-"2016-03-24T14:55:02.144Z", "load", "http://www.standaard.be/cnt/dmf20160325_02203598", ""
-"2016-03-24T14:55:15.286Z", "click", "http://www.standaard.be/cnt/dmf20160325_02203598", "http://www.standaard.be/"
-"2016-03-24T14:55:15.319Z", "beforeunload", "http://www.standaard.be/cnt/dmf20160325_02203598", ""
-"2016-03-24T14:55:17.563Z", "load", "http://www.standaard.be/", ""
-"2016-03-24T14:55:32.995Z", "click", "http://www.standaard.be/", "http://www.standaard.be/#most-read"
-"2016-03-24T14:55:48.529Z", "beforeunload", "http://www.standaard.be/", ""
-"2016-03-24T14:55:49.841Z", "load", "http://www.inoreader.com/", ""
-"2016-03-24T14:56:07.647Z", "beforeunload", "http://www.inoreader.com/", ""
-"2016-03-24T14:56:10.745Z", "load", "https://twigserial.wordpress.com/", ""
-"2016-03-24T14:56:23.215Z", "click", "https://twigserial.wordpress.com/", "https://twigserial.wordpress.com/2016/03/24/in-sheeps-clothing-10-2/"
-"2016-03-24T14:56:23.223Z", "beforeunload", "https://twigserial.wordpress.com/", ""
-"2016-03-24T14:56:25.594Z", "load", "https://twigserial.wordpress.com/2016/03/24/in-sheeps-clothing-10-2/", ""
-"2016-03-24T14:56:33.715Z", "load", "http://topwebfiction.com/vote.php?for=twig", ""
-"2016-03-24T14:56:35.801Z", "beforeunload", "http://topwebfiction.com/vote.php?for=twig", ""
-"2016-03-24T14:56:37.566Z", "load", "http://topwebfiction.com/?for=twig", ""
-"2016-03-24T14:56:39.769Z", "click", "http://topwebfiction.com/?for=twig", "http://topwebfiction.com/vote.php?for=worm"
-"2016-03-24T14:56:39.777Z", "beforeunload", "http://topwebfiction.com/?for=twig", ""
-"2016-03-24T14:56:40.407Z", "load", "http://topwebfiction.com/vote.php?for=worm", ""
-"2016-03-24T14:56:41.283Z", "beforeunload", "http://topwebfiction.com/vote.php?for=worm", ""
-"2016-03-24T14:56:43.082Z", "load", "http://topwebfiction.com/?for=worm", ""
-"2016-03-24T14:56:43.685Z", "beforeunload", "http://topwebfiction.com/?for=worm", ""
-"2016-03-24T14:56:54.580Z", "load", "https://www.youtube.com/", ""
-"2016-03-24T14:57:00.279Z", "beforeunload", "https://www.youtube.com/", ""
-"2016-03-24T14:57:02.146Z", "load", "https://accounts.google.com/ServiceLogin?passive=true&uilel=3&hl=en&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fnext%3D%252F%26action_handle_signin%3Dtrue%26hl%3Den%26app%3Ddesktop%26feature%3Dsign_in_button&service=youtube", ""
-"2016-03-24T14:57:33.928Z", "beforeunload", "https://accounts.google.com/ServiceLogin?passive=true&uilel=3&hl=en&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fnext%3D%252F%26action_handle_signin%3Dtrue%26hl%3Den%26app%3Ddesktop%26feature%3Dsign_in_button&service=youtube", ""
-"2016-03-24T14:57:35.787Z", "load", "https://accounts.google.com/signin/challenge/ipp/31792?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fnext%3D%252F%26action_handle_signin%3Dtrue%26hl%3Den%26app%3Ddesktop%26feature%3Dsign_in_button&service=youtube&hl=en", ""
-"2016-03-24T14:57:49.967Z", "beforeunload", "https://accounts.google.com/signin/challenge/ipp/31792?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fnext%3D%252F%26action_handle_signin%3Dtrue%26hl%3Den%26app%3Ddesktop%26feature%3Dsign_in_button&service=youtube&hl=en", ""
-"2016-03-24T14:57:54.550Z", "load", "https://www.youtube.com/", ""
-"2016-03-24T14:58:01.805Z", "beforeunload", "https://www.youtube.com/", ""
-"2016-03-24T14:58:04.733Z", "load", "https://www.youtube.com/", ""
-"2016-03-24T14:58:06.148Z", "click", "https://www.youtube.com/", "https://www.youtube.com/feed/subscriptions"
-"2016-03-24T14:58:06.597Z", "polling", "https://www.youtube.com/feed/subscriptions", ""
-"2016-03-24T14:58:18.806Z", "beforeunload", "https://www.youtube.com/feed/subscriptions", ""
-"2016-03-25T20:00:09.884Z", "load", "https://www.facebook.com/", ""
-"2016-03-25T20:01:16.679Z", "click", "https://www.facebook.com/", "https://www.facebook.com/photo.php?fbid=10151499536749806&set=a.10150948530664806.440247.738179805&type=3"
-"2016-03-25T20:01:18.791Z", "polling", "https://www.facebook.com/photo.php?fbid=10151499536749806&set=a.10150948530664806.440247.738179805&type=3&theater", ""
-"2016-03-25T20:01:24.529Z", "polling", "https://www.facebook.com/", ""
-"2016-03-25T20:01:30.401Z", "beforeunload", "https://www.facebook.com/", ""
-"2016-03-25T20:01:35.328Z", "load", "https://twitter.com/", ""
-"2016-03-25T20:02:12.684Z", "polling", "https://twitter.com/BoredElonMusk/status/713440819764715520", ""
-"2016-03-25T20:02:23.448Z", "polling", "https://twitter.com/", ""
-"2016-03-25T20:02:50.343Z", "polling", "https://twitter.com/ID_AA_Carmack/status/713418413469634560", ""
-"2016-03-25T20:02:58.320Z", "load", "https://developer.oculus.com/blog/asynchronous-timewarp-on-oculus-rift/", ""
-"2016-03-25T20:03:29.361Z", "beforeunload", "https://developer.oculus.com/blog/asynchronous-timewarp-on-oculus-rift/", ""
-"2016-03-25T20:03:31.194Z", "polling", "https://twitter.com/", ""
-"2016-03-25T20:05:29.394Z", "polling", "https://twitter.com/Demruth/status/713259241360896001", ""
-"2016-03-25T20:06:08.538Z", "load", "https://www.youtube.com/watch?v=cwXfv25xJUw", ""
-"2016-03-25T20:07:16.539Z", "click", "https://www.youtube.com/watch?v=cwXfv25xJUw", "https://www.youtube.com/"
-"2016-03-25T20:07:16.597Z", "polling", "https://www.youtube.com/", ""
-"2016-03-25T20:07:22.296Z", "click", "https://www.youtube.com/", "https://www.youtube.com/feed/subscriptions"
-"2016-03-25T20:07:22.417Z", "polling", "https://www.youtube.com/feed/subscriptions", ""
-"2016-03-25T20:07:42.690Z", "beforeunload", "https://www.youtube.com/feed/subscriptions", ""
-"2016-03-25T20:07:45.269Z", "polling", "https://twitter.com/", ""
-"2016-03-25T20:07:48.298Z", "click", "https://twitter.com/", "https://twitter.com/"
-"2016-03-25T20:07:57.266Z", "beforeunload", "https://twitter.com/", ""
-"2016-03-25T20:07:58.916Z", "load", "https://news.ycombinator.com/", ""
-"2016-03-25T20:08:35.116Z", "load", "http://www.bbc.com/future/story/20160325-the-names-that-break-computer-systems", ""
-"2016-03-25T20:08:53.572Z", "load", "https://jenkins.io/2.0/", ""
-"2016-03-25T20:10:12.183Z", "load", "http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/", ""
-"2016-03-25T20:11:03.974Z", "beforeunload", "http://www.bbc.com/future/story/20160325-the-names-that-break-computer-systems", ""
-"2016-03-25T20:12:04.406Z", "beforeunload", "http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/", ""
-"2016-03-25T20:12:22.507Z", "beforeunload", "https://jenkins.io/2.0/", ""
-"2016-03-25T20:12:26.332Z", "load", "https://news.ycombinator.com/item?id=11359915", ""
-"2016-03-25T20:12:48.393Z", "load", "http://imgur.com/1KhRws2", ""
-"2016-03-25T20:12:49.283Z", "beforeunload", "http://imgur.com/1KhRws2", ""
-"2016-03-25T20:14:45.138Z", "beforeunload", "https://news.ycombinator.com/item?id=11359915", ""
-"2016-03-25T20:14:46.092Z", "beforeunload", "https://news.ycombinator.com/", ""
-"2016-03-25T20:14:49.735Z", "load", "https://www.reddit.com/", ""
-"2016-03-25T20:14:59.021Z", "click", "https://www.reddit.com/", ""
-"2016-03-25T20:15:04.293Z", "click", "https://www.reddit.com/", ""
-"2016-03-25T20:15:07.655Z", "click", "https://www.reddit.com/", ""
-"2016-03-25T20:15:15.925Z", "click", "https://www.reddit.com/", ""
-"2016-03-25T20:15:31.059Z", "load", "http://smbc-comics.com/index.php?id=4054", ""
-"2016-03-25T20:15:41.433Z", "click", "http://smbc-comics.com/index.php?id=4054", "http://smbc-comics.com/index.php?id=4055"
-"2016-03-25T20:15:41.440Z", "beforeunload", "http://smbc-comics.com/index.php?id=4054", ""
-"2016-03-25T20:15:42.324Z", "load", "http://smbc-comics.com/index.php?id=4055", ""
-"2016-03-25T20:15:48.754Z", "click", "http://smbc-comics.com/index.php?id=4055", "http://smbc-comics.com/index.php?id=4056"
-"2016-03-25T20:15:48.762Z", "beforeunload", "http://smbc-comics.com/index.php?id=4055", ""
-"2016-03-25T20:15:49.794Z", "load", "http://smbc-comics.com/index.php?id=4056", ""
-"2016-03-25T20:15:56.341Z", "click", "http://smbc-comics.com/index.php?id=4056", "http://smbc-comics.com/index.php?id=4057"
-"2016-03-25T20:15:56.349Z", "beforeunload", "http://smbc-comics.com/index.php?id=4056", ""
-"2016-03-25T20:15:57.228Z", "load", "http://smbc-comics.com/index.php?id=4057", ""
-"2016-03-25T20:16:01.640Z", "beforeunload", "http://smbc-comics.com/index.php?id=4057", ""
-"2016-03-25T20:16:08.676Z", "polling", "https://www.reddit.com/#page=2", ""
-"2016-03-25T20:16:20.148Z", "polling", "https://www.reddit.com/#page=3", ""
-"2016-03-25T20:16:28.874Z", "load", "https://www.youtube.com/watch?v=e4Ao-iNPPUc", ""
-"2016-03-25T20:18:07.779Z", "beforeunload", "https://www.youtube.com/watch?v=e4Ao-iNPPUc", ""
-"2016-03-25T20:18:09.648Z", "polling", "https://www.reddit.com/#page=4", ""
-"2016-03-25T20:18:18.866Z", "load", "http://waitbutwhy.com/2016/03/cryonics.html", ""
-"2016-03-25T15:00:50.650Z", "load", "https://www.reddit.com/", ""
-"2016-03-25T15:00:53.688Z", "click", "https://www.reddit.com/", ""
-"2016-03-25T15:00:58.707Z", "click", "https://www.reddit.com/", ""
-"2016-03-25T15:01:11.007Z", "load", "https://www.youtube.com/watch?v=mqk6Sp9Jxj8&feature=youtu.be", ""
-"2016-03-25T15:01:30.373Z", "beforeunload", "https://www.youtube.com/watch?v=mqk6Sp9Jxj8&feature=youtu.be", ""
-"2016-03-25T15:01:36.170Z", "load", "https://www.reddit.com/r/Android/comments/4bvbuf/the_new_google_voice_leaked_with_a_comparison_to/", ""
-"2016-03-25T15:01:51.732Z", "click", "https://www.reddit.com/r/Android/comments/4bvbuf/the_new_google_voice_leaked_with_a_comparison_to/", "javascript:void(0)"
-"2016-03-25T15:02:15.683Z", "beforeunload", "https://www.reddit.com/r/Android/comments/4bvbuf/the_new_google_voice_leaked_with_a_comparison_to/", ""
-"2016-03-25T15:02:21.957Z", "load", "http://www.salon.com/2016/03/24/snowden_has_done_a_service_former_bush_official_lawrence_wilkerson_applauds_the_whistleblower/", ""
-"2016-03-25T15:03:07.880Z", "beforeunload", "http://www.salon.com/2016/03/24/snowden_has_done_a_service_former_bush_official_lawrence_wilkerson_applauds_the_whistleblower/", ""
-"2016-03-25T15:03:14.578Z", "load", "https://www.reddit.com/r/technology/comments/4btufe/snowden_has_done_a_service_former_bush_official/", ""
-"2016-03-25T15:04:05.317Z", "beforeunload", "https://www.reddit.com/r/technology/comments/4btufe/snowden_has_done_a_service_former_bush_official/", ""
-"2016-03-25T15:04:09.608Z", "click", "https://www.reddit.com/", "https://www.reddit.com/message/inbox/"
-"2016-03-25T15:04:09.654Z", "beforeunload", "https://www.reddit.com/", ""
-"2016-03-25T15:04:11.272Z", "load", "https://www.reddit.com/message/inbox/", ""
-"2016-03-25T15:04:39.844Z", "click", "https://www.reddit.com/message/inbox/", "https://www.reddit.com/"
-"2016-03-25T15:04:39.900Z", "beforeunload", "https://www.reddit.com/message/inbox/", ""
-"2016-03-25T15:04:42.242Z", "load", "https://www.reddit.com/", ""
-"2016-03-25T15:04:46.843Z", "beforeunload", "https://www.reddit.com/", ""
-"2016-03-25T15:04:48.893Z", "load", "https://www.reddit.com/r/darksouls", ""
-"2016-03-25T15:04:55.206Z", "load", "https://www.reddit.com/r/darksouls/comments/4bvmu8/fuck_the_bed_of_chaos/", ""
-"2016-03-25T15:05:54.369Z", "beforeunload", "https://www.reddit.com/r/darksouls/comments/4bvmu8/fuck_the_bed_of_chaos/", ""
-"2016-03-25T15:06:06.102Z", "load", "https://www.facebook.com/", ""
-"2016-03-25T15:06:39.737Z", "click", "https://www.facebook.com/", "https://www.facebook.com/#"
-"2016-03-25T15:06:41.190Z", "click", "https://www.facebook.com/", "https://www.facebook.com/messages/"
-"2016-03-25T15:06:41.375Z", "polling", "https://www.facebook.com/messages/", ""
-"2016-03-25T15:06:49.706Z", "polling", "https://www.facebook.com/messages/conversation-1035234523202769", ""
-"2016-03-25T15:06:55.925Z", "click", "https://www.facebook.com/messages/conversation-1035234523202769", "https://www.facebook.com/?ref=logo"
-"2016-03-25T15:06:56.445Z", "polling", "https://www.facebook.com/", ""
-"2016-03-25T15:07:04.606Z", "beforeunload", "https://www.facebook.com/", ""
-"2016-03-25T15:07:07.219Z", "load", "https://twitter.com/", ""
-"2016-03-25T15:07:15.599Z", "load", "https://twitter.com/Letofski", ""
-"2016-03-25T15:07:26.383Z", "beforeunload", "https://twitter.com/Letofski", ""
-"2016-03-25T15:07:33.525Z", "load", "https://twitter.com/SwiftOnSecurity", ""
-"2016-03-25T15:07:56.868Z", "beforeunload", "https://twitter.com/SwiftOnSecurity", ""
-"2016-03-25T15:07:58.117Z", "click", "https://twitter.com/", "https://twitter.com/"
-"2016-03-25T15:08:16.076Z", "load", "https://www.youtube.com/", ""
-"2016-03-25T15:08:19.611Z", "click", "https://www.youtube.com/", "https://www.youtube.com/feed/subscriptions"
-"2016-03-25T15:08:19.696Z", "polling", "https://www.youtube.com/feed/subscriptions", ""
-"2016-03-25T15:08:28.214Z", "load", "https://www.youtube.com/watch?v=5oXyibEgJr0", ""
-"2016-03-25T15:09:40.150Z", "click", "https://www.youtube.com/watch?v=5oXyibEgJr0", "https://www.youtube.com/watch?v=5oXyibEgJr0"
-"2016-03-25T15:10:12.313Z", "beforeunload", "https://www.youtube.com/watch?v=5oXyibEgJr0", ""
-"2016-03-25T15:10:22.263Z", "beforeunload", "https://www.youtube.com/feed/subscriptions", ""
-"2016-03-25T15:10:42.389Z", "load", "http://toledo.kuleuven.be/", ""
-"2016-03-25T15:10:44.195Z", "click", "http://toledo.kuleuven.be/", "http://toledo.kuleuven.be/portal"
-"2016-03-25T15:10:44.203Z", "beforeunload", "http://toledo.kuleuven.be/", ""
-"2016-03-25T15:10:44.465Z", "load", "https://toledo.kuleuven.be/portal/", ""
-"2016-03-25T15:10:44.482Z", "beforeunload", "https://toledo.kuleuven.be/portal/", ""
-"2016-03-25T15:10:45.914Z", "load", "https://idp.kuleuven.be/idp/view/login.htm", ""
-"2016-03-25T15:10:47.500Z", "beforeunload", "https://idp.kuleuven.be/idp/view/login.htm", ""
-"2016-03-25T15:10:48.254Z", "load", "https://idp.kuleuven.be/idp/profile/SAML2/POST/SSO", ""
-"2016-03-25T15:10:48.274Z", "beforeunload", "https://idp.kuleuven.be/idp/profile/SAML2/POST/SSO", ""
-"2016-03-25T15:10:49.421Z", "load", "https://toledo.kuleuven.be/portal/", ""
-"2016-03-25T15:10:50.270Z", "polling", "https://toledo.kuleuven.be/portal/#/home", ""
-"2016-03-25T15:10:55.692Z", "click", "https://toledo.kuleuven.be/portal/#/home", "https://toledo.kuleuven.be/portal/"
-"2016-03-25T15:11:06.591Z", "click", "https://toledo.kuleuven.be/portal/#/home", "https://p.cygnus.cc.kuleuven.be/webapps/tol-web-rs-bb-bb_bb60/goto.do?url=%2Fwebapps%2Ftol-notifications-bb_bb60%2Frs%2Fevents%2F_889170342_1%2Fenclosed%2F0&entityId=urn%3Amace%3Akuleuven.be%3Akulassoc%3Akuleuven.be"
-"2016-03-25T15:11:06.630Z", "beforeunload", "https://toledo.kuleuven.be/portal/#/home", ""
-"2016-03-25T15:11:07.276Z", "load", "https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO", ""
-"2016-03-25T15:11:07.293Z", "beforeunload", "https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO", ""
-"2016-03-25T15:11:07.746Z", "load", "https://p.cygnus.cc.kuleuven.be/webapps/tol-web-rs-bb-bb_bb60/goto_nowhite.do?rdl=%2Fwebapps%2Fbb-auth-provider-shibboleth-bb_bb60%2Fexecute%2FshibbolethLogin%3FauthProviderId%3D_104_1%26returnUrl%3D%252Fwebapps%252Ftol-notifications-bb_bb60%252Frs%252Fevents%252F_889170342_1%252Fenclosed%252F0&altVersion=0", ""
-"2016-03-25T15:11:11.715Z", "load", "https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/displayIndividualContent?mode=reset&content_id=_15282578_1&course_id=_662189_1", ""
-"2016-03-25T15:11:18.968Z", "click", "https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/displayIndividualContent?mode=reset&content_id=_15282578_1&course_id=_662189_1", "https://p.cygnus.cc.kuleuven.be/bbcswebdav/pid-15282578-dt-content-rid-72753196_2/xid-72753196_2"
-"2016-03-25T15:11:20.114Z", "load", "https://p.cygnus.cc.kuleuven.be/bbcswebdav/pid-15282578-dt-content-rid-72753196_2/courses/B-KUL-H02C3a-1516/lecture4.handouts%285%29.pdf", ""
-"2016-03-25T15:11:44.293Z", "beforeunload", "https://p.cygnus.cc.kuleuven.be/bbcswebdav/pid-15282578-dt-content-rid-72753196_2/courses/B-KUL-H02C3a-1516/lecture4.handouts%285%29.pdf", ""
-"2016-03-25T15:11:46.481Z", "load", "https://twitter.com/", ""
-"2016-03-25T15:11:50.600Z", "click", "https://twitter.com/", "https://twitter.com/i/notifications"
-"2016-03-25T15:11:52.638Z", "polling", "https://twitter.com/i/notifications", ""
-"2016-03-25T15:11:56.068Z", "click", "https://twitter.com/i/notifications", "https://twitter.com/"
-"2016-03-25T15:11:57.706Z", "polling", "https://twitter.com/", ""
-"2016-03-25T15:12:08.685Z", "beforeunload", "https://twitter.com/", ""
-"2016-03-25T15:12:10.675Z", "load", "https://news.ycombinator.com/", ""
-"2016-03-25T15:12:22.776Z", "load", "https://torrentfreak.com/internet-archive-seeks-to-defend-against-wrongful-copyright-takedowns-160323/", ""
-"2016-03-25T15:12:50.919Z", "beforeunload", "https://torrentfreak.com/internet-archive-seeks-to-defend-against-wrongful-copyright-takedowns-160323/", ""
-"2016-03-25T15:12:53.139Z", "load", "https://news.ycombinator.com/item?id=11359207", ""
-"2016-03-25T15:13:09.846Z", "beforeunload", "https://news.ycombinator.com/item?id=11359207", ""
-"2016-03-25T15:13:11.458Z", "click", "https://news.ycombinator.com/", "https://news.ycombinator.com/newest"
-"2016-03-25T15:13:11.464Z", "beforeunload", "https://news.ycombinator.com/", ""
-"2016-03-25T15:13:12.283Z", "load", "https://news.ycombinator.com/newest", ""
-"2016-03-25T15:13:19.073Z", "load", "http://city-journal.org/html/finnish-model-14302.html", ""
-"2016-03-25T15:14:17.942Z", "load", "http://toledo.kuleuven.be/", ""
-"2016-03-25T15:14:19.875Z", "click", "http://toledo.kuleuven.be/", "http://toledo.kuleuven.be/portal"
-"2016-03-25T15:14:19.883Z", "beforeunload", "http://toledo.kuleuven.be/", ""
-"2016-03-25T15:14:20.496Z", "load", "https://toledo.kuleuven.be/portal/", ""
-"2016-03-25T15:14:21.479Z", "polling", "https://toledo.kuleuven.be/portal/#/home", ""
-"2016-03-25T15:14:30.162Z", "beforeunload", "https://toledo.kuleuven.be/portal/#/home", ""
-"2016-03-25T15:14:32.777Z", "beforeunload", "http://city-journal.org/html/finnish-model-14302.html", ""
-"2016-03-25T15:14:50.444Z", "load", "https://twigserial.wordpress.com/", ""
-"2016-03-25T15:14:52.917Z", "click", "https://twigserial.wordpress.com/", "https://twigserial.wordpress.com/2016/03/22/in-sheeps-clothing-10-1/"
-"2016-03-25T15:14:52.928Z", "beforeunload", "https://twigserial.wordpress.com/", ""
-"2016-03-25T15:14:55.205Z", "load", "https://twigserial.wordpress.com/2016/03/22/in-sheeps-clothing-10-1/", ""
-"2016-03-25T15:15:06.138Z", "click", "https://twigserial.wordpress.com/2016/03/22/in-sheeps-clothing-10-1/", "http://topwebfiction.com/vote.php?for=twig"
-"2016-03-25T15:15:06.146Z", "beforeunload", "https://twigserial.wordpress.com/2016/03/22/in-sheeps-clothing-10-1/", ""
-"2016-03-25T15:15:07.639Z", "load", "http://topwebfiction.com/vote.php?for=twig", ""
-"2016-03-25T15:15:08.910Z", "beforeunload", "http://topwebfiction.com/vote.php?for=twig", ""
-"2016-03-25T15:15:13.669Z", "load", "http://topwebfiction.com/?for=twig", ""
-"2016-03-25T15:15:15.941Z", "click", "http://topwebfiction.com/?for=twig", "http://topwebfiction.com/vote.php?for=worm"
-"2016-03-25T15:15:15.946Z", "beforeunload", "http://topwebfiction.com/?for=twig", ""
-"2016-03-25T15:15:17.129Z", "load", "http://topwebfiction.com/vote.php?for=worm", ""
-"2016-03-25T15:15:18.490Z", "beforeunload", "http://topwebfiction.com/vote.php?for=worm", ""
-"2016-03-25T15:15:20.173Z", "load", "http://topwebfiction.com/?for=worm", ""
-"2016-03-25T15:15:24.654Z", "beforeunload", "http://topwebfiction.com/?for=worm", ""
-"2016-03-25T15:15:37.324Z", "load", "http://arstechnica.com/", ""
-"2016-03-25T15:15:43.122Z", "load", "http://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/", ""
-"2016-03-25T15:15:55.437Z", "click", "http://arstechnica.com/", "http://arstechnica.com/?view=archive"
-"2016-03-25T15:15:55.465Z", "beforeunload", "http://arstechnica.com/", ""
-"2016-03-25T15:15:56.950Z", "load", "http://arstechnica.com/", ""
-"2016-03-25T15:16:16.566Z", "click", "http://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/", "http://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/?comments=1"
-"2016-03-25T15:16:17.503Z", "polling", "http://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/?comments=1", ""
-"2016-03-25T15:17:00.234Z", "beforeunload", "http://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/?comments=1", ""
-"2016-03-25T15:17:09.739Z", "click", "http://arstechnica.com/", "http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/"
-"2016-03-25T15:17:09.773Z", "beforeunload", "http://arstechnica.com/", ""
-"2016-03-25T15:17:10.826Z", "load", "http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/", ""
-"2016-03-25T15:17:22.494Z", "click", "http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/", "http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/?comments=1"
-"2016-03-25T15:17:23.439Z", "polling", "http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/?comments=1", ""
-"2016-03-25T15:17:34.725Z", "click", "http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/?comments=1", "http://arstechnica.com/"
-"2016-03-25T15:17:34.742Z", "beforeunload", "http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/?comments=1", ""
-"2016-03-25T15:17:35.583Z", "load", "http://arstechnica.com/", ""
-"2016-03-25T20:00:09.884Z", "load", "https://www.facebook.com/", ""
-"2016-03-25T20:01:16.679Z", "click", "https://www.facebook.com/", "https://www.facebook.com/photo.php?fbid=10151499536749806&set=a.10150948530664806.440247.738179805&type=3"
-"2016-03-25T20:01:18.791Z", "polling", "https://www.facebook.com/photo.php?fbid=10151499536749806&set=a.10150948530664806.440247.738179805&type=3&theater", ""
-"2016-03-25T20:01:24.529Z", "polling", "https://www.facebook.com/", ""
-"2016-03-25T20:01:30.401Z", "beforeunload", "https://www.facebook.com/", ""
-"2016-03-25T20:01:35.328Z", "load", "https://twitter.com/", ""
-"2016-03-25T20:02:12.684Z", "polling", "https://twitter.com/BoredElonMusk/status/713440819764715520", ""
-"2016-03-25T20:02:23.448Z", "polling", "https://twitter.com/", ""
-"2016-03-25T20:02:50.343Z", "polling", "https://twitter.com/ID_AA_Carmack/status/713418413469634560", ""
-"2016-03-25T20:02:58.320Z", "load", "https://developer.oculus.com/blog/asynchronous-timewarp-on-oculus-rift/", ""
-"2016-03-25T20:03:29.361Z", "beforeunload", "https://developer.oculus.com/blog/asynchronous-timewarp-on-oculus-rift/", ""
-"2016-03-25T20:03:31.194Z", "polling", "https://twitter.com/", ""
-"2016-03-25T20:05:29.394Z", "polling", "https://twitter.com/Demruth/status/713259241360896001", ""
-"2016-03-25T20:06:08.538Z", "load", "https://www.youtube.com/watch?v=cwXfv25xJUw", ""
-"2016-03-25T20:07:16.539Z", "click", "https://www.youtube.com/watch?v=cwXfv25xJUw", "https://www.youtube.com/"
-"2016-03-25T20:07:16.597Z", "polling", "https://www.youtube.com/", ""
-"2016-03-25T20:07:22.296Z", "click", "https://www.youtube.com/", "https://www.youtube.com/feed/subscriptions"
-"2016-03-25T20:07:22.417Z", "polling", "https://www.youtube.com/feed/subscriptions", ""
-"2016-03-25T20:07:42.690Z", "beforeunload", "https://www.youtube.com/feed/subscriptions", ""
-"2016-03-25T20:07:45.269Z", "polling", "https://twitter.com/", ""
-"2016-03-25T20:07:48.298Z", "click", "https://twitter.com/", "https://twitter.com/"
-"2016-03-25T20:07:57.266Z", "beforeunload", "https://twitter.com/", ""
-"2016-03-25T20:07:58.916Z", "load", "https://news.ycombinator.com/", ""
-"2016-03-25T20:08:35.116Z", "load", "http://www.bbc.com/future/story/20160325-the-names-that-break-computer-systems", ""
-"2016-03-25T20:08:53.572Z", "load", "https://jenkins.io/2.0/", ""
-"2016-03-25T20:10:12.183Z", "load", "http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/", ""
-"2016-03-25T20:11:03.974Z", "beforeunload", "http://www.bbc.com/future/story/20160325-the-names-that-break-computer-systems", ""
-"2016-03-25T20:12:04.406Z", "beforeunload", "http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/", ""
-"2016-03-25T20:12:22.507Z", "beforeunload", "https://jenkins.io/2.0/", ""
-"2016-03-25T20:12:26.332Z", "load", "https://news.ycombinator.com/item?id=11359915", ""
-"2016-03-25T20:12:48.393Z", "load", "http://imgur.com/1KhRws2", ""
-"2016-03-25T20:12:49.283Z", "beforeunload", "http://imgur.com/1KhRws2", ""
-"2016-03-25T20:14:45.138Z", "beforeunload", "https://news.ycombinator.com/item?id=11359915", ""
-"2016-03-25T20:14:46.092Z", "beforeunload", "https://news.ycombinator.com/", ""
-"2016-03-25T20:14:49.735Z", "load", "https://www.reddit.com/", ""
-"2016-03-25T20:14:59.021Z", "click", "https://www.reddit.com/", ""
-"2016-03-25T20:15:04.293Z", "click", "https://www.reddit.com/", ""
-"2016-03-25T20:15:07.655Z", "click", "https://www.reddit.com/", ""
-"2016-03-25T20:15:15.925Z", "click", "https://www.reddit.com/", ""
-"2016-03-25T20:15:31.059Z", "load", "http://smbc-comics.com/index.php?id=4054", ""
-"2016-03-25T20:15:41.433Z", "click", "http://smbc-comics.com/index.php?id=4054", "http://smbc-comics.com/index.php?id=4055"
-"2016-03-25T20:15:41.440Z", "beforeunload", "http://smbc-comics.com/index.php?id=4054", ""
-"2016-03-25T20:15:42.324Z", "load", "http://smbc-comics.com/index.php?id=4055", ""
-"2016-03-25T20:15:48.754Z", "click", "http://smbc-comics.com/index.php?id=4055", "http://smbc-comics.com/index.php?id=4056"
-"2016-03-25T20:15:48.762Z", "beforeunload", "http://smbc-comics.com/index.php?id=4055", ""
-"2016-03-25T20:15:49.794Z", "load", "http://smbc-comics.com/index.php?id=4056", ""
-"2016-03-25T20:15:56.341Z", "click", "http://smbc-comics.com/index.php?id=4056", "http://smbc-comics.com/index.php?id=4057"
-"2016-03-25T20:15:56.349Z", "beforeunload", "http://smbc-comics.com/index.php?id=4056", ""
-"2016-03-25T20:15:57.228Z", "load", "http://smbc-comics.com/index.php?id=4057", ""
-"2016-03-25T20:16:01.640Z", "beforeunload", "http://smbc-comics.com/index.php?id=4057", ""
-"2016-03-25T20:16:08.676Z", "polling", "https://www.reddit.com/#page=2", ""
-"2016-03-25T20:16:20.148Z", "polling", "https://www.reddit.com/#page=3", ""
-"2016-03-25T20:16:28.874Z", "load", "https://www.youtube.com/watch?v=e4Ao-iNPPUc", ""
-"2016-03-25T20:18:07.779Z", "beforeunload", "https://www.youtube.com/watch?v=e4Ao-iNPPUc", ""
-"2016-03-25T20:18:09.648Z", "polling", "https://www.reddit.com/#page=4", ""
-"2016-03-25T20:18:18.866Z", "load", "http://waitbutwhy.com/2016/03/cryonics.html", ""
+2016-03-24T14:24:49.015Z, beforeunload, https://www.linuxmint.com/start/rebecca/, 
+2016-03-24T14:24:50.130Z, load, https://www.reddit.com/, 
+2016-03-24T14:24:59.624Z, beforeunload, https://www.reddit.com/, 
+2016-03-24T14:25:01.433Z, load, https://www.reddit.com/, 
+2016-03-24T14:25:12.011Z, click, https://www.reddit.com/, https://www.reddit.com/r/gaming/
+2016-03-24T14:25:12.041Z, beforeunload, https://www.reddit.com/, 
+2016-03-24T14:25:13.279Z, load, https://www.reddit.com/r/gaming/, 
+2016-03-24T14:25:23.655Z, click, https://www.reddit.com/r/gaming/, https://imgur.com/gallery/0rAuS
+2016-03-24T14:25:23.692Z, beforeunload, https://www.reddit.com/r/gaming/, 
+2016-03-24T14:25:30.630Z, load, https://imgur.com/gallery/0rAuS, 
+2016-03-24T14:25:57.215Z, beforeunload, https://imgur.com/gallery/0rAuS, 
+2016-03-24T14:25:57.603Z, load, https://www.reddit.com/r/gaming/, 
+2016-03-24T14:26:11.102Z, click, https://www.reddit.com/r/gaming/, https://www.reddit.com/r/gaming/comments/4bmxaq/just_wanted_to_share_this_nostalgic_gif/
+2016-03-24T14:26:11.133Z, beforeunload, https://www.reddit.com/r/gaming/, 
+2016-03-24T14:26:13.530Z, load, https://www.reddit.com/r/gaming/comments/4bmxaq/just_wanted_to_share_this_nostalgic_gif/, 
+2016-03-24T14:27:45.878Z, click, https://www.reddit.com/r/gaming/comments/4bmxaq/just_wanted_to_share_this_nostalgic_gif/, https://www.reddit.com/r/space/
+2016-03-24T14:27:45.901Z, beforeunload, https://www.reddit.com/r/gaming/comments/4bmxaq/just_wanted_to_share_this_nostalgic_gif/, 
+2016-03-24T14:27:47.072Z, load, https://www.reddit.com/r/space/, 
+2016-03-24T14:27:53.939Z, click, https://www.reddit.com/r/space/, http://i.imgur.com/sCYzj5H.png
+2016-03-24T14:27:53.971Z, beforeunload, https://www.reddit.com/r/space/, 
+2016-03-24T14:27:54.215Z, load, http://i.imgur.com/sCYzj5H.png, 
+2016-03-24T14:27:56.384Z, beforeunload, http://i.imgur.com/sCYzj5H.png, 
+2016-03-24T14:27:56.711Z, load, https://www.reddit.com/r/space/, 
+2016-03-24T14:28:05.244Z, click, https://www.reddit.com/r/space/, http://www.drewexmachina.com/2016/03/24/the-practical-limits-of-trip-times-to-the-planets/
+2016-03-24T14:28:05.275Z, beforeunload, https://www.reddit.com/r/space/, 
+2016-03-24T14:28:11.523Z, beforeunload, https://www.reddit.com/r/space/, 
+2016-03-24T14:28:14.899Z, load, https://www.reddit.com/r/space/, 
+2016-03-24T14:28:18.762Z, click, https://www.reddit.com/r/space/, http://www.csmonitor.com/Science/2016/0323/Ceres-becomes-even-more-mysterious-with-new-specatular-images
+2016-03-24T14:28:18.793Z, beforeunload, https://www.reddit.com/r/space/, 
+2016-03-24T14:28:20.564Z, load, http://www.csmonitor.com/Science/2016/0323/Spectacular-Ceres-images-deepen-mystery-of-dwarf-planet-s-geology, 
+2016-03-24T14:29:26.603Z, beforeunload, http://www.csmonitor.com/Science/2016/0323/Spectacular-Ceres-images-deepen-mystery-of-dwarf-planet-s-geology, 
+2016-03-24T14:29:33.897Z, load, http://sporza.be/cm/sporza, 
+2016-03-24T14:29:44.861Z, click, http://sporza.be/cm/sporza, http://sporza.be/cm/sporza/voetbal/buitenland/Nederland/1.2610913
+2016-03-24T14:29:45.808Z, load, http://sporza.be/cm/sporza/voetbal/buitenland/Nederland/1.2610913, 
+2016-03-24T14:29:44.867Z, beforeunload, http://sporza.be/cm/sporza, 
+2016-03-24T14:30:23.044Z, click, http://sporza.be/cm/sporza/voetbal/buitenland/Nederland/1.2610913, http://sporza.be/cm/sporza
+2016-03-24T14:30:24.121Z, load, http://sporza.be/cm/sporza, 
+2016-03-24T14:30:23.050Z, beforeunload, http://sporza.be/cm/sporza/voetbal/buitenland/Nederland/1.2610913, 
+2016-03-24T14:31:41.126Z, click, http://sporza.be/cm/sporza, http://sporza.be/cm/sporza/voetbal
+2016-03-24T14:31:41.149Z, beforeunload, http://sporza.be/cm/sporza, 
+2016-03-24T14:31:47.164Z, load, http://sporza.be/cm/sporza/voetbal, 
+2016-03-24T14:32:04.156Z, click, http://sporza.be/cm/sporza/voetbal, http://sporza.be/cm/sporza/matchcenter/mc_voetbal/jupilerleague_1516/JPL_PO_speeldag1
+2016-03-24T14:32:04.162Z, beforeunload, http://sporza.be/cm/sporza/voetbal, 
+2016-03-24T14:32:06.655Z, load, http://sporza.be/cm/sporza/matchcenter/mc_voetbal/jupilerleague_1516/JPL_PO_speeldag1, 
+2016-03-24T14:32:14.606Z, beforeunload, http://sporza.be/cm/sporza/matchcenter/mc_voetbal/jupilerleague_1516/JPL_PO_speeldag1, 
+2016-03-24T14:32:16.119Z, load, https://www.youtube.com/, 
+2016-03-24T14:32:17.473Z, beforeunload, https://www.youtube.com/, 
+2016-03-24T14:32:18.055Z, load, https://accounts.google.com/ServiceLogin?hl=en&service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Ffeature%3Dsign_in_button%26hl%3Den%26app%3Ddesktop%26next%3D%252F%26action_handle_signin%3Dtrue&passive=true&uilel=3#identifier, 
+2016-03-24T14:32:27.555Z, polling, https://accounts.google.com/ServiceLogin?hl=en&service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Ffeature%3Dsign_in_button%26hl%3Den%26app%3Ddesktop%26next%3D%252F%26action_handle_signin%3Dtrue&passive=true&uilel=3#password, 
+2016-03-24T14:32:28.906Z, beforeunload, https://accounts.google.com/ServiceLogin?hl=en&service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Ffeature%3Dsign_in_button%26hl%3Den%26app%3Ddesktop%26next%3D%252F%26action_handle_signin%3Dtrue&passive=true&uilel=3#password, 
+2016-03-24T14:32:29.316Z, load, https://accounts.google.com/ServiceLoginAuth#password, 
+2016-03-24T14:32:36.052Z, beforeunload, https://accounts.google.com/ServiceLoginAuth#password, 
+2016-03-24T14:32:36.404Z, load, https://accounts.google.com/CheckCookie?hl=en&checkedDomains=youtube&checkConnection=youtube%3A374%3A1&pstMsg=1&chtml=LoginDoneHtml&service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Ffeature%3Dsign_in_button%26hl%3Den%26app%3Ddesktop%26next%3D%252F%26action_handle_signin%3Dtrue&gidl=CAA, 
+2016-03-24T14:32:36.497Z, beforeunload, https://accounts.google.com/CheckCookie?hl=en&checkedDomains=youtube&checkConnection=youtube%3A374%3A1&pstMsg=1&chtml=LoginDoneHtml&service=youtube&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Ffeature%3Dsign_in_button%26hl%3Den%26app%3Ddesktop%26next%3D%252F%26action_handle_signin%3Dtrue&gidl=CAA, 
+2016-03-24T14:32:37.383Z, load, https://www.youtube.com/signin?action_prompt_identity=true&next=%2F&app=desktop, 
+2016-03-24T14:32:39.827Z, beforeunload, https://www.youtube.com/signin?action_prompt_identity=true&next=%2F&app=desktop, 
+2016-03-24T14:32:42.715Z, load, https://www.youtube.com/, 
+2016-03-24T14:33:01.045Z, click, https://www.youtube.com/, https://www.youtube.com/watch?v=fbJg5yeo12c
+2016-03-24T14:33:01.076Z, beforeunload, https://www.youtube.com/, 
+2016-03-24T14:33:01.711Z, load, https://www.youtube.com/watch?v=fbJg5yeo12c, 
+2016-03-24T14:36:51.173Z, load, http://vtm.be/, 
+2016-03-24T14:36:56.652Z, load, http://www.hln.be/, 
+2016-03-24T14:36:57.906Z, beforeunload, http://vtm.be/, 
+2016-03-24T14:36:59.682Z, load, http://www.vier.be/, 
+2016-03-24T14:37:03.524Z, beforeunload, http://www.vier.be/, 
+2016-03-24T14:38:03.137Z, click, http://www.hln.be/, http://www.hln.be/hln/nl/36484/Aanslagen-Brussel/article/detail/2656721/2016/03/24/Geens-Onze-diensten-hebben-fout-gemaakt.dhtml
+2016-03-24T14:38:03.234Z, beforeunload, http://www.hln.be/, 
+2016-03-24T14:38:05.812Z, load, http://www.hln.be/hln/nl/36484/Aanslagen-Brussel/article/detail/2656721/2016/03/24/Geens-Onze-diensten-hebben-fout-gemaakt.dhtml, 
+2016-03-24T14:38:07.104Z, click, http://www.hln.be/hln/nl/36484/Aanslagen-Brussel/article/detail/2656721/2016/03/24/Geens-Onze-diensten-hebben-fout-gemaakt.dhtml, http://www.hln.be/hln/nl/922/Nieuws/index.dhtml
+2016-03-24T14:38:07.184Z, beforeunload, http://www.hln.be/hln/nl/36484/Aanslagen-Brussel/article/detail/2656721/2016/03/24/Geens-Onze-diensten-hebben-fout-gemaakt.dhtml, 
+2016-03-24T14:38:09.081Z, load, http://www.hln.be/hln/nl/922/Nieuws/index.dhtml, 
+2016-03-24T14:38:58.006Z, click, https://www.youtube.com/watch?v=fbJg5yeo12c, https://www.youtube.com/
+2016-03-24T14:38:58.022Z, beforeunload, https://www.youtube.com/watch?v=fbJg5yeo12c, 
+2016-03-24T14:39:00.636Z, load, https://www.youtube.com/, 
+2016-03-24T14:39:16.962Z, click, https://www.youtube.com/, https://www.youtube.com/watch?v=ISdfUPd2AIA
+2016-03-24T14:39:16.988Z, beforeunload, https://www.youtube.com/, 
+2016-03-24T14:39:18.231Z, load, https://www.youtube.com/watch?v=ISdfUPd2AIA, 
+2016-03-24T14:39:33.613Z, click, https://www.youtube.com/watch?v=ISdfUPd2AIA, 
+2016-03-24T14:41:42.260Z, click, https://www.youtube.com/watch?v=ISdfUPd2AIA, https://www.youtube.com/watch?v=RGp3FZSi900
+2016-03-24T14:41:42.290Z, beforeunload, https://www.youtube.com/watch?v=ISdfUPd2AIA, 
+2016-03-24T14:41:43.488Z, load, https://www.youtube.com/watch?v=RGp3FZSi900, 
+2016-03-24T14:42:18.135Z, click, https://www.youtube.com/watch?v=RGp3FZSi900, 
+2016-03-24T14:42:29.357Z, beforeunload, http://www.hln.be/hln/nl/922/Nieuws/index.dhtml, 
+2016-03-24T14:42:31.563Z, load, http://www.nieuwsblad.be/sportwereld, 
+2016-03-24T14:42:35.876Z, click, http://www.nieuwsblad.be/sportwereld, http://www.nieuwsblad.be/sportwereld#modalbox-splash
+2016-03-24T14:42:38.272Z, beforeunload, http://www.nieuwsblad.be/sportwereld, 
+2016-03-24T14:42:38.264Z, click, http://www.nieuwsblad.be/sportwereld, http://www.nieuwsblad.be/sportwereld/voetbal
+2016-03-24T14:42:40.339Z, load, http://www.nieuwsblad.be/sportwereld/voetbal, 
+2016-03-24T14:42:46.571Z, click, http://www.nieuwsblad.be/sportwereld/voetbal, http://www.nieuwsblad.be/sportwereld/tag/voetbal/belgie
+2016-03-24T14:42:46.593Z, beforeunload, http://www.nieuwsblad.be/sportwereld/voetbal, 
+2016-03-24T14:42:47.981Z, load, http://www.nieuwsblad.be/sportwereld/tag/voetbal/belgie, 
+2016-03-24T14:43:08.483Z, click, http://www.nieuwsblad.be/sportwereld/tag/voetbal/belgie, http://www.nieuwsblad.be/cnt/dmf20160324_02200618
+2016-03-24T14:43:08.517Z, beforeunload, http://www.nieuwsblad.be/sportwereld/tag/voetbal/belgie, 
+2016-03-24T14:43:09.635Z, load, http://www.nieuwsblad.be/cnt/dmf20160324_02200618, 
+2016-03-24T14:43:17.381Z, click, http://www.nieuwsblad.be/cnt/dmf20160324_02200618, http://www.nieuwsblad.be/sportwereld/wielrennen
+2016-03-24T14:43:18.134Z, load, http://www.nieuwsblad.be/sportwereld/wielrennen, 
+2016-03-24T14:43:17.401Z, beforeunload, http://www.nieuwsblad.be/cnt/dmf20160324_02200618, 
+2016-03-24T14:43:43.928Z, click, http://www.nieuwsblad.be/sportwereld/wielrennen, http://www.nieuwsblad.be/sportwereld/wielrennen
+2016-03-24T14:43:43.942Z, beforeunload, http://www.nieuwsblad.be/sportwereld/wielrennen, 
+2016-03-24T14:43:44.445Z, load, http://www.nieuwsblad.be/sportwereld/wielrennen, 
+2016-03-24T14:43:46.591Z, click, http://www.nieuwsblad.be/sportwereld/wielrennen, http://www.nieuwsblad.be/cnt/dmf20160323_02199928
+2016-03-24T14:43:46.601Z, beforeunload, http://www.nieuwsblad.be/sportwereld/wielrennen, 
+2016-03-24T14:43:47.401Z, load, http://www.nieuwsblad.be/cnt/dmf20160323_02199928, 
+2016-03-24T14:44:00.465Z, beforeunload, https://www.youtube.com/watch?v=RGp3FZSi900, 
+2016-03-24T14:44:01.775Z, load, https://www.youtube.com/results?search_query=Mars+footage, 
+2016-03-24T14:44:04.309Z, click, https://www.youtube.com/results?search_query=Mars+footage, https://www.youtube.com/watch?v=7zpojhD4hpI
+2016-03-24T14:44:04.337Z, beforeunload, https://www.youtube.com/results?search_query=Mars+footage, 
+2016-03-24T14:44:05.681Z, load, https://www.youtube.com/watch?v=7zpojhD4hpI, 
+2016-03-24T14:44:18.558Z, click, https://www.youtube.com/watch?v=7zpojhD4hpI, 
+2016-03-24T14:49:51.680Z, load, http://www.gva.be/, 
+2016-03-24T14:49:55.867Z, click, http://www.gva.be/, http://www.gva.be/sport
+2016-03-24T14:49:56.776Z, load, http://www.gva.be/sport, 
+2016-03-24T14:49:55.884Z, beforeunload, http://www.gva.be/, 
+2016-03-24T14:50:00.479Z, beforeunload, http://www.gva.be/sport, 
+2016-03-24T14:50:00.440Z, click, http://www.gva.be/sport, http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal
+2016-03-24T14:50:01.832Z, load, http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal, 
+2016-03-24T14:50:04.226Z, click, http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal, http://www.gva.be/sport
+2016-03-24T14:50:04.236Z, beforeunload, http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal, 
+2016-03-24T14:50:04.768Z, load, http://www.gva.be/sport, 
+2016-03-24T14:50:09.532Z, click, http://www.gva.be/sport, http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal
+2016-03-24T14:50:09.553Z, beforeunload, http://www.gva.be/sport, 
+2016-03-24T14:50:10.071Z, load, http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal, 
+2016-03-24T14:50:12.412Z, click, http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal, http://www.gva.be/
+2016-03-24T14:50:12.428Z, beforeunload, http://www.gva.be/cnt/dmf20160324_02200733/origi-valt-geblesseerd-af-voor-portugal, 
+2016-03-24T14:50:16.155Z, click, http://www.gva.be/, http://www.gva.be/regio/regio-kempen
+2016-03-24T14:50:13.514Z, load, http://www.gva.be/, 
+2016-03-24T14:50:16.680Z, beforeunload, http://www.gva.be/, 
+2016-03-24T14:50:17.600Z, load, http://www.gva.be/regio/regio-kempen, 
+2016-03-24T14:50:17.284Z, load, http://tap2-cdn.rubiconproject.com/partner/scripts/rubicon/emily.html?rtb_ext=1&pc=7916/12718&geo=eu&co=be, 
+2016-03-24T14:50:19.802Z, click, http://www.gva.be/regio/regio-kempen, http://www.gva.be/cnt/dmf20160321_02194589/dit-weekend-in-citta-kempen
+2016-03-24T14:50:19.827Z, beforeunload, http://www.gva.be/regio/regio-kempen, 
+2016-03-24T14:50:20.877Z, load, http://www.gva.be/cnt/dmf20160321_02194589/dit-weekend-in-citta-kempen, 
+2016-03-24T14:50:23.393Z, click, http://www.gva.be/cnt/dmf20160321_02194589/dit-weekend-in-citta-kempen, http://www.gva.be/regio/regio-kempen
+2016-03-24T14:50:23.407Z, beforeunload, http://www.gva.be/cnt/dmf20160321_02194589/dit-weekend-in-citta-kempen, 
+2016-03-24T14:50:23.969Z, load, http://www.gva.be/regio/regio-kempen, 
+2016-03-24T14:39:23.791Z, load, https://news.ycombinator.com/, 
+2016-03-24T14:39:47.042Z, load, https://security.googleblog.com/2016/03/more-encryption-more-notifications-more.html, 
+2016-03-24T14:40:11.340Z, load, https://news.ycombinator.com/item?id=11359664, 
+2016-03-24T14:41:21.317Z, load, https://www.omniref.com/code_review, 
+2016-03-24T14:41:33.412Z, beforeunload, https://www.omniref.com/code_review, 
+2016-03-24T14:41:46.544Z, load, https://www.smashingmagazine.com/2016/03/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of/, 
+2016-03-24T14:42:05.681Z, load, https://news.ycombinator.com/item?id=11357794, 
+2016-03-24T14:42:35.006Z, beforeunload, https://news.ycombinator.com/, 
+2016-03-24T14:42:37.106Z, load, https://www.reddit.com/, 
+2016-03-24T14:42:39.618Z, load, http://redditenhancementsuite.com/whatsnew.html?v=4.6.1, 
+2016-03-24T14:42:49.222Z, click, https://www.reddit.com/, https://www.reddit.com/new/
+2016-03-24T14:42:49.285Z, beforeunload, https://www.reddit.com/, 
+2016-03-24T14:42:51.630Z, load, https://www.reddit.com/new/, 
+2016-03-24T14:43:01.300Z, load, https://www.youtube.com/watch?v=XpLEHRonid8&ab_channel=J, 
+2016-03-24T14:47:15.143Z, beforeunload, https://www.youtube.com/watch?v=XpLEHRonid8&ab_channel=J, 
+2016-03-24T14:47:22.038Z, click, https://www.reddit.com/new/, https://www.reddit.com/
+2016-03-24T14:47:22.085Z, beforeunload, https://www.reddit.com/new/, 
+2016-03-24T14:47:24.339Z, load, https://www.reddit.com/, 
+2016-03-24T14:47:26.929Z, click, https://www.reddit.com/, https://www.reddit.com/message/inbox/
+2016-03-24T14:47:27.119Z, beforeunload, https://www.reddit.com/, 
+2016-03-24T14:47:29.168Z, load, https://www.reddit.com/message/inbox/, 
+2016-03-24T14:48:07.697Z, click, https://www.reddit.com/message/inbox/, https://www.reddit.com/
+2016-03-24T14:48:07.726Z, beforeunload, https://www.reddit.com/message/inbox/, 
+2016-03-24T14:48:09.666Z, load, https://www.reddit.com/, 
+2016-03-24T14:48:11.834Z, beforeunload, https://www.reddit.com/, 
+2016-03-24T14:48:14.179Z, load, https://www.reddit.com/r/darksouls, 
+2016-03-24T14:48:24.909Z, load, https://www.reddit.com/r/darksouls/comments/4bt86x/someone_should_sell_stress_balls_shaped_like/, 
+2016-03-24T14:48:45.712Z, click, https://www.reddit.com/r/darksouls/comments/4bt86x/someone_should_sell_stress_balls_shaped_like/, javascript:void(0)
+2016-03-24T14:48:47.796Z, click, https://www.reddit.com/r/darksouls/comments/4bt86x/someone_should_sell_stress_balls_shaped_like/, javascript:void(0)
+2016-03-24T14:48:57.909Z, beforeunload, https://www.reddit.com/r/darksouls/comments/4bt86x/someone_should_sell_stress_balls_shaped_like/, 
+2016-03-24T14:49:06.637Z, load, https://www.reddit.com/r/darksouls/comments/4bwjlo/need_help_with_dsfix_and_some_other_stuff/, 
+2016-03-24T14:49:25.129Z, beforeunload, https://www.reddit.com/r/darksouls/comments/4bwjlo/need_help_with_dsfix_and_some_other_stuff/, 
+2016-03-24T14:49:35.791Z, load, https://twitter.com/, 
+2016-03-24T14:49:51.083Z, click, https://twitter.com/, https://twitter.com/#
+2016-03-24T14:50:36.456Z, beforeunload, https://twitter.com/, 
+2016-03-24T14:50:39.052Z, load, https://www.facebook.com/, 
+2016-03-24T14:50:48.109Z, click, https://www.facebook.com/, https://www.facebook.com/#
+2016-03-24T14:50:51.671Z, click, https://www.facebook.com/, https://www.facebook.com/messages/
+2016-03-24T14:50:52.141Z, polling, https://www.facebook.com/messages/, 
+2016-03-24T14:50:53.766Z, polling, https://www.facebook.com/messages/Caro.otjj, 
+2016-03-24T14:50:59.977Z, click, https://www.facebook.com/messages/Caro.otjj, https://www.facebook.com/messages/conversation-1719792268307148
+2016-03-24T14:51:00.063Z, polling, https://www.facebook.com/messages/conversation-1719792268307148, 
+2016-03-24T14:51:08.765Z, beforeunload, https://www.facebook.com/messages/conversation-1719792268307148, 
+2016-03-24T14:51:09.914Z, load, http://en.lichess.org/, 
+2016-03-24T14:51:14.003Z, click, http://en.lichess.org/, http://en.lichess.org/training/daily
+2016-03-24T14:51:14.019Z, beforeunload, http://en.lichess.org/, 
+2016-03-24T14:51:14.662Z, load, http://en.lichess.org/training/55459, 
+2016-03-24T14:51:52.161Z, click, http://en.lichess.org/training/55459, 
+2016-03-24T14:51:52.661Z, polling, http://en.lichess.org/training/22398, 
+2016-03-24T14:53:42.418Z, click, http://en.lichess.org/training/22398, http://en.lichess.org/
+2016-03-24T14:53:42.426Z, beforeunload, http://en.lichess.org/training/22398, 
+2016-03-24T14:53:43.076Z, load, http://en.lichess.org/, 
+2016-03-24T14:53:51.972Z, load, https://medium.com/, 
+2016-03-24T14:54:08.407Z, click, https://medium.com/, https://medium.com/@alexteplitzky/it-s-impossible-to-make-any-political-points-through-image-making-so-stop-painting-donald-trump-deae176ea411?source=reading_list---------3-3
+2016-03-24T14:54:08.504Z, polling, https://medium.com/@alexteplitzky/it-s-impossible-to-make-any-political-points-through-image-making-so-stop-painting-donald-trump-deae176ea411, 
+2016-03-24T14:54:09.608Z, polling, https://medium.com/@alexteplitzky/it-s-impossible-to-make-any-political-points-through-image-making-so-stop-painting-donald-trump-deae176ea411#.8gonl2pug, 
+2016-03-24T14:54:55.094Z, beforeunload, https://medium.com/@alexteplitzky/it-s-impossible-to-make-any-political-points-through-image-making-so-stop-painting-donald-trump-deae176ea411#.8gonl2pug, 
+2016-03-24T14:54:57.823Z, load, http://www.standaard.be/, 
+2016-03-24T14:54:59.685Z, click, http://www.standaard.be/, http://www.standaard.be/cnt/dmf20160325_02203598
+2016-03-24T14:54:59.916Z, beforeunload, http://www.standaard.be/, 
+2016-03-24T14:55:00.638Z, load, http://embed.scribblelive.com/Embed/v7.aspx?Id=1960548&ThemeId=31503, 
+2016-03-24T14:55:02.144Z, load, http://www.standaard.be/cnt/dmf20160325_02203598, 
+2016-03-24T14:55:15.286Z, click, http://www.standaard.be/cnt/dmf20160325_02203598, http://www.standaard.be/
+2016-03-24T14:55:15.319Z, beforeunload, http://www.standaard.be/cnt/dmf20160325_02203598, 
+2016-03-24T14:55:17.563Z, load, http://www.standaard.be/, 
+2016-03-24T14:55:32.995Z, click, http://www.standaard.be/, http://www.standaard.be/#most-read
+2016-03-24T14:55:48.529Z, beforeunload, http://www.standaard.be/, 
+2016-03-24T14:55:49.841Z, load, http://www.inoreader.com/, 
+2016-03-24T14:56:07.647Z, beforeunload, http://www.inoreader.com/, 
+2016-03-24T14:56:10.745Z, load, https://twigserial.wordpress.com/, 
+2016-03-24T14:56:23.215Z, click, https://twigserial.wordpress.com/, https://twigserial.wordpress.com/2016/03/24/in-sheeps-clothing-10-2/
+2016-03-24T14:56:23.223Z, beforeunload, https://twigserial.wordpress.com/, 
+2016-03-24T14:56:25.594Z, load, https://twigserial.wordpress.com/2016/03/24/in-sheeps-clothing-10-2/, 
+2016-03-24T14:56:33.715Z, load, http://topwebfiction.com/vote.php?for=twig, 
+2016-03-24T14:56:35.801Z, beforeunload, http://topwebfiction.com/vote.php?for=twig, 
+2016-03-24T14:56:37.566Z, load, http://topwebfiction.com/?for=twig, 
+2016-03-24T14:56:39.769Z, click, http://topwebfiction.com/?for=twig, http://topwebfiction.com/vote.php?for=worm
+2016-03-24T14:56:39.777Z, beforeunload, http://topwebfiction.com/?for=twig, 
+2016-03-24T14:56:40.407Z, load, http://topwebfiction.com/vote.php?for=worm, 
+2016-03-24T14:56:41.283Z, beforeunload, http://topwebfiction.com/vote.php?for=worm, 
+2016-03-24T14:56:43.082Z, load, http://topwebfiction.com/?for=worm, 
+2016-03-24T14:56:43.685Z, beforeunload, http://topwebfiction.com/?for=worm, 
+2016-03-24T14:56:54.580Z, load, https://www.youtube.com/, 
+2016-03-24T14:57:00.279Z, beforeunload, https://www.youtube.com/, 
+2016-03-24T14:57:02.146Z, load, https://accounts.google.com/ServiceLogin?passive=true&uilel=3&hl=en&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fnext%3D%252F%26action_handle_signin%3Dtrue%26hl%3Den%26app%3Ddesktop%26feature%3Dsign_in_button&service=youtube, 
+2016-03-24T14:57:33.928Z, beforeunload, https://accounts.google.com/ServiceLogin?passive=true&uilel=3&hl=en&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fnext%3D%252F%26action_handle_signin%3Dtrue%26hl%3Den%26app%3Ddesktop%26feature%3Dsign_in_button&service=youtube, 
+2016-03-24T14:57:35.787Z, load, https://accounts.google.com/signin/challenge/ipp/31792?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fnext%3D%252F%26action_handle_signin%3Dtrue%26hl%3Den%26app%3Ddesktop%26feature%3Dsign_in_button&service=youtube&hl=en, 
+2016-03-24T14:57:49.967Z, beforeunload, https://accounts.google.com/signin/challenge/ipp/31792?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fnext%3D%252F%26action_handle_signin%3Dtrue%26hl%3Den%26app%3Ddesktop%26feature%3Dsign_in_button&service=youtube&hl=en, 
+2016-03-24T14:57:54.550Z, load, https://www.youtube.com/, 
+2016-03-24T14:58:01.805Z, beforeunload, https://www.youtube.com/, 
+2016-03-24T14:58:04.733Z, load, https://www.youtube.com/, 
+2016-03-24T14:58:06.148Z, click, https://www.youtube.com/, https://www.youtube.com/feed/subscriptions
+2016-03-24T14:58:06.597Z, polling, https://www.youtube.com/feed/subscriptions, 
+2016-03-24T14:58:18.806Z, beforeunload, https://www.youtube.com/feed/subscriptions, 
+2016-03-25T20:00:09.884Z, load, https://www.facebook.com/, 
+2016-03-25T20:01:16.679Z, click, https://www.facebook.com/, https://www.facebook.com/photo.php?fbid=10151499536749806&set=a.10150948530664806.440247.738179805&type=3
+2016-03-25T20:01:18.791Z, polling, https://www.facebook.com/photo.php?fbid=10151499536749806&set=a.10150948530664806.440247.738179805&type=3&theater, 
+2016-03-25T20:01:24.529Z, polling, https://www.facebook.com/, 
+2016-03-25T20:01:30.401Z, beforeunload, https://www.facebook.com/, 
+2016-03-25T20:01:35.328Z, load, https://twitter.com/, 
+2016-03-25T20:02:12.684Z, polling, https://twitter.com/BoredElonMusk/status/713440819764715520, 
+2016-03-25T20:02:23.448Z, polling, https://twitter.com/, 
+2016-03-25T20:02:50.343Z, polling, https://twitter.com/ID_AA_Carmack/status/713418413469634560, 
+2016-03-25T20:02:58.320Z, load, https://developer.oculus.com/blog/asynchronous-timewarp-on-oculus-rift/, 
+2016-03-25T20:03:29.361Z, beforeunload, https://developer.oculus.com/blog/asynchronous-timewarp-on-oculus-rift/, 
+2016-03-25T20:03:31.194Z, polling, https://twitter.com/, 
+2016-03-25T20:05:29.394Z, polling, https://twitter.com/Demruth/status/713259241360896001, 
+2016-03-25T20:06:08.538Z, load, https://www.youtube.com/watch?v=cwXfv25xJUw, 
+2016-03-25T20:07:16.539Z, click, https://www.youtube.com/watch?v=cwXfv25xJUw, https://www.youtube.com/
+2016-03-25T20:07:16.597Z, polling, https://www.youtube.com/, 
+2016-03-25T20:07:22.296Z, click, https://www.youtube.com/, https://www.youtube.com/feed/subscriptions
+2016-03-25T20:07:22.417Z, polling, https://www.youtube.com/feed/subscriptions, 
+2016-03-25T20:07:42.690Z, beforeunload, https://www.youtube.com/feed/subscriptions, 
+2016-03-25T20:07:45.269Z, polling, https://twitter.com/, 
+2016-03-25T20:07:48.298Z, click, https://twitter.com/, https://twitter.com/
+2016-03-25T20:07:57.266Z, beforeunload, https://twitter.com/, 
+2016-03-25T20:07:58.916Z, load, https://news.ycombinator.com/, 
+2016-03-25T20:08:35.116Z, load, http://www.bbc.com/future/story/20160325-the-names-that-break-computer-systems, 
+2016-03-25T20:08:53.572Z, load, https://jenkins.io/2.0/, 
+2016-03-25T20:10:12.183Z, load, http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/, 
+2016-03-25T20:11:03.974Z, beforeunload, http://www.bbc.com/future/story/20160325-the-names-that-break-computer-systems, 
+2016-03-25T20:12:04.406Z, beforeunload, http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/, 
+2016-03-25T20:12:22.507Z, beforeunload, https://jenkins.io/2.0/, 
+2016-03-25T20:12:26.332Z, load, https://news.ycombinator.com/item?id=11359915, 
+2016-03-25T20:12:48.393Z, load, http://imgur.com/1KhRws2, 
+2016-03-25T20:12:49.283Z, beforeunload, http://imgur.com/1KhRws2, 
+2016-03-25T20:14:45.138Z, beforeunload, https://news.ycombinator.com/item?id=11359915, 
+2016-03-25T20:14:46.092Z, beforeunload, https://news.ycombinator.com/, 
+2016-03-25T20:14:49.735Z, load, https://www.reddit.com/, 
+2016-03-25T20:14:59.021Z, click, https://www.reddit.com/, 
+2016-03-25T20:15:04.293Z, click, https://www.reddit.com/, 
+2016-03-25T20:15:07.655Z, click, https://www.reddit.com/, 
+2016-03-25T20:15:15.925Z, click, https://www.reddit.com/, 
+2016-03-25T20:15:31.059Z, load, http://smbc-comics.com/index.php?id=4054, 
+2016-03-25T20:15:41.433Z, click, http://smbc-comics.com/index.php?id=4054, http://smbc-comics.com/index.php?id=4055
+2016-03-25T20:15:41.440Z, beforeunload, http://smbc-comics.com/index.php?id=4054, 
+2016-03-25T20:15:42.324Z, load, http://smbc-comics.com/index.php?id=4055, 
+2016-03-25T20:15:48.754Z, click, http://smbc-comics.com/index.php?id=4055, http://smbc-comics.com/index.php?id=4056
+2016-03-25T20:15:48.762Z, beforeunload, http://smbc-comics.com/index.php?id=4055, 
+2016-03-25T20:15:49.794Z, load, http://smbc-comics.com/index.php?id=4056, 
+2016-03-25T20:15:56.341Z, click, http://smbc-comics.com/index.php?id=4056, http://smbc-comics.com/index.php?id=4057
+2016-03-25T20:15:56.349Z, beforeunload, http://smbc-comics.com/index.php?id=4056, 
+2016-03-25T20:15:57.228Z, load, http://smbc-comics.com/index.php?id=4057, 
+2016-03-25T20:16:01.640Z, beforeunload, http://smbc-comics.com/index.php?id=4057, 
+2016-03-25T20:16:08.676Z, polling, https://www.reddit.com/#page=2, 
+2016-03-25T20:16:20.148Z, polling, https://www.reddit.com/#page=3, 
+2016-03-25T20:16:28.874Z, load, https://www.youtube.com/watch?v=e4Ao-iNPPUc, 
+2016-03-25T20:18:07.779Z, beforeunload, https://www.youtube.com/watch?v=e4Ao-iNPPUc, 
+2016-03-25T20:18:09.648Z, polling, https://www.reddit.com/#page=4, 
+2016-03-25T20:18:18.866Z, load, http://waitbutwhy.com/2016/03/cryonics.html, 
+2016-03-25T15:00:50.650Z, load, https://www.reddit.com/, 
+2016-03-25T15:00:53.688Z, click, https://www.reddit.com/, 
+2016-03-25T15:00:58.707Z, click, https://www.reddit.com/, 
+2016-03-25T15:01:11.007Z, load, https://www.youtube.com/watch?v=mqk6Sp9Jxj8&feature=youtu.be, 
+2016-03-25T15:01:30.373Z, beforeunload, https://www.youtube.com/watch?v=mqk6Sp9Jxj8&feature=youtu.be, 
+2016-03-25T15:01:36.170Z, load, https://www.reddit.com/r/Android/comments/4bvbuf/the_new_google_voice_leaked_with_a_comparison_to/, 
+2016-03-25T15:01:51.732Z, click, https://www.reddit.com/r/Android/comments/4bvbuf/the_new_google_voice_leaked_with_a_comparison_to/, javascript:void(0)
+2016-03-25T15:02:15.683Z, beforeunload, https://www.reddit.com/r/Android/comments/4bvbuf/the_new_google_voice_leaked_with_a_comparison_to/, 
+2016-03-25T15:02:21.957Z, load, http://www.salon.com/2016/03/24/snowden_has_done_a_service_former_bush_official_lawrence_wilkerson_applauds_the_whistleblower/, 
+2016-03-25T15:03:07.880Z, beforeunload, http://www.salon.com/2016/03/24/snowden_has_done_a_service_former_bush_official_lawrence_wilkerson_applauds_the_whistleblower/, 
+2016-03-25T15:03:14.578Z, load, https://www.reddit.com/r/technology/comments/4btufe/snowden_has_done_a_service_former_bush_official/, 
+2016-03-25T15:04:05.317Z, beforeunload, https://www.reddit.com/r/technology/comments/4btufe/snowden_has_done_a_service_former_bush_official/, 
+2016-03-25T15:04:09.608Z, click, https://www.reddit.com/, https://www.reddit.com/message/inbox/
+2016-03-25T15:04:09.654Z, beforeunload, https://www.reddit.com/, 
+2016-03-25T15:04:11.272Z, load, https://www.reddit.com/message/inbox/, 
+2016-03-25T15:04:39.844Z, click, https://www.reddit.com/message/inbox/, https://www.reddit.com/
+2016-03-25T15:04:39.900Z, beforeunload, https://www.reddit.com/message/inbox/, 
+2016-03-25T15:04:42.242Z, load, https://www.reddit.com/, 
+2016-03-25T15:04:46.843Z, beforeunload, https://www.reddit.com/, 
+2016-03-25T15:04:48.893Z, load, https://www.reddit.com/r/darksouls, 
+2016-03-25T15:04:55.206Z, load, https://www.reddit.com/r/darksouls/comments/4bvmu8/fuck_the_bed_of_chaos/, 
+2016-03-25T15:05:54.369Z, beforeunload, https://www.reddit.com/r/darksouls/comments/4bvmu8/fuck_the_bed_of_chaos/, 
+2016-03-25T15:06:06.102Z, load, https://www.facebook.com/, 
+2016-03-25T15:06:39.737Z, click, https://www.facebook.com/, https://www.facebook.com/#
+2016-03-25T15:06:41.190Z, click, https://www.facebook.com/, https://www.facebook.com/messages/
+2016-03-25T15:06:41.375Z, polling, https://www.facebook.com/messages/, 
+2016-03-25T15:06:49.706Z, polling, https://www.facebook.com/messages/conversation-1035234523202769, 
+2016-03-25T15:06:55.925Z, click, https://www.facebook.com/messages/conversation-1035234523202769, https://www.facebook.com/?ref=logo
+2016-03-25T15:06:56.445Z, polling, https://www.facebook.com/, 
+2016-03-25T15:07:04.606Z, beforeunload, https://www.facebook.com/, 
+2016-03-25T15:07:07.219Z, load, https://twitter.com/, 
+2016-03-25T15:07:15.599Z, load, https://twitter.com/Letofski, 
+2016-03-25T15:07:26.383Z, beforeunload, https://twitter.com/Letofski, 
+2016-03-25T15:07:33.525Z, load, https://twitter.com/SwiftOnSecurity, 
+2016-03-25T15:07:56.868Z, beforeunload, https://twitter.com/SwiftOnSecurity, 
+2016-03-25T15:07:58.117Z, click, https://twitter.com/, https://twitter.com/
+2016-03-25T15:08:16.076Z, load, https://www.youtube.com/, 
+2016-03-25T15:08:19.611Z, click, https://www.youtube.com/, https://www.youtube.com/feed/subscriptions
+2016-03-25T15:08:19.696Z, polling, https://www.youtube.com/feed/subscriptions, 
+2016-03-25T15:08:28.214Z, load, https://www.youtube.com/watch?v=5oXyibEgJr0, 
+2016-03-25T15:09:40.150Z, click, https://www.youtube.com/watch?v=5oXyibEgJr0, https://www.youtube.com/watch?v=5oXyibEgJr0
+2016-03-25T15:10:12.313Z, beforeunload, https://www.youtube.com/watch?v=5oXyibEgJr0, 
+2016-03-25T15:10:22.263Z, beforeunload, https://www.youtube.com/feed/subscriptions, 
+2016-03-25T15:10:42.389Z, load, http://toledo.kuleuven.be/, 
+2016-03-25T15:10:44.195Z, click, http://toledo.kuleuven.be/, http://toledo.kuleuven.be/portal
+2016-03-25T15:10:44.203Z, beforeunload, http://toledo.kuleuven.be/, 
+2016-03-25T15:10:44.465Z, load, https://toledo.kuleuven.be/portal/, 
+2016-03-25T15:10:44.482Z, beforeunload, https://toledo.kuleuven.be/portal/, 
+2016-03-25T15:10:45.914Z, load, https://idp.kuleuven.be/idp/view/login.htm, 
+2016-03-25T15:10:47.500Z, beforeunload, https://idp.kuleuven.be/idp/view/login.htm, 
+2016-03-25T15:10:48.254Z, load, https://idp.kuleuven.be/idp/profile/SAML2/POST/SSO, 
+2016-03-25T15:10:48.274Z, beforeunload, https://idp.kuleuven.be/idp/profile/SAML2/POST/SSO, 
+2016-03-25T15:10:49.421Z, load, https://toledo.kuleuven.be/portal/, 
+2016-03-25T15:10:50.270Z, polling, https://toledo.kuleuven.be/portal/#/home, 
+2016-03-25T15:10:55.692Z, click, https://toledo.kuleuven.be/portal/#/home, https://toledo.kuleuven.be/portal/
+2016-03-25T15:11:06.591Z, click, https://toledo.kuleuven.be/portal/#/home, https://p.cygnus.cc.kuleuven.be/webapps/tol-web-rs-bb-bb_bb60/goto.do?url=%2Fwebapps%2Ftol-notifications-bb_bb60%2Frs%2Fevents%2F_889170342_1%2Fenclosed%2F0&entityId=urn%3Amace%3Akuleuven.be%3Akulassoc%3Akuleuven.be
+2016-03-25T15:11:06.630Z, beforeunload, https://toledo.kuleuven.be/portal/#/home, 
+2016-03-25T15:11:07.276Z, load, https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO, 
+2016-03-25T15:11:07.293Z, beforeunload, https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO, 
+2016-03-25T15:11:07.746Z, load, https://p.cygnus.cc.kuleuven.be/webapps/tol-web-rs-bb-bb_bb60/goto_nowhite.do?rdl=%2Fwebapps%2Fbb-auth-provider-shibboleth-bb_bb60%2Fexecute%2FshibbolethLogin%3FauthProviderId%3D_104_1%26returnUrl%3D%252Fwebapps%252Ftol-notifications-bb_bb60%252Frs%252Fevents%252F_889170342_1%252Fenclosed%252F0&altVersion=0, 
+2016-03-25T15:11:11.715Z, load, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/displayIndividualContent?mode=reset&content_id=_15282578_1&course_id=_662189_1, 
+2016-03-25T15:11:18.968Z, click, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/displayIndividualContent?mode=reset&content_id=_15282578_1&course_id=_662189_1, https://p.cygnus.cc.kuleuven.be/bbcswebdav/pid-15282578-dt-content-rid-72753196_2/xid-72753196_2
+2016-03-25T15:11:20.114Z, load, https://p.cygnus.cc.kuleuven.be/bbcswebdav/pid-15282578-dt-content-rid-72753196_2/courses/B-KUL-H02C3a-1516/lecture4.handouts%285%29.pdf, 
+2016-03-25T15:11:44.293Z, beforeunload, https://p.cygnus.cc.kuleuven.be/bbcswebdav/pid-15282578-dt-content-rid-72753196_2/courses/B-KUL-H02C3a-1516/lecture4.handouts%285%29.pdf, 
+2016-03-25T15:11:46.481Z, load, https://twitter.com/, 
+2016-03-25T15:11:50.600Z, click, https://twitter.com/, https://twitter.com/i/notifications
+2016-03-25T15:11:52.638Z, polling, https://twitter.com/i/notifications, 
+2016-03-25T15:11:56.068Z, click, https://twitter.com/i/notifications, https://twitter.com/
+2016-03-25T15:11:57.706Z, polling, https://twitter.com/, 
+2016-03-25T15:12:08.685Z, beforeunload, https://twitter.com/, 
+2016-03-25T15:12:10.675Z, load, https://news.ycombinator.com/, 
+2016-03-25T15:12:22.776Z, load, https://torrentfreak.com/internet-archive-seeks-to-defend-against-wrongful-copyright-takedowns-160323/, 
+2016-03-25T15:12:50.919Z, beforeunload, https://torrentfreak.com/internet-archive-seeks-to-defend-against-wrongful-copyright-takedowns-160323/, 
+2016-03-25T15:12:53.139Z, load, https://news.ycombinator.com/item?id=11359207, 
+2016-03-25T15:13:09.846Z, beforeunload, https://news.ycombinator.com/item?id=11359207, 
+2016-03-25T15:13:11.458Z, click, https://news.ycombinator.com/, https://news.ycombinator.com/newest
+2016-03-25T15:13:11.464Z, beforeunload, https://news.ycombinator.com/, 
+2016-03-25T15:13:12.283Z, load, https://news.ycombinator.com/newest, 
+2016-03-25T15:13:19.073Z, load, http://city-journal.org/html/finnish-model-14302.html, 
+2016-03-25T15:14:17.942Z, load, http://toledo.kuleuven.be/, 
+2016-03-25T15:14:19.875Z, click, http://toledo.kuleuven.be/, http://toledo.kuleuven.be/portal
+2016-03-25T15:14:19.883Z, beforeunload, http://toledo.kuleuven.be/, 
+2016-03-25T15:14:20.496Z, load, https://toledo.kuleuven.be/portal/, 
+2016-03-25T15:14:21.479Z, polling, https://toledo.kuleuven.be/portal/#/home, 
+2016-03-25T15:14:30.162Z, beforeunload, https://toledo.kuleuven.be/portal/#/home, 
+2016-03-25T15:14:32.777Z, beforeunload, http://city-journal.org/html/finnish-model-14302.html, 
+2016-03-25T15:14:50.444Z, load, https://twigserial.wordpress.com/, 
+2016-03-25T15:14:52.917Z, click, https://twigserial.wordpress.com/, https://twigserial.wordpress.com/2016/03/22/in-sheeps-clothing-10-1/
+2016-03-25T15:14:52.928Z, beforeunload, https://twigserial.wordpress.com/, 
+2016-03-25T15:14:55.205Z, load, https://twigserial.wordpress.com/2016/03/22/in-sheeps-clothing-10-1/, 
+2016-03-25T15:15:06.138Z, click, https://twigserial.wordpress.com/2016/03/22/in-sheeps-clothing-10-1/, http://topwebfiction.com/vote.php?for=twig
+2016-03-25T15:15:06.146Z, beforeunload, https://twigserial.wordpress.com/2016/03/22/in-sheeps-clothing-10-1/, 
+2016-03-25T15:15:07.639Z, load, http://topwebfiction.com/vote.php?for=twig, 
+2016-03-25T15:15:08.910Z, beforeunload, http://topwebfiction.com/vote.php?for=twig, 
+2016-03-25T15:15:13.669Z, load, http://topwebfiction.com/?for=twig, 
+2016-03-25T15:15:15.941Z, click, http://topwebfiction.com/?for=twig, http://topwebfiction.com/vote.php?for=worm
+2016-03-25T15:15:15.946Z, beforeunload, http://topwebfiction.com/?for=twig, 
+2016-03-25T15:15:17.129Z, load, http://topwebfiction.com/vote.php?for=worm, 
+2016-03-25T15:15:18.490Z, beforeunload, http://topwebfiction.com/vote.php?for=worm, 
+2016-03-25T15:15:20.173Z, load, http://topwebfiction.com/?for=worm, 
+2016-03-25T15:15:24.654Z, beforeunload, http://topwebfiction.com/?for=worm, 
+2016-03-25T15:15:37.324Z, load, http://arstechnica.com/, 
+2016-03-25T15:15:43.122Z, load, http://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/, 
+2016-03-25T15:15:55.437Z, click, http://arstechnica.com/, http://arstechnica.com/?view=archive
+2016-03-25T15:15:55.465Z, beforeunload, http://arstechnica.com/, 
+2016-03-25T15:15:56.950Z, load, http://arstechnica.com/, 
+2016-03-25T15:16:16.566Z, click, http://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/, http://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/?comments=1
+2016-03-25T15:16:17.503Z, polling, http://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/?comments=1, 
+2016-03-25T15:17:00.234Z, beforeunload, http://arstechnica.com/information-technology/2016/03/rage-quit-coder-unpublished-17-lines-of-javascript-and-broke-the-internet/?comments=1, 
+2016-03-25T15:17:09.739Z, click, http://arstechnica.com/, http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/
+2016-03-25T15:17:09.773Z, beforeunload, http://arstechnica.com/, 
+2016-03-25T15:17:10.826Z, load, http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/, 
+2016-03-25T15:17:22.494Z, click, http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/, http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/?comments=1
+2016-03-25T15:17:23.439Z, polling, http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/?comments=1, 
+2016-03-25T15:17:34.725Z, click, http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/?comments=1, http://arstechnica.com/
+2016-03-25T15:17:34.742Z, beforeunload, http://arstechnica.com/information-technology/2016/03/artificial-intelligence-in-healthcare/?comments=1, 
+2016-03-25T15:17:35.583Z, load, http://arstechnica.com/, 
+2016-03-25T20:00:09.884Z, load, https://www.facebook.com/, 
+2016-03-25T20:01:16.679Z, click, https://www.facebook.com/, https://www.facebook.com/photo.php?fbid=10151499536749806&set=a.10150948530664806.440247.738179805&type=3
+2016-03-25T20:01:18.791Z, polling, https://www.facebook.com/photo.php?fbid=10151499536749806&set=a.10150948530664806.440247.738179805&type=3&theater, 
+2016-03-25T20:01:24.529Z, polling, https://www.facebook.com/, 
+2016-03-25T20:01:30.401Z, beforeunload, https://www.facebook.com/, 
+2016-03-25T20:01:35.328Z, load, https://twitter.com/, 
+2016-03-25T20:02:12.684Z, polling, https://twitter.com/BoredElonMusk/status/713440819764715520, 
+2016-03-25T20:02:23.448Z, polling, https://twitter.com/, 
+2016-03-25T20:02:50.343Z, polling, https://twitter.com/ID_AA_Carmack/status/713418413469634560, 
+2016-03-25T20:02:58.320Z, load, https://developer.oculus.com/blog/asynchronous-timewarp-on-oculus-rift/, 
+2016-03-25T20:03:29.361Z, beforeunload, https://developer.oculus.com/blog/asynchronous-timewarp-on-oculus-rift/, 
+2016-03-25T20:03:31.194Z, polling, https://twitter.com/, 
+2016-03-25T20:05:29.394Z, polling, https://twitter.com/Demruth/status/713259241360896001, 
+2016-03-25T20:06:08.538Z, load, https://www.youtube.com/watch?v=cwXfv25xJUw, 
+2016-03-25T20:07:16.539Z, click, https://www.youtube.com/watch?v=cwXfv25xJUw, https://www.youtube.com/
+2016-03-25T20:07:16.597Z, polling, https://www.youtube.com/, 
+2016-03-25T20:07:22.296Z, click, https://www.youtube.com/, https://www.youtube.com/feed/subscriptions
+2016-03-25T20:07:22.417Z, polling, https://www.youtube.com/feed/subscriptions, 
+2016-03-25T20:07:42.690Z, beforeunload, https://www.youtube.com/feed/subscriptions, 
+2016-03-25T20:07:45.269Z, polling, https://twitter.com/, 
+2016-03-25T20:07:48.298Z, click, https://twitter.com/, https://twitter.com/
+2016-03-25T20:07:57.266Z, beforeunload, https://twitter.com/, 
+2016-03-25T20:07:58.916Z, load, https://news.ycombinator.com/, 
+2016-03-25T20:08:35.116Z, load, http://www.bbc.com/future/story/20160325-the-names-that-break-computer-systems, 
+2016-03-25T20:08:53.572Z, load, https://jenkins.io/2.0/, 
+2016-03-25T20:10:12.183Z, load, http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/, 
+2016-03-25T20:11:03.974Z, beforeunload, http://www.bbc.com/future/story/20160325-the-names-that-break-computer-systems, 
+2016-03-25T20:12:04.406Z, beforeunload, http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/, 
+2016-03-25T20:12:22.507Z, beforeunload, https://jenkins.io/2.0/, 
+2016-03-25T20:12:26.332Z, load, https://news.ycombinator.com/item?id=11359915, 
+2016-03-25T20:12:48.393Z, load, http://imgur.com/1KhRws2, 
+2016-03-25T20:12:49.283Z, beforeunload, http://imgur.com/1KhRws2, 
+2016-03-25T20:14:45.138Z, beforeunload, https://news.ycombinator.com/item?id=11359915, 
+2016-03-25T20:14:46.092Z, beforeunload, https://news.ycombinator.com/, 
+2016-03-25T20:14:49.735Z, load, https://www.reddit.com/, 
+2016-03-25T20:14:59.021Z, click, https://www.reddit.com/, 
+2016-03-25T20:15:04.293Z, click, https://www.reddit.com/, 
+2016-03-25T20:15:07.655Z, click, https://www.reddit.com/, 
+2016-03-25T20:15:15.925Z, click, https://www.reddit.com/, 
+2016-03-25T20:15:31.059Z, load, http://smbc-comics.com/index.php?id=4054, 
+2016-03-25T20:15:41.433Z, click, http://smbc-comics.com/index.php?id=4054, http://smbc-comics.com/index.php?id=4055
+2016-03-25T20:15:41.440Z, beforeunload, http://smbc-comics.com/index.php?id=4054, 
+2016-03-25T20:15:42.324Z, load, http://smbc-comics.com/index.php?id=4055, 
+2016-03-25T20:15:48.754Z, click, http://smbc-comics.com/index.php?id=4055, http://smbc-comics.com/index.php?id=4056
+2016-03-25T20:15:48.762Z, beforeunload, http://smbc-comics.com/index.php?id=4055, 
+2016-03-25T20:15:49.794Z, load, http://smbc-comics.com/index.php?id=4056, 
+2016-03-25T20:15:56.341Z, click, http://smbc-comics.com/index.php?id=4056, http://smbc-comics.com/index.php?id=4057
+2016-03-25T20:15:56.349Z, beforeunload, http://smbc-comics.com/index.php?id=4056, 
+2016-03-25T20:15:57.228Z, load, http://smbc-comics.com/index.php?id=4057, 
+2016-03-25T20:16:01.640Z, beforeunload, http://smbc-comics.com/index.php?id=4057, 
+2016-03-25T20:16:08.676Z, polling, https://www.reddit.com/#page=2, 
+2016-03-25T20:16:20.148Z, polling, https://www.reddit.com/#page=3, 
+2016-03-25T20:16:28.874Z, load, https://www.youtube.com/watch?v=e4Ao-iNPPUc, 
+2016-03-25T20:18:07.779Z, beforeunload, https://www.youtube.com/watch?v=e4Ao-iNPPUc, 
+2016-03-25T20:18:09.648Z, polling, https://www.reddit.com/#page=4, 
+2016-03-25T20:18:18.866Z, load, http://waitbutwhy.com/2016/03/cryonics.html, 
 

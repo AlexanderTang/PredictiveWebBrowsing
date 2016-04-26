@@ -1,103 +1,103 @@
-"2016-03-16T:08:56:12.852Z, ""load"", ""https://www.google.be/search?q=toledo&ie=utf-8&oe=utf-8&gws_rd=cr&ei=NQT1VsrgFILoywPVz7uICA"", """""
-"2016-03-16T:08:56:13.829Z, ""click"", ""https://www.google.be/search?q=toledo&ie=utf-8&oe=utf-8&gws_rd=cr&ei=NQT1VsrgFILoywPVz7uICA"", ""https://www.google.be/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjj8u67wtvLAhXG8XIKHfCVAhMQFggoMAA&url=https%3A%2F%2Ftoledo.kuleuven.be%2F&usg=AFQjCNGhDbFi61MBsss_BXI9mLUQgNS22w"""
-"2016-03-16T:08:56:13.916Z, ""beforeunload"", ""https://www.google.be/search?q=toledo&ie=utf-8&oe=utf-8&gws_rd=cr&ei=NQT1VsrgFILoywPVz7uICA"", """""
-"2016-03-16T:08:56:14.777Z, ""load"", ""https://toledo.kuleuven.be/"", """""
-"2016-03-16T:08:56:15.730Z, ""click"", ""https://toledo.kuleuven.be/"", ""https://toledo.kuleuven.be/portal"""
-"2016-03-16T:08:56:16.102Z, ""load"", ""https://toledo.kuleuven.be/portal/"", """""
-"2016-03-16T:08:56:15.740Z, ""beforeunload"", ""https://toledo.kuleuven.be/"", """""
-"2016-03-16T:08:56:16.655Z, ""polling"", ""https://toledo.kuleuven.be/portal/#/home"", """""
-"2016-03-16T:08:56:23.653Z, ""click"", ""https://toledo.kuleuven.be/portal/#/home"", ""https://p.cygnus.cc.kuleuven.be/webapps/tol-web-rs-bb-bb_bb60/goto_lu.do?batchUid=B-KUL-H0T25a-1516&entityId=urn%3Amace%3Akuleuven.be%3Akulassoc%3Akuleuven.be"""
-"2016-03-16T:08:56:23.678Z, ""beforeunload"", ""https://toledo.kuleuven.be/portal/#/home"", """""
-"2016-03-16T:08:56:24.007Z, ""load"", ""https://idp.kuleuven.be/idp/view/login.htm"", """""
-"2016-03-16T:08:56:25.498Z, ""beforeunload"", ""https://idp.kuleuven.be/idp/view/login.htm"", """""
-"2016-03-16T:08:56:25.741Z, ""load"", ""https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO"", """""
-"2016-03-16T:08:56:25.748Z, ""beforeunload"", ""https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO"", """""
-"2016-03-16T:08:56:26.008Z, ""load"", ""https://p.cygnus.cc.kuleuven.be/webapps/tol-web-rs-bb-bb_bb60/goto_nowhite.do?rdl=%2Fwebapps%2Fbb-auth-provider-shibboleth-bb_bb60%2Fexecute%2FshibbolethLogin%3FauthProviderId%3D_104_1%26returnUrl%3D%252Fwebapps%252Fblackboard%252Fexecute%252FcourseMain%253Fcourse_id%253D_670696_1&altVersion=0"", """""
-"2016-03-16T:08:56:28.562Z, ""load"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view"", """""
-"2016-03-16T:08:56:31.007Z, ""click"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset"""
-"2016-03-16T:08:56:32.378Z, ""load"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset"", """""
-"2016-03-16T:08:56:31.016Z, ""beforeunload"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view"", """""
-"2016-03-16T:08:56:35.079Z, ""click"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/launchLink.jsp?course_id=_670696_1&tool_id=_10_1&tool_type=TOOL&mode=view&mode=reset"""
-"2016-03-16T:08:56:36.489Z, ""load"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/course/tools/settings?dispatch=viewShowHideTool&course_id=_670696_1&family=course_tools_area&mode=view"", """""
-"2016-03-16T:08:56:35.089Z, ""beforeunload"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset"", """""
-"2016-03-16T:08:56:37.796Z, ""click"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/course/tools/settings?dispatch=viewShowHideTool&course_id=_670696_1&family=course_tools_area&mode=view"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/launchLink.jsp?course_id=_670696_1&tool_id=_161_1&tool_type=TOOL&mode=view&mode=reset"""
-"2016-03-16T:08:56:37.804Z, ""beforeunload"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/course/tools/settings?dispatch=viewShowHideTool&course_id=_670696_1&family=course_tools_area&mode=view"", """""
-"2016-03-16T:08:56:39.260Z, ""load"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/staffinfo/manageStaffInfo?course_id=_670696_1&mode=view&mode=view"", """""
-"2016-03-16T:08:56:40.461Z, ""click"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/staffinfo/manageStaffInfo?course_id=_670696_1&mode=view&mode=view"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/launchLink.jsp?course_id=_670696_1&tool_id=_108_1&tool_type=TOOL&mode=view&mode=reset"""
-"2016-03-16T:08:56:40.476Z, ""beforeunload"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/staffinfo/manageStaffInfo?course_id=_670696_1&mode=view&mode=view"", """""
-"2016-03-16T:08:56:42.400Z, ""load"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view"", """""
-"2016-03-16T:08:56:43.618Z, ""click"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset"""
-"2016-03-16T:08:56:43.631Z, ""beforeunload"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view"", """""
-"2016-03-16T:08:56:44.944Z, ""load"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset"", """""
-"2016-03-16T:08:56:46.803Z, ""click"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset"", ""https://p.cygnus.cc.kuleuven.be/bbcswebdav/pid-17202873-dt-content-rid-68993995_2/xid-68993995_2"""
-"2016-03-16T:08:57:12.223Z, ""beforeunload"", ""https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset"", """""
-"2016-03-16T:10:04:39.770Z, ""load"", ""https://www.google.be/search?q=kuleuven+webmail&ie=utf-8&oe=utf-8&gws_rd=cr&ei=mBb1VsPwBuvJ6ATJxIt4"", """""
-"2016-03-16T:10:04:40.846Z, ""click"", ""https://www.google.be/search?q=kuleuven+webmail&ie=utf-8&oe=utf-8&gws_rd=cr&ei=mBb1VsPwBuvJ6ATJxIt4"", ""https://www.google.be/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwing5OA1NvLAhUIz3IKHbdQDSQQFggoMAA&url=https%3A%2F%2Fwebmail.kuleuven.be%2F&usg=AFQjCNFf1TKH8WxLDUdTOsLNAYeW58n7Jg"""
-"2016-03-16T:10:04:40.931Z, ""beforeunload"", ""https://www.google.be/search?q=kuleuven+webmail&ie=utf-8&oe=utf-8&gws_rd=cr&ei=mBb1VsPwBuvJ6ATJxIt4"", """""
-"2016-03-16T:10:04:41.439Z, ""load"", ""https://webmail.kuleuven.be/"", """""
-"2016-03-16T:10:04:42.941Z, ""click"", ""https://webmail.kuleuven.be/"", ""https://owa.student.kuleuven.be/"""
-"2016-03-16T:10:04:42.943Z, ""beforeunload"", ""https://webmail.kuleuven.be/"", """""
-"2016-03-16T:10:04:43.475Z, ""load"", ""https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO"", """""
-"2016-03-16T:10:04:45.422Z, ""load"", ""https://owa.student.kuleuven.be/owa/?authToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjYwd19nR3FhNjBtV3NOSlYxZnlaY3RpVWlacyJ9.eyJhdWQiOiJ1cm46QXBwUHJveHk6Y29tIiwiaXNzIjoiaHR0cDovL2ZzLmt1bGV1dmVuLmJlL2FkZnMvc2VydmljZXMvdHJ1c3QiLCJpYXQiOjE0NTg5MDI2ODQsImV4cCI6MTQ1ODkwNjI4NCwicmVseWluZ3BhcnR5dHJ1c3RpZCI6IjcxMGYyMGRmLWQyMmEtZTUxMS04MGMyLTAwNTA1Njk0NjVlMyIsInVwbiI6InIwNTg4MjU4QGt1bGV1dmVuLmJlIiwiY2xpZW50cmVxaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMzQ1MS0wMDgwMDcwODAwZjkiLCJhdXRobWV0aG9kIjoidXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFjOmNsYXNzZXM6UHJldmlvdXNTZXNzaW9uIiwiYXV0aF90aW1lIjoiMjAxNi0wMy0yNVQxMDo0NDo0NC41MjNaIiwidmVyIjoiMS4wIn0.XiamwmbQadhcFib3MDoK-Wi4xyndj1Yp50NwUMz4KW5EYOxSb7Psf8BShspiPhiFxgNVwV_uoOanUXljC0r8dEIMOjHMa8QkozuDw71RGWCWf73iD3qGe4D_hXj1aYXELb4sXnpeqtHb0vkHjcneKr8iN6dAPz8MmhH72oGQP1iOfzO8mwuwNviGA1ehgKulsDlxZa6FHSp0v32bjXaz1WFn-2LIu_9gJnQPJVltLm9_2N7E-Tfqxu0Dd0TVV-lxU8xHsYvU6N1AX26zi77fPlE1zH35nBFyymd64r4fKi8QTmD4SzDQFLUhZJkxRMWPLuNkT8vW6Vt99NjcNSoy_Q#path=/mail"", """""
-"2016-03-16T:10:04:43.480Z, ""beforeunload"", ""https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO"", """""
-"2016-03-16T:10:05:26.831Z, ""beforeunload"", ""https://owa.student.kuleuven.be/owa/?authToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjYwd19nR3FhNjBtV3NOSlYxZnlaY3RpVWlacyJ9.eyJhdWQiOiJ1cm46QXBwUHJveHk6Y29tIiwiaXNzIjoiaHR0cDovL2ZzLmt1bGV1dmVuLmJlL2FkZnMvc2VydmljZXMvdHJ1c3QiLCJpYXQiOjE0NTg5MDI2ODQsImV4cCI6MTQ1ODkwNjI4NCwicmVseWluZ3BhcnR5dHJ1c3RpZCI6IjcxMGYyMGRmLWQyMmEtZTUxMS04MGMyLTAwNTA1Njk0NjVlMyIsInVwbiI6InIwNTg4MjU4QGt1bGV1dmVuLmJlIiwiY2xpZW50cmVxaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMzQ1MS0wMDgwMDcwODAwZjkiLCJhdXRobWV0aG9kIjoidXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFjOmNsYXNzZXM6UHJldmlvdXNTZXNzaW9uIiwiYXV0aF90aW1lIjoiMjAxNi0wMy0yNVQxMDo0NDo0NC41MjNaIiwidmVyIjoiMS4wIn0.XiamwmbQadhcFib3MDoK-Wi4xyndj1Yp50NwUMz4KW5EYOxSb7Psf8BShspiPhiFxgNVwV_uoOanUXljC0r8dEIMOjHMa8QkozuDw71RGWCWf73iD3qGe4D_hXj1aYXELb4sXnpeqtHb0vkHjcneKr8iN6dAPz8MmhH72oGQP1iOfzO8mwuwNviGA1ehgKulsDlxZa6FHSp0v32bjXaz1WFn-2LIu_9gJnQPJVltLm9_2N7E-Tfqxu0Dd0TVV-lxU8xHsYvU6N1AX26zi77fPlE1zH35nBFyymd64r4fKi8QTmD4SzDQFLUhZJkxRMWPLuNkT8vW6Vt99NjcNSoy_Q#path=/mail"", """""
-"2016-03-16T:10:37:50.540Z, ""load"", ""https://www.google.be/search?q=youtube&ie=utf-8&oe=utf-8&gws_rd=cr&ei=3czzVpbgLseaPveRoYgB"", """""
-"2016-03-16T:10:37:51.740Z, ""click"", ""https://www.google.be/search?q=youtube&ie=utf-8&oe=utf-8&gws_rd=cr&ei=3czzVpbgLseaPveRoYgB"", ""https://www.google.be/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjL0bDGmdnLAhXDJQ8KHQbkCCsQFggoMAA&url=https%3A%2F%2Fwww.youtube.com%2F%3Fhl%3Dnl%26gl%3DBE&usg=AFQjCNGbJF4ObBXQ5F9rgtg7ChZY-iyhNQ"""
-"2016-03-16T:10:37:51.876Z, ""beforeunload"", ""https://www.google.be/search?q=youtube&ie=utf-8&oe=utf-8&gws_rd=cr&ei=3czzVpbgLseaPveRoYgB"", """""
-"2016-03-16T:10:37:53.725Z, ""load"", ""https://www.youtube.com/?hl=nl&gl=BE"", """""
-"2016-03-16T:10:37:57.217Z, ""polling"", ""https://www.youtube.com/results?search_query=vlogbrothers"", """""
-"2016-03-16T:10:37:59.551Z, ""click"", ""https://www.youtube.com/results?search_query=vlogbrothers"", ""https://www.youtube.com/user/vlogbrothers"""
-"2016-03-16T:10:37:59.717Z, ""polling"", ""https://www.youtube.com/user/vlogbrothers"", """""
-"2016-03-16T:10:38:02.962Z, ""click"", ""https://www.youtube.com/user/vlogbrothers"", ""https://www.youtube.com/user/vlogbrothers/videos"""
-"2016-03-16T:10:38:03.216Z, ""polling"", ""https://www.youtube.com/user/vlogbrothers/videos"", """""
-"2016-03-16T:10:38:06.735Z, ""polling"", ""https://www.youtube.com/user/vlogbrothers/videos?sort=da&view=0&flow=grid"", """""
-"2016-03-16T:10:38:09.202Z, ""click"", ""https://www.youtube.com/user/vlogbrothers/videos?sort=da&view=0&flow=grid"", ""https://www.youtube.com/watch?v=PuMV6KCkLQI"""
-"2016-03-16T:10:38:09.244Z, ""polling"", ""https://www.youtube.com/watch?v=PuMV6KCkLQI"", """""
-"2016-03-16T:10:38:32.900Z, ""click"", ""https://www.youtube.com/watch?v=PuMV6KCkLQI"", """""
-"2016-03-16T:10:40:43.161Z, ""click"", ""https://www.youtube.com/watch?v=PuMV6KCkLQI"", ""https://www.youtube.com/watch?v=VpIs2J256fo&ebc=ANyPxKpabcJdzXUM6kKT5McTF-jY1WKTR8Q9SnnU4Wk-JTviUDnXDtiSPuUdnFtsFiA-xXi8ter2_2hwoFSSuIG2egp7kcerNg"""
-"2016-03-16T:10:40:43.218Z, ""polling"", ""https://www.youtube.com/watch?v=VpIs2J256fo&ebc=ANyPxKpabcJdzXUM6kKT5McTF-jY1WKTR8Q9SnnU4Wk-JTviUDnXDtiSPuUdnFtsFiA-xXi8ter2_2hwoFSSuIG2egp7kcerNg"", """""
-"2016-03-16T:10:41:01.316Z, ""click"", ""https://www.youtube.com/watch?v=VpIs2J256fo&ebc=ANyPxKpabcJdzXUM6kKT5McTF-jY1WKTR8Q9SnnU4Wk-JTviUDnXDtiSPuUdnFtsFiA-xXi8ter2_2hwoFSSuIG2egp7kcerNg"", """""
-"2016-03-16T:10:44:06.824Z, ""polling"", ""https://www.youtube.com/results?search_query=smarter+every+day"", """""
-"2016-03-16T:10:44:09.084Z, ""click"", ""https://www.youtube.com/results?search_query=smarter+every+day"", ""https://www.youtube.com/user/destinws2"""
-"2016-03-16T:10:44:09.225Z, ""polling"", ""https://www.youtube.com/user/destinws2"", """""
-"2016-03-16T:10:44:14.916Z, ""click"", ""https://www.youtube.com/user/destinws2"", ""https://www.youtube.com/user/destinws2/videos"""
-"2016-03-16T:10:44:15.249Z, ""polling"", ""https://www.youtube.com/user/destinws2/videos"", """""
-"2016-03-16T:10:44:19.716Z, ""polling"", ""https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da"", """""
-"2016-03-16T:10:44:23.754Z, ""click"", ""https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da"", ""https://www.youtube.com/watch?v=Oz4YBJ64kgA"""
-"2016-03-16T:10:44:24.216Z, ""polling"", ""https://www.youtube.com/watch?v=Oz4YBJ64kgA"", """""
-"2016-03-16T:10:44:42.006Z, ""polling"", ""https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da"", """""
-"2016-03-16T:10:44:43.774Z, ""click"", ""https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da"", ""https://www.youtube.com/watch?v=4tbYPidp3do"""
-"2016-03-16T:10:44:44.331Z, ""polling"", ""https://www.youtube.com/watch?v=4tbYPidp3do"", """""
-"2016-03-16T:10:44:58.510Z, ""click"", ""https://www.youtube.com/watch?v=4tbYPidp3do"", """""
-"2016-03-16T:10:45:22.119Z, ""polling"", ""https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da"", """""
-"2016-03-16T:10:45:24.398Z, ""click"", ""https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da"", ""https://www.youtube.com/watch?v=Hf273uCVHvE"""
-"2016-03-16T:10:45:24.779Z, ""polling"", ""https://www.youtube.com/watch?v=Hf273uCVHvE"", """""
-"2016-03-16T:10:46:05.840Z, ""polling"", ""https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da"", """""
-"2016-03-16T:10:46:10.509Z, ""click"", ""https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da"", ""https://www.youtube.com/watch?v=ipQkk7RxApg"""
-"2016-03-16T:10:46:10.844Z, ""polling"", ""https://www.youtube.com/watch?v=ipQkk7RxApg"", """""
-"2016-03-16T:10:46:25.757Z, ""click"", ""https://www.youtube.com/watch?v=ipQkk7RxApg"", """""
-"2016-03-16T:10:46:54.330Z, ""polling"", ""https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da"", """""
-"2016-03-16T:10:46:56.513Z, ""click"", ""https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da"", ""https://www.youtube.com/watch?v=kI2pDzEKdzg"""
-"2016-03-16T:10:46:56.892Z, ""polling"", ""https://www.youtube.com/watch?v=kI2pDzEKdzg"", """""
-"2016-03-16T:10:48:23.844Z, ""polling"", ""https://www.youtube.com/results?search_query=failarmy"", """""
-"2016-03-16T:10:48:26.399Z, ""click"", ""https://www.youtube.com/results?search_query=failarmy"", ""https://www.youtube.com/user/failarmy"""
-"2016-03-16T:10:48:26.434Z, ""polling"", ""https://www.youtube.com/user/failarmy"", """""
-"2016-03-16T:10:48:29.897Z, ""click"", ""https://www.youtube.com/user/failarmy"", ""https://www.youtube.com/user/failarmy/videos"""
-"2016-03-16T:10:48:30.341Z, ""polling"", ""https://www.youtube.com/user/failarmy/videos"", """""
-"2016-03-16T:10:48:33.501Z, ""click"", ""https://www.youtube.com/user/failarmy/videos"", ""https://www.youtube.com/watch?v=WzBBM-v0sTk"""
-"2016-03-16T:10:48:33.873Z, ""polling"", ""https://www.youtube.com/watch?v=WzBBM-v0sTk"", """""
-"2016-03-16T:10:55:48.595Z, ""beforeunload"", ""https://www.youtube.com/watch?v=WzBBM-v0sTk"", """""
-"2016-03-16T:10:55:49.485Z, ""load"", ""https://www.google.be/search?q=wait+but+why&ie=utf-8&oe=utf-8&gws_rd=cr&ei=FdHzVsqrDsP4PtLjlJAJ"", """""
-"2016-03-16T:10:55:51.211Z, ""click"", ""https://www.google.be/search?q=wait+but+why&ie=utf-8&oe=utf-8&gws_rd=cr&ei=FdHzVsqrDsP4PtLjlJAJ"", ""https://www.google.be/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwiq3fDIndnLAhUGaA8KHbmRB6UQFggoMAA&url=http%3A%2F%2Fwaitbutwhy.com%2F&usg=AFQjCNHNiLlZr2_0rhnWs-WXVG8oOlcuRQ"""
-"2016-03-16T:10:55:51.290Z, ""beforeunload"", ""https://www.google.be/search?q=wait+but+why&ie=utf-8&oe=utf-8&gws_rd=cr&ei=FdHzVsqrDsP4PtLjlJAJ"", """""
-"2016-03-16T:10:55:52.532Z, ""load"", ""http://waitbutwhy.com/"", """""
-"2016-03-16T:10:55:55.482Z, ""click"", ""http://waitbutwhy.com/"", ""http://waitbutwhy.com/wait-but-who"""
-"2016-03-16T:10:55:56.360Z, ""load"", ""http://waitbutwhy.com/wait-but-who"", """""
-"2016-03-16T:10:55:55.521Z, ""beforeunload"", ""http://waitbutwhy.com/"", """""
-"2016-03-16T:10:56:00.600Z, ""click"", ""http://waitbutwhy.com/wait-but-who"", ""http://waitbutwhy.com/archive"""
-"2016-03-16T:10:56:01.693Z, ""load"", ""http://waitbutwhy.com/archive"", """""
-"2016-03-16T:10:56:00.610Z, ""beforeunload"", ""http://waitbutwhy.com/wait-but-who"", """""
-"2016-03-16T:10:56:12.183Z, ""click"", ""http://waitbutwhy.com/archive"", ""http://waitbutwhy.com/2014/02/pick-life-partner.html"""
-"2016-03-16T:10:56:13.249Z, ""load"", ""http://waitbutwhy.com/2014/02/pick-life-partner.html"", """""
-"2016-03-16T:10:56:12.196Z, ""beforeunload"", ""http://waitbutwhy.com/archive"", """""
-"2016-03-16T:10:58:31.810Z, ""beforeunload"", ""http://waitbutwhy.com/2014/02/pick-life-partner.html"", """""
+2016-03-16T:08:56:12.852Z, load, https://www.google.be/search?q=toledo&ie=utf-8&oe=utf-8&gws_rd=cr&ei=NQT1VsrgFILoywPVz7uICA, 
+2016-03-16T:08:56:13.829Z, click, https://www.google.be/search?q=toledo&ie=utf-8&oe=utf-8&gws_rd=cr&ei=NQT1VsrgFILoywPVz7uICA, https://www.google.be/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjj8u67wtvLAhXG8XIKHfCVAhMQFggoMAA&url=https%3A%2F%2Ftoledo.kuleuven.be%2F&usg=AFQjCNGhDbFi61MBsss_BXI9mLUQgNS22w
+2016-03-16T:08:56:13.916Z, beforeunload, https://www.google.be/search?q=toledo&ie=utf-8&oe=utf-8&gws_rd=cr&ei=NQT1VsrgFILoywPVz7uICA, 
+2016-03-16T:08:56:14.777Z, load, https://toledo.kuleuven.be/, 
+2016-03-16T:08:56:15.730Z, click, https://toledo.kuleuven.be/, https://toledo.kuleuven.be/portal
+2016-03-16T:08:56:16.102Z, load, https://toledo.kuleuven.be/portal/, 
+2016-03-16T:08:56:15.740Z, beforeunload, https://toledo.kuleuven.be/, 
+2016-03-16T:08:56:16.655Z, polling, https://toledo.kuleuven.be/portal/#/home, 
+2016-03-16T:08:56:23.653Z, click, https://toledo.kuleuven.be/portal/#/home, https://p.cygnus.cc.kuleuven.be/webapps/tol-web-rs-bb-bb_bb60/goto_lu.do?batchUid=B-KUL-H0T25a-1516&entityId=urn%3Amace%3Akuleuven.be%3Akulassoc%3Akuleuven.be
+2016-03-16T:08:56:23.678Z, beforeunload, https://toledo.kuleuven.be/portal/#/home, 
+2016-03-16T:08:56:24.007Z, load, https://idp.kuleuven.be/idp/view/login.htm, 
+2016-03-16T:08:56:25.498Z, beforeunload, https://idp.kuleuven.be/idp/view/login.htm, 
+2016-03-16T:08:56:25.741Z, load, https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO, 
+2016-03-16T:08:56:25.748Z, beforeunload, https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO, 
+2016-03-16T:08:56:26.008Z, load, https://p.cygnus.cc.kuleuven.be/webapps/tol-web-rs-bb-bb_bb60/goto_nowhite.do?rdl=%2Fwebapps%2Fbb-auth-provider-shibboleth-bb_bb60%2Fexecute%2FshibbolethLogin%3FauthProviderId%3D_104_1%26returnUrl%3D%252Fwebapps%252Fblackboard%252Fexecute%252FcourseMain%253Fcourse_id%253D_670696_1&altVersion=0, 
+2016-03-16T:08:56:28.562Z, load, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view, 
+2016-03-16T:08:56:31.007Z, click, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset
+2016-03-16T:08:56:32.378Z, load, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset, 
+2016-03-16T:08:56:31.016Z, beforeunload, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view, 
+2016-03-16T:08:56:35.079Z, click, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/launchLink.jsp?course_id=_670696_1&tool_id=_10_1&tool_type=TOOL&mode=view&mode=reset
+2016-03-16T:08:56:36.489Z, load, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/course/tools/settings?dispatch=viewShowHideTool&course_id=_670696_1&family=course_tools_area&mode=view, 
+2016-03-16T:08:56:35.089Z, beforeunload, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset, 
+2016-03-16T:08:56:37.796Z, click, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/course/tools/settings?dispatch=viewShowHideTool&course_id=_670696_1&family=course_tools_area&mode=view, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/launchLink.jsp?course_id=_670696_1&tool_id=_161_1&tool_type=TOOL&mode=view&mode=reset
+2016-03-16T:08:56:37.804Z, beforeunload, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/course/tools/settings?dispatch=viewShowHideTool&course_id=_670696_1&family=course_tools_area&mode=view, 
+2016-03-16T:08:56:39.260Z, load, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/staffinfo/manageStaffInfo?course_id=_670696_1&mode=view&mode=view, 
+2016-03-16T:08:56:40.461Z, click, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/staffinfo/manageStaffInfo?course_id=_670696_1&mode=view&mode=view, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/launchLink.jsp?course_id=_670696_1&tool_id=_108_1&tool_type=TOOL&mode=view&mode=reset
+2016-03-16T:08:56:40.476Z, beforeunload, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/staffinfo/manageStaffInfo?course_id=_670696_1&mode=view&mode=view, 
+2016-03-16T:08:56:42.400Z, load, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view, 
+2016-03-16T:08:56:43.618Z, click, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset
+2016-03-16T:08:56:43.631Z, beforeunload, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_670696_1&handle=announcements_entry&mode=view, 
+2016-03-16T:08:56:44.944Z, load, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset, 
+2016-03-16T:08:56:46.803Z, click, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset, https://p.cygnus.cc.kuleuven.be/bbcswebdav/pid-17202873-dt-content-rid-68993995_2/xid-68993995_2
+2016-03-16T:08:57:12.223Z, beforeunload, https://p.cygnus.cc.kuleuven.be/webapps/blackboard/content/listContent.jsp?course_id=_670696_1&content_id=_15605359_1&mode=reset, 
+2016-03-16T:10:04:39.770Z, load, https://www.google.be/search?q=kuleuven+webmail&ie=utf-8&oe=utf-8&gws_rd=cr&ei=mBb1VsPwBuvJ6ATJxIt4, 
+2016-03-16T:10:04:40.846Z, click, https://www.google.be/search?q=kuleuven+webmail&ie=utf-8&oe=utf-8&gws_rd=cr&ei=mBb1VsPwBuvJ6ATJxIt4, https://www.google.be/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwing5OA1NvLAhUIz3IKHbdQDSQQFggoMAA&url=https%3A%2F%2Fwebmail.kuleuven.be%2F&usg=AFQjCNFf1TKH8WxLDUdTOsLNAYeW58n7Jg
+2016-03-16T:10:04:40.931Z, beforeunload, https://www.google.be/search?q=kuleuven+webmail&ie=utf-8&oe=utf-8&gws_rd=cr&ei=mBb1VsPwBuvJ6ATJxIt4, 
+2016-03-16T:10:04:41.439Z, load, https://webmail.kuleuven.be/, 
+2016-03-16T:10:04:42.941Z, click, https://webmail.kuleuven.be/, https://owa.student.kuleuven.be/
+2016-03-16T:10:04:42.943Z, beforeunload, https://webmail.kuleuven.be/, 
+2016-03-16T:10:04:43.475Z, load, https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO, 
+2016-03-16T:10:04:45.422Z, load, https://owa.student.kuleuven.be/owa/?authToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjYwd19nR3FhNjBtV3NOSlYxZnlaY3RpVWlacyJ9.eyJhdWQiOiJ1cm46QXBwUHJveHk6Y29tIiwiaXNzIjoiaHR0cDovL2ZzLmt1bGV1dmVuLmJlL2FkZnMvc2VydmljZXMvdHJ1c3QiLCJpYXQiOjE0NTg5MDI2ODQsImV4cCI6MTQ1ODkwNjI4NCwicmVseWluZ3BhcnR5dHJ1c3RpZCI6IjcxMGYyMGRmLWQyMmEtZTUxMS04MGMyLTAwNTA1Njk0NjVlMyIsInVwbiI6InIwNTg4MjU4QGt1bGV1dmVuLmJlIiwiY2xpZW50cmVxaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMzQ1MS0wMDgwMDcwODAwZjkiLCJhdXRobWV0aG9kIjoidXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFjOmNsYXNzZXM6UHJldmlvdXNTZXNzaW9uIiwiYXV0aF90aW1lIjoiMjAxNi0wMy0yNVQxMDo0NDo0NC41MjNaIiwidmVyIjoiMS4wIn0.XiamwmbQadhcFib3MDoK-Wi4xyndj1Yp50NwUMz4KW5EYOxSb7Psf8BShspiPhiFxgNVwV_uoOanUXljC0r8dEIMOjHMa8QkozuDw71RGWCWf73iD3qGe4D_hXj1aYXELb4sXnpeqtHb0vkHjcneKr8iN6dAPz8MmhH72oGQP1iOfzO8mwuwNviGA1ehgKulsDlxZa6FHSp0v32bjXaz1WFn-2LIu_9gJnQPJVltLm9_2N7E-Tfqxu0Dd0TVV-lxU8xHsYvU6N1AX26zi77fPlE1zH35nBFyymd64r4fKi8QTmD4SzDQFLUhZJkxRMWPLuNkT8vW6Vt99NjcNSoy_Q#path=/mail, 
+2016-03-16T:10:04:43.480Z, beforeunload, https://idp.kuleuven.be/idp/profile/SAML2/Redirect/SSO, 
+2016-03-16T:10:05:26.831Z, beforeunload, https://owa.student.kuleuven.be/owa/?authToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjYwd19nR3FhNjBtV3NOSlYxZnlaY3RpVWlacyJ9.eyJhdWQiOiJ1cm46QXBwUHJveHk6Y29tIiwiaXNzIjoiaHR0cDovL2ZzLmt1bGV1dmVuLmJlL2FkZnMvc2VydmljZXMvdHJ1c3QiLCJpYXQiOjE0NTg5MDI2ODQsImV4cCI6MTQ1ODkwNjI4NCwicmVseWluZ3BhcnR5dHJ1c3RpZCI6IjcxMGYyMGRmLWQyMmEtZTUxMS04MGMyLTAwNTA1Njk0NjVlMyIsInVwbiI6InIwNTg4MjU4QGt1bGV1dmVuLmJlIiwiY2xpZW50cmVxaWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMzQ1MS0wMDgwMDcwODAwZjkiLCJhdXRobWV0aG9kIjoidXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFjOmNsYXNzZXM6UHJldmlvdXNTZXNzaW9uIiwiYXV0aF90aW1lIjoiMjAxNi0wMy0yNVQxMDo0NDo0NC41MjNaIiwidmVyIjoiMS4wIn0.XiamwmbQadhcFib3MDoK-Wi4xyndj1Yp50NwUMz4KW5EYOxSb7Psf8BShspiPhiFxgNVwV_uoOanUXljC0r8dEIMOjHMa8QkozuDw71RGWCWf73iD3qGe4D_hXj1aYXELb4sXnpeqtHb0vkHjcneKr8iN6dAPz8MmhH72oGQP1iOfzO8mwuwNviGA1ehgKulsDlxZa6FHSp0v32bjXaz1WFn-2LIu_9gJnQPJVltLm9_2N7E-Tfqxu0Dd0TVV-lxU8xHsYvU6N1AX26zi77fPlE1zH35nBFyymd64r4fKi8QTmD4SzDQFLUhZJkxRMWPLuNkT8vW6Vt99NjcNSoy_Q#path=/mail, 
+2016-03-16T:10:37:50.540Z, load, https://www.google.be/search?q=youtube&ie=utf-8&oe=utf-8&gws_rd=cr&ei=3czzVpbgLseaPveRoYgB, 
+2016-03-16T:10:37:51.740Z, click, https://www.google.be/search?q=youtube&ie=utf-8&oe=utf-8&gws_rd=cr&ei=3czzVpbgLseaPveRoYgB, https://www.google.be/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjL0bDGmdnLAhXDJQ8KHQbkCCsQFggoMAA&url=https%3A%2F%2Fwww.youtube.com%2F%3Fhl%3Dnl%26gl%3DBE&usg=AFQjCNGbJF4ObBXQ5F9rgtg7ChZY-iyhNQ
+2016-03-16T:10:37:51.876Z, beforeunload, https://www.google.be/search?q=youtube&ie=utf-8&oe=utf-8&gws_rd=cr&ei=3czzVpbgLseaPveRoYgB, 
+2016-03-16T:10:37:53.725Z, load, https://www.youtube.com/?hl=nl&gl=BE, 
+2016-03-16T:10:37:57.217Z, polling, https://www.youtube.com/results?search_query=vlogbrothers, 
+2016-03-16T:10:37:59.551Z, click, https://www.youtube.com/results?search_query=vlogbrothers, https://www.youtube.com/user/vlogbrothers
+2016-03-16T:10:37:59.717Z, polling, https://www.youtube.com/user/vlogbrothers, 
+2016-03-16T:10:38:02.962Z, click, https://www.youtube.com/user/vlogbrothers, https://www.youtube.com/user/vlogbrothers/videos
+2016-03-16T:10:38:03.216Z, polling, https://www.youtube.com/user/vlogbrothers/videos, 
+2016-03-16T:10:38:06.735Z, polling, https://www.youtube.com/user/vlogbrothers/videos?sort=da&view=0&flow=grid, 
+2016-03-16T:10:38:09.202Z, click, https://www.youtube.com/user/vlogbrothers/videos?sort=da&view=0&flow=grid, https://www.youtube.com/watch?v=PuMV6KCkLQI
+2016-03-16T:10:38:09.244Z, polling, https://www.youtube.com/watch?v=PuMV6KCkLQI, 
+2016-03-16T:10:38:32.900Z, click, https://www.youtube.com/watch?v=PuMV6KCkLQI, 
+2016-03-16T:10:40:43.161Z, click, https://www.youtube.com/watch?v=PuMV6KCkLQI, https://www.youtube.com/watch?v=VpIs2J256fo&ebc=ANyPxKpabcJdzXUM6kKT5McTF-jY1WKTR8Q9SnnU4Wk-JTviUDnXDtiSPuUdnFtsFiA-xXi8ter2_2hwoFSSuIG2egp7kcerNg
+2016-03-16T:10:40:43.218Z, polling, https://www.youtube.com/watch?v=VpIs2J256fo&ebc=ANyPxKpabcJdzXUM6kKT5McTF-jY1WKTR8Q9SnnU4Wk-JTviUDnXDtiSPuUdnFtsFiA-xXi8ter2_2hwoFSSuIG2egp7kcerNg, 
+2016-03-16T:10:41:01.316Z, click, https://www.youtube.com/watch?v=VpIs2J256fo&ebc=ANyPxKpabcJdzXUM6kKT5McTF-jY1WKTR8Q9SnnU4Wk-JTviUDnXDtiSPuUdnFtsFiA-xXi8ter2_2hwoFSSuIG2egp7kcerNg, 
+2016-03-16T:10:44:06.824Z, polling, https://www.youtube.com/results?search_query=smarter+every+day, 
+2016-03-16T:10:44:09.084Z, click, https://www.youtube.com/results?search_query=smarter+every+day, https://www.youtube.com/user/destinws2
+2016-03-16T:10:44:09.225Z, polling, https://www.youtube.com/user/destinws2, 
+2016-03-16T:10:44:14.916Z, click, https://www.youtube.com/user/destinws2, https://www.youtube.com/user/destinws2/videos
+2016-03-16T:10:44:15.249Z, polling, https://www.youtube.com/user/destinws2/videos, 
+2016-03-16T:10:44:19.716Z, polling, https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da, 
+2016-03-16T:10:44:23.754Z, click, https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da, https://www.youtube.com/watch?v=Oz4YBJ64kgA
+2016-03-16T:10:44:24.216Z, polling, https://www.youtube.com/watch?v=Oz4YBJ64kgA, 
+2016-03-16T:10:44:42.006Z, polling, https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da, 
+2016-03-16T:10:44:43.774Z, click, https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da, https://www.youtube.com/watch?v=4tbYPidp3do
+2016-03-16T:10:44:44.331Z, polling, https://www.youtube.com/watch?v=4tbYPidp3do, 
+2016-03-16T:10:44:58.510Z, click, https://www.youtube.com/watch?v=4tbYPidp3do, 
+2016-03-16T:10:45:22.119Z, polling, https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da, 
+2016-03-16T:10:45:24.398Z, click, https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da, https://www.youtube.com/watch?v=Hf273uCVHvE
+2016-03-16T:10:45:24.779Z, polling, https://www.youtube.com/watch?v=Hf273uCVHvE, 
+2016-03-16T:10:46:05.840Z, polling, https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da, 
+2016-03-16T:10:46:10.509Z, click, https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da, https://www.youtube.com/watch?v=ipQkk7RxApg
+2016-03-16T:10:46:10.844Z, polling, https://www.youtube.com/watch?v=ipQkk7RxApg, 
+2016-03-16T:10:46:25.757Z, click, https://www.youtube.com/watch?v=ipQkk7RxApg, 
+2016-03-16T:10:46:54.330Z, polling, https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da, 
+2016-03-16T:10:46:56.513Z, click, https://www.youtube.com/user/destinws2/videos?flow=grid&view=0&sort=da, https://www.youtube.com/watch?v=kI2pDzEKdzg
+2016-03-16T:10:46:56.892Z, polling, https://www.youtube.com/watch?v=kI2pDzEKdzg, 
+2016-03-16T:10:48:23.844Z, polling, https://www.youtube.com/results?search_query=failarmy, 
+2016-03-16T:10:48:26.399Z, click, https://www.youtube.com/results?search_query=failarmy, https://www.youtube.com/user/failarmy
+2016-03-16T:10:48:26.434Z, polling, https://www.youtube.com/user/failarmy, 
+2016-03-16T:10:48:29.897Z, click, https://www.youtube.com/user/failarmy, https://www.youtube.com/user/failarmy/videos
+2016-03-16T:10:48:30.341Z, polling, https://www.youtube.com/user/failarmy/videos, 
+2016-03-16T:10:48:33.501Z, click, https://www.youtube.com/user/failarmy/videos, https://www.youtube.com/watch?v=WzBBM-v0sTk
+2016-03-16T:10:48:33.873Z, polling, https://www.youtube.com/watch?v=WzBBM-v0sTk, 
+2016-03-16T:10:55:48.595Z, beforeunload, https://www.youtube.com/watch?v=WzBBM-v0sTk, 
+2016-03-16T:10:55:49.485Z, load, https://www.google.be/search?q=wait+but+why&ie=utf-8&oe=utf-8&gws_rd=cr&ei=FdHzVsqrDsP4PtLjlJAJ, 
+2016-03-16T:10:55:51.211Z, click, https://www.google.be/search?q=wait+but+why&ie=utf-8&oe=utf-8&gws_rd=cr&ei=FdHzVsqrDsP4PtLjlJAJ, https://www.google.be/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwiq3fDIndnLAhUGaA8KHbmRB6UQFggoMAA&url=http%3A%2F%2Fwaitbutwhy.com%2F&usg=AFQjCNHNiLlZr2_0rhnWs-WXVG8oOlcuRQ
+2016-03-16T:10:55:51.290Z, beforeunload, https://www.google.be/search?q=wait+but+why&ie=utf-8&oe=utf-8&gws_rd=cr&ei=FdHzVsqrDsP4PtLjlJAJ, 
+2016-03-16T:10:55:52.532Z, load, http://waitbutwhy.com/, 
+2016-03-16T:10:55:55.482Z, click, http://waitbutwhy.com/, http://waitbutwhy.com/wait-but-who
+2016-03-16T:10:55:56.360Z, load, http://waitbutwhy.com/wait-but-who, 
+2016-03-16T:10:55:55.521Z, beforeunload, http://waitbutwhy.com/, 
+2016-03-16T:10:56:00.600Z, click, http://waitbutwhy.com/wait-but-who, http://waitbutwhy.com/archive
+2016-03-16T:10:56:01.693Z, load, http://waitbutwhy.com/archive, 
+2016-03-16T:10:56:00.610Z, beforeunload, http://waitbutwhy.com/wait-but-who, 
+2016-03-16T:10:56:12.183Z, click, http://waitbutwhy.com/archive, http://waitbutwhy.com/2014/02/pick-life-partner.html
+2016-03-16T:10:56:13.249Z, load, http://waitbutwhy.com/2014/02/pick-life-partner.html, 
+2016-03-16T:10:56:12.196Z, beforeunload, http://waitbutwhy.com/archive, 
+2016-03-16T:10:58:31.810Z, beforeunload, http://waitbutwhy.com/2014/02/pick-life-partner.html, 
