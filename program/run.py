@@ -1,14 +1,23 @@
 import glob
-import csv
+import numpy as np
+import warnings
 
-csv_list =  glob.glob('../dataset/*.csv')
+"""
+    All the .csv files get loaded and stored in data.  There are currently problems
+    with 25.3.csv and 25.5.csv, which cannot be loaded since the files are empty.
+    We exclude them from our dataset.
+"""
 
+csv_list = glob.glob('../dataset/*.csv')
+
+data = np.array([[0,0,0]])
+warnings.simplefilter("ignore")
 for csv_file in csv_list:
     with open(csv_file, 'rb') as csvfile:
-        csv_matrix = csv.reader((x.replace('\0','') for x in csvfile),
-                                delimiter=',')
-        for row in csv_matrix:
-            print row
-            if len(row) != 0:
-                print 'el:', row[0], row[1]
-            # add to numpy array
+        try:
+            csv_matrix = np.genfromtxt(csv_file,delimiter=",",usecols=(0,1,2),dtype=None)
+            data = np.concatenate([data,csv_matrix])
+        except ValueError:
+            pass
+
+data = np.delete(data, 0, 0)
