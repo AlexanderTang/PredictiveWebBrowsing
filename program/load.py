@@ -9,7 +9,6 @@ def load():
 # load the transformed data set without 'beforeunload' and 'polling' as a numpy array
 def downsized_load():
     dataset = load()
-    print dataset
     dataset = dataset[
         np.logical_not(np.logical_or(
             dataset[:, 2] == "beforeunload",

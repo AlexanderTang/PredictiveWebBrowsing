@@ -22,13 +22,13 @@ def run():
 # Returns the dataset in a numpy matrix
 def get_dataset():
     csv_list = glob.glob('../dataset/*.csv')
-    data = np.array([[0, 0, 0, 0]], dtype= None)
+    data = np.array([[0, 0, 0, 0]])
     warnings.simplefilter("ignore")
     for csv_file in csv_list:
         try:
             csv_matrix = np.genfromtxt(csv_file, delimiter=",", usecols=(0,1,2), dtype=None)
             amount_rows = len(csv_matrix)
-            id_col = np.empty(amount_rows, dtype=None)
+            id_col = np.empty(amount_rows)
             id_col.fill(get_id(csv_file))
             csv_matrix = np.c_[csv_matrix, id_col]
             data = np.concatenate([data, csv_matrix])
