@@ -21,3 +21,8 @@ NOTES:
    - identify users (already done for us, since the number of the csv files indicates the user id -> might have to add to the array)
    - identify sessions (using 'timeout': once the period between two clicks reaches a certain threshold, then a new session starts)
    - create data model
+
+- possible to test different things:
+    - entire dataset vs per user
+    - training/test splits (see above)
+    - markov model / other technique

@@ -20,6 +20,3 @@ def count_occurrences():
     sorted_dict = sorted(dom_dict.items(), key=operator.itemgetter(1))
     return sorted_dict
 
-occ = count_occurrences()
-for el in occ:
-    print el

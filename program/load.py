@@ -16,9 +16,3 @@ def downsized_load():
         ))
     ]
     return dataset
-
-
-a = downsized_load()
-
-for el in a:
-    print el
