@@ -1,6 +1,12 @@
 import load
 import operator
 
+"""
+Notes: watch pitfalls:
+- if there is no load after a click, the override the click domain: don't accidentally take the load of another (following) click!
+- if there are loads within 0.1 seconds of each other, then it's most likely ads. (there are some within 4-6 milliseconds of each other...)
+"""
+
 # counts the occurrences of url domains for every load indicator; it is sorted from infrequent to frequent
 def count_occurrences():
     dataset = load.load()

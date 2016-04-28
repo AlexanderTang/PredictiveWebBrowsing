@@ -54,5 +54,3 @@ def parse_url(url):
     if len(parsed_url.query) != 0:
         urlpath = urlpath.rsplit('/', 1)[0]
     return parsed_url.netloc, urlpath
-
-run()
