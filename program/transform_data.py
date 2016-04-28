@@ -10,6 +10,9 @@ from urlparse import urlparse
     We exclude them from our dataset.
 """
 
+# Run this to load the given datasets and save them to "transformed_data.csv".
+# This new csv-file has the date and time separated and the url domain and path separated as well; other
+# useless information has been removed.
 def run():
     data = get_dataset()
     transform(data)
@@ -31,7 +34,7 @@ def get_dataset():
     return data
 
 def transform(data):
-    with open('transformed_data.csv', 'wb') as csvfile:
+    with open('../processed_data/transformed_data.csv', 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         for row in data:
             (date,time) = parse_time(row[0])
