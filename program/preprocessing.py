@@ -8,18 +8,18 @@ Notes: watch pitfalls:
 - Polling refers to call to external source, not made by user, so probably it is not necessary???
 """
 
-threshold = 1000
+SESSION_TIMEOUT_THRESHOLD = 1000
 
 # counts the occurrences of url domains for every load indicator; it is sorted from infrequent to frequent
 def count_occurrences():
     dataset = load.load()
     dom_dict = {}
     for row in dataset:
-        if row[2] == "load":
-            if dom_dict.has_key(row[3]):
-                dom_dict[row[3]] = dom_dict[row[3]] + 1 # increase the count of the word in dictionary by 1
+        if row[1] == "load":
+            if dom_dict.has_key(row[2]):
+                dom_dict[row[2]] = dom_dict[row[2]] + 1 # increase the count of the word in dictionary by 1
             else:
-                dom_dict[row[3]] = 1    # if word not in dictionary, insert with count 1
+                dom_dict[row[2]] = 1    # if word not in dictionary, insert with count 1
     sorted_dict = sorted(dom_dict.items(), key=operator.itemgetter(1))
     return sorted_dict
 
@@ -30,12 +30,12 @@ def get_sessions():
     dataset = load.downsized_load()
 
     for i in range(len(dataset)):
-        rowTime1 = dataset[i][1]
-        rowTime2 = dataset[i+1][1]
+        rowTime1 = dataset[i][0]
+        rowTime2 = dataset[i+1][0]
 
         deltaTime = np.datetime64(dataset[i+1][0]+"T"+rowTime2) - np.datetime64(dataset[i][0]+"T"+rowTime1)
 
-        if deltaTime > threshold:
+        if deltaTime > SESSION_TIMEOUT_THRESHOLD:
             #dataset[i+1] should be start the new session
         else:
             #dataset[i] remains in the session

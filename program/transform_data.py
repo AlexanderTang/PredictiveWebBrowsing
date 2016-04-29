@@ -49,10 +49,11 @@ def transform(data):
     with open('../processed_data/transformed_data.csv', 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         for row in data:
-            (date,time) = parse_time(row[0])
+            #(date,time) = parse_time(row[0])
+            timestamp = row[0].replace("T:","T")
             (urldomain, urlpath) = parse_url(row[2])
             action = row[1].replace(" ", "")
-            csvwriter.writerow([date, time, action, urldomain, urlpath, row[3]])  # the last element is the user id
+            csvwriter.writerow([timestamp, action, urldomain, urlpath, row[3]])  # the last element is the user id
 
 
 def parse_time(timestamp):
