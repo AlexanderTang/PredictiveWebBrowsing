@@ -1,5 +1,6 @@
 import load
 import operator
+import numpy as np
 """
 Notes: watch pitfalls:
 - if there is no load after a click, the override the click domain: don't accidentally take the load of another (following) click!
@@ -26,20 +27,11 @@ def count_occurrences():
 def get_sessions():
     # In this case I was loading the rows with load actions of the transformed_data file, now load is loading the
     # transformed_data as it is.
-    dataset = load.load()
+    dataset = load.downsized_load()
 
-    l = len(dataset)
-
-    for i in range(0,l-1):
+    for i in range(len(dataset)):
         rowTime1 = dataset[i][1]
         rowTime2 = dataset[i+1][1]
-
-        # The following two lines are use to remove the extra colon at the beginning of the some times
-        if rowTime1[0] == ":":
-            rowTime1 = rowTime1[1:]
-
-        if rowTime2[0] == ":":
-            rowTime2 = rowTime2[1:]
 
         deltaTime = np.datetime64(dataset[i+1][0]+"T"+rowTime2) - np.datetime64(dataset[i][0]+"T"+rowTime1)
 

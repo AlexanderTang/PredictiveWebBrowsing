@@ -58,6 +58,8 @@ def transform(data):
 def parse_time(timestamp):
     (date,time) = timestamp.split('T')
     time = time[:-1]
+    if time[0] == ":":
+        time = time[1:]
     return date,time
 
 
