@@ -4,7 +4,7 @@ AD_THRESHOLD = 15   # loads within this threshold (in ms) count as advertisement
 
 # loads the transformed data set and returns it as a numpy array
 def load():
-    return np.genfromtxt('../processed_data/transformed_data.csv', delimiter=",", dtype=str)
+    return np.genfromtxt('../processed_data/transformed_data.csv', delimiter=",", dtype=None, names=["ts","action","dom","path","uid"])
 
 
 # load the transformed data set without 'beforeunload' and 'polling' as a numpy array
@@ -14,8 +14,8 @@ def downsized_load():
     dataset = load()
     dataset = dataset[
         np.logical_not(np.logical_or(
-            dataset[:, 1] == "beforeunload",
-            dataset[:, 1] == "polling"
+            dataset["action"] == "beforeunload",
+            dataset["action"] == "polling"
         ))
     ]
     dataset = filter_ads(dataset)
@@ -23,6 +23,7 @@ def downsized_load():
 
 
 def filter_ads(dataset):
+    dataset.sort(order=["uid","ts"])
     t1 = 0
     i = 1
     while i < len(dataset):
