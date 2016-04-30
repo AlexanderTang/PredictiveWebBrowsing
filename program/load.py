@@ -1,4 +1,5 @@
 import numpy as np
+import csv
 
 AD_THRESHOLD = 15   # loads within this threshold (in ms) count as advertisements
 
@@ -8,8 +9,9 @@ def load():
 
 
 # load the transformed data set without 'beforeunload' and 'polling' as a numpy array
-# loaded urls which are considered spam ads are also filtered
-#   (urls are ads when they load the same page within 10 milliseconds of each other)
+# loaded urls which are not useful are also filtered; such urls would be:
+#   - ads, which get loaded several times such as 'tap2-cdn.rubiconproject.com'
+#   - widgets, such as twitter and facebook (hln.be in particular loads a lot of ads and external links)
 def downsized_load():
     dataset = load()
     dataset = dataset[
@@ -18,12 +20,12 @@ def downsized_load():
             dataset["action"] == "polling"
         ))
     ]
-    dataset = filter_ads(dataset)
+    dataset.sort(order=["uid", "ts"])
+    #dataset = filter_junk(dataset)
     return dataset
 
 
-def filter_ads(dataset):
-    dataset.sort(order=["uid","ts"])
+def filter_junk(dataset):
     t1 = 0
     i = 1
     while i < len(dataset):
@@ -41,9 +43,13 @@ def filter_ads(dataset):
     return dataset
 
 
+def filter_data():
+    data = downsized_load()
+    with open('../processed_data/filtered_data.csv', 'wb') as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',')
+        for row in data:
+            csvwriter.writerow(row)
+    filter_junk(data)
 
-a = downsized_load()
-"""
-for el in a:
-    print el
-"""
+
+filter_data()
