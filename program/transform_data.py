@@ -73,4 +73,4 @@ def parse_url(url):
     return parsed_url.netloc, urlpath
 
 
-run()
+# run()
