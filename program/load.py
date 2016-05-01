@@ -41,6 +41,7 @@ def filter_data():
 
     dataset.sort(order=["uid", "ts"])  # order by user id, then by timestamp
     dataset = filter_junk(dataset)
+    dataset = filter_clicks(dataset)
 
     with open('../processed_data/filtered_data.csv', 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
@@ -94,4 +95,12 @@ def filter_junk(dataset):
     return dataset
 
 
-# filter_data()
+# run this when the clicks are no longer necessary in the dataset
+def filter_clicks(dataset):
+    dataset = dataset[np.logical_not(
+            dataset["action"] == "click"
+    )]
+    return dataset
+
+
+filter_data()
