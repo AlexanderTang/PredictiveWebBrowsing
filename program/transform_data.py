@@ -45,6 +45,8 @@ def get_id(file_path):
     return str.rsplit('_', 1)[0]     # remove the underscore and everything to the right
 
 
+# formats invalid rows into valid ones, split URL into relevant parts
+# and write to csv file
 def transform(data):
     with open('../processed_data/transformed_data.csv', 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
@@ -56,6 +58,7 @@ def transform(data):
             csvwriter.writerow([timestamp, action, urldomain, urlpath, row[3]])  # the last element is the user id
 
 
+# splits timestamp in date and time and returns them
 def parse_time(timestamp):
     (date,time) = timestamp.split('T')
     time = time[:-1]
@@ -64,6 +67,8 @@ def parse_time(timestamp):
     return date,time
 
 
+# extract the URL domain and path;
+# if the URL contains a query, remove the last part of the path
 def parse_url(url):
     url = url.replace(" ", "")
     parsed_url = urlparse(url)

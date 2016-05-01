@@ -1,9 +1,21 @@
 
 \section{Preprocessing}\label{sec:preprocessing}
 
-Before the data can be analyzed, it must be transformed to a suitable format. This means:~\cite{article:markovmodel}
+Before the data can be analyzed, it must be transformed to a suitable format. The procedure is as follows:~\cite{article:markovmodel}
 
 \begin{enumerate}
-	\item Concatenate data from different resources together into the same format. This way, the data can be compared with each other.
-	\item 
+	\item Concatenate data from different resources together into the same format. See section~\ref{subsec:formatting}.
+	\item Format invalid rows into valid rows and split the URLs into its domain and path. See section~\ref{subsec:formatting}.
+	\item Filter irrelevant data. See section~\ref{subsec:filtering}.
 \end{enumerate}
+
+\subsection{Formatting data sets}~\label{subsec:formatting}
+
+First the \textit{.csv} files get cleaned up a bit. The quotation marks ``'' and semicolons ; are removed. To do this, we opened all the files in Notepad\verb!++!. Then press CTRL\verb!+!H and using \textbf{replace all in all opened documents}, we replaced the quotation marks and semicolons by the empty string (leave the second field blank). Be sure not to leave any other documents open at that time since those files would become modified as well!
+\\[2ex]
+The formatting of data sets happen in \textit{transform\_data.py}. The method \textbf{get\_dataset()} loops over all the given \textit{.csv} files and concatenates the contents in one numpy array. The user ID is extracted from the file names and added to each row. Note that files \textit{25.3.csv} and \textit{25.5.csv} are empty.
+\\[2ex]
+The \textbf{transform(data)} method then extracts the domain and path from the URL in each row, using the \textit{urlparse} module. Queries, fragment identifier and URL schemes are removed. This way, only the relevant part of the URL is kept. For the action (`load', `click', \ldots) and the URL columns, there is a white space in front which is removed. Finally, some timestamps have a colon : in between \textbf{T} and the time part. This is also removed. The final result is a numpy array with the timestamp, action, URL domain, URL path and user ID in each row. This is written away to \textit{transformed\_data.csv}.
+
+
+\subsection{Filter data}\label{subsec:filtering}
