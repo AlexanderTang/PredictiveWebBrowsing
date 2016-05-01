@@ -15,9 +15,18 @@ def load():
 # loaded urls which are not useful are also filtered; such urls would be:
 #   - ads, which get loaded several times such as 'tap2-cdn.rubiconproject.com'
 #   - widgets, such as twitter and facebook (hln.be in particular loads a lot of ads and external links)
+#   - loads before clicks (we are only interested in the loads that follow a click)
 def filtered_load():
     return np.genfromtxt('../processed_data/filtered_data.csv', delimiter=",", dtype=None,
                          names=["ts", "action", "dom", "path", "uid"])
+
+
+# generates the ground truth for:
+#  - all users and stores it in ground_truth_all.csv
+#  - each user and stores it in ground_truth_user.csv
+def define_truths():
+    data = filtered_load()
+
 
 
 # filter the data and write to filtered_data.csv
@@ -85,6 +94,4 @@ def filter_junk(dataset):
     return dataset
 
 
-filter_data()
-#data = filtered_load()
-#data = filter_junk(data)
+# filter_data()
