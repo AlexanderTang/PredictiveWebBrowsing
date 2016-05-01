@@ -1,72 +1,89 @@
+"""
+REMARKS:
+    - I'm assuming that the dataset contains load actions only
+"""
+
 import numpy as np
 
-IS_STATE_THRESHOLD = 20   # loads within this threshold (in ms) count as advertisements
-states_dict = {}
-edges_dict = {}
+IS_STATE_THRESHOLD = 20
+states_dict = {}          # States and the number of times the user transverses them
+edges_dict = {}           # Edges and the number of times the user transverses them
+
 
 """
-I'm assuming that the dataset contains load actions only
+ Increases by one the value of the given key in the dictionary
 """
+
+
+def increase_count(dictionary, key):
+    if key in dictionary:
+        dictionary[key] += 1
+    else:
+        dictionary[key] = 1
+
+
+"""
+ Compare two domains with their paths and return true if:
+   - User goes back from page X to page Y in the next click
+   - User changes from page X to page Y and keeps the same deep in the tree, where X and Y are different
+   - User changes domain from page X in next click Y
+"""
+
+
+def is_useful_path(dataset, x, y):
+    # User stays in the same domain
+    if dataset[x][2] == dataset[y][2]:
+        # User goes back in the next click
+        if len(dataset[x][3].split("/")) > len(dataset[y][3].split("/")):
+            return True
+        else:
+            # User might change to other page and keep the same deep in the tree
+            if len(dataset[x][3].split("/")) == len(dataset[y][3].split("/")):
+                # User changes to other page and keeps the same deep in the tree
+                if (dataset[x][3] != dataset[y][3]):
+                    return True
+                else:
+                    return False
+            else:
+                return False
+    # User changes domain in next click
+    else:
+        return True
+
+
 def get_states(uid):
 
     # Get states for the entire dataset, no user distinction
     if uid == -1:
         dataset = np.genfromtxt('../processed_data/filtered_data.csv', delimiter=",", dtype=None,
                                 names=["ts", "action", "dom", "path", "uid"])
-        limit = len(dataset) -1
+        limit = len(dataset) - 1
 
         """
-        The last two evaluation are missing
+        The last evaluation is missing
         """
         for i in range(0, limit):
-            if (is_useful_path(dataset,i,i+1)):
-                print "-----Useful path-------"
-                print dataset[i][2]
-                print dataset[i][3].split("/")
-                print "-----------------------"
+
+            if is_useful_path(dataset, i, i+1):
+                increase_count(states_dict, dataset[i][2])
+                for state in dataset[i][3].split("/"):
+                    if state != "":
+                        edges_dict[dataset[i][2]] = {state: 10}
+                        increase_count(states_dict, state)
 
     # Get states for the specific user in the dataset
     else:
         raise ValueError('Method not implemented')
 
-# Compare two domains with their paths and return true if:
-#   - User goes back from page X to page Y in the next click
-#   - User changes from page X to page Y and keeps the same deep in the tree, where X and Y are different
-#   - User changes domain from page X in next click Y
-def is_useful_path(dataset, x, y):
-
-    # User stays in the same domain
-    if dataset[x][2] == dataset[y][2]:
-
-        # User goes back in the next click
-        if len(dataset[x][3].split("/")) > len(dataset[y][3].split("/")):
-            return True
-            #print "---------before goes back------------"
-            #print dataset[x][2]
-            #print dataset[x][3].split("/")
-            #print "----------------------------"
-        else:
-            return False
-        # User might change to other page and keep the same deep in the tree
-        if len(dataset[x][3].split("/")) == len(dataset[y][3].split("/")):
-            # User changes to other page and keeps the same deep in the tree
-            if (dataset[x][3] != dataset[y][3]):
-                return True
-            else:
-                return False
-        else:
-            return False
-                #print "---------before change page------------"
-                #print dataset[x][2]
-                #print dataset[x][3].split("/")
-                #print "----------------------------"
-    # User changes domain in next click
-    else:
-        return True
-
-        #print "---------change domain------------"
-        #print dataset[x][2]
-        #print dataset[x][3].split("/")
-        #print "----------------------------"
-
 get_states(-1)
+
+#print edges_dict[('edgeA', 'edgeB')]
+#for state in edges_dict:
+#    print state
+
+for state in edges_dict:
+    print "------State-----"
+    print state
+    print "****************"
+    print edges_dict[state]
+    print "----------------"
