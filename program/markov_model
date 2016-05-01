@@ -51,7 +51,7 @@ def is_useful_path(dataset, x, y):
         return True
 
 
-def get_states(uid):
+def set_states(uid):
 
     # Get states for the entire dataset, no user distinction
     if uid == -1:
@@ -66,16 +66,30 @@ def get_states(uid):
 
             if is_useful_path(dataset, i, i+1):
                 increase_count(states_dict, dataset[i][2])
-                for state in dataset[i][3].split("/"):
-                    if state != "":
-                        edges_dict[dataset[i][2]] = {state: 10}
-                        increase_count(states_dict, state)
+
+                path = dataset[i][3].split("/")
+                path = filter(lambda a: a != "", path)
+                length_path = len(path) - 1
+
+                for j in range(0, length_path):
+                    if j == 0:
+                        if dataset[i][2] in edges_dict:
+                            edges_dict[dataset[i][2]].update({path[j]: 10})
+                        else:
+                            edges_dict[dataset[i][2]] = {path[j]: 10}
+
+                    if path[j] in edges_dict:
+                        edges_dict[path[j]].update({path[j+1]: 10})
+                    else:
+                        edges_dict[path[j]] = {path[j+1]: 10}
+
+                    increase_count(states_dict, path[j])
 
     # Get states for the specific user in the dataset
     else:
         raise ValueError('Method not implemented')
 
-get_states(-1)
+set_states(-1)
 
 #print edges_dict[('edgeA', 'edgeB')]
 #for state in edges_dict:
