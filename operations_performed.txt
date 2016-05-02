@@ -3,7 +3,11 @@
 2a) removed wrong semicolons ':' (semicolons that started at the front of the time)
 3) count the occurrences of main domains (for each load identifier) -> determine whether a Markov Model would be appropriate (sparse matrix or not?)
 3a) clean data (filter ads, widgets, useless loads and clicks)
-3b) generate ground truth based on remaining clicks and loads
+3b) remove document types out of path
+3c) for every domain in the load:
+      if path has depth 0, remove
+      if path has depth > 0 but occurs only once, remove
+3d) generate ground truth based on remaining clicks and loads
 4*) determine training/test split (use k-folds from scikit on one hand; use manual splitting on the other hand)
     For the manual splitting, try 50/50; 60/40; 80/20 for training/test split
 	pros/cons of k-fold vs manually: random distribution, so no bias. But as a user we know what to look for, so we can better adjust the training dataset to our needs. However, this is labor intensive and biased.

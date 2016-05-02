@@ -41,5 +41,10 @@ def get_file_name(file):
     str = str[1:]
     return str.rsplit('_',1)[0]
 
-str = "something ok?"
-print str.endswith("ok")
+str1 = np.array(["test","yes"])
+str2 = "abc"
+str3 = "something"
+str4 = "yes"
+
+a = np.where(str1 == str4) and np.where(str1 == str2)
+print a

@@ -50,8 +50,27 @@ def filter_data():
     dataset = filter_junk(dataset)
     dataset = filter_clicks(dataset)
     dataset = filter_documents(dataset)
+    dataset = deep_cleaning_data(dataset)
 
     with open('../processed_data/filtered_data.csv', 'wb') as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',')
+        for row in dataset:
+            csvwriter.writerow(row)
+
+
+# further filter the dataset; filter the following:
+#  - loads that don't lead to a deeper path of at least depth 1:
+#      we are only interested in the deepest end paths;
+#      homepages are meaningless to us
+#  - loads with deeper paths, but that occur only once in the entire file:
+#      a load that only occurs once has a small confidence interval:
+#      the load could be a one-time only path which is meaningless to train on
+def deep_cleaning_data():
+    dataset = load.filtered_load()
+    dataset = clean_homepages(dataset)
+    dataset = remove_single_occurrences(dataset)
+
+    with open('../processed_data/deep_filtered_data.csv', 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         for row in dataset:
             csvwriter.writerow(row)
@@ -133,4 +152,35 @@ def get_top_docs():
             ".epub",".od",".odx",".txt",".rtf"]
 
 
+# clean rows with path of depth 0
+def clean_homepages(dataset):
+    rows_to_filter = []
+    row_index = 0
+    while row_index < len(dataset):
+        # path of depth 0
+        if dataset[row_index]["path"] == "" or \
+                        dataset[row_index]["path"] == "/":
+            rows_to_filter.append(row_index)
+        row_index += 1
+    dataset = np.delete(dataset, rows_to_filter, 0)
+    return dataset
+
+
+# remove rows with paths of single occurrence (user id is not compared!)
+def remove_single_occurrences(dataset):
+    rows_to_filter = []
+    row_index = 0
+    while row_index < len(dataset):
+        row = dataset[row_index]
+        occurrences = np.where(dataset["dom"] == row["dom"]) and \
+                      np.where(dataset["path"] == row["path"])  # and \
+                     # np.where(dataset["uid"] == row["uid"])
+        if len(occurrences[0]) == 1:
+            rows_to_filter.append(occurrences[0])
+        row_index += 1
+    dataset = np.delete(dataset, rows_to_filter, 0)
+    return dataset
+
+
 #filter_data()
+#deep_cleaning_data()
