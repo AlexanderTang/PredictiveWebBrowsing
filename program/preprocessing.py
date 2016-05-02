@@ -49,6 +49,7 @@ def filter_data():
     dataset.sort(order=["uid", "ts"])  # order by user id, then by timestamp
     dataset = filter_junk(dataset)
     dataset = filter_clicks(dataset)
+    dataset = filter_documents(dataset)
 
     with open('../processed_data/filtered_data.csv', 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
@@ -114,4 +115,22 @@ def filter_clicks(dataset):
     return dataset
 
 
-filter_data()
+# truncate paths with the top 12 common documents (such as .pdf, .png, .jpg)
+def filter_documents(dataset):
+    for row in dataset:
+        for doc_ext in get_top_docs():
+            if row["path"].endswith(doc_ext):
+                row["path"] = row["path"].rsplit('/', 1)[0]
+                break
+    return dataset
+
+
+# return the top 12 common documents (such as .pdf, .png, .jpg)
+# extensions borrowed from:
+# duff-johnson.com/2014/02/17/the-8-most-popular-document-formats-on-the-web
+def get_top_docs():
+    return [".pdf",".xlsx",".xls",".docx",".doc",".ppt",".pptx",
+            ".epub",".od",".odx",".txt",".rtf"]
+
+
+#filter_data()
