@@ -1,6 +1,7 @@
 """
-REMARKS:
-    - I'm assuming that the dataset contains load actions only
+ASSUMPTIONS:
+    - The dataset contains load actions only
+    - The data set is the training set
 """
 
 import numpy as np
@@ -8,19 +9,39 @@ import numpy as np
 IS_STATE_THRESHOLD = 20
 states_dict = {}          # States and the number of times the user transverses them
 edges_dict = {}           # Edges and the number of times the user transverses them
+modifications_dict = {}   # Tuple (domain, modified_vertex) mapping the modified fragment of a path with the real name
 
 
 """
- Increases by one the value of the given key in the dictionary
+ Increases by one the value of the transversed vertex of the given domain
 """
 
 
-def increase_count(dictionary, key):
-    if key in dictionary:
-        dictionary[key] += 1
+def increase_vertex(dictionary, domain, vertex):
+    if domain in dictionary:
+        if vertex in dictionary[domain]:
+            dictionary[domain][vertex] += 1
+        else:
+            dictionary[domain].update({vertex: 1})
     else:
-        dictionary[key] = 1
+        dictionary[domain] = {vertex: 1}
 
+"""
+ Increases by one the value of the transversed edge of the given domain
+"""
+
+
+def increase_edge(dictionary, domain, outgoing, ingoing):
+    if domain in dictionary:
+        if outgoing in dictionary[domain]:
+            if ingoing in dictionary[domain][outgoing]:
+                dictionary[domain][outgoing][ingoing] += 1
+            else:
+                dictionary[domain][outgoing].update({ingoing: 1})
+        else:
+            dictionary[domain].update({outgoing: {ingoing: 1}})
+    else:
+        dictionary[domain] = {outgoing: {ingoing: 1}}
 
 """
  Compare two domains with their paths and return true if:
@@ -31,73 +52,97 @@ def increase_count(dictionary, key):
 
 
 def is_useful_path(dataset, x, y):
-    # User stays in the same domain
-    if dataset[x][2] == dataset[y][2]:
-        # User goes back in the next click
-        if len(dataset[x][3].split("/")) > len(dataset[y][3].split("/")):
-            return True
-        else:
-            # User might change to other page and keep the same deep in the tree
-            if len(dataset[x][3].split("/")) == len(dataset[y][3].split("/")):
-                # User changes to other page and keeps the same deep in the tree
-                if (dataset[x][3] != dataset[y][3]):
-                    return True
+    # We reach the last element of the dataset, we switch the latter one with the former one
+    if len(dataset) == y:
+        # User stayed in the same domain
+        if dataset[x-1][2] == dataset[x][2]:
+            # User went back in the next click
+            if len(dataset[x-1][3].split("/")) < len(dataset[x][3].split("/")):
+                return True
+            else:
+                # User might have changed to other page and kept the same deep in the tree
+                if len(dataset[x-1][3].split("/")) == len(dataset[x][3].split("/")):
+                    # User changed to other page and kept the same deep in the tree
+                    if dataset[x-1][3] != dataset[x][3]:
+                        return True
+                    else:
+                        return False
                 else:
                     return False
-            else:
-                return False
-    # User changes domain in next click
+        # User changed domain in next click
+        else:
+            return True
     else:
-        return True
+        # User stays in the same domain
+        if dataset[x][2] == dataset[y][2]:
+            # User goes back in the next click
+            if len(dataset[x][3].split("/")) > len(dataset[y][3].split("/")):
+                return True
+            else:
+                # User might change to other page and keep the same deep in the tree
+                if len(dataset[x][3].split("/")) == len(dataset[y][3].split("/")):
+                    # User changes to other page and keeps the same deep in the tree
+                    if dataset[x][3] != dataset[y][3]:
+                        return True
+                    else:
+                        return False
+                else:
+                    return False
+        # User changes domain in next click
+        else:
+            return True
 
 
-def set_states(uid):
+"""
+ Transform the CSV file with the training data into a graph representation using the dictionaries states_dict and
+ edges_dict
+"""
 
-    # Get states for the entire dataset, no user distinction
+
+def set_graph(uid):
+
+    # Set states and edges for the entire dataset, no user distinction
     if uid == -1:
+        # dataset = np.genfromtxt('../processed_data/dummy_data.csv', delimiter=",", dtype=None,
         dataset = np.genfromtxt('../processed_data/filtered_data.csv', delimiter=",", dtype=None,
                                 names=["ts", "action", "dom", "path", "uid"])
-        limit = len(dataset) - 1
+        limit = len(dataset)
 
-        """
-        The last evaluation is missing
-        """
         for i in range(0, limit):
 
             if is_useful_path(dataset, i, i+1):
-                increase_count(states_dict, dataset[i][2])
 
-                path = dataset[i][3].split("/")
-                path = filter(lambda a: a != "", path)
+                domain = dataset[i][2]
+                path = filter(lambda a: a != "", dataset[i][3].split("/"))
                 length_path = len(path) - 1
 
-                for j in range(0, length_path):
-                    if j == 0:
-                        if dataset[i][2] in edges_dict:
-                            edges_dict[dataset[i][2]].update({path[j]: 10})
+                increase_vertex(states_dict, domain, domain)
+
+                if len(path) > 0:
+                    increase_edge(edges_dict, domain, domain, path[0])
+
+                    for j in range(0, length_path):
+                        # Current path's fragment name is different of the next path's fragment name
+                        if path[j] != path[j + 1]:
+                            increase_edge(edges_dict, domain, path[j], path[j + 1])
+                        # Current path's fragment name is equal to the next path's fragment name
                         else:
-                            edges_dict[dataset[i][2]] = {path[j]: 10}
+                            # Changing name of the next path's fragment and storing in a dictionary to reconstruct the
+                            # URL
+                            temporal_path = path[j + 1] + "[!]" + str(7 * j)
+                            if not (domain, temporal_path) in modifications_dict:
+                                modifications_dict[(domain, temporal_path)] = path[j + 1]
 
-                    if path[j] in edges_dict:
-                        edges_dict[path[j]].update({path[j+1]: 10})
-                    else:
-                        edges_dict[path[j]] = {path[j+1]: 10}
+                            increase_edge(edges_dict, domain, path[j], temporal_path)
+                            path[j + 1] = temporal_path
 
-                    increase_count(states_dict, path[j])
+                        increase_vertex(states_dict, domain, path[j])
 
-    # Get states for the specific user in the dataset
+                    increase_vertex(states_dict, domain, path[length_path])
+
+
+    # Set states and edges for the specific user in the dataset
     else:
         raise ValueError('Method not implemented')
 
-set_states(-1)
-
-#print edges_dict[('edgeA', 'edgeB')]
-#for state in edges_dict:
-#    print state
-
-for state in edges_dict:
-    print "------State-----"
-    print state
-    print "****************"
-    print edges_dict[state]
-    print "----------------"
+#set_graph(-1)
