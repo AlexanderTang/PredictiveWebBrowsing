@@ -5,13 +5,17 @@ ASSUMPTIONS:
 """
 
 import numpy as np
+from hmmlearn import hmm
 
 IS_STATE_THRESHOLD = 20
 states_dict = {}          # States and the number of times the user transverses them
 edges_dict = {}           # Edges and the number of times the user transverses them
 modifications_dict = {}   # Tuple (domain, modified_vertex) mapping the modified fragment of a path with the real name
 
-
+probabilities_vertex_by_domain = {}
+transition_matrix_by_domain = {}
+id_dict_by_domain = {}
+useless_domain = []
 """
  Increases by one the value of the transversed vertex of the given domain
 """
@@ -104,7 +108,7 @@ def set_graph(uid):
     # Set states and edges for the entire dataset, no user distinction
     if uid == -1:
         # dataset = np.genfromtxt('../processed_data/dummy_data.csv', delimiter=",", dtype=None,
-        dataset = np.genfromtxt('../processed_data/filtered_data.csv', delimiter=",", dtype=None,
+        dataset = np.genfromtxt('../processed_data/deep_filtered_data.csv', delimiter=",", dtype=None,
                                 names=["ts", "action", "dom", "path", "uid"])
         limit = len(dataset)
 
@@ -145,4 +149,58 @@ def set_graph(uid):
     else:
         raise ValueError('Method not implemented')
 
-#set_graph(-1)
+
+"""
+It's probable that we need to use the inverse_id_dict_by_domain as well
+"""
+def set_id_by_domain(domain):
+    inverse_id_dict_by_domain = dict(enumerate(states_dict[domain].keys()))
+    id_dict_by_domain[domain] = {v: k for k, v in inverse_id_dict_by_domain.items()}
+
+
+# Not sure how the dictionaries is apply, I guessing it is in the same order as states_dict[domain].keys()
+def set_vertices_probabilities(domain):
+    visits_by_vertex = np.array(states_dict[domain].values(), dtype="float")
+    total_vertices_visits = np.sum(visits_by_vertex)
+    probabilities_vertex_by_domain[domain] = map(lambda x: x / total_vertices_visits, visits_by_vertex)
+    return len(visits_by_vertex)
+
+
+def set_edges_probabilities(domain, amount_vertices):
+    visits_by_edge = np.zeros([amount_vertices, amount_vertices])
+
+    for outgoing in edges_dict[domain]:
+        for ingoing in edges_dict[domain][outgoing]:
+            visits_by_edge[id_dict_by_domain[domain][outgoing], id_dict_by_domain[domain][ingoing]] = \
+                edges_dict[domain][outgoing][ingoing]
+
+    total_edges_visits = np.apply_along_axis(sum, axis=1, arr=visits_by_edge)
+
+    for i in range(0, amount_vertices-1):
+        if total_edges_visits[i] > 0:
+            visits_by_edge[i, :] = map(lambda x: x / total_edges_visits[i], visits_by_edge[i, :])
+
+    transition_matrix_by_domain[domain] = visits_by_edge
+
+
+def convert_graph_to_matrix():
+    for domain in states_dict:
+        if states_dict[domain][domain] < IS_STATE_THRESHOLD:
+            useless_domain.append(domain)
+
+    for domain in useless_domain:
+        del states_dict[domain]
+        del edges_dict[domain]
+
+    for domain in states_dict:
+        set_id_by_domain(domain)
+        amount_vertices_by_domain = set_vertices_probabilities(domain)
+        set_edges_probabilities(domain, amount_vertices_by_domain)
+
+set_graph(-1)
+
+convert_graph_to_matrix()
+
+"""
+************************************************************************************************************************
+"""
