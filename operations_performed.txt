@@ -7,7 +7,9 @@
 3c) for every domain in the load:
       if path has depth 0, remove
       if path has depth > 0 but occurs only once, remove
-3d) generate ground truth based on remaining clicks and loads
+3d) generate ground truth based on remaining loads:
+     - for all users
+     - per user (only if data is at least 30 rows large; otherwise that user has too little data)
 4*) determine training/test split (use k-folds from scikit on one hand; use manual splitting on the other hand)
     For the manual splitting, try 50/50; 60/40; 80/20 for training/test split
 	pros/cons of k-fold vs manually: random distribution, so no bias. But as a user we know what to look for, so we can better adjust the training dataset to our needs. However, this is labor intensive and biased.

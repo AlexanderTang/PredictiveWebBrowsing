@@ -17,3 +17,6 @@ def filtered_load():
                          names=["ts", "action", "dom", "path", "uid"])
 
 
+def deep_filtered_load():
+    return np.genfromtxt('../processed_data/deep_filtered_data.csv', delimiter=",", dtype=None,
+                         names=["ts", "action", "dom", "path", "uid"])

@@ -29,13 +29,6 @@ def count_occurrences():
     return sorted_dict
 
 
-# generates the ground truth for:
-#  - all users and stores it in ground_truth_all.csv
-#  - each user and stores it in ground_truth_user.csv
-def define_truths():
-    data = load.filtered_load()
-
-
 # filter the data and write to filtered_data.csv
 def filter_data():
     dataset = load.load()
