@@ -1,7 +1,6 @@
 import load
 import csv
 import numpy as np
-import operator
 
 # threshold for users to become eligible for the ground truth
 #   (see define_truth_users() method)
@@ -82,7 +81,7 @@ def gen_truth_domain(dataset, dom):
                 path_dict[(current_path,depth)] = 1
             depth += 1
 
-    # REMOVE THIS LATER
+    # SHOWS THE DEPTH AND COUNT LEVELS FOR EACH (SUB)PATH (! import operator)
     #sorted_dict = sorted(path_dict.items(), key=operator.itemgetter(1))
     #print sorted_dict
 
