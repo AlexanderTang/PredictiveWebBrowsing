@@ -1,7 +1,7 @@
 
 \section{Preprocessing}\label{sec:preprocessing}
 
-Before the data can be analyzed, it must be transformed to a suitable format. The procedure is as follows:~\cite{article:markovmodel}
+Before the data can be used, it must be transformed to a suitable format. The procedure is as follows:
 
 \begin{enumerate}
 	\item Concatenate data from different resources together into the same format. See section~\ref{subsec:formatting}.
@@ -19,3 +19,23 @@ The \textbf{transform(data)} method then extracts the domain and path from the U
 
 
 \subsection{Filter data}\label{subsec:filtering}
+
+The next step is to filter out data which doesn't add any value.~\cite{article:markovmodel, website:redundantsudoku} The initial filtering is done in \textbf{preprocessing.filter\_data.py}. We have no need for the \textbf{beforeunload} and \textbf{polling} actions, so they are removed.
+\\[2ex]
+Now the useless \textbf{load} and \textbf{click} actions get removed:
+\begin{itemize}
+	\item \textit{Loads that follow a click but have a different domain.} Such loads are often advertisements or widgets (e.g. facebook, twitter). It can also be the load right before the next click, but that load is considered unnecessary as we get the URL from the click as well.
+	\item \textit{Loads that timeout before the next click.} The LOAD\_TIMEOUT parameter specifies the time it may take before another click happens. When the timeout expires, loads are discarded regardless of the domain since we assume a new session has started.
+	\item \textit{Clicks without any following loads of the same domain.} Such clicks are regarded as useless clicks since they don't lead us to a deeper path. Since we have discovered that finding a pattern between different websites introduces many more difficulties, we are currently not handling patterns that cross from one domain to another.
+\end{itemize}
+Once this process is over, we remove the remaining clicks as well since they serve no purpose anymore.
+\\[2ex]
+Next, we filter out the documents. Note that we don't remove the rows this time, we simply truncate the path. While we only found \textit{.pdf}s, we filter the most common documents to cover more cases. Finally we filter out loads that don't provide information:
+\begin{itemize}
+	\item \textit{Loads that don't lead to a deeper path of at least depth 1.} Predicting home pages does not offer any value.
+	\item \textit{Loads with deeper paths, but that occur only once in the entire file. Note: an implementation exists to do this for each user separately.} Loads that only occur once are not very useful since they are likely to be one-time-only paths. Training on these paths may lead to overfitting: we train our model to fit a path which will probably never occur again. A high accuracy is meaningless if the confidence interval is too small. On the other hand, since the data is incredibly small for some users, it's possible we're filtering out paths which are not really one-time-only paths. But with lack of data it's impossible to differentiate the two situations so we play safe.
+\end{itemize}
+The results are written away to \textit{filtered\_data.csv}. The idea is that the remaining data provides only the core needed utilities. This allows us to select the desired data in a more efficient and uniform way while also increasing performance of prediction. It's compact in storage/memory as well. It's also possible to introduce a level of bias if we accidentally delete data we thought was useless.  Still, the advantages of cleaning the data outweighs the disadvantages.
+
+
+

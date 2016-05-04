@@ -58,15 +58,10 @@ def filter_data():
 #  - loads with deeper paths, but that occur only once in the entire file:
 #      a load that only occurs once has a small confidence interval:
 #      the load could be a one-time only path which is meaningless to train on
-def deep_cleaning_data():
-    dataset = load.filtered_load()
+def deep_cleaning_data(dataset):
     dataset = clean_homepages(dataset)
     dataset = remove_single_occurrences(dataset)
-
-    with open('../processed_data/deep_filtered_data.csv', 'wb') as csvfile:
-        csvwriter = csv.writer(csvfile, delimiter=',')
-        for row in dataset:
-            csvwriter.writerow(row)
+    return dataset
 
 
 # filter useless loads and clicks:
@@ -175,5 +170,4 @@ def remove_single_occurrences(dataset):
     return dataset
 
 
-#filter_data()
-#deep_cleaning_data()
+filter_data()

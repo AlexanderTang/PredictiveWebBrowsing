@@ -34,3 +34,7 @@ NOTES:
     - entire dataset vs per user
     - training/test splits (see above)
     - markov model / other technique
+
+- for the ground truth: mention that we are doing supervised learning since we are able to label the data
+  https://www.quora.com/When-establishing-a-ground-truth-for-machine-learning-how-does-one-determine-if-it-is-a-sufficient-training-set
+  https://followthedata.wordpress.com/2012/06/02/practical-advice-for-machine-learning-bias-variance/
