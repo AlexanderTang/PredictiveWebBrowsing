@@ -112,9 +112,14 @@ def search_truth(cp, path_dict):
     return truth
 
 
+# Some modifiers for the algorithm below
+MAX_DEPTH_DIFF = 5  # the maximum amount of depth level difference
+BASE_PERC = 20  # base percentage of total count for deeper path (20 = 20%)
+
+
 # Returns true if 1 gives a better prediction than 2,
 # based on depth and score comparison
-def is_better_prediction(d1,c1,d2,c2):
+def is_better_prediction(d1, c1, d2, c2):
     """
     We don't want deep paths with very few occurrences relative to
         to the subpath to overshadow the rest, so depth must play
@@ -152,13 +157,13 @@ def is_better_prediction(d1,c1,d2,c2):
             return True
     else:
         depth_diff = abs(d1-d2) - 1
-        if depth_diff > 5:
-            depth_diff = 5
+        if depth_diff > MAX_DEPTH_DIFF:
+            depth_diff = MAX_DEPTH_DIFF
         if d1 > d2:
-            if c1 > c2 * ((20-4*depth_diff)/100):
+            if c1 > c2 * ((BASE_PERC - (BASE_PERC/MAX_DEPTH_DIFF) * depth_diff) / 100):
                 return True
         else:
-            if c2 <= c1 * ((20 - 4 * depth_diff) / 100):
+            if c2 <= c1 * ((BASE_PERC - (BASE_PERC/MAX_DEPTH_DIFF) * depth_diff) / 100):
                 return True
     return False
 
