@@ -20,3 +20,14 @@ def filtered_load():
 def deep_filtered_load():
     return np.genfromtxt('../processed_data/deep_filtered_data.csv', delimiter=",", dtype=None,
                          names=["ts", "action", "dom", "path", "uid"])
+
+
+def load_truth(id):
+    try:
+        if id == "all":
+            path = "../ground_truth/gt_all.csv"
+        else:
+            path = "../ground_truth/gt_u" + str(id) + ".csv"
+        return np.genfromtxt(path, delimiter=",", dtype=None)
+    except:
+        print "invalid id given, file does not exist"
