@@ -41,10 +41,22 @@ def get_file_name(file):
     str = str[1:]
     return str.rsplit('_',1)[0]
 
-str1 = np.array(["test","yes"])
-str2 = "abc"
-str3 = "something"
-str4 = "yes"
+def numpywheretest():
+    str1 = np.array(["test", "yes"])
+    str2 = "abc"
+    str3 = "something"
+    str4 = "yes"
 
-a = np.where(str1 == str4) and np.where(str1 == str2)
-print a
+    a = np.where(str1 == str4) and np.where(str1 == str2)
+    print a
+
+
+def testdict():
+    dict = {}
+    dict["yes"] = 5
+    dict["no"] = 2
+    print dict
+    for key,v in dict.items():
+        print key, ' + ', v
+
+testdict()
