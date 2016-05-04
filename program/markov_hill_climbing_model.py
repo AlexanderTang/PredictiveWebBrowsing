@@ -2,21 +2,25 @@
 ASSUMPTIONS:
     - The dataset contains load actions only
     - The data set is the training set
+
+Questions:
+    - Does we really need to save the domain as a state?
+    - Is it better to have precomputed the probabilities and store them in a data structure (for instance a dictionary)
+        or to compute the probabilities when they are needed them (in the search method)?
 """
 
 import numpy as np
-from hmmlearn import hmm
 
 IS_STATE_THRESHOLD = 20
-states_dict = {}          # States and the number of times the user transverses them
-edges_dict = {}           # Edges and the number of times the user transverses them
-modifications_dict = {}   # Tuple (domain, modified_vertex) mapping the modified fragment of a path with the real name
+#DELTA_THRESHOLD = .10
+#DELTA_THRESHOLD = .15
+DELTA_THRESHOLD = .20
 
-probabilities_vertex_by_domain = {}
-transition_matrix_by_domain = {}
-id_dict_by_domain = {}
-markov_model_by_domain = {}
-
+states_dict = {}            # States and the number of times the user transverses them
+edges_dict = {}             # Edges and the number of times the user transverses them
+modifications_dict = {}     # Tuple (domain, modified_vertex) mapping the modified fragment of a path with the real name
+states_total_dict = {}      # Total amount that the user transversed the states by domain
+edges_total_dict = {}       # Total amount that the user transversed the edges by domain
 
 """
  Increases by one the value of the transversed vertex of the given domain
@@ -29,8 +33,10 @@ def increase_vertex(dictionary, domain, vertex):
             dictionary[domain][vertex] += 1
         else:
             dictionary[domain].update({vertex: 1})
+        states_total_dict[domain] += 1
     else:
         dictionary[domain] = {vertex: 1}
+        states_total_dict[domain] = 1
 
 """
  Increases by one the value of the transversed edge of the given domain
@@ -44,10 +50,13 @@ def increase_edge(dictionary, domain, outgoing, ingoing):
                 dictionary[domain][outgoing][ingoing] += 1
             else:
                 dictionary[domain][outgoing].update({ingoing: 1})
+            edges_total_dict[domain][outgoing] += 1
         else:
             dictionary[domain].update({outgoing: {ingoing: 1}})
+            edges_total_dict[domain].update({outgoing: 1})
     else:
         dictionary[domain] = {outgoing: {ingoing: 1}}
+        edges_total_dict[domain] = {outgoing: 1}
 
 """
  Compare two domains with their paths and return true if:
@@ -109,7 +118,7 @@ def set_graph(uid):
 
     # Set states and edges for the entire dataset, no user distinction
     if uid == -1:
-        # dataset = np.genfromtxt('../processed_data/dummy_data.csv', delimiter=",", dtype=None,
+
         dataset = np.genfromtxt('../processed_data/deep_filtered_data.csv', delimiter=",", dtype=None,
                                 names=["ts", "action", "dom", "path", "uid"])
         limit = len(dataset)
@@ -119,7 +128,7 @@ def set_graph(uid):
             if is_useful_path(dataset, i, i+1):
 
                 domain = dataset[i][2]
-                path = filter(lambda a: a != "", dataset[i][3].split("/"))
+                path = filter(lambda x: x != "", dataset[i][3].split("/"))
                 length_path = len(path) - 1
 
                 increase_vertex(states_dict, domain, domain)
@@ -135,7 +144,7 @@ def set_graph(uid):
                         else:
                             # Changing name of the next path's fragment and storing in a dictionary to reconstruct the
                             # URL
-                            temporal_path = path[j + 1] + "[!]" + str(7 * j)
+                            temporal_path = path[j + 1] + "[!" + str(7 * j) + "]"
                             if not (domain, temporal_path) in modifications_dict:
                                 modifications_dict[(domain, temporal_path)] = path[j + 1]
 
@@ -152,57 +161,6 @@ def set_graph(uid):
         raise ValueError('Method not implemented')
 
 
-"""
-It's probable that we need to use the inverse_id_dict_by_domain as well
-"""
-def set_id_by_domain(domain):
-    inverse_id_dict_by_domain = dict(enumerate(states_dict[domain].keys()))
-    id_dict_by_domain[domain] = {v: k for k, v in inverse_id_dict_by_domain.items()}
-
-
-# Not sure how the dictionaries is apply, I guessing it is in the same order as states_dict[domain].keys()
-def set_vertices_probabilities(domain):
-    visits_by_vertex = np.array(states_dict[domain].values(), dtype="float")
-    total_vertices_visits = np.sum(visits_by_vertex)
-    probabilities_vertex_by_domain[domain] = map(lambda x: x / total_vertices_visits, visits_by_vertex)
-    return len(visits_by_vertex)
-
-
-def set_edges_probabilities(domain, amount_vertices):
-    visits_by_edge = np.zeros([amount_vertices, amount_vertices])
-
-    for outgoing in edges_dict[domain]:
-        for ingoing in edges_dict[domain][outgoing]:
-            visits_by_edge[id_dict_by_domain[domain][outgoing], id_dict_by_domain[domain][ingoing]] = \
-                edges_dict[domain][outgoing][ingoing]
-
-    total_edges_visits = np.apply_along_axis(sum, axis=1, arr=visits_by_edge)
-
-    for i in range(0, amount_vertices-1):
-        if total_edges_visits[i] > 0:
-            visits_by_edge[i, :] = map(lambda x: x / total_edges_visits[i], visits_by_edge[i, :])
-
-    transition_matrix_by_domain[domain] = visits_by_edge
-
-"""
-
-def set_markov_model(domain, components, startprob_prior, transmat_prior):
-    #markov_model_by_domain[domain] = hmm.MultinomialHMM(components, startprob_prior, transmat_prior)
-    test = hmm.MultinomialHMM(n_components=0)
-    test.transmat_ = transmat_prior
-    test.startprob_ = startprob_prior
-
-    #examples = []
-    #for i in range(components):
-    #    examples.append("hofrho"+str(i))
-    #print examples
-    z, x = test.sample(100)
-    print "********"
-    print z
-    print x
-    #print test.decode(0)
-"""
-
 def convert_graph_to_matrix():
     useless_domain = []
 
@@ -214,21 +172,68 @@ def convert_graph_to_matrix():
         del states_dict[domain]
         del edges_dict[domain]
 
-    for domain in states_dict:
-        set_id_by_domain(domain)
-        amount_vertices_by_domain = set_vertices_probabilities(domain)
-        set_edges_probabilities(domain, amount_vertices_by_domain)
-        set_markov_model(domain, amount_vertices_by_domain, probabilities_vertex_by_domain[domain], transition_matrix_by_domain[domain])
+
+"""
+    This search is a modification of the Hill Climbing search algorithm
+"""
+
+
+def search(domain, visited):
+    last_url = ""
+    while next and len(visited) > 0:
+        outgoing = visited.pop(0)
+
+        # we verify with the current node has edges, if that is not case we have reached the deepest path
+        if outgoing[1] in edges_dict[domain]:
+            temp = []
+            for ingoing in edges_dict[domain][outgoing[1]]:
+                """
+                Here we need a threshold to see if it possible to advance or if it is better to stay in the node and
+                don't go deeper in the path because could be the following case.
+                This can also sole the problem where we have for example many a path a/b/c that is frequently visited,
+                but the actual last pages are a/b/c/z, a/b/c/x and a/b/c/y but maybe the user only visited them once each
+                while path a/b/c was visited 20 times. So I think the best prediction should be path a/b/c instead of
+                the deepest one (either a/b/c/z, a/b/c/x or a/b/c/y).
+
+                Right now I'm considering a delta among the probability of being the current state and the probability of
+                being in the next state, if such delta is less that a THRESHOLD then is  more likely that the user goes
+                deeper in the path, otherwise the user might stay there.
+                """
+                current_state_probability = states_dict[domain][outgoing[1]] / (states_total_dict[domain] * 1.0)
+                next_state_probability = states_dict[domain][ingoing] / (states_total_dict[domain] * 1.0)
+                delta = current_state_probability - next_state_probability
+                print "current: ", outgoing[1], current_state_probability
+                print "next: ", ingoing, next_state_probability
+                if delta < DELTA_THRESHOLD:
+                    edge_probability = \
+                        edges_dict[domain][outgoing[1]][ingoing] / (edges_total_dict[domain][outgoing[1]] * -1.0)
+                    new_path = outgoing[2] + "/" + ingoing
+                    temp.append((edge_probability, ingoing, new_path))
+            if len(temp) > 0:
+                temp = sorted(temp, key=lambda x: x[0])
+                visited = visited + [temp[0]]
+                last_url = temp[0][2]
+            else:
+                last_url = outgoing[2]
+        else:
+            break
+    return last_url
+
+"""
+    predict the most likely path for the given page and the given domain
+"""
+
+
+def get_prediction(domain, fragment_url):
+    visited = [(0, fragment_url, fragment_url)]
+    raw_url = search(domain, visited)
+    return raw_url
 
 
 set_graph(-1)
 
 convert_graph_to_matrix()
 
-#for i in set_markov_model:
- #   print set_markov_model[i]
-    #print transition_matrix_by_domain[i]
+print get_prediction("onderwijsaanbod.kuleuven.be", "opleidingen")
 
-"""
-************************************************************************************************************************
-"""
+
