@@ -31,11 +31,11 @@ def load_obj(name):
 """
 
 
-def search(domain, visited):
+def hill_climbing_search(domain, visited):
     last_url = ""
-    while next and len(visited) > 0:
+    while len(visited) > 0:
         outgoing = visited.pop(0)
-
+        last_url = outgoing[1]
         # we verify with the current node has edges, if that is not case we have reached the deepest path
         if outgoing[1] in edges_dict[domain]:
             temp = []
@@ -54,18 +54,18 @@ def search(domain, visited):
                 """
                 current_state_probability = states_dict[domain][outgoing[1]] / (states_total_dict[domain] * 1.0)
                 next_state_probability = states_dict[domain][ingoing] / (states_total_dict[domain] * 1.0)
-                delta = current_state_probability - next_state_probability
-                if delta < DELTA_THRESHOLD:
+                confident_interval = current_state_probability - next_state_probability
+
+                if confident_interval < DELTA_THRESHOLD:
                     edge_probability = \
                         edges_dict[domain][outgoing[1]][ingoing] / (edges_total_dict[domain][outgoing[1]] * -1.0)
-                    new_path = outgoing[2] + "/" + ingoing
-                    temp.append((edge_probability, ingoing, new_path))
+                    #new_path = outgoing[2] + "/" + ingoing
+                    temp.append((edge_probability, ingoing))
             if len(temp) > 0:
                 temp = sorted(temp, key=lambda x: x[0])
                 visited = visited + [temp[0]]
-                last_url = temp[0][2]
-            else:
-                last_url = outgoing[2]
+                last_url = temp[0][1]
+
         else:
             break
     return last_url
@@ -76,12 +76,25 @@ def search(domain, visited):
 """
 
 
-def get_prediction(domain, fragment_url):
-    raw_url = "NOT FOUND"
+def get_prediction(domain, path):
+    prediction = path
     if domain in states_dict:
-        visited = [(0, fragment_url, fragment_url)]
-        raw_url = search(domain, visited)
-    return raw_url
+        visited = [(1, path)]
+        prediction = hill_climbing_search(domain, visited)
+    return prediction
+
+
+def load_data(uid):
+    global edges_dict
+    global states_dict
+    global edges_total_dict
+    global states_total_dict
+
+    edges_dict = load_obj("edges_" + str(uid))
+    states_dict = load_obj("states_" + str(uid))
+    edges_total_dict = load_obj("total_edges_" + str(uid))
+    states_total_dict = load_obj("total_states_" + str(uid))
+
 
 """
     test implementation
@@ -96,39 +109,29 @@ def print_results(uid):
     global edges_total_dict
 
     try:
-        if uid == -1:
+        if uid == 0:
             print "********* ALL *********"
-            test_data = np.genfromtxt('../ground_truth/gt_all.csv', delimiter=",", dtype=None,
-                                      names=["current_path", "prediction"])
-            edges_dict = load_obj("edges_all")
-            states_dict = load_obj("states_all")
-            edges_total_dict = load_obj("total_edges_all")
-            states_total_dict = load_obj("total_states_all")
+
+            testing_data = np.genfromtxt('../ground_truth/gt_all.csv', delimiter=",", dtype=None,
+                                         names=["current_path", "prediction"])
         else:
             print "********* User ID:", uid, "*********"
-            url = "../ground_truth/gt_u" + str(int(uid)) + ".csv"
-            test_data = np.genfromtxt(url, delimiter=",", dtype=None,
-                                      names=["current_path", "prediction"])
-            edges_dict = load_obj("edges_" + str(uid))
-            states_dict = load_obj("states_" + str(uid))
-            edges_total_dict = load_obj("total_edges_" + str(uid))
-            states_total_dict = load_obj("total_states_" + str(uid))
+            path_file = "../ground_truth/gt_u" + str(uid) + ".csv"
+            testing_data = np.genfromtxt(path_file, delimiter=",", dtype=None,
+                                         names=["current_path", "prediction"])
 
+        load_data(uid)
 
         incorrect_prediction = 0
         correct_prediction = 0
 
-        for row in test_data:
-            path = filter(lambda x: x != "", row[0].split("/"))
-            pre_prediction = get_prediction(path[0], path[len(path)-1])
-            new_path = "/".join(path[:-1])
+        for row in testing_data:
+            domain = row[0].split("/")[0]
+            path = row[0]
 
-            if len(new_path) > 0:
-                new_path += "/"
-            prediction = new_path + pre_prediction
-            #print row[1]
+            prediction = get_prediction(domain, path)
             #print prediction
-            # print "Correct!!!"
+
             if row[1] == prediction:
                 correct_prediction += 1
                 #print "Correct!!!"
@@ -139,12 +142,11 @@ def print_results(uid):
         print "Threshold:", DELTA_THRESHOLD
         print incorrect_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% incorrect predictions"
         print correct_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% correct predictions"
+
     except IOError:
-        print "NO DATA FOUND"
+        print "USER DATA NOT FOUND"
 
-print_results(-1)
-print ""
 
-for i in range(1, 28):
-    print_results(i*1.0)
+for i in range(0, 28):
+    print_results(i)
     print ""
