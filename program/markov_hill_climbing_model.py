@@ -55,7 +55,6 @@ def hill_climbing_search(domain, visited):
                 current_state_probability = states_dict[domain][outgoing[1]] / (states_total_dict[domain] * 1.0)
                 next_state_probability = states_dict[domain][ingoing] / (states_total_dict[domain] * 1.0)
                 delta = current_state_probability - next_state_probability
-
                 if delta < CONFIDENT_INTERVAL:
                     edge_probability = \
                         edges_dict[domain][outgoing[1]][ingoing] / (edges_total_dict[domain][outgoing[1]] * -1.0)

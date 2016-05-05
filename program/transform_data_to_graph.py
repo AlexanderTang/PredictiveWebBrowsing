@@ -188,10 +188,22 @@ def load_obj(name):
     with open('../graphs/' + name + '.pkl', 'rb') as f:
         return pk.load(f)
 
-for i in range(0, 28):
-    set_graph(i)
+#for i in range(0, 28):
+#    set_graph(i)
 
 #set_graph(0)
 
 #test = load_obj("states_0")
 #print test
+
+raw_data = np.genfromtxt('../processed_data/testing.csv', delimiter=",", dtype=None,
+                         names=["ts", "action", "dom", "path", "uid"])
+
+limit = len(raw_data)
+
+with open("../test/daniel.csv", 'wb') as csvfile:
+    csvwriter = csv.writer(csvfile, delimiter=',')
+    for i in range(0, limit):
+        if is_useful_path(raw_data, i, i+1):
+            text = [raw_data[i][2], raw_data[i][2] + raw_data[i][3]]
+            csvwriter.writerow(text)
