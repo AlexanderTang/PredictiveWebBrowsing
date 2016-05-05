@@ -9,9 +9,12 @@ Questions:
         or to compute the probabilities when they are needed them (in the search method)?
 """
 
+from sklearn.cross_validation import train_test_split
 import numpy as np
 import pickle as pk
+import csv
 
+TRAINING_DATA_PERCENTAGE = 0.66
 
 """
  Increases by one the value of the transversed vertex of the given domain
@@ -113,13 +116,7 @@ def convert_data_to_graph(uid):
         edges_total_dict = {}
 
         try:
-            if uid == 0:
-                dataset = np.genfromtxt('../ground_truth/gt_all.csv', delimiter=",", dtype=None,
-                                        names=["ts", "action", "dom", "path", "uid"])
-            else:
-                file_path = "../ground_truth/gt_u" + str(uid) + ".csv"
-                dataset = np.genfromtxt(file_path, delimiter=",", dtype=None,
-                                        names=["ts", "action", "dom", "path", "uid"])
+            dataset = set_training_testing_data(uid)
         except IOError:
             return False, states_dict, edges_dict, states_total_dict, edges_total_dict
 
@@ -136,16 +133,11 @@ def convert_data_to_graph(uid):
             if len(path) > 0:
 
                 increase_vertex(states_total_dict, states_dict, domain, current_path)
-                print current_path
+
                 for j in range(1, length_path):
                     increase_edge(edges_total_dict, edges_dict, domain, current_path, current_path + "/" + path[j])
                     increase_vertex(states_total_dict, states_dict, domain, current_path + "/" + path[j])
                     current_path = current_path + "/" + path[j]
-                    print current_path
-                # increase_vertex(states_total_dict, states_dict, domain, current_path + "/" + path[length_path])
-
-                #print current_path
-            print "*****----******---*****----******"
 
         return True, states_dict, edges_dict, states_total_dict, edges_total_dict
 
@@ -164,14 +156,42 @@ def set_graph(user_id):
         save_obj(edges_total_dict, "total_edges_" + str(user_id))
 
 
+def set_training_testing_data(user_id):
+
+    if user_id == 0:
+        raw_data = np.genfromtxt('../ground_truth/gt_all.csv', delimiter=",", dtype=None,
+                                names=["ts", "action", "dom", "path", "uid"])
+    else:
+        file_path = "../ground_truth/gt_u" + str(user_id) + ".csv"
+        raw_data = np.genfromtxt(file_path, delimiter=",", dtype=None,
+                                names=["ts", "action", "dom", "path", "uid"])
+
+    training_data, testing_data = train_test_split(raw_data, test_size=TRAINING_DATA_PERCENTAGE)
+
+    traning_path = "../training_data/training_" + str(user_id) + ".csv"
+    testing_path = "../testing_data/testing_" + str(user_id) + ".csv"
+
+    with open(traning_path, 'wb') as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',')
+        for row in training_data:
+            csvwriter.writerow(row)
+
+    with open(testing_path, 'wb') as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',')
+        for row in testing_data:
+            csvwriter.writerow(row)
+
+    return training_data
+
+
 def load_obj(name):
     with open('../graphs/' + name + '.pkl', 'rb') as f:
         return pk.load(f)
 
-#for i in range(0, 28):
-#    set_graph(i)
+for i in range(0, 28):
+    set_graph(i)
 
-set_graph(0)
+#set_graph(0)
 
-test = load_obj("states_0")
-print test
+#test = load_obj("states_0")
+#print test

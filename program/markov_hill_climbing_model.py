@@ -12,9 +12,9 @@ Questions:
 import pickle as pk
 import numpy as np
 
-#DELTA_THRESHOLD = .10
+DELTA_THRESHOLD = .10
 #DELTA_THRESHOLD = .15
-DELTA_THRESHOLD = .20
+#DELTA_THRESHOLD = .20
 
 states_dict = {}            # States and the number of times the user transverses them
 edges_dict = {}             # Edges and the number of times the user transverses them
@@ -112,11 +112,11 @@ def print_results(uid):
         if uid == 0:
             print "********* ALL *********"
 
-            testing_data = np.genfromtxt('../ground_truth/gt_all.csv', delimiter=",", dtype=None,
+            testing_data = np.genfromtxt('../testing_data/testing_0.csv', delimiter=",", dtype=None,
                                          names=["current_path", "prediction"])
         else:
             print "********* User ID:", uid, "*********"
-            path_file = "../ground_truth/gt_u" + str(uid) + ".csv"
+            path_file = "../testing_data/testing_" + str(uid) + ".csv"
             testing_data = np.genfromtxt(path_file, delimiter=",", dtype=None,
                                          names=["current_path", "prediction"])
 
