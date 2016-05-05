@@ -21,10 +21,9 @@ edges_dict = {}             # Edges and the number of times the user transverses
 states_total_dict = {}      # Total amount that the user transversed the states by domain
 edges_total_dict = {}       # Total amount that the user transversed the edges by domain
 
-#modifications_dict = {}     # Tuple (domain, modified_vertex) mapping the modified fragment of a path with the real name
 
 def load_obj(name):
-    with open('../graph/' + name + '.pkl', 'rb') as f:
+    with open('../graphs/' + name + '.pkl', 'rb') as f:
         return pk.load(f)
 
 """
@@ -88,32 +87,64 @@ def get_prediction(domain, fragment_url):
     test implementation
 """
 
-edges_dict = load_obj("edges")
-states_dict = load_obj("states")
-edges_total_dict = load_obj("total_edges")
-states_total_dict = load_obj("total_states")
-# modifications_dict = load_obj("modifications")
 
-test_data = np.genfromtxt('../ground_truth/gt_all.csv', delimiter=",", dtype=None, names=["current_path", "prediction"])
+def print_results(uid):
 
-incorrect_prediction = 0
-correct_prediction = 0
+    global states_dict
+    global edges_dict
+    global states_total_dict
+    global edges_total_dict
 
-for row in test_data:
-    path = filter(lambda x: x != "", row[0].split("/"))
-    pre_prediction = get_prediction(path[0], path[len(path)-1])
-    new_path = "/".join(path[:-1])
-    if len(new_path) > 0:
-        new_path += "/"
-    prediction = new_path + pre_prediction
+    try:
+        if uid == -1:
+            print "********* ALL *********"
+            test_data = np.genfromtxt('../ground_truth/gt_all.csv', delimiter=",", dtype=None,
+                                      names=["current_path", "prediction"])
+            edges_dict = load_obj("edges_all")
+            states_dict = load_obj("states_all")
+            edges_total_dict = load_obj("total_edges_all")
+            states_total_dict = load_obj("total_states_all")
+        else:
+            print "********* User ID:", uid, "*********"
+            url = "../ground_truth/gt_u" + str(int(uid)) + ".csv"
+            test_data = np.genfromtxt(url, delimiter=",", dtype=None,
+                                      names=["current_path", "prediction"])
+            edges_dict = load_obj("edges_" + str(uid))
+            states_dict = load_obj("states_" + str(uid))
+            edges_total_dict = load_obj("total_edges_" + str(uid))
+            states_total_dict = load_obj("total_states_" + str(uid))
 
-    if row[1] == prediction:
-        correct_prediction += 1
-        #print "Correct!!!"
-    else:
-        incorrect_prediction += 1
-        #print "Incorrect :'("
 
-print "Threshold:", DELTA_THRESHOLD
-print incorrect_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% incorrect predictions"
-print correct_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% correct predictions"
+        incorrect_prediction = 0
+        correct_prediction = 0
+
+        for row in test_data:
+            path = filter(lambda x: x != "", row[0].split("/"))
+            pre_prediction = get_prediction(path[0], path[len(path)-1])
+            new_path = "/".join(path[:-1])
+
+            if len(new_path) > 0:
+                new_path += "/"
+            prediction = new_path + pre_prediction
+            #print row[1]
+            #print prediction
+            # print "Correct!!!"
+            if row[1] == prediction:
+                correct_prediction += 1
+                #print "Correct!!!"
+            else:
+                incorrect_prediction += 1
+                #print "Incorrect :'("
+
+        print "Threshold:", DELTA_THRESHOLD
+        print incorrect_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% incorrect predictions"
+        print correct_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% correct predictions"
+    except IOError:
+        print "NO DATA FOUND"
+
+print_results(-1)
+print ""
+
+for i in range(1, 28):
+    print_results(i*1.0)
+    print ""

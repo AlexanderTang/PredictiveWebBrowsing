@@ -16,7 +16,6 @@ IS_STATE_THRESHOLD = 20
 
 states_dict = {}            # States and the number of times the user transverses them
 edges_dict = {}             # Edges and the number of times the user transverses them
-modifications_dict = {}     # Tuple (domain, modified_vertex) mapping the modified fragment of a path with the real name
 states_total_dict = {}      # Total amount that the user transversed the states by domain
 edges_total_dict = {}       # Total amount that the user transversed the edges by domain
 
@@ -114,17 +113,18 @@ def is_useful_path(dataset, x, y):
 
 def convert_data_to_graph(uid):
 
-    # Set states and edges for the entire dataset, no user distinction
-    if uid == -1:
+    states_dict.clear()
+    edges_dict.clear()
+    states_total_dict.clear()
+    edges_total_dict.clear()
 
-        dataset = np.genfromtxt('../processed_data/deep_filtered_data.csv', delimiter=",", dtype=None,
-                                names=["ts", "action", "dom", "path", "uid"])
-        limit = len(dataset)
+    dataset = np.genfromtxt('../processed_data/deep_filtered_data.csv', delimiter=",", dtype=None,
+                            names=["ts", "action", "dom", "path", "uid"])
+    limit = len(dataset)
 
-        for i in range(0, limit):
-
-            if is_useful_path(dataset, i, i+1):
-
+    for i in range(0, limit):
+        if uid == dataset[i][4] or uid == -1:
+            if is_useful_path(dataset, i, i + 1):
                 domain = dataset[i][2]
                 path = filter(lambda x: x != "", dataset[i][3].split("/"))
                 length_path = len(path) - 1
@@ -142,9 +142,9 @@ def convert_data_to_graph(uid):
                         else:
                             # Changing name of the next path's fragment and storing in a dictionary to reconstruct the
                             # URL
-                            temporal_path = path[j + 1] + "[!" + str(7 * j) + "]"
-                            if not (domain, temporal_path) in modifications_dict:
-                                modifications_dict[(domain, temporal_path)] = path[j + 1]
+                            temporal_path = path[j + 1] + "[!" + str(7 * j) + "!]"
+                            #if not (domain, temporal_path) in modifications_dict:
+                                #modifications_dict[(domain, temporal_path)] = path[j + 1]
 
                             increase_edge(edges_dict, domain, path[j], temporal_path)
                             path[j + 1] = temporal_path
@@ -152,11 +152,6 @@ def convert_data_to_graph(uid):
                         increase_vertex(states_dict, domain, path[j])
 
                     increase_vertex(states_dict, domain, path[length_path])
-
-
-    # Set states and edges for the specific user in the dataset
-    else:
-        raise ValueError('Method not implemented')
 
 
 def convert_graph_to_matrix():
@@ -172,17 +167,28 @@ def convert_graph_to_matrix():
 
 
 def save_obj(obj, name ):
-    with open('../graph/' + name + '.pkl', 'wb') as f:
+    with open('../graphs/' + name + '.pkl', 'wb') as f:
         pk.dump(obj, f, pk.HIGHEST_PROTOCOL)
 
 
 def set_graph(user_id):
-    convert_data_to_graph(user_id)
-    save_obj(edges_dict, "edges")
-    save_obj(states_dict, "states")
-    save_obj(modifications_dict, "modifications")
-    save_obj(states_total_dict, "total_states")
-    save_obj(edges_total_dict, "total_edges")
+
+    if user_id == -1:
+        convert_data_to_graph(user_id)
+        save_obj(edges_dict, "edges_all")
+        save_obj(states_dict, "states_all")
+        save_obj(states_total_dict, "total_states_all")
+        save_obj(edges_total_dict, "total_edges_all")
+    else:
+        convert_data_to_graph(user_id)
+        if states_dict:
+            save_obj(edges_dict, "edges_" + str(user_id))
+            save_obj(states_dict, "states_" + str(user_id))
+            save_obj(states_total_dict, "total_states_" + str(user_id))
+            save_obj(edges_total_dict, "total_edges_" + str(user_id))
+
 
 set_graph(-1)
+for i in range(1, 28):
+    set_graph(i*1.0)
 
