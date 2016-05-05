@@ -84,10 +84,10 @@ def gen_truth_domain(dataset, dom):
     #sorted_dict = sorted(path_dict.items(), key=operator.itemgetter(1))
     #print sorted_dict
 
-    for truth in search_truth(dom, path_dict):
+    for truth in search_truth(dom, 0, path_dict):
         truth_list.append((dom, truth))
     for key in path_dict:
-        for truth in search_truth(key[0], path_dict):
+        for truth in search_truth(key[0], key[1], path_dict):
             if truth != key[0]:
                 truth_list.append((key[0], truth))
 
@@ -95,6 +95,55 @@ def gen_truth_domain(dataset, dom):
     return dataset, truth_list
 
 
+CONFIDENCE_INTERVAL = 0.2
+
+
+# returns the truth for the given path
+#   cp stands for 'current path'
+# This algorithm takes into account the depth, count and confidence interval
+def search_truth(cp, depth, path_dict):
+    """
+    STRATEGY:
+        - keep count of the amount of occurrences of every deeper path with
+            depth exactly 1 (deeper paths are included in this count)
+        - list all the relevant deeper paths in a new dictionary
+        - when the new dictionary is computed, test the confidence interval
+            for each path, deepest paths first; if a solution has been found,
+            return it (test all paths of the same
+            depth, even when a truth has already been found in case of
+            multiple solutions).
+    """
+    depth_dict = {}
+    total_count = 0.0
+    for key, value in path_dict.items():
+        # check if it's the same substring (path)
+        if key[0][:len(cp)] == cp:
+            if key[1] == depth + 1:
+                total_count += value
+            if depth_dict.has_key(key[1]):
+                depth_dict[key[1]].append((key[0], value))
+            else:
+                depth_dict[key[1]] = [(key[0], value)]
+    if total_count == 0:
+        return []   # no deeper paths found
+    depth_nbs = sorted(depth_dict, reverse=True)
+    for d in depth_nbs:
+        counts = depth_dict[d]
+        truth_list = []
+        c = 0
+        for tuple in counts:
+            if tuple[1]/total_count > CONFIDENCE_INTERVAL:
+                if tuple[1] > c:
+                    c = tuple[1]
+                    truth_list = [tuple[0]]
+                elif tuple[1] == c:
+                    truth_list.append(tuple[0])
+        if len(truth_list) != 0:
+            return truth_list
+    return []
+
+
+""" Note :: Too simplistic approach
 # returns the truth for the given path
 #   cp stands for 'current path'
 # This uses a much more simplistic approach compared to the method below:
@@ -121,6 +170,7 @@ def search_truth(cp, path_dict):
                 elif value == count:
                     truth.append(key[0])
     return truth
+"""
 
 
 # Note :: this uses a much more complex algorithm for finding the truths

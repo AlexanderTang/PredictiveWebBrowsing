@@ -1,3 +1,18 @@
 \section{Defining the truth}\label{sec:truth}
 
-\todo{conclusion here}
+To verify whether a prediction is correct, we need an answer sheet of sorts to compare the results with. This is called the ``ground truth'' and is computed in \textit{setup\_data.py}. For this project, the ground truth can be ambiguous. Even when we manually try to define an end path, the desired result is not always very clear. Consider for example:
+\begin{lstlisting}
+load,example.com,/A/B/
+load,example.com,/A/B/
+load,example.com,/A/C/
+load,example.com,/A/C/
+\end{lstlisting}
+Which path would we prefer? B? C? Both B and C? A? We decided that defining both B and C as valid truths for that domain (and any subpath) is a better choice than defining it for B or C alone. Otherwise the correctness of a prediction is left to pure chance on which truth was selected, which is not desirable at all. Selecting A as the truth instead has some merits, especially when there are many deeper paths with a lower count. Take for example that instead of just B and C, we also have D, E and so on, all of which occur twice. Now there are a lot of possible truths, all of which have a low (and the same) count. Since the confidence interval of each path is low, it might be more desirable to predict A instead. 
+\\[2ex]
+The \textbf{is\_better\_prediction/4} method uses an algorithm which takes the depth and count difference into account for the current path and the deeper paths. The main idea of this method is to find a balance between predicting a subpath (A) or one of the deeper paths (B or C). This algorithm is based on feeling and our observations in the data. It is adjustable with the parameters MAX\_DEPTH\_DIFF and BASE\_PERC. But the major drawback is that the models we implement must adjust to this complex algorithm for the predictions to be worth anything. The models become so complex, that this approach is not worth it. For that reason, we decided to comment this method out. For more information on \textbf{is\_better\_prediction/4}, I refer to the documentation within the code.
+\\[2ex]
+Using a too simplistic method where we simply compare the deepest paths is also not an option since we might predict paths with a very low confidence interval. Such is the case in the above example where /A/ occurs many times whereas any deeper path only occurs twice.
+
+\todo{mention that i use the more simplistic approach, but that all the results from the previous algorithm worked!  things only got added, none got removed.}
+
+\todo{mention all users vs individual users}
