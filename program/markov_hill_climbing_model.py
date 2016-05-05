@@ -12,6 +12,11 @@ Questions:
 import pickle as pk
 import numpy as np
 
+#TESTING_DATA = "50_50"
+#TESTING_DATA = "60_40"
+#TESTING_DATA = "70_30"
+TESTING_DATA = "80_20"
+
 #CONFIDENT_INTERVAL = .10
 #CONFIDENT_INTERVAL = .15
 CONFIDENT_INTERVAL = .20
@@ -110,15 +115,13 @@ def print_results(uid):
 
     try:
         if uid == 0:
-            print "********* ALL *********"
-
-            testing_data = np.genfromtxt('../testing_data/testing_0.csv', delimiter=",", dtype=None,
-                                         names=["current_path", "prediction"])
+            #print "********* ALL *********"
+            testing_url = "../testing_data/" + TESTING_DATA + "/all.csv"
         else:
-            print "********* User ID:", uid, "*********"
-            path_file = "../testing_data/testing_" + str(uid) + ".csv"
-            testing_data = np.genfromtxt(path_file, delimiter=",", dtype=None,
-                                         names=["current_path", "prediction"])
+            #print "********* User ID:", uid, "*********"
+            testing_url = "../testing_data/" + TESTING_DATA + "/u" + str(uid) +".csv"
+
+        testing_data = np.genfromtxt(testing_url, delimiter=",", dtype=None, names=["current_path", "prediction"])
 
         load_data(uid)
 
@@ -134,44 +137,20 @@ def print_results(uid):
 
             if row[1] == prediction:
                 correct_prediction += 1
-                #print "Correct!!!"
             else:
                 incorrect_prediction += 1
-                #print "Incorrect :'("
-        """
-            print "Prediction", prediction
-            print "actual path", row[1]
-            print "---------------------"
-            print ""
 
-        domain = testing_data[0][0].split("/")[0]
-        path = testing_data[0][0]
-
-        prediction = get_prediction(domain, path)
-        # print prediction
-
-        if testing_data[0][1] == prediction:
-            correct_prediction += 1
-            # print "Correct!!!"
-        else:
-            incorrect_prediction += 1
-            # print "Incorrect :'("
-        print "Prediction", prediction
-        print "actual path", testing_data[0][1]
-        print "---------------------"
-        print ""
-        """
-
-        print "Threshold:", CONFIDENT_INTERVAL
-        print incorrect_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% incorrect predictions"
-        print correct_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% correct predictions"
+        #print uid
+        #print incorrect_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% incorrect predictions"
+        print correct_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100
 
     except IOError:
-        print "USER DATA NOT FOUND"
+        test = ""
+       # print "USER DATA NOT FOUND"
 
-
+print "Confident interval:", CONFIDENT_INTERVAL, "/ Cross validation:", TESTING_DATA
 for i in range(0, 28):
     print_results(i)
-    print ""
+    #print ""
 
 #print_results(0)
