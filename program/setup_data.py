@@ -246,5 +246,20 @@ def search_truth(cp, path_dict):
 #     return False
 
 
-define_truth_users()
-define_truth_all()
+#define_truth_users()
+#define_truth_all()
+
+
+# generates the ground truth for all users and store it in gt_all.csv
+def define_test():
+    dataset = np.genfromtxt('../processed_data/testing.csv', delimiter=",", dtype=None,
+                         names=["ts", "action", "dom", "path", "uid"])
+    truth_list = gen_truth(dataset)
+
+    with open('../ground_truth/alexander.csv', 'wb') as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',')
+        for row in truth_list:
+            csvwriter.writerow(row)
+
+
+define_test()

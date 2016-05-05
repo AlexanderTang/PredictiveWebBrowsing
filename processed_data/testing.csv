@@ -1769,3 +1769,11 @@
 2016-04-13T11:43:31.967Z,load,www.example4.com,/A/B,27.0
 2016-04-13T11:43:31.967Z,load,www.example4.com,/A/C,27.0
 2016-04-13T11:43:31.967Z,load,www.example4.com,/B/B,27.0
+2016-04-13T11:43:31.967Z,load,www.example5.com,/A/B,27.0
+2016-04-13T11:43:31.967Z,load,www.example5.com,/A/C,27.0
+2016-04-13T11:43:31.967Z,load,www.example5.com,/A/D,27.0
+2016-04-13T11:43:31.967Z,load,www.example5.com,/A/E,27.0
+2016-04-13T11:43:31.967Z,load,www.example5.com,/A/F,27.0
+2016-04-13T11:43:31.967Z,load,www.example5.com,/A/G,27.0
+2016-04-13T11:43:31.967Z,load,www.example5.com,/A/H,27.0
+2016-04-13T11:43:31.967Z,load,www.example5.com,/A/B,27.0
