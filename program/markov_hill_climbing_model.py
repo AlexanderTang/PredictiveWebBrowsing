@@ -59,7 +59,7 @@ def hill_climbing_search(domain, visited):
                 if confident_interval < DELTA_THRESHOLD:
                     edge_probability = \
                         edges_dict[domain][outgoing[1]][ingoing] / (edges_total_dict[domain][outgoing[1]] * -1.0)
-                    #new_path = outgoing[2] + "/" + ingoing
+
                     temp.append((edge_probability, ingoing))
             if len(temp) > 0:
                 temp = sorted(temp, key=lambda x: x[0])
@@ -138,6 +138,29 @@ def print_results(uid):
             else:
                 incorrect_prediction += 1
                 #print "Incorrect :'("
+        """
+            print "Prediction", prediction
+            print "actual path", row[1]
+            print "---------------------"
+            print ""
+
+        domain = testing_data[0][0].split("/")[0]
+        path = testing_data[0][0]
+
+        prediction = get_prediction(domain, path)
+        # print prediction
+
+        if testing_data[0][1] == prediction:
+            correct_prediction += 1
+            # print "Correct!!!"
+        else:
+            incorrect_prediction += 1
+            # print "Incorrect :'("
+        print "Prediction", prediction
+        print "actual path", testing_data[0][1]
+        print "---------------------"
+        print ""
+        """
 
         print "Threshold:", DELTA_THRESHOLD
         print incorrect_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% incorrect predictions"
@@ -150,3 +173,5 @@ def print_results(uid):
 for i in range(0, 28):
     print_results(i)
     print ""
+
+#print_results(0)

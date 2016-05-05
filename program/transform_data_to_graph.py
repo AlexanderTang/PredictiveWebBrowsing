@@ -128,19 +128,24 @@ def convert_data_to_graph(uid):
         for i in range(0, limit):
 
             path = filter(lambda x: x != "", dataset[i][1].split("/"))
+
             domain = path[0]
             current_path = path[0]
-            length_path = len(path) - 1
+            length_path = len(path)
 
             if len(path) > 0:
 
                 increase_vertex(states_total_dict, states_dict, domain, current_path)
-                for j in range(0, length_path):
+                print current_path
+                for j in range(1, length_path):
                     increase_edge(edges_total_dict, edges_dict, domain, current_path, current_path + "/" + path[j])
                     increase_vertex(states_total_dict, states_dict, domain, current_path + "/" + path[j])
                     current_path = current_path + "/" + path[j]
+                    print current_path
+                # increase_vertex(states_total_dict, states_dict, domain, current_path + "/" + path[length_path])
 
-                increase_vertex(states_total_dict, states_dict, domain, current_path + "/" + path[length_path])
+                #print current_path
+            print "*****----******---*****----******"
 
         return True, states_dict, edges_dict, states_total_dict, edges_total_dict
 
@@ -163,5 +168,10 @@ def load_obj(name):
     with open('../graphs/' + name + '.pkl', 'rb') as f:
         return pk.load(f)
 
-for i in range(0, 28):
-    set_graph(i)
+#for i in range(0, 28):
+#    set_graph(i)
+
+set_graph(0)
+
+test = load_obj("states_0")
+print test
