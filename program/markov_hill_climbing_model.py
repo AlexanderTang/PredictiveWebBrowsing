@@ -12,9 +12,9 @@ Questions:
 import pickle as pk
 import numpy as np
 
-DELTA_THRESHOLD = .10
-#DELTA_THRESHOLD = .15
-#DELTA_THRESHOLD = .20
+#CONFIDENT_INTERVAL = .10
+#CONFIDENT_INTERVAL = .15
+CONFIDENT_INTERVAL = .20
 
 states_dict = {}            # States and the number of times the user transverses them
 edges_dict = {}             # Edges and the number of times the user transverses them
@@ -54,9 +54,9 @@ def hill_climbing_search(domain, visited):
                 """
                 current_state_probability = states_dict[domain][outgoing[1]] / (states_total_dict[domain] * 1.0)
                 next_state_probability = states_dict[domain][ingoing] / (states_total_dict[domain] * 1.0)
-                confident_interval = current_state_probability - next_state_probability
+                delta = current_state_probability - next_state_probability
 
-                if confident_interval < DELTA_THRESHOLD:
+                if delta < CONFIDENT_INTERVAL:
                     edge_probability = \
                         edges_dict[domain][outgoing[1]][ingoing] / (edges_total_dict[domain][outgoing[1]] * -1.0)
 
@@ -162,7 +162,7 @@ def print_results(uid):
         print ""
         """
 
-        print "Threshold:", DELTA_THRESHOLD
+        print "Threshold:", CONFIDENT_INTERVAL
         print incorrect_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% incorrect predictions"
         print correct_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% correct predictions"
 
