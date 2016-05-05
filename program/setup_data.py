@@ -256,7 +256,7 @@ def define_test():
                          names=["ts", "action", "dom", "path", "uid"])
     truth_list = gen_truth(dataset)
 
-    with open('../ground_truth/alexander.csv', 'wb') as csvfile:
+    with open('../test/alexander.csv', 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         for row in truth_list:
             csvwriter.writerow(row)
