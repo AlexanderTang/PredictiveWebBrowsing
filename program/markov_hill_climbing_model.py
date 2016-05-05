@@ -60,6 +60,7 @@ def hill_climbing_search(domain, visited):
                         edges_dict[domain][outgoing[1]][ingoing] / (edges_total_dict[domain][outgoing[1]] * -1.0)
 
                     temp.append((edge_probability, ingoing))
+
             if len(temp) > 0:
                 temp = sorted(temp, key=lambda x: x[0])
                 visited = visited + [temp[0]]

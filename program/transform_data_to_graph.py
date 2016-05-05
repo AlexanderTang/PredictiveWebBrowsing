@@ -14,7 +14,7 @@ import numpy as np
 import pickle as pk
 import csv
 
-TRAINING_DATA_PERCENTAGE = 0.66
+TESTING_DATA_PERCENTAGE = 0.66
 
 """
  Increases by one the value of the transversed vertex of the given domain
@@ -166,12 +166,12 @@ def set_training_testing_data(user_id):
         raw_data = np.genfromtxt(file_path, delimiter=",", dtype=None,
                                 names=["ts", "action", "dom", "path", "uid"])
 
-    training_data, testing_data = train_test_split(raw_data, test_size=TRAINING_DATA_PERCENTAGE)
+    training_data, testing_data = train_test_split(raw_data, test_size=TESTING_DATA_PERCENTAGE)
 
-    traning_path = "../training_data/training_" + str(user_id) + ".csv"
+    training_path = "../training_data/training_" + str(user_id) + ".csv"
     testing_path = "../testing_data/testing_" + str(user_id) + ".csv"
 
-    with open(traning_path, 'wb') as csvfile:
+    with open(training_path, 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         for row in training_data:
             csvwriter.writerow(row)
