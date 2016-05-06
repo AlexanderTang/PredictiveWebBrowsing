@@ -3,7 +3,7 @@
 
 import pickle as pk
 
-TRAINING_TESTING_DATA_PERCENTAGE = "80_20"   #"60_40", "70_30", "80_20"]
+TRAINING_DATA_PERCENTAGE = "80_20"   #"60_40", "70_30", "80_20"]
 CONFIDENT_INTERVAL = .20            #.10, .15, .20
 
 states_dict = {}                    # States and the number of times the user transverses them
@@ -13,7 +13,7 @@ edges_total_dict = {}               # Total amount that the user transversed the
 
 
 def load_obj(name):
-    with open('../graphs/' + TRAINING_TESTING_DATA_PERCENTAGE + "/" + name + '.pkl', 'rb') as f:
+    with open('../graphs/' + TRAINING_DATA_PERCENTAGE + "/" + name + '.pkl', 'rb') as f:
         return pk.load(f)
 
 
