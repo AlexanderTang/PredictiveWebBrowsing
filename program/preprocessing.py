@@ -114,8 +114,26 @@ def filter_junk(dataset):
     return dataset
 
 
-# run this when the clicks are no longer necessary in the dataset
+# run this when the clicks are no longer necessary in the dataset;
+# the clicks are saved in a clicks.csv
 def filter_clicks(dataset):
+    clicks = dataset[dataset["action"] == "click"]
+    click_paths = []
+    for c in clicks:
+        path = c["path"].split('/')
+        if len(path) != 0 and path[0] == "":  # remove empty string at the beginning
+            del path[0]
+        if len(path) != 0 and path[len(path) - 1] == "":  # remove empty string at the end
+            del path[len(path) - 1]
+        url = c["dom"]
+        for p in path:
+            url += "/" + p
+        click_paths.append([url])
+    with open('../processed_data/clicks.csv', 'wb') as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',')
+        for row in click_paths:
+            csvwriter.writerow(row)
+
     dataset = dataset[np.logical_not(
             dataset["action"] == "click"
     )]
@@ -170,4 +188,4 @@ def remove_single_occurrences(dataset):
     return dataset
 
 
-filter_data()
+#filter_data()

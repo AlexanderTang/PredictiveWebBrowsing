@@ -35,9 +35,9 @@ def write_data(training_parameter, sub_folder, file_name, csv_matrix):
         #new_matrix = np.array(csv_matrix)
         #new_matrix.tolist()
         #print new_matrix
-        csv_matrix = [list(elem) for elem in csv_matrix]
-        print csv_matrix
-        a = cross_val.StratifiedKFold(csv_matrix, training_parameter)
+        #csv_matrix = [list(elem) for elem in csv_matrix]
+        #print csv_matrix
+        a = cross_val.KFold(csv_matrix, training_parameter)
         #print a
         for training, test in a:
             print training
