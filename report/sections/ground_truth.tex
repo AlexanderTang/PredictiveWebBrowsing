@@ -40,9 +40,15 @@ The examples in table~\ref{table:truthpred_ex} are now explained:
 	\item \textbf{Example 4:}\\
 		This example shows best how we deny one deep path with very low relative occurrence from overshadowing shorter but better paths. It's clear by now that /A/B/ will fall below the threshold and that the solution for \textit{example4.com} will be \textit{example4.com/A}.
 \end{itemize}
-In summary: using the minimum confidence interval as a modifier, a proper balance can be made between a path with large depth and with large occurrence. Note here that the ground truth is not a universally correct solution and can be different depending on interpretation. We're not applying 100\% supervised learning, but rather semi-supervised learning.
+In summary: using the minimum confidence interval as a modifier, a proper balance can be made between a path with large depth and with large occurrence. 
+\\[2ex]
+The timestamp has not been used to generate the ground truth, which might decrease accuracy. For example:
+\begin{lstlisting}
+load,www.kapaza.be,/nl/auto
+load,www.kapaza.be,/nl/bmw
+\end{lstlisting}
+This sequence always occurs in that order. But our ground truth will have both /nl/auto and /nl/bmw as equally likely solutions while it's clear that the user wants \textit{www.kapaza.be/nl/bmw} as a solution. We still chose not to take the timestamp into account (aside from using it for filtering the data, see section~\ref{sec:preprocessing}). That's because generally, clicks lead to loads of deeper paths and the timestamp is no longer needed then. Deeper paths are already preferred in our implementation, though the minimum confidence level ensures shorter but better paths also have a fair chance. Only the rare cases where a click leads to a load on the same (or smaller) depth, might not have the correct solution. But as a trade-off, the complexity of having to take time ordering into account is omitted and performance would improve. This makes the program more scalable in terms of amount of users it can handle or the amount of data that can be processed within reasonable time. These advantages are worth the slight decrease in accuracy in our opinions. We now know that the ground truth is not a universally correct solution and can be different depending on interpretation and preferences: ``Do we want performance or ensure a higher accuracy?''. We're not applying 100\% supervised learning, but rather semi-supervised learning.
+\\[2ex]
+Finally, we have to make a choice between generating the ground truth for the entire dataset (all users) or for each individual. If we consider each user separately, we might not have enough data to predict anything useful. Such is the case for user 1: only 9 rows remain after thorough data filtering. But we may reason that the predictions for each individual will be more accurate than for the entire dataset. Within the same website, users are likely to have different preferences. When taking all these preferences together, the ground truth will be decided by the users who generate most of the data. For that reason, we decide to analyze users separately, but only those who have useful data of at least 30 rows. There simply is no way to provide a meaningful model for users who have little to no data. Additionally, we will generate the ground truth for the entire dataset after all to (dis)prove our assumptions.
 
-\todo{mention all users vs individual users}
 
-
-\todo{mention why we don't use timestamps for the ground truth (because it adds a lot more complexity, both for generating the ground truth and generating the model; we sacrifice some accuracy in favor of computation time and scalability)}
