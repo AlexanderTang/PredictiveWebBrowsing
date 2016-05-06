@@ -1,9 +1,11 @@
-from sklearn.cross_validation import train_test_split
+import sklearn.cross_validation as cross_val
 import glob
 import numpy as np
 import csv
 
 
+# splits the data into training and test data, based on training percentages;
+# the way the data is split happens randomly (the data gets shuffled first)
 def set_training_testing_data():
     csv_list = glob.glob('../ground_truth/*.csv')
     for csv_file in csv_list:
@@ -17,9 +19,20 @@ def set_training_testing_data():
         write_data(0.7, "70_30", file_name, csv_matrix)
         write_data(0.8, "80_20", file_name, csv_matrix)
 
+        # TODO first compute the good score using the cross val library, before performing stratified kfold (only one needed)
+        write_data(3, "3fold", file_name, csv_matrix)
+        write_data(4, "4fold", file_name, csv_matrix)
+        write_data(5, "5fold", file_name, csv_matrix)
 
-def write_data(training_percentage, sub_folder, file_name, csv_matrix):
-    training_data, testing_data = train_test_split(csv_matrix, train_size=training_percentage)
+
+# writing away data to .csv files for training parameters
+def write_data(training_parameter, sub_folder, file_name, csv_matrix):
+    if isinstance(training_parameter, int):
+        a = cross_val.StratifiedKFold(csv_matrix, n_folds=training_parameter, shuffle=True)
+        print a
+        return
+    else:
+        training_data, testing_data = cross_val.train_test_split(csv_matrix, train_size=training_parameter)
 
     training_path = "../training_data/" + sub_folder + "/" + file_name
     testing_path = "../testing_data/" + sub_folder + "/" + file_name
@@ -35,4 +48,4 @@ def write_data(training_percentage, sub_folder, file_name, csv_matrix):
             csvwriter.writerow(row)
 
 
-#set_training_testing_data()
+set_training_testing_data()

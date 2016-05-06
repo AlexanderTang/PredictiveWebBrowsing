@@ -9,10 +9,40 @@ load,example.com,/A/C/
 \end{lstlisting}
 Which path would we prefer? B? C? Both B and C? A? We decided that defining both B and C as valid truths for that domain (and any subpath) is a better choice than defining it for B or C alone. Otherwise the correctness of a prediction is left to pure chance on which truth was selected, which is not desirable at all. Selecting A as the truth instead has some merits, especially when there are many deeper paths with a lower count. Take for example that instead of just B and C, we also have D, E and so on, all of which occur twice. Now there are a lot of possible truths, all of which have a low (and the same) count. Since the confidence interval of each path is low, it might be more desirable to predict A instead. 
 \\[2ex]
-The \textbf{is\_better\_prediction/4} method uses an algorithm which takes the depth and count difference into account for the current path and the deeper paths. The main idea of this method is to find a balance between predicting a subpath (A) or one of the deeper paths (B or C). This algorithm is based on feeling and our observations in the data. It is adjustable with the parameters MAX\_DEPTH\_DIFF and BASE\_PERC. But the major drawback is that the models we implement must adjust to this complex algorithm for the predictions to be worth anything. The models become so complex, that this approach is not worth it. For that reason, we decided to comment this method out. For more information on \textbf{is\_better\_prediction/4}, I refer to the documentation within the code.
+The \textbf{is\_better\_prediction/4} method uses an algorithm which takes the depth and count difference into account for the current path and the deeper paths. The main idea of this method is to find a balance between predicting a subpath (A) or the deeper paths (B, C). This algorithm is based on feeling and our observations in the data. It is adjustable with the parameters MAX\_DEPTH\_DIFF and BASE\_PERC. But the major drawback is that the models we implement must adjust to this complex algorithm for the predictions to be worth anything. The models become so complex that this approach is not very usable. For that reason, we decided to comment this method out. For more information on \textbf{is\_better\_prediction/4}, I refer to the documentation within the code.
 \\[2ex]
-Using a too simplistic method where we simply compare the deepest paths is also not an option since we might predict paths with a very low confidence interval. Such is the case in the above example where /A/ occurs many times whereas any deeper path only occurs twice.
+Using a too simplistic method where we simply compare the deepest paths is also not an option since we might predict paths with a very low confidence interval. Such is the case in the above example where /A/ occurs many times whereas any deeper path only occurs once or twice. The solution we finally use is somewhere in between the two extremes. For each deeper path (not necessarily the deepest path) we compute the amount of occurrences. Then we calculate the frequency (using the total amount of deeper paths) and iterate over the depth levels from large to small. At any given depth, we verify whether the frequency passes a certain threshold. This threshold is the confidence interval, which is set to 20\%. If the frequency is higher than the minimum confidence level needed, then we have found a possible solution. The other paths within the same depth are still computed to see if we find a better (or equally good) solution. However, if none of the solutions have a high enough confidence interval, then the depth level decreases by one and we repeat the process. It's very possible that no solutions are found. Such is the case when we are already at the end path or when we start from a path of which all next paths are equally likely and have a low confidence interval. The following example will make things clear. Assume for the sake of simplicity that the minimum confidence level is 30\%.
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{llll}
+		\textbf{Example 1} & \textbf{Example 2} & \textbf{Example 3} & \textbf{Example 4} \\ \hline 
+example1.com,/A/B/	& example2.com,/A/B/ &   example3.com/A/A/  & example4.com,/A/B/ \\
+example1.com,/A/C/	&  example2.com,/A/B/ &  example3.com/B/ & example4.com,/A/ \\
+example1.com,/A/D/	&  example2.com,/A/C/ &  example3.com/C/A/ & example4.com,/A/ \\
+example1.com,/B/	&  example2.com,/A/C/ &  example3.com/D &  example4.com,/A/ \\
+example1.com,/B/	&   example2.com,/A/D/ & example3.com/E/ & example4.com,/A/ \\
+    &   example2.com,/A/  & example3.com/ & example4.com,/A/
+	\end{tabular}
+	\caption{Truth prediction examples.}
+	\label{table:truthpred_ex}
+\end{table}
 
-\todo{mention that i use the more simplistic approach, but that all the results from the previous algorithm worked!  things only got added, none got removed.}
+The examples in table~\ref{table:truthpred_ex} are now explained:
+\begin{itemize}
+	\item \textbf{Example 1:}\\
+		If we want the prediction for \textit{example1.com}, the deepest paths are evaluated first. These are /A/B/, /A/C/ and /A/D/ with one occurrence each. The total amount of deeper paths for \textit{example1.com} is 5. This means that the frequency of each of the paths with depth 2 equals 20\%. All of these are lower than the threshold, which means none of these paths are valid solutions. Since no solutions are found at depth 2, we try again for depth 1. The amount of occurrences for /A/ is 3 and for /B/ is 2. The frequency for /A/ equals 60\% and for /B/ equals 40\%. While both results are higher than the threshold, the one with the highest count is selected: /A/ with 60\%. The truth for \textit{example1.com} should be \textit{example1.com/A}.
+		\\[2ex]
+		Now we can do a prediction for \textit{example1.com/A}. The amount of occurrences of /A/B/ and so on stays the same, but the total amount of deeper paths for \textit{example1.com/A} is 3. This means that each of the deeper paths has an equal chance of 33\%, which is higher than the threshold. The result for \textit{example1.com/A} becomes \textit{example1.com/A/B}, \textit{example1.com/A/C} and \textit{example1.com/A/D}. Any predictions that coincide with one of these results is a correct prediction.
+	\item \textbf{Example 2:}\\
+		For the prediction of \textit{example2.com} we follow the same reasoning. The frequency of /A/B/, /A/C/, /A/D/ and /A/ are 33\%, 33\%, 17\% and 17\% respectively. Only the results for /A/B/ and /A/C/ are above the threshold and they're the same at that, so the solution for \textit{example2.com} becomes \textit{example2.com/A/B} and \textit{example2.com/A/C}. For the prediction of \textit{example2.com/A}, the calculations and results are completely the same. \textit{example2.com/A} itself is still taken into account for the total count. If it's not clear why this is the case, then I suggest to take a look at \textbf{example 4}.
+	\item \textbf{Example 3:}\\
+		When computing the results for \textit{example3.com}, we find that the two deepest paths /A/A/ and /C/A/ both have an occurrence of one. The frequency for both paths is 17\%, thus they fall below the threshold and are not valid solutions. When comparing the paths of depth 1, all of the frequencies are again 17\% and fall below the threshold. This means that no solution is found and no predictions can be made for \textit{example3.com}. The solution for \textit{example3.com/A} would be \textit{example3.com/A/A}.
+	\item \textbf{Example 4:}\\
+		This example shows best how we deny one deep path with very low relative occurrence from overshadowing shorter but better paths. It's clear by now that /A/B/ will fall below the threshold and that the solution for \textit{example4.com} will be \textit{example4.com/A}.
+\end{itemize}
+In summary: using the minimum confidence interval as a modifier, a proper balance can be made between a path with large depth and with large occurrence. Note here that the ground truth is not a universally correct solution and can be different depending on interpretation. We're not applying 100\% supervised learning, but rather semi-supervised learning.
 
 \todo{mention all users vs individual users}
+
+
+\todo{mention why we don't use timestamps for the ground truth (because it adds a lot more complexity, both for generating the ground truth and generating the model; we sacrifice some accuracy in favor of computation time and scalability)}
