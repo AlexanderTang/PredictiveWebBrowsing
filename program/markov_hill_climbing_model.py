@@ -1,34 +1,19 @@
 """
-ASSUMPTIONS:
-    - The dataset contains load actions only
-    - The data set is the training set
-
-Questions:
-    - Does we really need to save the domain as a state?
-    - Is it better to have precomputed the probabilities and store them in a data structure (for instance a dictionary)
-        or to compute the probabilities when they are needed them (in the search method)?
 """
 
 import pickle as pk
-import numpy as np
 
-#TESTING_DATA = "50_50"
-#TESTING_DATA = "60_40"
-#TESTING_DATA = "70_30"
-TESTING_DATA = "80_20"
+TRAINING_TESTING_DATA_PERCENTAGE = "50_50"   #"60_40", "70_30", "80_20"]
+CONFIDENT_INTERVAL = .20            #.10, .15, .20
 
-#CONFIDENT_INTERVAL = .10
-#CONFIDENT_INTERVAL = .15
-CONFIDENT_INTERVAL = .20
-
-states_dict = {}            # States and the number of times the user transverses them
-edges_dict = {}             # Edges and the number of times the user transverses them
-states_total_dict = {}      # Total amount that the user transversed the states by domain
-edges_total_dict = {}       # Total amount that the user transversed the edges by domain
+states_dict = {}                    # States and the number of times the user transverses them
+edges_dict = {}                     # Edges and the number of times the user transverses them
+states_total_dict = {}              # Total amount that the user transversed the states by domain
+edges_total_dict = {}               # Total amount that the user transversed the edges by domain
 
 
 def load_obj(name):
-    with open('../graphs/' + name + '.pkl', 'rb') as f:
+    with open('../graphs/' + TRAINING_TESTING_DATA_PERCENTAGE + "/" + name + '.pkl', 'rb') as f:
         return pk.load(f)
 
 """
@@ -60,6 +45,7 @@ def hill_climbing_search(domain, visited):
                 current_state_probability = states_dict[domain][outgoing[1]] / (states_total_dict[domain] * 1.0)
                 next_state_probability = states_dict[domain][ingoing] / (states_total_dict[domain] * 1.0)
                 delta = current_state_probability - next_state_probability
+
                 if delta < CONFIDENT_INTERVAL:
                     edge_probability = \
                         edges_dict[domain][outgoing[1]][ingoing] / (edges_total_dict[domain][outgoing[1]] * -1.0)
@@ -81,15 +67,7 @@ def hill_climbing_search(domain, visited):
 """
 
 
-def get_prediction(domain, path):
-    prediction = path
-    if domain in states_dict:
-        visited = [(1, path)]
-        prediction = hill_climbing_search(domain, visited)
-    return prediction
-
-
-def load_data(uid):
+def load_graph(uid):
     global edges_dict
     global states_dict
     global edges_total_dict
@@ -101,56 +79,9 @@ def load_data(uid):
     states_total_dict = load_obj("total_states_" + str(uid))
 
 
-"""
-    test implementation
-"""
-
-
-def print_results(uid):
-
-    global states_dict
-    global edges_dict
-    global states_total_dict
-    global edges_total_dict
-
-    try:
-        if uid == 0:
-            #print "********* ALL *********"
-            testing_url = "../testing_data/" + TESTING_DATA + "/all.csv"
-        else:
-            #print "********* User ID:", uid, "*********"
-            testing_url = "../testing_data/" + TESTING_DATA + "/u" + str(uid) +".csv"
-
-        testing_data = np.genfromtxt(testing_url, delimiter=",", dtype=None, names=["current_path", "prediction"])
-
-        load_data(uid)
-
-        incorrect_prediction = 0
-        correct_prediction = 0
-
-        for row in testing_data:
-            domain = row[0].split("/")[0]
-            path = row[0]
-
-            prediction = get_prediction(domain, path)
-            #print prediction
-
-            if row[1] == prediction:
-                correct_prediction += 1
-            else:
-                incorrect_prediction += 1
-
-        #print uid
-        #print incorrect_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100, "% incorrect predictions"
-        print correct_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100
-
-    except IOError:
-        test = ""
-       # print "USER DATA NOT FOUND"
-
-print "Confident interval:", CONFIDENT_INTERVAL, "/ Cross validation:", TESTING_DATA
-for i in range(0, 28):
-    print_results(i)
-    #print ""
-
-#print_results(0)
+def get_prediction(domain, path):
+    prediction = path
+    if domain in states_dict:
+        visited = [(1, path)]
+        prediction = hill_climbing_search(domain, visited)
+    return prediction

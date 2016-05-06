@@ -1,23 +1,21 @@
 """
-ASSUMPTIONS:
-    - The dataset contains load actions only
-    - The data set is the training set
 
-Questions:
-    - Does we really need to save the domain as a state?
-    - Is it better to have precomputed the probabilities and store them in a data structure (for instance a dictionary)
-        or to compute the probabilities when they are needed them (in the search method)?
 """
 
-from sklearn.cross_validation import train_test_split
 import numpy as np
 import pickle as pk
-import csv
 
-#TESTING_DATA = "50_50"
-#TESTING_DATA = "60_40"
-#TESTING_DATA = "70_30"
-TESTING_DATA = "80_20"
+TRAINING_DATA_PERCENTAGE = ["50_50", "60_40", "70_30", "80_20"]
+
+
+def get_training(user_id, training_data):
+
+    if user_id == 0:
+        training_path = "../training_data/" + training_data + "/all.csv"
+    else:
+        training_path = "../training_data/" + training_data + "/u" + str(user_id) + ".csv"
+
+    return np.genfromtxt(training_path, delimiter=",", dtype=None)
 
 """
  Increases by one the value of the transversed vertex of the given domain
@@ -55,55 +53,6 @@ def increase_edge(edges_total_dict, dictionary, domain, outgoing, ingoing):
         dictionary[domain] = {outgoing: {ingoing: 1}}
         edges_total_dict[domain] = {outgoing: 1}
 
-"""
- Compare two domains with their paths and return true if:
-   - User goes back from page X to page Y in the next click
-   - User changes from page X to page Y and keeps the same deep in the tree, where X and Y are different
-   - User changes domain from page X in next click Y
-"""
-
-
-def is_useful_path(dataset, x, y):
-    # We reach the last element of the dataset, we switch the latter one with the former one
-    if len(dataset) == y:
-        # User stayed in the same domain
-        if dataset[x-1][2] == dataset[x][2]:
-            # User went back in the next click
-            if len(dataset[x-1][3].split("/")) < len(dataset[x][3].split("/")):
-                return True
-            else:
-                # User might have changed to other page and kept the same deep in the tree
-                if len(dataset[x-1][3].split("/")) == len(dataset[x][3].split("/")):
-                    # User changed to other page and kept the same deep in the tree
-                    if dataset[x-1][3] != dataset[x][3]:
-                        return True
-                    else:
-                        return False
-                else:
-                    return False
-        # User changed domain in next click
-        else:
-            return True
-    else:
-        # User stays in the same domain
-        if dataset[x][2] == dataset[y][2]:
-            # User goes back in the next click
-            if len(dataset[x][3].split("/")) > len(dataset[y][3].split("/")):
-                return True
-            else:
-                # User might change to other page and keep the same deep in the tree
-                if len(dataset[x][3].split("/")) == len(dataset[y][3].split("/")):
-                    # User changes to other page and keeps the same deep in the tree
-                    if dataset[x][3] != dataset[y][3]:
-                        return True
-                    else:
-                        return False
-                else:
-                    return False
-        # User changes domain in next click
-        else:
-            return True
-
 
 """
  Transform the CSV file with the training data into a graph representation using the dictionaries states_dict and
@@ -111,7 +60,7 @@ def is_useful_path(dataset, x, y):
 """
 
 
-def convert_data_to_graph(uid):
+def convert_data_to_graph(uid, training_data_percentage):
 
         states_dict = {}
         edges_dict = {}
@@ -119,7 +68,7 @@ def convert_data_to_graph(uid):
         edges_total_dict = {}
 
         try:
-            dataset = get_training(uid)
+            dataset = get_training(uid, training_data_percentage)
         except IOError:
             return False, states_dict, edges_dict, states_total_dict, edges_total_dict
 
@@ -145,33 +94,25 @@ def convert_data_to_graph(uid):
         return True, states_dict, edges_dict, states_total_dict, edges_total_dict
 
 
-def save_obj(obj, name ):
-    with open('../graphs/' + name + '.pkl', 'wb') as f:
+def save_obj(obj, training_data_percentage, name):
+    with open('../graphs/' + training_data_percentage + "/" + name + '.pkl', 'wb') as f:
         pk.dump(obj, f, pk.HIGHEST_PROTOCOL)
 
 
-def set_graph(user_id):
-    (successful, states_dict, edges_dict, states_total_dict, edges_total_dict) = convert_data_to_graph(user_id)
+def set_graph(user_id, training_data_percentage):
+    (successful, states_dict, edges_dict, states_total_dict, edges_total_dict) = \
+        convert_data_to_graph(user_id, training_data_percentage)
     if successful:
-        save_obj(edges_dict, "edges_" + str(user_id))
-        save_obj(states_dict, "states_" + str(user_id))
-        save_obj(states_total_dict, "total_states_" + str(user_id))
-        save_obj(edges_total_dict, "total_edges_" + str(user_id))
+        save_obj(edges_dict, training_data_percentage, "edges_" + str(user_id))
+        save_obj(states_dict, training_data_percentage, "states_" + str(user_id))
+        save_obj(states_total_dict, training_data_percentage, "total_states_" + str(user_id))
+        save_obj(edges_total_dict, training_data_percentage, "total_edges_" + str(user_id))
 
 
-def get_training(user_id):
-
-    if user_id == 0:
-        training_path = "../training_data/" + TESTING_DATA + "/all.csv"
-    else:
-        training_path = "../training_data/" + TESTING_DATA + "/u" + str(user_id) + ".csv"
-
-    return np.genfromtxt(training_path, delimiter=",", dtype=None)
+def set_all_graphs():
+    for training_data_percentage in TRAINING_DATA_PERCENTAGE:
+        for i in range(0, 28):
+            set_graph(i, training_data_percentage)
 
 
-def load_obj(name):
-    with open('../graphs/' + name + '.pkl', 'rb') as f:
-        return pk.load(f)
-
-for i in range(0, 28):
-    set_graph(i)
+set_all_graphs()

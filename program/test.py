@@ -60,3 +60,58 @@ def testdict():
         print key, ' + ', v
 
 testdict()
+
+
+"""
+
+def print_all_results():
+
+    for uid in range(0, 28):
+
+        try:
+
+            for testing_data_percentage in TESTING_DATA_PERCENTAGE:
+
+                if uid == 0:
+                    testing_url = "../testing_data/" + testing_data_percentage + "/all.csv"
+                else:
+                    testing_url = "../testing_data/" + testing_data_percentage + "/u" + str(uid) +".csv"
+
+                testing_data = np.genfromtxt(testing_url, delimiter=",", dtype=None, names=["current_path", "prediction"])
+
+                incorrect_prediction = 0
+                correct_prediction = 0
+
+                load_graph(uid)
+
+                for row in testing_data:
+                    domain = row[0].split("/")[0]
+                    path = row[0]
+
+                    prediction = get_prediction(domain, path, confident_interval)
+
+                    if row[1] == prediction:
+                        correct_prediction += 1
+                    else:
+                        incorrect_prediction += 1
+
+                print correct_prediction / (correct_prediction + incorrect_prediction * 1.0) * 100
+
+        except IOError:
+            test = ""
+
+#print_results(0)
+
+
+teams_list = ["Man Utd", "Man City", "T Hotspur"]
+data = np.array([[1, 2, 1],
+                 [0, 1, 0],
+                 [2, 4, 2]])
+
+row_format ="{:>15}" * (len(teams_list) + 1)
+
+print row_format.format("", *teams_list)
+
+for team, row in zip(teams_list, data):
+    print row_format.format(team, *row)
+"""
