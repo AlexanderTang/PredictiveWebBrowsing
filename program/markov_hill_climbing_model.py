@@ -3,7 +3,7 @@
 
 import pickle as pk
 
-TRAINING_TESTING_DATA_PERCENTAGE = "50_50"   #"60_40", "70_30", "80_20"]
+TRAINING_TESTING_DATA_PERCENTAGE = "80_20"   #"60_40", "70_30", "80_20"]
 CONFIDENT_INTERVAL = .20            #.10, .15, .20
 
 states_dict = {}                    # States and the number of times the user transverses them
