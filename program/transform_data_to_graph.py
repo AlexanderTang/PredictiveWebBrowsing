@@ -14,7 +14,10 @@ import numpy as np
 import pickle as pk
 import csv
 
-TESTING_DATA_PERCENTAGE = 0.66
+#TESTING_DATA = "50_50"
+#TESTING_DATA = "60_40"
+#TESTING_DATA = "70_30"
+TESTING_DATA = "80_20"
 
 """
  Increases by one the value of the transversed vertex of the given domain
@@ -116,7 +119,7 @@ def convert_data_to_graph(uid):
         edges_total_dict = {}
 
         try:
-            dataset = set_training_testing_data(uid)
+            dataset = get_training(uid)
         except IOError:
             return False, states_dict, edges_dict, states_total_dict, edges_total_dict
 
@@ -156,54 +159,19 @@ def set_graph(user_id):
         save_obj(edges_total_dict, "total_edges_" + str(user_id))
 
 
-def set_training_testing_data(user_id):
+def get_training(user_id):
 
     if user_id == 0:
-        raw_data = np.genfromtxt('../ground_truth/gt_all.csv', delimiter=",", dtype=None,
-                                names=["ts", "action", "dom", "path", "uid"])
+        training_path = "../training_data/" + TESTING_DATA + "/all.csv"
     else:
-        file_path = "../ground_truth/gt_u" + str(user_id) + ".csv"
-        raw_data = np.genfromtxt(file_path, delimiter=",", dtype=None,
-                                names=["ts", "action", "dom", "path", "uid"])
+        training_path = "../training_data/" + TESTING_DATA + "/u" + str(user_id) + ".csv"
 
-    training_data, testing_data = train_test_split(raw_data, test_size=TESTING_DATA_PERCENTAGE)
-
-    training_path = "../training_data/training_" + str(user_id) + ".csv"
-    testing_path = "../testing_data/testing_" + str(user_id) + ".csv"
-
-    with open(training_path, 'wb') as csvfile:
-        csvwriter = csv.writer(csvfile, delimiter=',')
-        for row in training_data:
-            csvwriter.writerow(row)
-
-    with open(testing_path, 'wb') as csvfile:
-        csvwriter = csv.writer(csvfile, delimiter=',')
-        for row in testing_data:
-            csvwriter.writerow(row)
-
-    return training_data
+    return np.genfromtxt(training_path, delimiter=",", dtype=None)
 
 
 def load_obj(name):
     with open('../graphs/' + name + '.pkl', 'rb') as f:
         return pk.load(f)
 
-#for i in range(0, 28):
-#    set_graph(i)
-
-#set_graph(0)
-
-#test = load_obj("states_0")
-#print test
-
-raw_data = np.genfromtxt('../processed_data/testing.csv', delimiter=",", dtype=None,
-                         names=["ts", "action", "dom", "path", "uid"])
-
-limit = len(raw_data)
-
-with open("../test/daniel.csv", 'wb') as csvfile:
-    csvwriter = csv.writer(csvfile, delimiter=',')
-    for i in range(0, limit):
-        if is_useful_path(raw_data, i, i+1):
-            text = [raw_data[i][2], raw_data[i][2] + raw_data[i][3]]
-            csvwriter.writerow(text)
+for i in range(0, 28):
+    set_graph(i)
