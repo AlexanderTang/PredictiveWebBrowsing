@@ -16,32 +16,16 @@ def load_obj(name):
     with open('../graphs/' + TRAINING_TESTING_DATA_PERCENTAGE + "/" + name + '.pkl', 'rb') as f:
         return pk.load(f)
 
-"""
-    This search is a modification of the Hill Climbing search algorithm
-"""
-
 
 def hill_climbing_search(domain, visited):
     last_url = ""
     while len(visited) > 0:
         outgoing = visited.pop(0)
         last_url = outgoing[1]
-        # we verify with the current node has edges, if that is not case we have reached the deepest path
         if outgoing[1] in edges_dict[domain]:
             temp = []
             for ingoing in edges_dict[domain][outgoing[1]]:
-                """
-                Here we need a threshold to see if it possible to advance or if it is better to stay in the node and
-                don't go deeper in the path because could be the following case.
-                This can also sole the problem where we have for example many a path a/b/c that is frequently visited,
-                but the actual last pages are a/b/c/z, a/b/c/x and a/b/c/y but maybe the user only visited them once each
-                while path a/b/c was visited 20 times. So I think the best prediction should be path a/b/c instead of
-                the deepest one (either a/b/c/z, a/b/c/x or a/b/c/y).
 
-                Right now I'm considering a delta among the probabilities of being the current state and the probability
-                of being in the next state, if such delta is less that a THRESHOLD then is  more likely that the user
-                goes deeper in the path, otherwise the user might stay there.
-                """
                 current_state_probability = states_dict[domain][outgoing[1]] / (states_total_dict[domain] * 1.0)
                 next_state_probability = states_dict[domain][ingoing] / (states_total_dict[domain] * 1.0)
                 delta = current_state_probability - next_state_probability
@@ -60,11 +44,6 @@ def hill_climbing_search(domain, visited):
         else:
             break
     return last_url
-
-
-"""
-    Predict the most likely path for the given page and the given domain
-"""
 
 
 def load_graph(uid):

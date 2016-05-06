@@ -1,7 +1,3 @@
-"""
-
-"""
-
 import numpy as np
 import pickle as pk
 
@@ -17,10 +13,6 @@ def get_training(user_id, training_data):
 
     return np.genfromtxt(training_path, delimiter=",", dtype=None)
 
-"""
- Increases by one the value of the transversed vertex of the given domain
-"""
-
 
 def increase_vertex(states_total_dict, dictionary, domain, vertex):
     if domain in dictionary:
@@ -32,10 +24,6 @@ def increase_vertex(states_total_dict, dictionary, domain, vertex):
     else:
         dictionary[domain] = {vertex: 1}
         states_total_dict[domain] = 1
-
-"""
- Increases by one the value of the transversed edge of the given domain
-"""
 
 
 def increase_edge(edges_total_dict, dictionary, domain, outgoing, ingoing):
@@ -52,12 +40,6 @@ def increase_edge(edges_total_dict, dictionary, domain, outgoing, ingoing):
     else:
         dictionary[domain] = {outgoing: {ingoing: 1}}
         edges_total_dict[domain] = {outgoing: 1}
-
-
-"""
- Transform the CSV file with the training data into a graph representation using the dictionaries states_dict and
- edges_dict
-"""
 
 
 def convert_data_to_graph(uid, training_data_percentage):
