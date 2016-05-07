@@ -1,12 +1,12 @@
 \section{Defining the truth}\label{sec:truth}
 
 To verify whether a prediction is correct, we need an answer sheet of sorts to compare the results with. This is called the ``ground truth'' and is computed in \textit{setup\_data.py}. For this project, the ground truth can be ambiguous. Even when we manually try to define an end path, the desired result is not always very clear. Consider for example:
-\begin{lstlisting}
+\begin{verbatim}
 example.com,/A/B/
 example.com,/A/B/
 example.com,/A/C/
 example.com,/A/C/
-\end{lstlisting}
+\end{verbatim}
 Which path would we prefer when starting from \textit{example.com}? B? C? Both B and C? A? We decided that defining both B and C as valid truths for that domain (and any subpath) is a better choice than defining it for B or C alone. Otherwise the correctness of a prediction is left to pure chance on which truth was selected, which is not desirable at all. Selecting A as the truth instead has some merits, especially when there are many deeper paths with a lower count. Take for example that instead of just B and C, we also have D, E and so on, all of which occur twice. Now there are a lot of possible truths, all of which have a low (and the same) count. Since the confidence interval of each path is low, it might be more desirable to predict A instead. 
 \\[2ex]
 The \textbf{is\_better\_prediction/4} method uses an algorithm which takes the depth and count difference into account for the current path and the deeper paths. The main idea of this method is to find a balance between predicting a subpath (A) or the deeper paths (B, C). This algorithm is based on feeling and our observations in the data. It is adjustable with the parameters MAX\_DEPTH\_DIFF and BASE\_PERC. But the major drawback is that the models we implement must adjust to this complex algorithm for the predictions to be worth anything. The models become so complex that this approach is not very usable. For that reason, we decided to comment this method out. For more information on \textbf{is\_better\_prediction/4}, I refer to the documentation within the code.
@@ -43,10 +43,10 @@ The examples in table~\ref{table:truthpred_ex} are now explained:
 In summary: using the minimum confidence interval as a modifier, a proper balance can be made between a path with large depth and with large occurrence. 
 \\[2ex]
 The timestamp has not been used to generate the ground truth, which might decrease accuracy. For example:
-\begin{lstlisting}
-load,www.kapaza.be,/nl/auto
-load,www.kapaza.be,/nl/bmw
-\end{lstlisting}
+\begin{verbatim}
+www.kapaza.be,/nl/auto
+www.kapaza.be,/nl/bmw
+\end{verbatim}
 This sequence always occurs in that order. But our ground truth will have both /nl/auto and /nl/bmw as equally likely solutions while it's clear that the user wants \textit{www.kapaza.be/nl/bmw} as a solution. We still chose not to take the timestamp into account (aside from using it for filtering the data, see section~\ref{sec:preprocessing}). That's because generally, clicks lead to loads of deeper paths and the timestamp is no longer needed then. Deeper paths are already preferred in our implementation, though the minimum confidence level ensures shorter but better paths also have a fair chance. Only the rare cases where a click leads to a load on the same (or smaller) depth, might not have the correct solution. But as a trade-off, the complexity of having to take time ordering into account is omitted and performance would improve. This makes the program more scalable in terms of amount of users it can handle or the amount of data that can be processed within reasonable time. These advantages are worth the slight decrease in accuracy in our opinions. We now know that the ground truth is not a universally correct solution and can be different depending on interpretation and preferences: ``Do we want performance or ensure a higher accuracy?''. We're not applying 100\% supervised learning, but rather semi-supervised learning.
 \\[2ex]
 Finally, we have to make a choice between generating the ground truth for the entire dataset (all users) or for each individual. If we consider each user separately, we might not have enough data to predict anything useful. Such is the case for user 1: only 9 rows remain after thorough data filtering. But we may reason that the predictions for each individual will be more accurate than for the entire dataset. Within the same website, users are likely to have different preferences. When taking all these preferences together, the ground truth will be decided by the users who generate most of the data. For that reason, we decide to analyze users separately, but only those who have useful data of at least 30 rows. There simply is no way to provide a meaningful model for users who have little to no data. Additionally, we will generate the ground truth for the entire dataset after all to (dis)prove our assumptions.
