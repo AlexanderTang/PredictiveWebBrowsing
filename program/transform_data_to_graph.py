@@ -1,5 +1,4 @@
 import numpy as np
-import pickle as pk
 import graph_utilities as gu
 
 TRAINING_DATA_PERCENTAGE = ["50_50", "60_40", "70_30", "80_20"]
