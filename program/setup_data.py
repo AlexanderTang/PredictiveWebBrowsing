@@ -53,8 +53,9 @@ def gen_truth(dataset):
 # generate ground truth for domain
 def gen_truth_domain(dataset, dom):
     """
-    assign a weight per section in the path; if a deeper path is equal to the previous subpath in count,
-            prefer to deep path (that's what we look for)
+    assign a weight per section in the path; if a deeper path is equal
+    to the previous subpath in count, prefer to deep path
+        (that's what we look for)
     """
     truth_list = []
     dom_list = dataset[np.in1d(dataset["dom"], dom)]
@@ -192,7 +193,7 @@ def search_truth(cp, path_dict):
 #
 # # Some modifiers for the algorithm below
 # MAX_DEPTH_DIFF = 5  # the maximum amount of depth level difference
-# BASE_PERC = 20  # base percentage of total count for deeper path (20 = 20%)
+# BASE_PRC = 20  # base percentage of total count for deeper path (20 = 20%)
 #
 #
 # # Returns true if 1 gives a better prediction than 2,
@@ -238,10 +239,10 @@ def search_truth(cp, path_dict):
 #         if depth_diff > MAX_DEPTH_DIFF:
 #             depth_diff = MAX_DEPTH_DIFF
 #         if d1 > d2:
-#             if c1 > c2 * ((BASE_PERC - (BASE_PERC/MAX_DEPTH_DIFF) * depth_diff) / 100):
+#             if c1 > c2*((BASE_PRC-BASE_PRC/MAX_DEPTH_DIFF*depth_diff)/100):
 #                 return True
 #         else:
-#             if c2 <= c1 * ((BASE_PERC - (BASE_PERC/MAX_DEPTH_DIFF) * depth_diff) / 100):
+#             if c2 <= c1*((BASE_PRC-BASE_PRC/MAX_DEPTH_DIFF*depth_diff)/100):
 #                 return True
 #     return False
 

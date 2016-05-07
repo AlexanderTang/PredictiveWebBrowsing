@@ -5,15 +5,15 @@ import csv
 from urlparse import urlparse
 
 """
-    All the .csv files get loaded and stored in data.  There are currently problems
-    with 25.3.csv and 25.5.csv, which cannot be loaded since the files are empty.
-    We exclude them from our dataset.
+    All the .csv files get loaded and stored in data.  There are currently
+    problems with 25.3.csv and 25.5.csv, which cannot be loaded since the
+    files are empty. We exclude them from our dataset.
 """
 
 
 # Run this to load the given datasets and save them to "transformed_data.csv".
-# This new csv-file has the date and time separated and the url domain and path separated as well; other
-# useless information has been removed.
+# This new csv-file has the date and time separated and the url domain and path
+# separated as well; other useless information has been removed.
 def run():
     data = get_dataset()
     transform(data)
@@ -26,7 +26,8 @@ def get_dataset():
     warnings.simplefilter("ignore")
     for csv_file in csv_list:
         try:
-            csv_matrix = np.genfromtxt(csv_file, delimiter=",", usecols=(0,1,2), dtype=None)
+            csv_matrix = np.genfromtxt(csv_file, delimiter=",",
+                                       usecols=(0,1,2), dtype=None)
             amount_rows = len(csv_matrix)
             id_col = np.empty(amount_rows)
             id_col.fill(get_id(csv_file))
@@ -42,7 +43,7 @@ def get_dataset():
 def get_id(file_path):
     str = file_path.rsplit('\\', 1)[1]  # get filename with extension .csv
     str = str[1:]       # remove the 'u' from the string
-    return str.rsplit('_', 1)[0]     # remove the underscore and everything to the right
+    return str.rsplit('_', 1)[0]
 
 
 # formats invalid rows into valid ones, split URL into relevant parts
@@ -55,7 +56,7 @@ def transform(data):
             timestamp = row[0].replace("T:","T")
             (urldomain, urlpath) = parse_url(row[2])
             action = row[1].replace(" ", "")
-            csvwriter.writerow([timestamp, action, urldomain, urlpath, row[3]])  # the last element is the user id
+            csvwriter.writerow([timestamp, action, urldomain, urlpath, row[3]])
 
 
 # splits timestamp in date and time and returns them

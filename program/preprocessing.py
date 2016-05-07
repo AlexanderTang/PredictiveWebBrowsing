@@ -3,28 +3,23 @@ import operator
 import numpy as np
 import csv
 
-"""
-Notes: watch pitfalls:
-- if there is no load after a click, the override the click domain: don't accidentally take the load of another (following) click!
-- remove the ads and widgets between clicks (load with different domains)
-- remove clicks without deeper paths (such as google.com)
-- remove clicks after having generated the paths
-"""
-
 # The timeout in hours for a load to follow a click
 LOAD_TIMEOUT = 1
 
 
-# counts the occurrences of url domains for every load indicator; it is sorted from infrequent to frequent
+# counts the occurrences of url domains for every load indicator; it is
+#   sorted from infrequent to frequent
 def count_occurrences():
     dataset = load.load()
     dom_dict = {}
     for row in dataset:
         if row[1] == "load":
             if dom_dict.has_key(row[2]):
-                dom_dict[row[2]] = dom_dict[row[2]] + 1 # increase the count of the word in dictionary by 1
+                # increase the count of the word in dictionary by 1
+                dom_dict[row[2]] += 1
             else:
-                dom_dict[row[2]] = 1    # if word not in dictionary, insert with count 1
+                # if word not in dictionary, insert with count 1
+                dom_dict[row[2]] = 1
     sorted_dict = sorted(dom_dict.items(), key=operator.itemgetter(1))
     return sorted_dict
 
@@ -68,13 +63,16 @@ def deep_cleaning_data(dataset):
 #  - loads that follow a click but have a different domain
 #  - loads after a click that timeout before the next click
 #    (this implies a new session)
-#  - clicks without any following loads of the same domain are regarded as useless clicks
+#  - clicks without any following loads of the same domain are regarded
+#       as useless clicks
 def filter_junk(dataset):
     """
     Strategy:
         1) initially remove all loads until a click is found
-        2) remove all loads that don't have the same domain as the click until another click is found
-        2a) if a click does not have any following loads with the same domain, remove the click
+        2) remove all loads that don't have the same domain as the click
+            until another click is found
+        2a) if a click does not have any following loads with the same domain,
+                remove the click
         3) any loads that timeout beyond the threshold after the click are
            removed regardless of the domain
     """
@@ -87,7 +85,7 @@ def filter_junk(dataset):
             break
         else:
             rows_to_filter.append(click_index)
-            click_index = click_index + 1
+            click_index += 1
 
     row_index = click_index + 1
     relevant_loads = 0
@@ -99,15 +97,16 @@ def filter_junk(dataset):
                             dataset[row_index][2] != dataset[click_index][2]:
                 rows_to_filter.append(row_index)
             else:
-                relevant_loads = relevant_loads + 1
-        elif dataset[row_index][1] == "click":  # elif instead of else to be safe
+                relevant_loads += 1
+        elif dataset[row_index][1] == "click":
             if relevant_loads == 0:
                 rows_to_filter.append(click_index)
             relevant_loads = 0
             click_index = row_index
-        row_index = row_index + 1
+        row_index += 1
 
-    if relevant_loads == 0:  # in case the last click doesn't have any relevant loads
+    # in case the last click doesn't have any relevant loads
+    if relevant_loads == 0:
         rows_to_filter.append(click_index)
 
     dataset = np.delete(dataset, rows_to_filter, 0)
@@ -121,9 +120,9 @@ def filter_clicks(dataset):
     click_paths = []
     for c in clicks:
         path = c["path"].split('/')
-        if len(path) != 0 and path[0] == "":  # remove empty string at the beginning
+        if len(path) != 0 and path[0] == "":  # remove empty string
             del path[0]
-        if len(path) != 0 and path[len(path) - 1] == "":  # remove empty string at the end
+        if len(path) != 0 and path[len(path) - 1] == "":  # remove empty string
             del path[len(path) - 1]
         url = c["dom"]
         for p in path:

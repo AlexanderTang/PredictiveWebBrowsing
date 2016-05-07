@@ -14,7 +14,7 @@ def set_training_testing_data():
         truth_matrix = np.genfromtxt(truth_file, delimiter=",", dtype=None,
                                    names=["key", "result"])
 
-        file_name = truth_file.rsplit('\\', 1)[1]  # get filename with extension .csv
+        file_name = truth_file.rsplit('\\', 1)[1]  # get filename
         file_name = file_name[3:]
 
         if truth_file[-7:] == "all.csv":
@@ -38,7 +38,8 @@ def set_training_testing_data():
 # assign solutions to clicks
 def assign_solutions(click_matrix, truth_matrix, identifier):
     if identifier != 0:
-        new_click_matrix = click_matrix[np.in1d(click_matrix["uid"], identifier)]
+        new_click_matrix = click_matrix[np.in1d(
+            click_matrix["uid"], identifier)]
     else:
         new_click_matrix = click_matrix
     arr = []
@@ -55,9 +56,11 @@ def find_solution(truth_matrix, click):
     return click, click  # no solution found: return itself
 
 
-# writing away data to .csv files for training parameters for split with shuffling
+# writing away data to .csv files for training parameters for split
+# with shuffling
 def write_split_data(training_parameter, sub_folder, file_name, csv_matrix):
-    training_data, testing_data = cross_val.train_test_split(csv_matrix, train_size=training_parameter)
+    training_data, testing_data = \
+        cross_val.train_test_split(csv_matrix, train_size=training_parameter)
 
     training_path = "../training_data/" + sub_folder + "/" + file_name
     testing_path = "../testing_data/" + sub_folder + "/" + file_name
@@ -75,12 +78,15 @@ def write_split_data(training_parameter, sub_folder, file_name, csv_matrix):
 
 # writing away data to .csv files for training parameters for kfold
 def write_kfold_data(training_parameter, sub_folder, file_name, csv_matrix):
-    kf = cross_val.KFold(len(csv_matrix), n_folds=training_parameter, shuffle=True)
+    kf = cross_val.KFold(len(csv_matrix), n_folds=training_parameter,
+                         shuffle=True)
 
     iteration = 1
     for train_index, test_index in kf:
-        training_path = "../training_data/" + sub_folder + "/iter" + str(iteration) + "/" + file_name
-        testing_path = "../testing_data/" + sub_folder + "/iter" + str(iteration) + "/" + file_name
+        training_path = "../training_data/" + sub_folder + "/iter" + \
+                        str(iteration) + "/" + file_name
+        testing_path = "../testing_data/" + sub_folder + "/iter" + \
+                       str(iteration) + "/" + file_name
 
         with open(training_path, 'wb') as csvfile:
             csvwriter = csv.writer(csvfile, delimiter=',')
