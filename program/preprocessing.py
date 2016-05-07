@@ -128,7 +128,7 @@ def filter_clicks(dataset):
         url = c["dom"]
         for p in path:
             url += "/" + p
-        click_paths.append([url])
+        click_paths.append((url, c["uid"]))
     with open('../processed_data/clicks.csv', 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         for row in click_paths:
@@ -188,4 +188,4 @@ def remove_single_occurrences(dataset):
     return dataset
 
 
-#filter_data()
+filter_data()
