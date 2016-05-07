@@ -1,9 +1,16 @@
 \section{Splitting training and test data}\label{sec:training}
 
+Now that the data is filtered and we have the ground truth set up properly, we will need to generate training and test data. The training data is used to teach our model the basics, while the test data will be used to test the accuracy of the predictions. The predictions should be made for the page the user is usually clicking from. More often than not, this will be the homepage of a website. So we generate \textit{clicks.csv} which contains all the paths of the clicks, aside from the useless ones we filtered in section~\ref{sec:preprocessing}. The user ID is included in case we wish to apply the model for a specific user.
+\\[2ex]
+For each of the clicks, the desired endpath can be found in the \textit{ground\_truth} directory that we generated in section~\ref{sec:truth}. If no solution can be found in \textit{ground\_truth}, then the path of the click itself will be returned. Of course we won't suggest for the user to stay on the current page, which is pointless. However we prefer not to offer a suggestion rather than offering a random one.
+\\[2ex]
+The question now is: How do we create the training and test data? Let's discuss the two extremes first:
+\begin{itemize}
+	\item \textbf{The training data is empty and all the test data includes everything.} This means there is no model to work with and there simply are no (sensible) predictions to make. This will probably become better as time goes on if incremental learning is applied, but it's still a very bad starting point.
+	\item \textbf{The training data includes everything and the test data is empty.} There is no test data, so there are no predictions to make. The model is trained on all of our available data. We could generate new data and apply that to the model, but the accuracy won't be as good since the model has been overfitting.~\footnote{\url{https://en.wikipedia.org/wiki/Overfitting}}
+\end{itemize}
+The idea is to find a compromise where we give the model enough data to train on, but leave out some data to prevent overfitting and to test the accuracy of the predictions. The easiest way to do this, is to split the total data by a certain percentage to generate the training and test data: 50/50, 60/40, 70/30 and 80/20 respectively. The total data was shuffled (pseudo-)randomly first to reduce correlation and bias. If this method is chosen, then the predictions may vary quite a lot depending how (un)lucky the data was split. Imagine that all or most data concerning a specific domain happen to be in the test data and none of it in the training data. Then the predictions are very likely to be poor. A way to combat this, is by splitting the data in several partitions and to have the $N-1$ partitions form the training data while the remaining partition represents the test data. This technique is called `k-fold cross validation'.~\footnote{\url{https://en.wikipedia.org/wiki/Cross-validation}} Once the accuracy has been computed, the partitions get swapped around until every partition has served as the test data exactly one. The average of the N computed accuracies would become the actual accuracy. We compute the training/test data for 3-fold, 4-fold and 5-fold. All of the training and test data can be found in the \textit{training\_data} and \textit{test\_data} directories respectively. For the implementation of the training/test data split, we use the \textbf{sklearn.cross\_validation} module from the \textbf{scikit} package.
+\\[2ex]
+teste
 
-
-\todo{generate from clicks}
-
-\todo{look for answers in ground truth, but if no solution found, then refer to itself}
-
-\todo{use kfold, and explain why stratified kfold is not used (different weights per class is not of importance)}
+\todo{use kfold, and explain why stratified kfold is not used (although, it's worth trying: sort by domain: each domain represents a class; this way we can ensure the domain is in each fold) ; can be used to compare to kfold}
