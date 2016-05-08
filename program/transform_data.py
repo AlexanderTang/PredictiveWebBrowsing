@@ -16,14 +16,13 @@ from urlparse import urlparse
 # Run this to load the given datasets and save them to "transformed_data.csv".
 # This new csv-file has the date and time separated and the url domain and path
 # separated as well; other useless information has been removed.
-def run():
-    data = get_dataset()
-    transform(data)
+def run(csv_list=glob.glob('../dataset/*.csv'), output_path='../processed_data/transformed_data.csv'):
+    data = get_dataset(csv_list)
+    transform(data, output_path)
 
 
 # Returns the dataset in a numpy matrix
-def get_dataset():
-    csv_list = glob.glob('../dataset/*.csv')
+def get_dataset(csv_list):
     data = np.array([[0, 0, 0, 0]])
     warnings.simplefilter("ignore")
     for csv_file in csv_list:
@@ -50,8 +49,8 @@ def get_id(file_path):
 
 # formats invalid rows into valid ones, split URL into relevant parts
 # and write to csv file
-def transform(data):
-    with open('../processed_data/transformed_data.csv', 'wb') as csvfile:
+def transform(data, output_path):
+    with open(output_path, 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         for row in data:
             #(date,time) = parse_time(row[0])
@@ -81,4 +80,4 @@ def parse_url(url):
     return parsed_url.netloc, urlpath
 
 
-# run()
+run()
