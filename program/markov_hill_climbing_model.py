@@ -212,6 +212,6 @@ def get_results_k_fold_test():
             print "user", accuracy_sum_users.index(sum_accuracy_user), \
                 "-", sum_accuracy_user / number_iterations
 
-get_results_naive_test()
+# get_results_naive_test()
 # get_results_k_fold_test()
 

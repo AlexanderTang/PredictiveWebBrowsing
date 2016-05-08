@@ -189,4 +189,4 @@ def remove_single_occurrences(dataset):
     return dataset
 
 
-filter_data()
+# filter_data()

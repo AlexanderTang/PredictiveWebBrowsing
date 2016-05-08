@@ -98,4 +98,4 @@ def set_all_graphs():
         for u in range(0, 28):
             set_graph(u, K_FOLD_METHODS[2], parameter)
 
-set_all_graphs()
+#set_all_graphs()
