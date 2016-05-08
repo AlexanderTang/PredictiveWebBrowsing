@@ -55,9 +55,9 @@ def convert_data_to_graph(uid, method, parameter):
 
                 for j in range(1, length_path):
                     gu.increase_edge(edges_total_dict, edges_dict, domain,
-                                     current_path, current_path + "/" + path[j])
+                                current_path, current_path + "/" + path[j])
                     gu.increase_vertex(states_total_dict, states_dict,
-                                       domain, current_path + "/" + path[j])
+                                domain, current_path + "/" + path[j])
                     current_path = current_path + "/" + path[j]
 
         return True, states_dict, edges_dict, states_total_dict,\
