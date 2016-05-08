@@ -1,20 +1,28 @@
 import numpy as np
 import graph_utilities as gu
 
-TRAINING_DATA_PERCENTAGE = ["50_50", "60_40", "70_30", "80_20"]
+NAIVE_METHODS = ["50_50", "60_40", "70_30", "80_20"]
+
+K_FOLD_METHODS = ["3fold", "4fold", "5fold"]
 
 
-def get_training(user_id, training_data):
+def get_training_data(user_id, method, parameter):
 
-    if user_id == 0:
-        training_path = "../training_data/" + training_data + "/all.csv"
+    if method == "naive":
+        if user_id == 0:
+            training_path = "../training_data/" + parameter + "/all.csv"
+        else:
+            training_path = "../training_data/" + parameter + "/u" + str(user_id) + ".csv"
     else:
-        training_path = "../training_data/" + training_data + "/u" + str(user_id) + ".csv"
+        if user_id == 0:
+            training_path = "../training_data/" + method + "/" + parameter + "/all.csv"
+        else:
+            training_path = "../training_data/" + method + "/" + parameter + "/u" + str(user_id) + ".csv"
 
     return np.genfromtxt(training_path, delimiter=",", dtype=None)
 
 
-def convert_data_to_graph(uid, training_data_percentage):
+def convert_data_to_graph(uid, method, parameter):
 
         states_dict = {}
         edges_dict = {}
@@ -22,7 +30,7 @@ def convert_data_to_graph(uid, training_data_percentage):
         edges_total_dict = {}
 
         try:
-            dataset = get_training(uid, training_data_percentage)
+            dataset = get_training_data(uid, method, parameter)
         except IOError:
             return False, states_dict, edges_dict, states_total_dict, edges_total_dict
 
@@ -48,17 +56,35 @@ def convert_data_to_graph(uid, training_data_percentage):
         return True, states_dict, edges_dict, states_total_dict, edges_total_dict
 
 
-def set_graph(user_id, training_data_percentage):
+def set_graph(user_id, method, parameter):
     (successful, states, edges, states_total, edges_total) = \
-        convert_data_to_graph(user_id, training_data_percentage)
+        convert_data_to_graph(user_id, method, parameter)
     if successful:
-        gu.save_graph(user_id, training_data_percentage, states, edges, states_total, edges_total)
+        gu.save_graph(method, parameter, user_id, states, edges, states_total, edges_total)
 
 
 def set_all_graphs():
-    for training_data_percentage in TRAINING_DATA_PERCENTAGE:
+    # Graph for naive method
+    for naive_method in NAIVE_METHODS:
         for i in range(0, 28):
-            set_graph(i, training_data_percentage)
+            set_graph(i, "naive", naive_method)
 
+    # Graph for 3-fold method
+    for i in range(1, 4):
+        parameter = "iter"+str(i)
+        for u in range(0, 28):
+            set_graph(u, K_FOLD_METHODS[0], parameter)
+
+    # Graph for 4-fold method
+    for i in range(1, 5):
+        parameter = "iter" + str(i)
+        for u in range(0, 28):
+            set_graph(u, K_FOLD_METHODS[1], parameter)
+
+    # Graph for 5-fold method
+    for i in range(1, 6):
+        parameter = "iter" + str(i)
+        for u in range(0, 28):
+            set_graph(u, K_FOLD_METHODS[2], parameter)
 
 set_all_graphs()

@@ -1,14 +1,24 @@
 import pickle as pk
 
 
-def save_obj(obj, training_data_percentage, name):
-    with open('../graphs/' + training_data_percentage + "/" + name + '.pkl', 'wb') as f:
+def save_obj(method, parameter, obj, name):
+    if method == "naive":
+        file_url = "../graphs/" + parameter + "/" + name + ".pkl"
+    else:
+        file_url = "../graphs/" + method + "/" + parameter + "/" + name + ".pkl"
+
+    with open(file_url, 'wb') as f:
         pk.dump(obj, f, pk.HIGHEST_PROTOCOL)
 
 
-def load_obj(training_data_percentage, name):
+def load_obj(method, parameter, name):
 
-    with open('../graphs/' + training_data_percentage + "/" + name + '.pkl', 'rb') as f:
+    if method == "naive":
+        file_url = "../graphs/" + parameter + "/" + name + ".pkl"
+    else:
+        file_url = "../graphs/" + method + "/" + parameter + "/" + name + ".pkl"
+
+    with open(file_url) as f:
         return pk.load(f)
 
 
@@ -42,19 +52,19 @@ def increase_edge(edges_total, dictionary, domain, outgoing, ingoing):
         edges_total[domain] = {outgoing: 1}
 
 
-def save_graph(user_id, training_data_percentage, states, edges, states_total, edges_total):
+def save_graph(method, parameter, user_id, states, edges, states_total, edges_total):
 
-    save_obj(edges, training_data_percentage, "edges_" + str(user_id))
-    save_obj(states, training_data_percentage, "states_" + str(user_id))
-    save_obj(states_total, training_data_percentage, "total_states_" + str(user_id))
-    save_obj(edges_total, training_data_percentage, "total_edges_" + str(user_id))
+    save_obj(method, parameter, edges, "edges_" + str(user_id))
+    save_obj(method, parameter, states, "states_" + str(user_id))
+    save_obj(method, parameter, states_total, "total_states_" + str(user_id))
+    save_obj(method, parameter, edges_total, "total_edges_" + str(user_id))
 
 
-def load_graph(uid, training_data_percentage):
+def load_graph(method, parameter, uid):
 
-    edges = load_obj(training_data_percentage, "edges_" + str(uid))
-    states = load_obj(training_data_percentage, "states_" + str(uid))
-    edges_total = load_obj(training_data_percentage, "total_edges_" + str(uid))
-    states_total = load_obj(training_data_percentage, "total_states_" + str(uid))
+    edges = load_obj(method, parameter, "edges_" + str(uid))
+    states = load_obj(method, parameter, "states_" + str(uid))
+    edges_total = load_obj(method, parameter, "total_edges_" + str(uid))
+    states_total = load_obj(method, parameter, "total_states_" + str(uid))
 
     return states, edges, states_total, edges_total
