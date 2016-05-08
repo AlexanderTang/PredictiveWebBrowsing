@@ -27,8 +27,9 @@ def count_occurrences():
 
 
 # filter the data and write to filtered_data.csv
-def filter_data():
-    dataset = load.load()
+def filter_data(dataset=load.load(),
+                filtered_path='../processed_data/filtered_data.csv',
+                click_output='../processed_data/clicks.csv'):
     dataset = dataset[
         np.logical_not(np.logical_or(
             dataset["action"] == "beforeunload",
@@ -38,11 +39,11 @@ def filter_data():
 
     dataset.sort(order=["uid", "ts"])  # order by user id, then by timestamp
     dataset = filter_junk(dataset)
-    dataset = filter_clicks(dataset)
+    dataset = filter_clicks(dataset, click_output)
     dataset = filter_documents(dataset)
     dataset = deep_cleaning_data(dataset)
 
-    with open('../processed_data/filtered_data.csv', 'wb') as csvfile:
+    with open(filtered_path, 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         for row in dataset:
             csvwriter.writerow(row)
@@ -117,7 +118,7 @@ def filter_junk(dataset):
 
 # run this when the clicks are no longer necessary in the dataset;
 # the clicks are saved in a clicks.csv
-def filter_clicks(dataset):
+def filter_clicks(dataset, click_output):
     clicks = dataset[dataset["action"] == "click"]
     click_paths = []
     for c in clicks:
@@ -130,7 +131,7 @@ def filter_clicks(dataset):
         for p in path:
             url += "/" + p
         click_paths.append((url, c["uid"]))
-    with open('../processed_data/clicks.csv', 'wb') as csvfile:
+    with open(click_output, 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         for row in click_paths:
             csvwriter.writerow(row)

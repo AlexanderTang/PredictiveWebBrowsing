@@ -47,7 +47,7 @@ def get_id(file_path):
     return str.rsplit('_', 1)[0]
 
 
-# formats invalid rows into valid ones, split URL into relevant parts
+# formats invalid rows into valid ones, splits URL into relevant parts
 # and write to csv file
 def transform(data, output_path):
     with open(output_path, 'wb') as csvfile:
@@ -80,4 +80,4 @@ def parse_url(url):
     return parsed_url.netloc, urlpath
 
 
-run()
+#run()
