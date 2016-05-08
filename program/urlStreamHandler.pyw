@@ -12,8 +12,9 @@ import socketserver
 import datetime
 import atexit
 import signal
-import run
 from subprocess import call
+
+import csv
 
 date = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 filename = "urls_{}.csv".format(date)
@@ -85,8 +86,7 @@ def start_from_csv(filenames):
             # TODO: Incrementally train your model based on these files
             print('Processing {}'.format(filename))
     """
-    run.get_cleaned_training_files(filenames)
-    # call("python run.py " + filenames)
+    call("python run.py " + filenames)
 
 
 def main(argv=None):
@@ -100,7 +100,9 @@ def main(argv=None):
     args = parser.parse_args(argv)
 
     if args.csv is not None:
+        print("start")
         start_from_csv(args.csv)
+        print("end")
 
     server = socketserver.TCPServer(("", args.port), MyRequestHandler)
     print("Serving at port {}".format(args.port))
@@ -109,6 +111,9 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    with open('../dataset/u1_1.csv', 'rb') as csvfile:
+        csvfile.
+        print(csvfile)
+        sys.exit(main(csvfile))
 
 print("ok")
