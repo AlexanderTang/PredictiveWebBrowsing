@@ -87,9 +87,8 @@ def start_from_csv(filenames):
             print('Processing {}'.format(filename))
     """
     command = "python run.py"
-    for fn in filename:
+    for fn in filenames:
         command += " " + fn
-    print(command)
     call(command)
 
 
@@ -101,13 +100,10 @@ def main(argv=None):
                         help='Server port')
     parser.add_argument('--csv', nargs='*',
                         help='CSV files with a url stream to start from')
-    print(parser)
     args = parser.parse_args(argv)
 
     if args.csv is not None:
-        print("start")
         start_from_csv(args.csv)
-        print("end")
 
     server = socketserver.TCPServer(("", args.port), MyRequestHandler)
     print("Serving at port {}".format(args.port))

@@ -5,11 +5,12 @@ import setup_data
 import training
 import csv
 import transform_data_to_graph as to_graph
+import sys
 
 
-def main(args=None):
-    if args is not None:
-        get_cleaned_training_files(args)
+def main(argv=None):
+    if argv is not None:
+        get_cleaned_training_files(argv)
 
 
 # does filtering, pruning and generates the truth and returns the result;
@@ -45,7 +46,7 @@ def get_cleaned_training_files(datasets):
 
     to_graph.learn_model('../actual_run_data/training_data.csv')
 
-    print training_data
+    print len(training_data)
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv)
