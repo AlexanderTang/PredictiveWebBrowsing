@@ -13,6 +13,7 @@ import datetime
 import atexit
 import signal
 import run
+from subprocess import call
 
 date = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 filename = "urls_{}.csv".format(date)
@@ -85,7 +86,7 @@ def start_from_csv(filenames):
             print('Processing {}'.format(filename))
     """
     run.get_cleaned_training_files(filenames)
-    #pass this '../actual_run_data/training_data.csv'
+    # call("python run.py " + filenames)
 
 
 def main(argv=None):

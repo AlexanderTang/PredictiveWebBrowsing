@@ -4,6 +4,13 @@ import numpy as np
 import setup_data
 import training
 import csv
+import transform_data_to_graph as to_graph
+
+
+def main(args=None):
+    if args is not None:
+        get_cleaned_training_files(args)
+
 
 # does filtering, pruning and generates the truth and returns the result;
 # a lot of IO operations happen since we wish to keep a log of sorts in
@@ -35,3 +42,8 @@ def get_cleaned_training_files(datasets):
         csvwriter = csv.writer(csvfile, delimiter=',')
         for row in training_data:
             csvwriter.writerow(row)
+
+    to_graph.learn_model('../actual_run_data/training_data.csv')
+
+if __name__ == "__main__":
+    main()
