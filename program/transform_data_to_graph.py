@@ -4,7 +4,6 @@ import numpy as np
 import graph_utilities as gu
 
 NAIVE_METHODS = ["50_50", "60_40", "70_30", "80_20"]
-
 K_FOLD_METHODS = ["3fold", "4fold", "5fold"]
 
 
@@ -29,11 +28,11 @@ def get_training_data(user_id, method, parameter):
                                 str(user_id) + ".csv"
         else:
             if user_id == 0:
-                training_path = "../training_data/" + method + "/" + parameter + \
-                                "/all.csv"
+                training_path = "../training_data/" + method + "/" + \
+                                parameter + "/all.csv"
             else:
-                training_path = "../training_data/" + method + "/" + parameter + \
-                                "/u" + str(user_id) + ".csv"
+                training_path = "../training_data/" + method + "/" + \
+                                parameter + "/u" + str(user_id) + ".csv"
 
     return np.genfromtxt(training_path, delimiter=",", dtype=None)
 
