@@ -1,3 +1,5 @@
+#!python2
+
 import load
 import operator
 import numpy as np

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!python3
 # encoding: utf-8
 """
 urlStreamHandler.py
@@ -105,3 +105,4 @@ def main(argv=None):
 if __name__ == "__main__":
     sys.exit(main())
 
+print("ok")
