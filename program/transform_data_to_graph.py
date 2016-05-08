@@ -12,12 +12,15 @@ def get_training_data(user_id, method, parameter):
         if user_id == 0:
             training_path = "../training_data/" + parameter + "/all.csv"
         else:
-            training_path = "../training_data/" + parameter + "/u" + str(user_id) + ".csv"
+            training_path = "../training_data/" + parameter + "/u" + \
+                            str(user_id) + ".csv"
     else:
         if user_id == 0:
-            training_path = "../training_data/" + method + "/" + parameter + "/all.csv"
+            training_path = "../training_data/" + method + "/" + parameter + \
+                            "/all.csv"
         else:
-            training_path = "../training_data/" + method + "/" + parameter + "/u" + str(user_id) + ".csv"
+            training_path = "../training_data/" + method + "/" + parameter + \
+                            "/u" + str(user_id) + ".csv"
 
     return np.genfromtxt(training_path, delimiter=",", dtype=None)
 
@@ -32,7 +35,8 @@ def convert_data_to_graph(uid, method, parameter):
         try:
             dataset = get_training_data(uid, method, parameter)
         except IOError:
-            return False, states_dict, edges_dict, states_total_dict, edges_total_dict
+            return False, states_dict, edges_dict, states_total_dict, \
+                   edges_total_dict
 
         limit = len(dataset)
 
@@ -46,21 +50,26 @@ def convert_data_to_graph(uid, method, parameter):
 
             if len(path) > 0:
 
-                gu.increase_vertex(states_total_dict, states_dict, domain, current_path)
+                gu.increase_vertex(states_total_dict, states_dict, domain,
+                                   current_path)
 
                 for j in range(1, length_path):
-                    gu.increase_edge(edges_total_dict, edges_dict, domain, current_path, current_path + "/" + path[j])
-                    gu.increase_vertex(states_total_dict, states_dict, domain, current_path + "/" + path[j])
+                    gu.increase_edge(edges_total_dict, edges_dict, domain,
+                                     current_path, current_path + "/" + path[j])
+                    gu.increase_vertex(states_total_dict, states_dict,
+                                       domain, current_path + "/" + path[j])
                     current_path = current_path + "/" + path[j]
 
-        return True, states_dict, edges_dict, states_total_dict, edges_total_dict
+        return True, states_dict, edges_dict, states_total_dict,\
+               edges_total_dict
 
 
 def set_graph(user_id, method, parameter):
     (successful, states, edges, states_total, edges_total) = \
         convert_data_to_graph(user_id, method, parameter)
     if successful:
-        gu.save_graph(method, parameter, user_id, states, edges, states_total, edges_total)
+        gu.save_graph(method, parameter, user_id, states, edges,
+                      states_total, edges_total)
 
 
 def set_all_graphs():

@@ -3,9 +3,11 @@ import pickle as pk
 
 def save_obj(method, parameter, obj, name):
     if method == "naive":
-        file_url = "../graphs/" + parameter + "/" + name + ".pkl"
+        file_url = \
+            "../graphs/" + parameter + "/" + name + ".pkl"
     else:
-        file_url = "../graphs/" + method + "/" + parameter + "/" + name + ".pkl"
+        file_url = \
+            "../graphs/" + method + "/" + parameter + "/" + name + ".pkl"
 
     with open(file_url, 'wb') as f:
         pk.dump(obj, f, pk.HIGHEST_PROTOCOL)
@@ -14,9 +16,11 @@ def save_obj(method, parameter, obj, name):
 def load_obj(method, parameter, name):
 
     if method == "naive":
-        file_url = "../graphs/" + parameter + "/" + name + ".pkl"
+        file_url = \
+            "../graphs/" + parameter + "/" + name + ".pkl"
     else:
-        file_url = "../graphs/" + method + "/" + parameter + "/" + name + ".pkl"
+        file_url = \
+            "../graphs/" + method + "/" + parameter + "/" + name + ".pkl"
 
     with open(file_url) as f:
         return pk.load(f)
@@ -52,12 +56,12 @@ def increase_edge(edges_total, dictionary, domain, outgoing, ingoing):
         edges_total[domain] = {outgoing: 1}
 
 
-def save_graph(method, parameter, user_id, states, edges, states_total, edges_total):
+def save_graph(method, parameter, user_id, ss, es, sst, est):
 
-    save_obj(method, parameter, edges, "edges_" + str(user_id))
-    save_obj(method, parameter, states, "states_" + str(user_id))
-    save_obj(method, parameter, states_total, "total_states_" + str(user_id))
-    save_obj(method, parameter, edges_total, "total_edges_" + str(user_id))
+    save_obj(method, parameter, es, "edges_" + str(user_id))
+    save_obj(method, parameter, ss, "states_" + str(user_id))
+    save_obj(method, parameter, sst, "total_states_" + str(user_id))
+    save_obj(method, parameter, est, "total_edges_" + str(user_id))
 
 
 def load_graph(method, parameter, uid):
