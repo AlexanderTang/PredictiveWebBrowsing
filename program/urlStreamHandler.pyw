@@ -12,6 +12,7 @@ import socketserver
 import datetime
 import atexit
 import signal
+import run
 
 date = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 filename = "urls_{}.csv".format(date)
@@ -77,10 +78,14 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
 def start_from_csv(filenames):
     """List of csv files that contain a url stream as if they were comming
     from the GreaseMonkey script."""
+    """
     for filename in filenames:
         with open(filename, 'r') as csv_file:
             # TODO: Incrementally train your model based on these files
             print('Processing {}'.format(filename))
+    """
+    run.get_cleaned_training_files(filenames)
+    #pass this '../actual_run_data/training_data.csv'
 
 
 def main(argv=None):

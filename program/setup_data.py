@@ -10,11 +10,11 @@ USER_ROWS_THRESHOLD = 30
 
 
 # generates the ground truth for all users and store it in gt_all.csv
-def define_truth_all():
-    dataset = load.filtered_load()
+def define_truth_all(dataset=load.filtered_load(),
+                     output_path='../ground_truth/gt_all.csv'):
     truth_list = gen_truth(dataset)
 
-    with open('../ground_truth/gt_all.csv', 'wb') as csvfile:
+    with open(output_path, 'wb') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         for row in truth_list:
             csvwriter.writerow(row)

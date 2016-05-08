@@ -16,13 +16,17 @@ from urlparse import urlparse
 # Run this to load the given datasets and save them to "transformed_data.csv".
 # This new csv-file has the date and time separated and the url domain and path
 # separated as well; other useless information has been removed.
-def run(csv_list=glob.glob('../dataset/*.csv'), output_path='../processed_data/transformed_data.csv'):
-    data = get_dataset(csv_list)
+def run(csv_list=glob.glob('../dataset/*.csv'),
+        output_path='../processed_data/transformed_data.csv'):
+    if output_path == '../processed_data/transformed_data.csv':
+        data = get_dataset(csv_list)
+    else:
+        data = get_dataset(csv_list, True)
     transform(data, output_path)
 
 
 # Returns the dataset in a numpy matrix
-def get_dataset(csv_list):
+def get_dataset(csv_list, real_run=False):
     data = np.array([[0, 0, 0, 0]])
     warnings.simplefilter("ignore")
     for csv_file in csv_list:
@@ -31,7 +35,10 @@ def get_dataset(csv_list):
                                        usecols=(0,1,2), dtype=None)
             amount_rows = len(csv_matrix)
             id_col = np.empty(amount_rows)
-            id_col.fill(get_id(csv_file))
+            if real_run:
+                id_col.fill(0)
+            else:
+                id_col.fill(get_id(csv_file))
             csv_matrix = np.c_[csv_matrix, id_col]
             data = np.concatenate([data, csv_matrix])
         except ValueError:
