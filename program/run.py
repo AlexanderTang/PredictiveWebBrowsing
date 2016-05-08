@@ -45,5 +45,7 @@ def get_cleaned_training_files(datasets):
 
     to_graph.learn_model('../actual_run_data/training_data.csv')
 
+    print training_data
+
 if __name__ == "__main__":
     main()

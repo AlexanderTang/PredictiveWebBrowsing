@@ -86,7 +86,11 @@ def start_from_csv(filenames):
             # TODO: Incrementally train your model based on these files
             print('Processing {}'.format(filename))
     """
-    call("python run.py " + filenames)
+    command = "python run.py"
+    for fn in filename:
+        command += " " + fn
+    print(command)
+    call(command)
 
 
 def main(argv=None):
@@ -97,6 +101,7 @@ def main(argv=None):
                         help='Server port')
     parser.add_argument('--csv', nargs='*',
                         help='CSV files with a url stream to start from')
+    print(parser)
     args = parser.parse_args(argv)
 
     if args.csv is not None:
@@ -111,9 +116,6 @@ def main(argv=None):
 
 
 if __name__ == "__main__":
-    with open('../dataset/u1_1.csv', 'rb') as csvfile:
-        csvfile.
-        print(csvfile)
-        sys.exit(main(csvfile))
+    sys.exit(main())
 
 print("ok")
