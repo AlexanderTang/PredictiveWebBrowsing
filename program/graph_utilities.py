@@ -4,25 +4,32 @@ import pickle as pk
 
 
 def save_obj(method, parameter, obj, name):
-    if method == "naive":
+    if parameter == -1:
         file_url = \
-            "../graphs/" + parameter + "/" + name + ".pkl"
+            "../graphs/user/" + name + ".pkl"
     else:
-        file_url = \
-            "../graphs/" + method + "/" + parameter + "/" + name + ".pkl"
+        if method == "naive":
+            file_url = \
+                "../graphs/" + parameter + "/" + name + ".pkl"
+        else:
+            file_url = \
+                "../graphs/" + method + "/" + parameter + "/" + name + ".pkl"
 
     with open(file_url, 'wb') as f:
         pk.dump(obj, f, pk.HIGHEST_PROTOCOL)
 
 
 def load_obj(method, parameter, name):
-
-    if method == "naive":
+    if parameter == -1:
         file_url = \
-            "../graphs/" + parameter + "/" + name + ".pkl"
+            "../graphs/user/" + name + ".pkl"
     else:
-        file_url = \
-            "../graphs/" + method + "/" + parameter + "/" + name + ".pkl"
+        if method == "naive":
+            file_url = \
+                "../graphs/" + parameter + "/" + name + ".pkl"
+        else:
+            file_url = \
+                "../graphs/" + method + "/" + parameter + "/" + name + ".pkl"
 
     with open(file_url) as f:
         return pk.load(f)
@@ -59,18 +66,28 @@ def increase_edge(edges_total, dictionary, domain, outgoing, ingoing):
 
 
 def save_graph(method, parameter, user_id, ss, es, sst, est):
-
-    save_obj(method, parameter, es, "edges_" + str(user_id))
-    save_obj(method, parameter, ss, "states_" + str(user_id))
-    save_obj(method, parameter, sst, "total_states_" + str(user_id))
-    save_obj(method, parameter, est, "total_edges_" + str(user_id))
+    if parameter == -1:
+        save_obj(method, parameter, "edges")
+        save_obj(method, parameter, "states")
+        save_obj(method, parameter, "total_edges")
+        save_obj(method, parameter, "total_states")
+    else:
+        save_obj(method, parameter, es, "edges_" + str(user_id))
+        save_obj(method, parameter, ss, "states_" + str(user_id))
+        save_obj(method, parameter, sst, "total_states_" + str(user_id))
+        save_obj(method, parameter, est, "total_edges_" + str(user_id))
 
 
 def load_graph(method, parameter, uid):
-
-    edges = load_obj(method, parameter, "edges_" + str(uid))
-    states = load_obj(method, parameter, "states_" + str(uid))
-    edges_total = load_obj(method, parameter, "total_edges_" + str(uid))
-    states_total = load_obj(method, parameter, "total_states_" + str(uid))
+    if parameter == -1:
+        edges = load_obj(method, parameter, "edges")
+        states = load_obj(method, parameter, "states")
+        edges_total = load_obj(method, parameter, "total_edges")
+        states_total = load_obj(method, parameter, "total_states")
+    else:
+        edges = load_obj(method, parameter, "edges_" + str(uid))
+        states = load_obj(method, parameter, "states_" + str(uid))
+        edges_total = load_obj(method, parameter, "total_edges_" + str(uid))
+        states_total = load_obj(method, parameter, "total_states_" + str(uid))
 
     return states, edges, states_total, edges_total

@@ -14,11 +14,11 @@ states_total_dict = {}
 edges_total_dict = {}
 
 
-def load_model(uid, method, parameter):
+def load_model():
     global states_dict, edges_dict, states_total_dict, edges_total_dict
 
     states_dict, edges_dict, states_total_dict, edges_total_dict = \
-        gu.load_graph(method, parameter, uid)
+        gu.load_graph("", -1, -1)
 
 
 def hill_climbing_search(domain, visited):
@@ -82,6 +82,7 @@ def incremental_learning(domain, path):
 
 
 def naive_test(uid, with_incremental_learning):
+    global states_dict, edges_dict, states_total_dict, edges_total_dict
 
     if uid == 0:
         file_path = "../testing_data/" + NAIVE_METHOD + "/" + "all.csv"
@@ -90,8 +91,9 @@ def naive_test(uid, with_incremental_learning):
                     str(uid) + ".csv"
 
     try:
-        parameter = NAIVE_METHOD
-        load_model(uid, "naive", parameter)
+
+        states_dict, edges_dict, states_total_dict, edges_total_dict = \
+            gu.load_graph("naive", NAIVE_METHOD, uid)
 
         testing_data = np.genfromtxt(file_path, delimiter=",", dtype=None)
 
@@ -133,9 +135,8 @@ def k_fold_test(uid, iteration, with_incremental_learning):
 
     try:
 
-        method = K_FOLD_METHOD
-        parameter = iteration
-        load_model(uid, method, parameter)
+        states_dict, edges_dict, states_total_dict, edges_total_dict = \
+            gu.load_graph(K_FOLD_METHOD, iteration, uid)
 
         testing_data = np.genfromtxt(file_path, delimiter=",", dtype=None)
 
