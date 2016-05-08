@@ -8,21 +8,32 @@ NAIVE_METHODS = ["50_50", "60_40", "70_30", "80_20"]
 K_FOLD_METHODS = ["3fold", "4fold", "5fold"]
 
 
-def get_training_data(user_id, method, parameter):
-
-    if method == "naive":
-        if user_id == 0:
-            training_path = "../training_data/" + parameter + "/all.csv"
-        else:
-            training_path = "../training_data/" + parameter + "/u" + \
-                            str(user_id) + ".csv"
+def learn_model(file_url):
+    (successful, states, edges, states_total, edges_total) = \
+        convert_data_to_graph(-1, "", file_url)
+    if successful:
+        gu.save_graph("", "", -1, states, edges,
+                      states_total, edges_total)
     else:
-        if user_id == 0:
-            training_path = "../training_data/" + method + "/" + parameter + \
-                            "/all.csv"
+        raise IOError
+
+
+def get_training_data(user_id, method, parameter):
+    training_path = parameter
+    if user_id != -1:
+        if method == "naive":
+            if user_id == 0:
+                training_path = "../training_data/" + parameter + "/all.csv"
+            else:
+                training_path = "../training_data/" + parameter + "/u" + \
+                                str(user_id) + ".csv"
         else:
-            training_path = "../training_data/" + method + "/" + parameter + \
-                            "/u" + str(user_id) + ".csv"
+            if user_id == 0:
+                training_path = "../training_data/" + method + "/" + parameter + \
+                                "/all.csv"
+            else:
+                training_path = "../training_data/" + method + "/" + parameter + \
+                                "/u" + str(user_id) + ".csv"
 
     return np.genfromtxt(training_path, delimiter=",", dtype=None)
 
@@ -99,3 +110,4 @@ def set_all_graphs():
             set_graph(u, K_FOLD_METHODS[2], parameter)
 
 #set_all_graphs()
+

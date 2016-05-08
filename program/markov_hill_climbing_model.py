@@ -14,6 +14,13 @@ states_total_dict = {}
 edges_total_dict = {}
 
 
+def load_model():
+    global states_dict, edges_dict, states_total_dict, edges_total_dict
+
+    states_dict, edges_dict, states_total_dict, edges_total_dict = \
+        gu.load_graph("", -1, -1)
+
+
 def hill_climbing_search(domain, visited):
     last_url = ""
     while len(visited) > 0:
@@ -75,7 +82,6 @@ def incremental_learning(domain, path):
 
 
 def naive_test(uid, with_incremental_learning):
-
     global states_dict, edges_dict, states_total_dict, edges_total_dict
 
     if uid == 0:
@@ -85,6 +91,7 @@ def naive_test(uid, with_incremental_learning):
                     str(uid) + ".csv"
 
     try:
+
         states_dict, edges_dict, states_total_dict, edges_total_dict = \
             gu.load_graph("naive", NAIVE_METHOD, uid)
 
