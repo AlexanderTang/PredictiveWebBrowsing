@@ -1,10 +1,40 @@
 \section{Model}\label{sec:models}
 
-\subsection{Markov Model}
+\subsection{model design}\label{subsec:model_design}
 
-\todo{mention what you did first with the markov model}
+Navigating through a web site can be seen as a sequence of states where a pair of states is connected. One can simulate a tree representation of the web site where the root of the tree will be the domain (main) page and the leafs the deepest path a user can reach.
+\\[2ex]
+This idea was taken to process the training data and convert it into a graph representation, we considered each fragment of the url as a one single state, then we created the edges with all the following url that are reached from that parent state, additionally, each node and edge contain the number of times that was transversed.  Such a number is converted into a probability measurement, making our model a Markov chain model.
+\\[2ex]
+One important consideration here was creating a Markov chain model for each domain, the reason is that we considered a session only when the user is inside the same domain, whenever the user changes from one domain to others, for instance domain.com to example.com, we don’t keep the the link between those domains and we just consider that switch as a closing session from domain.com and a new open session of example.com. Besides, representing the links among different domain could affect our prediction and make affect the probabilities of the whole graph, for example a user can frequently visit web site A and B, whenever user surfaces over web site A, the prediction must we making isolated of the others domains and a similar behaviour should happen when the user surfaces over web site B. Also when we improve our model, the new incoming data of web site must be only update its corresponding probabilities, without affect the others.
+\\[2ex]
+You can wondering if the size of the model with different Markov chain could be grow into an exponentially way, however because we are already filtered sites that are not relevant during the preprocessing section, we can ensure that we only compute the useful data for the Markov chain for every domain visited by the user.
+\\[2ex]
+The first attempt to make predictions we used was using the Hidden Markov Model of the library hmmlearn, however we realised that such approach was out of the scope, we found that Hidden Markov Model is on the top of the Markov chain model, making prediction where are taking into account not only the probabilities of the edges but also the probabilities of extra attribute of the states, for instances on variable to predict the most likely deepest path could be the mood of the user.
+\\[2ex]
+As an alternative solution, we considered the idea of~\cite{article:markovmodel}, we thought that simple deep-first method is not the most accurate for this purpose. The goal of our model is not predict the most likely deepest path but also make the prediction as fast as possible, method hill climbing search in markov hill climbing model was implemented to achieve so.
+\\[2ex]
+Method hill climbing search is based  on the hill climbing search method, hill climbing method is setup with a memory of one node and works as follow:
 
-\todo{say how you do it now and how it's different from what you tried first}
+\begin{enumerate}
+  \item Receives the graph model and the current state/path were we need to predict, such path it is not limited to be the very first page of the web site
+  \item Stores the current path
+  \item Takes the next states connected to the current state
+  \item Computes the delta between of the probabilities of the states, if such delta is greater of the confident interval such state is discarded.
+  \item If there are more than one next possible state, takes the one with the highest transition probability and updates the current path
+  \item Repeats step 3,4 and 5 until there is no next states of the current path or we discard all the next states in step 4.
+\end{enumerate}
+
+Step 4 is an important aspect of our model because we want the most deepest useful path to be predicted, for example, we can have the following Markov chain model of a given domain:
+
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=\textwidth]{markov_chain}
+    \caption{Markov chain model representation}\label{fig:markov_chain}
+\end{figure}
+
+www.domain.com represents the very first page of the web site, if the confident interval is setup as 1, the result of the search will be the path www.domain.com/X/A, however, according with the state probabilities, most of the time user stays in path www.domain.com/X, which probably it is more useful than www.domain.com/X/A. Now I we use our search method with a confident interval of 15\% the result of our search will be www.domain.com/X since the delta between state X and the next states connected with it are less that our confident interval.
+
 
 \todo{mention incremental learning, confidence interval, ...  interpret results}
 
