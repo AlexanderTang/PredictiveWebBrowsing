@@ -60,6 +60,8 @@ class MarkovModel:
 
 
     def get_prediction(self, domain, path):
+        print domain
+        print path
         prediction = path
         if domain in states_dict:
             visited = [(1, path)]

@@ -67,8 +67,10 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
         command = "python run_prediction.py "
         command += url
         call(command)
-        f = open('workfile', 'rb')
+        f = open('../actual_run_data/prediction.txt', 'r')
         guess = f.readline()
+        print("LOOK HERE")
+        print(guess)
         if guess[:-2] == "\n":
             guess = guess[:-2]
         f.close()

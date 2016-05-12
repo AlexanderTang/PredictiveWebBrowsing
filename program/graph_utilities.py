@@ -30,8 +30,7 @@ def load_obj(method, parameter, name):
         else:
             file_url = \
                 "../graphs/" + method + "/" + parameter + "/" + name + ".pkl"
-
-    with open(file_url) as f:
+    with open(file_url, 'rb') as f:
         return pk.load(f)
 
 
