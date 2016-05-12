@@ -64,6 +64,7 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
               file=logfile)
         # TODO: Call your model to learn from url and build up a list of next
         # guesses guesses = myModel.get_guesses(url, html)
+
         response = {
             'success': True,
             'guesses': [['https://dtai.cs.kuleuven.be/events/leuveninc-visionary-seminar-machine-learning-smarter-world', 0.9],
@@ -86,7 +87,7 @@ def start_from_csv(filenames):
             # TODO: Incrementally train your model based on these files
             print('Processing {}'.format(filename))
     """
-    command = "python run.py"
+    command = "python run_training.py"
     for fn in filenames:
         command += " " + fn
     call(command)
