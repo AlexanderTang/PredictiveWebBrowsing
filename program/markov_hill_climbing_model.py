@@ -13,57 +13,58 @@ edges_dict = {}
 states_total_dict = {}
 edges_total_dict = {}
 
+class MarkovModel:
 
-def load_model():
-    global states_dict, edges_dict, states_total_dict, edges_total_dict
+    def load_model(self):
+        global states_dict, edges_dict, states_total_dict, edges_total_dict
 
-    states_dict, edges_dict, states_total_dict, edges_total_dict = \
-        gu.load_graph("", -1, -1)
+        states_dict, edges_dict, states_total_dict, edges_total_dict = \
+            gu.load_graph("", -1, -1)
 
 
-def hill_climbing_search(domain, visited):
-    last_url = ""
-    while len(visited) > 0:
-        outgoing = visited.pop(0)
-        last_url = outgoing[1]
+    def hill_climbing_search(self, domain, visited):
+        last_url = ""
+        while len(visited) > 0:
+            outgoing = visited.pop(0)
+            last_url = outgoing[1]
 
-        if domain in edges_dict:
-            if outgoing[1] in edges_dict[domain]:
-                temp = []
-                for ingoing in edges_dict[domain][outgoing[1]]:
+            if domain in edges_dict:
+                if outgoing[1] in edges_dict[domain]:
+                    temp = []
+                    for ingoing in edges_dict[domain][outgoing[1]]:
 
-                    current_state_probability = \
-                        states_dict[domain][outgoing[1]] / \
-                        (states_total_dict[domain] * 1.0)
-                    next_state_probability = \
-                        states_dict[domain][ingoing] / \
-                        (states_total_dict[domain] * 1.0)
-                    delta = current_state_probability - next_state_probability
+                        current_state_probability = \
+                            states_dict[domain][outgoing[1]] / \
+                            (states_total_dict[domain] * 1.0)
+                        next_state_probability = \
+                            states_dict[domain][ingoing] / \
+                            (states_total_dict[domain] * 1.0)
+                        delta = current_state_probability - next_state_probability
 
-                    if delta < CONFIDENT_INTERVAL:
-                        edge_probability = \
-                            edges_dict[domain][outgoing[1]][ingoing] / \
-                            (edges_total_dict[domain][outgoing[1]] * -1.0)
+                        if delta < CONFIDENT_INTERVAL:
+                            edge_probability = \
+                                edges_dict[domain][outgoing[1]][ingoing] / \
+                                (edges_total_dict[domain][outgoing[1]] * -1.0)
 
-                        temp.append((edge_probability, ingoing))
+                            temp.append((edge_probability, ingoing))
 
-                if len(temp) > 0:
-                    temp = sorted(temp, key=lambda x: x[0])
-                    visited = visited + [temp[0]]
-                    last_url = temp[0][1]
+                    if len(temp) > 0:
+                        temp = sorted(temp, key=lambda x: x[0])
+                        visited = visited + [temp[0]]
+                        last_url = temp[0][1]
+                else:
+                    break
             else:
                 break
-        else:
-            break
-    return last_url
+        return last_url
 
 
-def get_prediction(domain, path):
-    prediction = path
-    if domain in states_dict:
-        visited = [(1, path)]
-        prediction = hill_climbing_search(domain, visited)
-    return prediction
+    def get_prediction(self, domain, path):
+        prediction = path
+        if domain in states_dict:
+            visited = [(1, path)]
+            prediction = self.hill_climbing_search(domain, visited)
+        return prediction
 
 
 def incremental_learning(domain, path):
@@ -80,7 +81,7 @@ def incremental_learning(domain, path):
                            current_path + "/" + path[j])
         current_path = current_path + "/" + path[j]
 
-
+    
 def naive_test(uid, with_incremental_learning):
     global states_dict, edges_dict, states_total_dict, edges_total_dict
 
@@ -106,7 +107,7 @@ def naive_test(uid, with_incremental_learning):
 
             domain = path[0]
 
-            prediction = get_prediction(domain, testing_datum[0])
+            prediction = MarkovModel.get_prediction(domain, testing_datum[0])
 
             if prediction == testing_datum[1]:
                 correct_predictions += 1
@@ -221,4 +222,5 @@ def get_results_k_fold_test():
 
 # get_results_naive_test()
 # get_results_k_fold_test()
+
 
