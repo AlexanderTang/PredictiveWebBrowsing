@@ -64,11 +64,18 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
               file=logfile)
         # TODO: Call your model to learn from url and build up a list of next
         # guesses guesses = myModel.get_guesses(url, html)
+        command = "python run_prediction.py "
+        command += url
+        call(command)
+        f = open('workfile', 'rb')
+        guess = f.readline()
+        if guess[:-2] == "\n":
+            guess = guess[:-2]
+        f.close()
 
         response = {
             'success': True,
-            'guesses': [['https://dtai.cs.kuleuven.be/events/leuveninc-visionary-seminar-machine-learning-smarter-world', 0.9],
-                        ['link2_todo', 0.5]]
+            'guesses': [[guess, 1]]
         }
         jsonstr = bytes(json.dumps(response), "UTF-8")
         self.send_response(200)
