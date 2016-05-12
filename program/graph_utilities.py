@@ -66,7 +66,7 @@ def increase_edge(edges_total, dictionary, domain, outgoing, ingoing):
 
 
 def save_graph(method, parameter, user_id, ss, es, sst, est):
-    if parameter == -1:
+    if user_id == -1:
         save_obj(method, parameter, "edges")
         save_obj(method, parameter, "states")
         save_obj(method, parameter, "total_edges")
@@ -79,7 +79,7 @@ def save_graph(method, parameter, user_id, ss, es, sst, est):
 
 
 def load_graph(method, parameter, uid):
-    if parameter == -1:
+    if uid == -1:
         edges = load_obj(method, parameter, "edges")
         states = load_obj(method, parameter, "states")
         edges_total = load_obj(method, parameter, "total_edges")
