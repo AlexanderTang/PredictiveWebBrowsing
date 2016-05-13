@@ -130,11 +130,13 @@ try {
 	  var newContent = document.createTextNode("Our prediction"); 
 	  newDiv.appendChild(newContent); //add the text node to the newly created div. 
 
+	  var body= document.getElementsByTagName('div')[0];
+	  body.appendChild(newDiv);
 	  // add the newly created element and its content into the DOM 
 	  //var currentDiv = document.getElementById("div1"); 
 	  //document.body.insertBefore(newDiv, currentDiv); 
 	  //document.getElementsByTagName('body')[0].appendChild(newDiv)
-	  document.body.append(newDiv)
+	  //document.body.append(newDiv)
 	  
       var l = document.links;
       for (var i=0; i<l.length; i++) {
