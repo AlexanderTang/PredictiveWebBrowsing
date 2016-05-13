@@ -8,9 +8,9 @@ def main(argv=None):
         dom, path = transform_data.parse_url(argv[1])
         if dom[len(dom)-1] == "/":
             dom = dom[:-1]
-        if path == "" or path[len(path)-1] == "/":
+        if path != "" and path[len(path)-1] == "/":
             path = path[:-1]
-        if path[0] == "/":
+        if path != "" and path[0] == "/":
             path = path[1:]
         url = dom + "/" + path
 
