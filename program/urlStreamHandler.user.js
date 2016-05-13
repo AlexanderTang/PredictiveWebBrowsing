@@ -126,18 +126,19 @@ try {
       //       suspected sequence)
       var best_guess = data.guesses[0][0];
       
-      var myDiv = document.createElement("div");
-      //document.getElementsByTagName('div')[0].innerHTML += "OUR PREDICTION: "+best_guess.link("http://"+best_guess);
-
-      //myDiv.setAttribute('href',"http://"+best_guess);
-      //myDiv.innerHTML = "OUR PREDICTION: "+best_guess;
-      myDiv.innerHTML = "OUR PREDICTION: "+best_guess.link("http://"+best_guess);
-      document.getElementsByTagName('div')[0].appendChild(myDiv);
       
-     // var d = document.getElementById('yourDivId');
-     // d.style.position = "absolute";
-    //  d.style.left = x_pos+'px';
-    //  d.style.top = y_pos+'px';
+      //document.getElementsByTagName('div')[0].innerHTML += "OUR PREDICTION: "+best_guess.link("http://"+best_guess);
+      
+      var myDiv = document.createElement("div");
+      myDiv.innerHTML = "OUR PREDICTION: "+best_guess.link("http://"+best_guess);
+      myDiv.style.cssText = 'position:absolute;width:50%;height:5%;opacity:0.8;z-index:100;background-color:white;font-size:20px;color:black;';
+      document.body.appendChild(myDiv);
+      //document.getElementsByTagName('div')[0].appendChild(myDiv);
+      
+      //var d = document.getElementById(myDiv);
+      //d.style.position = "absolute";
+      //d.style.left = 5+'px';
+      //d.style.top = 5+'px';
       
       var l = document.links;
       for (var i=0; i<l.length; i++) {
