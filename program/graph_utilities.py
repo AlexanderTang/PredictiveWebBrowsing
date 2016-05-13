@@ -68,8 +68,8 @@ def save_graph(method, parameter, user_id, ss, es, sst, est):
     if user_id == -1:
         save_obj(method, user_id, es, "edges")
         save_obj(method, user_id, ss, "states")
-        save_obj(method, user_id, sst, "total_edges")
-        save_obj(method, user_id, est, "total_states")
+        save_obj(method, user_id, est, "total_edges")
+        save_obj(method, user_id, sst, "total_states")
     else:
         save_obj(method, parameter, es, "edges_" + str(user_id))
         save_obj(method, parameter, ss, "states_" + str(user_id))
@@ -78,6 +78,7 @@ def save_graph(method, parameter, user_id, ss, es, sst, est):
 
 
 def load_graph(method, parameter, uid):
+
     if uid == -1:
         edges = load_obj(method, parameter, "edges")
         states = load_obj(method, parameter, "states")

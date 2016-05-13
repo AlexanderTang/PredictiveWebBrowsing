@@ -83,7 +83,7 @@ def incremental_learning(domain, path):
                            current_path + "/" + path[j])
         current_path = current_path + "/" + path[j]
 
-    
+
 def naive_test(uid, with_incremental_learning):
     global states_dict, edges_dict, states_total_dict, edges_total_dict
 
@@ -152,7 +152,7 @@ def k_fold_test(uid, iteration, with_incremental_learning):
 
             domain = path[0]
 
-            prediction = get_prediction(domain, testing_datum[0])
+            prediction = MarkovModel.get_prediction(domain, testing_datum[0])
 
             if prediction == testing_datum[1]:
                 correct_predictions += 1
