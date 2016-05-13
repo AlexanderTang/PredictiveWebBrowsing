@@ -8,18 +8,22 @@ K_FOLD_METHOD = "5fold"  # "3fold", "4fold", "5fold"
 CONFIDENT_INTERVAL = .20 # .10, .15, .20
 INCREMENTAL_LEARNING = False
 
-states_dict = {}
-edges_dict = {}
-states_total_dict = {}
-edges_total_dict = {}
 
 class MarkovModel:
+    states_dict = {}
+    edges_dict = {}
+    states_total_dict = {}
+    edges_total_dict = {}
 
-    def load_model(self):
+    def load_model(self, method_name=None, parameter=None, user_id=None):
         global states_dict, edges_dict, states_total_dict, edges_total_dict
 
-        states_dict, edges_dict, states_total_dict, edges_total_dict = \
-            gu.load_graph("", -1, -1)
+        if method_name is None or parameter is None or user_id is None:
+            states_dict, edges_dict, states_total_dict, edges_total_dict = \
+                gu.load_graph("", -1, -1)
+        else:
+            states_dict, edges_dict, states_total_dict, edges_total_dict = \
+                gu.load_graph(method_name, parameter, user_id)
 
 
     def hill_climbing_search(self, domain, visited):
@@ -39,7 +43,8 @@ class MarkovModel:
                         next_state_probability = \
                             states_dict[domain][ingoing] / \
                             (states_total_dict[domain] * 1.0)
-                        delta = current_state_probability - next_state_probability
+                        delta = current_state_probability - \
+                                next_state_probability
 
                         if delta < CONFIDENT_INTERVAL:
                             edge_probability = \
@@ -60,8 +65,6 @@ class MarkovModel:
 
 
     def get_prediction(self, domain, path):
-        print domain
-        print path
         prediction = path
         if domain in states_dict:
             visited = [(1, path)]
@@ -69,24 +72,23 @@ class MarkovModel:
         return prediction
 
 
-def incremental_learning(domain, path):
+def incremental_learning(markov, domain, path):
 
     length_path = len(path)
     current_path = path[0]
 
-    gu.increase_vertex(states_total_dict, states_dict, domain, current_path)
+    gu.increase_vertex(markov.states_total_dict, markov.states_dict,
+                       domain, current_path)
 
     for j in range(1, length_path):
-        gu.increase_edge(edges_total_dict, edges_dict, domain, current_path,
-                         current_path + "/" + path[j])
-        gu.increase_vertex(states_total_dict, states_dict, domain,
-                           current_path + "/" + path[j])
+        gu.increase_edge(markov.edges_total_dict, markov.edges_dict, domain,
+                         current_path, current_path + "/" + path[j])
+        gu.increase_vertex(markov.states_total_dict, markov.states_dict,
+                           domain, current_path + "/" + path[j])
         current_path = current_path + "/" + path[j]
 
 
 def naive_test(uid, with_incremental_learning):
-    global states_dict, edges_dict, states_total_dict, edges_total_dict
-
     if uid == 0:
         file_path = "../testing_data/" + NAIVE_METHOD + "/" + "all.csv"
     else:
@@ -94,9 +96,8 @@ def naive_test(uid, with_incremental_learning):
                     str(uid) + ".csv"
 
     try:
-
-        states_dict, edges_dict, states_total_dict, edges_total_dict = \
-            gu.load_graph("naive", NAIVE_METHOD, uid)
+        markov = MarkovModel()
+        markov.load_model("naive", NAIVE_METHOD, uid)
 
         testing_data = np.genfromtxt(file_path, delimiter=",", dtype=None)
 
@@ -109,7 +110,7 @@ def naive_test(uid, with_incremental_learning):
 
             domain = path[0]
 
-            prediction = MarkovModel.get_prediction(domain, testing_datum[0])
+            prediction = markov.get_prediction(domain, testing_datum[0])
 
             if prediction == testing_datum[1]:
                 correct_predictions += 1
@@ -117,7 +118,7 @@ def naive_test(uid, with_incremental_learning):
                 incorrect_predictions += 1
 
             if with_incremental_learning:
-                incremental_learning(domain, path)
+                incremental_learning(markov, domain, path)
 
         return (correct_predictions / (correct_predictions +
                                        incorrect_predictions * 1.0)) * 100
@@ -126,9 +127,6 @@ def naive_test(uid, with_incremental_learning):
 
 
 def k_fold_test(uid, iteration, with_incremental_learning):
-
-    global states_dict, edges_dict, states_total_dict, edges_total_dict
-
     if uid == 0:
         file_path = "../testing_data/" + K_FOLD_METHOD + "/" + iteration \
                     + "/" + "all.csv"
@@ -137,9 +135,8 @@ def k_fold_test(uid, iteration, with_incremental_learning):
                     + "/" + "/u" + str(uid) + ".csv"
 
     try:
-
-        states_dict, edges_dict, states_total_dict, edges_total_dict = \
-            gu.load_graph(K_FOLD_METHOD, iteration, uid)
+        markov = MarkovModel()
+        markov.load_model(K_FOLD_METHOD, iteration, uid)
 
         testing_data = np.genfromtxt(file_path, delimiter=",", dtype=None)
 
@@ -152,7 +149,7 @@ def k_fold_test(uid, iteration, with_incremental_learning):
 
             domain = path[0]
 
-            prediction = MarkovModel.get_prediction(domain, testing_datum[0])
+            prediction = markov.get_prediction(domain, testing_datum[0])
 
             if prediction == testing_datum[1]:
                 correct_predictions += 1
@@ -160,7 +157,7 @@ def k_fold_test(uid, iteration, with_incremental_learning):
                 incorrect_predictions += 1
 
             if with_incremental_learning:
-                incremental_learning(domain, path)
+                incremental_learning(markov, domain, path)
         return (correct_predictions / (correct_predictions +
                                        incorrect_predictions * 1.0)) * 100
     except IOError:
@@ -178,7 +175,10 @@ def get_results_naive_test():
 
     for user in results_by_user:
         if results_by_user[user] > 0:
-            print "user", user, "-", results_by_user[user]
+            if user == 0:
+                print "all users -", results_by_user[user]
+            else:
+                print "user", user, "-", results_by_user[user]
 
 
 # Get results of k-fold method
@@ -219,10 +219,13 @@ def get_results_k_fold_test():
     print "Incremental learning:", INCREMENTAL_LEARNING
     for sum_accuracy_user in accuracy_sum_users:
         if sum_accuracy_user > 0:
-            print "user", accuracy_sum_users.index(sum_accuracy_user), \
-                "-", sum_accuracy_user / number_iterations
+            if accuracy_sum_users.index(sum_accuracy_user) == 0:
+                print "all users -", sum_accuracy_user / number_iterations
+            else:
+                print "user", accuracy_sum_users.index(sum_accuracy_user), \
+                    "-", sum_accuracy_user / number_iterations
 
-# get_results_naive_test()
-# get_results_k_fold_test()
+#get_results_naive_test()
+#get_results_k_fold_test()
 
 

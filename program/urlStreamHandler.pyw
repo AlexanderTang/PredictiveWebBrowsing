@@ -64,21 +64,27 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
               file=logfile)
         # TODO: Call your model to learn from url and build up a list of next
         # guesses guesses = myModel.get_guesses(url, html)
-        command = "python run_prediction.py "
-        command += url
-        call(command)
-        f = open('../actual_run_data/prediction.txt', 'r')
-        guess = f.readline()
-        print("LOOK HERE")
-        print(guess)
-        if guess[:-2] == "\n":
-            guess = guess[:-2]
-        f.close()
+        if(action == "click" or action == "load"):
+            command = "python run_prediction.py "
+            command += url
+            call(command)
+            f = open('../actual_run_data/prediction.txt', 'r')
+            guess = f.readline()
+            print("LOOK HERE")
+            print(guess)
+            if guess[:-2] == "\n":
+                guess = guess[:-2]
+            f.close()
 
-        response = {
-            'success': True,
-            'guesses': [[guess, 1]]
-        }
+            response = {
+                'success': True,
+                'guesses': [[guess, 1]]
+            }
+        else:
+            response = {
+                'success': False,
+                'guesses': []
+            }
         jsonstr = bytes(json.dumps(response), "UTF-8")
         self.send_response(200)
         self.send_header("Content-type", "application/json")
