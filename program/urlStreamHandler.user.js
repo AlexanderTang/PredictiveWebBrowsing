@@ -125,24 +125,25 @@ try {
       // TODO: Do something (e.g. show a top bar with the final link of the
       //       suspected sequence)
       var best_guess = data.guesses[0][0];
-	  
-	  var newDiv = document.createElement("div"); 
-	  var newContent = document.createTextNode("Our prediction"); 
-	  newDiv.appendChild(newContent); //add the text node to the newly created div. 
+      
+      var myDiv = document.createElement("div");
+      //document.getElementsByTagName('div')[0].innerHTML += "OUR PREDICTION: "+best_guess.link("http://"+best_guess);
 
-	  var body= document.getElementsByTagName('div')[0];
-	  body.appendChild(newDiv);
-	  // add the newly created element and its content into the DOM 
-	  //var currentDiv = document.getElementById("div1"); 
-	  //document.body.insertBefore(newDiv, currentDiv); 
-	  //document.getElementsByTagName('body')[0].appendChild(newDiv)
-	  //document.body.append(newDiv)
-	  
+      //myDiv.setAttribute('href',"http://"+best_guess);
+      //myDiv.innerHTML = "OUR PREDICTION: "+best_guess;
+      myDiv.innerHTML = "OUR PREDICTION: "+best_guess.link("http://"+best_guess);
+      document.getElementsByTagName('div')[0].appendChild(myDiv);
+      
+     // var d = document.getElementById('yourDivId');
+     // d.style.position = "absolute";
+    //  d.style.left = x_pos+'px';
+    //  d.style.top = y_pos+'px';
+      
       var l = document.links;
       for (var i=0; i<l.length; i++) {
         // As a simple example, we highlight the link with the highest
         // probability.
-        if (l[i].href == best_guess) {
+        if (l[i].href == "http://"+best_guess) {
           l[i].style["background-color"]="yellow";
         }
       }
