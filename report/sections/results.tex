@@ -11,7 +11,9 @@ www.kapaza.be,/nl/bmw
 \end{verbatim}
 It's also worth noting that when no predictions can be made, the current page will be the truth. It's not much of a prediction since you are already there, but it's more of an indication that there is currently nothing to predict. None of these issues subtract from the accuracy since the ground truth also does not take these into account. But we know that the \textit{real} accuracy is actually lower than the results we display. The accuracies we display represent more of an upper bound.
 \\[2ex]
-We offer a way to incrementally learn in our model. Every time we make a prediction, we reinforce our graph with the real url that the user wants to visit in accordance to the ground truth. The probabilities are then recomputed. While we cannot offer any useful prediction on unknown domains, we can learn from it so after a few times it may recognize a pattern.
+We offer a way to incrementally learn in our model. Every time we make a prediction, we reinforce our graph with the real url that the user wants to visit in accordance to the ground truth. The probabilities are then recomputed. While we cannot offer any useful prediction on unknown domains, we can learn from it so after a few times it may recognize a pattern. 
+\\[2ex]
+On the actual run of our program, we are no longer able to distinguish between ads and new domains because we will have no samples or clicks to compare the difference with. One fix to this would be to only consider clicked URL's, but from our observations sometimes a page is initially a load and only subsequent pages will result from clicks. This happens for example when using bookmarks. So to make sure we detect all input, we take the loads into consideration anyway.
 
 \subsection{Results}\label{subsec:results}
 
