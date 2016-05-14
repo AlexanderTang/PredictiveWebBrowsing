@@ -1,17 +1,83 @@
-Generating graphs for Markov Model
-=========================================
+HOW TO RUN
+==========
+Our project requires that both Python 2.7 and Python 3.2+ installed (preferrably the
+ latest Python versions). Python 3 is used to call 'urlStreamHandler.pyw' which was
+ provided to us and Python 2 is used to run the rest of our program.
 
-*** Warning: The different graphs used to generate our result are already created in the folder graphs. We generate ramdomly the sets of the navie validation, if you regenerate the graphs is probable that the results will be slightly different from the results we obtained.
+1. Edit run_pred_webbrowsing.bat in a text editor. 'python3' refers to the python
+   executable for the Python 3 environment (python3.exe); rename this if it's called
+   differently for you.
+   The arguments that follow on --csv are a few default datasets that are being loaded
+   and used to train the model. Adjust this to provide the csv files you wish.
+2. In urlStreamHandler.pyw in method start_from_csv(filenames), python2 is the variable
+   that refers to the Python 2 executable (default python.exe); rename this if it's
+   called differently for you.
+3. With the python2 and python3 executables set and the proper csv arguments given, you
+   are now ready to run the program. Double click run_pred_webbrowsing.bat and it will
+   train the model based on the given csv files. Afterwards, you may use the provided
+   urlStreamHandler.user.js script to browse sites.
+   Note: this was only tested on Firefox for us.
 
-To regenerate the graphs you need to run the method "set_all_graphs()" in "transform_data_to_graph.py" file (you can also go to the bottom of the page, uncomment the last line out and run the file).
+The predictions will show up in big letters appended to the document body. This may
+cause the prediction to become located in awkward positions sometimes, but we are not
+proficient enough with javascript to put it in a nice layout (we tried) and it's also
+outside the scope of this assignment we believe.
+
+
+WHAT IS REQUIRED
+================
+Aside from the modules that basically any python environment will have (such as numpy,
+glob, csv, urlparse, ...) we also require sklearn from scikit-learn. The sklearn module
+is supplied within the program folder as a library.
+
+
+HOW ARE THE RESULTS COMPUTED
+============================
+Our model only makes one prediction, not multiple. It solely chooses the best answer. When
+a prediction cannot be made (if the training data only stays at the homepage, if a domain
+is unknown or the confidence interval for each deeper path is too low) then the current page
+itself is returned as a prediction. Since we also return something even when there's nothing
+to predict, our model cannot distinguish between a new valid domain and an advertisement.
+
+Note that we assume the given csv files all come from one user. We don't perform any distinction
+between user ID since we dare not assume the names of the csv files will follow the same format
+as the example csv's we got and we don't know how the user ID would be supplied to us during the run.
+
+
+PERFORMING INDIVIDUAL STEPS YOURSELF
+====================================
+
+Setting Up Data
+---------------
+Data is set up through the following files in that order:
+
+1. transform_data.py
+2. preprocessing.py
+3. setup_data.py
+4. training.py
+
+To run any of the files, it suffices to uncomment the line at the end of the file; it will then
+run and write the computations to a file.
+
+Note that the results of our computations are already available in the accompanying folders. For
+the training and test data generation you will gain different results however, since the training/test
+data split makes use of randomization.
+
+Generating Graphs for Markov Model
+----------------------------------
+*** Warning: The different graphs used to generate our result are already created in the folder graphs.
+
+To regenerate the graphs you need to run the method "set_all_graphs()" in "transform_data_to_graph.py" file
+(you can also go to the bottom of the page, uncomment the last line out and run the file).
 
 This method will replace the graphs in the folder "graphs", using the the data in folder "training_data".
 
-
 Displaying test result for prediction
-=========================================
+-------------------------------------
+To run a secenario using the Markov Model you need to go to "markov_hill_climbing_model.py". You can use methods
+"get_results_naive_test()" and "get_results_k_fold_test()" to run a scenario (you can also uncomment out one of
+the lines in the bottom of the file with the scenario you want to run).
 
-To run a secenario using the Markov Model you need to go to "markov_hill_climbing_model.py" you can use methods "get_results_naive_test()" and "get_results_k_fold_test()" to run a scenario (you can also uncomment out one of the lines in the bottom of the file with the scenario you want to run).
 In the top of the page you can configure the parameters of the scenario as follow:
 
 	- NAIVE_METHOD : used by "get_results_naive_test()", you can select the percentage of the training and testing data. The possible configuration are:
