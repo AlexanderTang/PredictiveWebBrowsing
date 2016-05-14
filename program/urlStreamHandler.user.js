@@ -122,23 +122,12 @@ try {
   }, function(response) {
     try {
       data = JSON.parse(response.response);
-      // TODO: Do something (e.g. show a top bar with the final link of the
-      //       suspected sequence)
       var best_guess = data.guesses[0][0];
-      
-      
-      //document.getElementsByTagName('div')[0].innerHTML += "OUR PREDICTION: "+best_guess.link("http://"+best_guess);
       
       var myDiv = document.createElement("div");
       myDiv.innerHTML = "OUR PREDICTION: "+best_guess.link("http://"+best_guess);
-      myDiv.style.cssText = 'position:absolute;width:50%;height:5%;opacity:0.8;z-index:100;background-color:white;font-size:20px;color:black;';
+      myDiv.style.cssText = 'position:absolute;width:50%;height:5%;opacity:0.6;z-index:100;background-color:white;font-size:20px;color:black;';
       document.body.appendChild(myDiv);
-      //document.getElementsByTagName('div')[0].appendChild(myDiv);
-      
-      //var d = document.getElementById(myDiv);
-      //d.style.position = "absolute";
-      //d.style.left = 5+'px';
-      //d.style.top = 5+'px';
       
       var l = document.links;
       for (var i=0; i<l.length; i++) {

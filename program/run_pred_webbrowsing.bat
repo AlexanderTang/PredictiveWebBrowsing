@@ -1,0 +1,2 @@
+python3 urlStreamHandler.pyw --csv ../dataset/u1_1.csv ../dataset/u1_2.csv ../dataset/u1_3.csv ../dataset/u2_1.csv ../dataset/u2_2.csv ../dataset/u2_3.csv ../dataset/u2_4.csv ../dataset/u3_1.csv ../dataset/u1_2.csv ../dataset/u4_1.csv ../dataset/u4_2.csv ../dataset/u4_3.csv ../dataset/u4_4.csv ../dataset/u4_5.csv ../dataset/u4_6.csv ../dataset/u7_1.csv ../dataset/u8_1.csv ../dataset/u8_2.csv ../dataset/u8_3.csv ../dataset/u8_4.csv ../dataset/u8_5.csv ../dataset/u9_1.csv ../dataset/u9_2.csv
+pause

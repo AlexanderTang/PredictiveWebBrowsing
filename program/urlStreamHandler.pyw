@@ -14,7 +14,7 @@ import atexit
 import signal
 from subprocess import call
 
-import csv
+python2 = "python"
 
 date = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 filename = "urls_{}.csv".format(date)
@@ -62,10 +62,10 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
             print('{:<15}: {}'.format(action_str, url))
         print('"'+ts+'", "'+action_str+'", "'+url+'", "'+target+'"',
               file=logfile)
-        # TODO: Call your model to learn from url and build up a list of next
+        # Call your model to learn from url and build up a list of next
         # guesses guesses = myModel.get_guesses(url, html)
         if(action == "click" or action == "load"):
-            command = "python run_prediction.py "
+            command = python2 + " run_prediction.py "
             command += url
             call(command)
             f = open('../actual_run_data/prediction.txt', 'r')
@@ -96,13 +96,9 @@ class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
 def start_from_csv(filenames):
     """List of csv files that contain a url stream as if they were comming
     from the GreaseMonkey script."""
-    """
-    for filename in filenames:
-        with open(filename, 'r') as csv_file:
-            # TODO: Incrementally train your model based on these files
-            print('Processing {}'.format(filename))
-    """
-    command = "python run_training.py"
+
+    # Incrementally train your model based on these files
+    command = python2 + " run_training.py"
     for fn in filenames:
         command += " " + fn
     call(command)
