@@ -1,0 +1,30 @@
+Generating graphs for Markov Model
+=========================================
+
+*** Warning: The different graphs used to generate our result are already created in the folder graphs. We generate ramdomly the sets of the navie validation, if you regenerate the graphs is probable that the results will be slightly different from the results we obtained.
+
+To regenerate the graphs you need to run the method "set_all_graphs()" in "transform_data_to_graph.py" file (you can also go to the bottom of the page, uncomment the last line out and run the file).
+
+This method will replace the graphs in the folder "graphs", using the the data in folder "training_data".
+
+
+Displaying test result for prediction
+=========================================
+
+To run a secenario using the Markov Model you need to go to "markov_hill_climbing_model.py" you can use methods "get_results_naive_test()" and "get_results_k_fold_test()" to run a scenario (you can also uncomment out one of the lines in the bottom of the file with the scenario you want to run).
+In the top of the page you can configure the parameters of the scenario as follow:
+
+	- NAIVE_METHOD : used by "get_results_naive_test()", you can select the percentage of the training and testing data. The possible configuration are:
+		* 50_50 : uses 50% of data for training Markov Model and 50% of data for testing it.
+		* 60_40 : uses 60% of data for training Markov Model and 40% of data for testing it.
+		* 70_30 : uses 70% of data for training Markov Model and 30% of data for testing it.
+		* 80_20 : uses 80% of data for training Markov Model and 20% of data for testing it.
+
+	- K_FOLD_METHOD : used by "get_results_k_fold_test()", you can select the configurarion of the k-fold. The possible configurarion are:
+		* 3fold : uses 3-fold cross validation.
+		* 4fold : uses 4-fold cross validation.
+		* 5fold : uses 5-fold cross validation.
+
+	- CONFIDENT_INTERVAL : used in the search method, you can set it with any value between 0 to 1
+
+	- INCREMENTAL_LEARNING : used to improve the model while we make and compare a prediction, you can set it as False or True
