@@ -1,0 +1,20 @@
+\section{Discussion}\label{sec:discussion}
+
+\subsection{Context}
+
+We only predict one possible outcome for a domain since we limit the predictions to endpaths within the same domain. There's often not that much choice within the same domain, so offering multiple predictions resembles guessing more rather than predicting. If the program were to be extended to find sequences of different domains however, then including an option to list the top 3 or 5 becomes a possibility.
+\\[2ex]
+Since we search for the end paths with the URL, some websites manage to go undetected. This is the case for websites that don't go deeper, but redirect to a sibling page instead. As mentioned in section~\ref{sec:truth}, the following sequence will not be detected:
+\begin{verbatim}
+www.kapaza.be,/nl/auto
+www.kapaza.be,/nl/bmw
+\end{verbatim}
+It's also worth noting that when no predictions can be made, the current page will be the truth. It's not much of a prediction since you are already there, but it's more of an indication that there is currently nothing to predict. None of these issues subtract from the accuracy since the ground truth also does not take these into account. But we know that the \textit{real} accuracy is actually lower than the results we display. The accuracies we display represent more of an upper bound.
+\\[2ex]
+We offer a way to incrementally learn in our model. Every time we make a prediction, we reinforce our graph with the real url that the user wants to visit in accordance to the ground truth. The probabilities are then recomputed. While we cannot offer any useful prediction on unknown domains, we can learn from it so after a few times it may recognize a pattern.
+
+\subsection{Results}\label{subsec:results}
+
+The result for the naive scenarios shows us that this method is not finest one. The more percentage of training data we give to our model, the more accuracy we get. This could interpreted as an overfitting of our data in our model. We can also need to consider that the data is split them randomly, in some user the accuracy of the data is high because of the set of training and testing data was split consistency, while in some user have the bad luck to have the training data and the test data with a very few relationship between them. This just confirmed our assumptions that this naive method is not the best for training and testing our model.
+\\[2ex]
+In the other hand, the result when we used the k fold cross validation was much consistent, if use the same confident interval with either incremental learning or non incremental learning and we test test our model, we almost obtain the same accuracy for each k fold configuration. After knowing that the k fold give us uniform result, we obtain the best accuracy where the confident interval is set in 20\%. Finally we obtained that the incremental learning increases slightly the accuracy of our model, in fact this is what we expected, since the amount of testing data is relatively small to actually learn from it. The more testing data we have, the more be can improve our model.
