@@ -1,3 +1,9 @@
 \section{Conclusion}\label{sec:conclusion}
 
-\todo{conclusion here}
+The different components of a (filtered) URL represent nodes in a graph while any possible transitions to another part of the URL is represented as an edge in the graph. As a consequence of creating a different Markov chain model per domain, we have many compact graphs to use for our predictions.
+\\[2ex]
+The k-fold cross validation definitely offers more consistent accuracies than using the normal training/test split, while it is difficult to say which one was better for any specific user. The 5-fold split in particular is favored by us. Using a 20\% confidence interval is generally favorable when compared to 10\% and 15\%. Incremental learning doesn't increase accuracy on the small datasets we currently have, but is definitely a necessary component to be scalable.
+\\[2ex]
+Thanks to the harsh data filtering methods we use, the datasets are downsized to a much more manageable level. Using the Python broadcasting techniques in numpy, we are able to filter and train a model in no time. We use the timestamps to arrange the ordering of actions but afterwards we discard them, which removes another layer of computations and lowers the memory cost. We use the bare minimum in evaluation: the domain and path of URLs. We deem fast response to be a much more important quality in web browsing than a small decrease of accuracy in our predictions.
+\\[2ex]
+Our model can be adjusted to predict multiple endpaths, predict sequences of websites or to increase accuracy at the cost of performance. The main strength of our program is the way data gets filtered to the core level without removing important URLs and the use of k-fold cross validation.
